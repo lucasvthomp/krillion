@@ -5,6 +5,7 @@ const categoryLabels = [
   'salad', 'soup', 'pepper', 'flower', 'mushroom', 'tree', 'river', 'lake', 'mountain',
   'ocean', 'sea', 'desert', 'island', 'volcano', 'cloud', 'wine',
 ];
+const genericHeads = new Set(['example', 'name', 'one', 'phrase', 'something', 'thing', 'type', 'word']);
 
 export function exactKey(text) {
   return text.normalize('NFKC').trim().toLowerCase().replace(/\s+/gu, ' ');
@@ -16,16 +17,22 @@ function looseKey(text) {
 }
 
 function labelsIn(prompt) {
-  const subject = exactKey(prompt).replace(/^(?:name|give|list|identify) (?:a |an |one |any |the )?/u, '')
-    .split(/\s+(?:that|which|whose|with|without|in|from|by|found|used|anywhere)\b|[()[\];:?!]/u, 1)[0]
+  const wording = exactKey(prompt).match(/^(?:name|give|list|identify) (?:a |an |one |any |the )?(.+)$/u)?.[1];
+  if (!wording) return [];
+  const subject = wording.replace(/^(?:\p{L}+ )?(?:type|kind|variety|style|form|species|breed) of /u, '')
+    .split(/\s+(?:that|which|whose|with|without|in|from|by|of|for|about|found|used|anywhere|before|after|during|where|when|containing|people)\b|[()[\];:?!]/u, 1)[0]
     .trim().replace(/\.$/u, '');
-  const typed = subject.match(/^(?:\p{L}+ )?(?:type|kind|variety|style|form|species|breed) of (.+)$/u);
   const labels = new Set();
-  for (const part of (typed?.[1] ?? subject).split(/ (?:or|and) /u)) {
+  for (const part of subject.split(/,\s*| (?:or|and) /u)) {
     for (const label of categoryLabels) {
       if (part === label || part.endsWith(` ${label}`)) labels.add(label);
     }
-    if (typed && /^\p{L}+(?:[- ]\p{L}+){0,2}$/u.test(part)) labels.add(part);
+    const category = part.replace(/^(?:(?:a|an|the|famous|well-known|recognized|official|common|fictional|historical|former|current|popular|real|living) )+/u, '');
+    if (!/^\p{L}+(?:[- ]\p{L}+){0,4}$/u.test(category)) continue;
+    const head = category.split(' ').at(-1);
+    if (genericHeads.has(head) || head.length < 3) continue;
+    labels.add(head);
+    labels.add(category);
   }
   if (labels.has('mountain')) labels.add('mount');
   return [...labels];
@@ -35,10 +42,17 @@ function shortenedForms(answer, labels) {
   const forms = [];
   const name = answer.replace(/[-–—]/gu, ' ').replace(/\s+/gu, ' ');
   for (const label of labels) {
-    if (name.startsWith(`${label} `)) forms.push(looseKey(name.slice(label.length + 1)));
-    if (name.endsWith(` ${label}`)) forms.push(looseKey(name.slice(0, -label.length - 1)));
+    const prefix = `${label} `;
+    const suffix = ` ${label}`;
+    const parenthetical = ` (${label})`;
+    if (name.startsWith(prefix)) forms.push(name.slice(prefix.length));
+    if (name.endsWith(suffix)) forms.push(name.slice(0, -suffix.length));
+    if (name.endsWith(parenthetical)) forms.push(name.slice(0, -parenthetical.length));
   }
-  return forms.filter((form) => form.length >= 3);
+  return forms
+    .filter((form) => !/^(?:of|in|on|at|by|for|with|from|the)(?: |$)/u.test(form.replace(/^the /u, '')))
+    .flatMap((form) => [looseKey(form), looseKey(form.replace(/^the /u, ''))])
+    .filter((form) => form.length >= 3 && form !== 'the');
 }
 
 // Keep a null entry for a spelling that points to several distinct answers.
@@ -80,6 +94,7 @@ export function buildLookup(answers, prompt) {
   const loose = new Map();
   const unique = new Map();
   const aliases = new Map();
+  const contextual = new Map();
   let spelling;
 
   for (const entry of answers) {
@@ -101,7 +116,7 @@ export function buildLookup(answers, prompt) {
       const shorter = looseKey(name.slice(4));
       if (shorter.length >= 3) addUnique(aliases, shorter, entry);
     }
-    for (const form of shortenedForms(name, labels)) addUnique(aliases, form, entry);
+    for (const form of shortenedForms(name, labels)) addUnique(contextual, form, entry);
   }
 
   return {
@@ -111,10 +126,13 @@ export function buildLookup(answers, prompt) {
       if (exact.has(key)) return exact.get(key);
       if (loose.has(folded)) return loose.get(folded);
       if (aliases.has(folded)) return aliases.get(folded);
+      if (contextual.has(folded)) return contextual.get(folded);
       if (key.startsWith('the ')) {
         const withoutArticle = looseKey(key.slice(4));
         if (withoutArticle.length >= 3) {
-          return unique.has(withoutArticle) ? unique.get(withoutArticle) : aliases.get(withoutArticle);
+          if (unique.has(withoutArticle)) return unique.get(withoutArticle);
+          if (aliases.has(withoutArticle)) return aliases.get(withoutArticle);
+          return contextual.get(withoutArticle);
         }
       }
       return undefined;
@@ -125,9 +143,10 @@ export function buildLookup(answers, prompt) {
       if (guess.length < 4 || guess.length > 48) return null;
       if (!spelling) {
         spelling = Array.from({ length: 51 }, () => []);
-        for (const index of [unique, aliases]) {
+        for (const index of [unique, aliases, contextual]) {
           for (const [key, entry] of index) {
-            if (index === aliases && unique.has(key)) continue;
+            if (index !== unique && unique.has(key)) continue;
+            if (index === contextual && aliases.has(key)) continue;
             if (key.length >= 3 && key.length <= 50) spelling[key.length].push([key, entry]);
           }
         }

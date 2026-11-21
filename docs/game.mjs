@@ -1,5 +1,5 @@
 import { createOcean } from './ocean.mjs?v=5';
-import { buildLookup, exactKey } from './answers.mjs?v=8';
+import { buildLookup, exactKey } from './answers.mjs?v=11';
 import { renderDiveLog } from './dive-log.mjs?v=10';
 
 const roundsPerGame = 7;
@@ -29,6 +29,7 @@ const loadStatus = byId('load-status');
 const resultStatus = byId('result-status');
 const startButton = byId('start');
 const replayButton = byId('replay');
+const mainMenuButton = byId('main-menu');
 const nextButton = byId('next');
 const form = byId('answer-form');
 const answerInput = byId('answer');
@@ -117,6 +118,7 @@ async function startGame() {
   }
   startButton.disabled = true;
   replayButton.disabled = true;
+  mainMenuButton.disabled = true;
   loadStatus.textContent = resultStatus.textContent = 'Preparing seven rounds…';
   try {
     rounds = await Promise.all(drawPrompts().map(loadRound));
@@ -136,6 +138,7 @@ async function startGame() {
   } finally {
     startButton.disabled = false;
     replayButton.disabled = false;
+    mainMenuButton.disabled = false;
   }
 }
 
@@ -244,6 +247,20 @@ function showResults() {
   byId('results-heading').focus();
 }
 
+function returnToMenu() {
+  clearInterval(ticker);
+  hideSuggestion();
+  phase = 'idle';
+  rounds = [];
+  log = [];
+  score = 0;
+  diveLog.replaceChildren();
+  roundPanel.hidden = resultsPanel.hidden = true;
+  home.hidden = false;
+  updateDepth();
+  startButton.focus();
+}
+
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   if (phase !== 'answering') return;
@@ -298,23 +315,14 @@ nextButton.addEventListener('click', () => {
 });
 startButton.addEventListener('click', startGame);
 replayButton.addEventListener('click', startGame);
+mainMenuButton.addEventListener('click', returnToMenu);
 byId('help-button').addEventListener('click', () => help.showModal());
 byId('quit').addEventListener('click', () => {
   quitDialog.returnValue = '';
   quitDialog.showModal();
 });
 quitDialog.addEventListener('close', () => {
-  if (quitDialog.returnValue !== 'quit') return;
-  clearInterval(ticker);
-  hideSuggestion();
-  phase = 'idle';
-  rounds = [];
-  log = [];
-  score = 0;
-  roundPanel.hidden = true;
-  home.hidden = false;
-  updateDepth();
-  startButton.focus();
+  if (quitDialog.returnValue === 'quit') returnToMenu();
 });
 byId('share').addEventListener('click', async () => {
   const details = log.map(({ points }) => points).join(' · ');
