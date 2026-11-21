@@ -6,8 +6,8 @@
   <meta name="description" content="Seven random questions. Find an uncommon answer and see how deep you can go.">
   <meta name="theme-color" content="#023247">
   <title>Krillion | Rare-answer trivia</title>
-  <link rel="stylesheet" href="./style.css?v=7">
-  <script type="module" src="./game.mjs?v=9"></script>
+  <link rel="stylesheet" href="./style.css?v=10">
+  <script type="module" src="./game.mjs?v=10"></script>
 </head>
 <body>
   <canvas id="ocean" aria-hidden="true"></canvas>
@@ -68,10 +68,7 @@
       </div>
       <p class="notice" id="result-status" role="status"></p>
       <textarea id="share-text" readonly aria-label="Result to copy" hidden></textarea>
-      <details class="dive-log">
-        <summary>Dive log</summary>
-        <ol id="log"></ol>
-      </details>
+      <ol class="dive-log" id="log" aria-label="Questions from this dive"></ol>
     </section>
 
     <div class="depth-readout" id="depth-readout" hidden>

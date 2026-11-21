@@ -1,5 +1,6 @@
 import { createOcean } from './ocean.mjs?v=5';
 import { buildLookup, exactKey } from './answers.mjs?v=8';
+import { renderDiveLog } from './dive-log.mjs?v=10';
 
 const roundsPerGame = 7;
 const readingSeconds = 3;
@@ -23,6 +24,7 @@ const byId = (id) => document.getElementById(id);
 const home = byId('home');
 const roundPanel = byId('round');
 const resultsPanel = byId('results');
+const diveLog = byId('log');
 const loadStatus = byId('load-status');
 const resultStatus = byId('result-status');
 const startButton = byId('start');
@@ -88,8 +90,8 @@ async function loadRound(prompt) {
   if (answers.length !== prompt.count || !answers.length) throw new Error('Incomplete answer bank.');
   return {
     ...prompt,
+    answers,
     lookup: buildLookup(answers, prompt.prompt),
-    example: answers.reduce((top, answer) => answer[1] > top[1] ? answer : top),
   };
 }
 
@@ -121,6 +123,7 @@ async function startGame() {
     row = 0;
     score = 0;
     log = [];
+    diveLog.replaceChildren();
     loadStatus.textContent = '';
     home.hidden = true;
     resultsPanel.hidden = true;
@@ -185,7 +188,7 @@ function finishRound(reason, matched) {
   const points = matched ? matched[1] : 0;
   const tier = matched ? matched[2] : 'none';
   score += points;
-  log.push({ prompt: current.prompt, answer: matched?.[0], points, tier, example: current.example });
+  log.push({ prompt: current.prompt, answer: matched?.[0], points, tier });
   updateDepth();
 
   byId('feedback').dataset.tier = tier;
@@ -228,7 +231,6 @@ function showResults() {
   roundPanel.hidden = true;
   resultsPanel.hidden = false;
   resultStatus.textContent = '';
-  resultsPanel.querySelector('details').open = false;
   byId('share-text').hidden = true;
   const record = score > best;
   if (record) {
@@ -238,25 +240,7 @@ function showResults() {
   }
   const depth = (score * 10).toLocaleString();
   byId('summary').textContent = `${score} of ${maxScore} points · ${depth} m${record ? ' · New personal best' : ''}`;
-  byId('log').replaceChildren(...log.map((entry) => {
-    const item = document.createElement('li');
-    const name = document.createElement('div');
-    const answer = document.createElement('small');
-    const points = document.createElement('strong');
-    name.textContent = entry.prompt;
-    answer.textContent = entry.answer ? `${entry.answer} · ${rarity[entry.tier]?.[0] ?? 'Accepted'}` : 'No answer';
-    name.append(answer);
-    const [example, exampleScore] = entry.example;
-    if (entry.points < exampleScore) {
-      const bestAnswer = document.createElement('small');
-      bestAnswer.textContent = `High-scoring answer · ${example} (${exampleScore} pts)`;
-      name.append(bestAnswer);
-    }
-    item.dataset.tier = entry.tier;
-    points.textContent = `${entry.points} pts`;
-    item.append(name, points);
-    return item;
-  }));
+  renderDiveLog(diveLog, log, rounds, rarity);
   byId('results-heading').focus();
 }
 
