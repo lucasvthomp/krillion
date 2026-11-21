@@ -6,8 +6,8 @@
   <meta name="description" content="Seven random questions. Find an uncommon answer and see how deep you can go.">
   <meta name="theme-color" content="#101f29">
   <title>Krillion | Rare-answer trivia</title>
-  <link rel="stylesheet" href="./style.css">
-  <script type="module" src="./game.mjs"></script>
+  <link rel="stylesheet" href="./style.css?v=2">
+  <script type="module" src="./game.mjs?v=2"></script>
 </head>
 <body>
   <header class="site-header shell">
@@ -34,22 +34,32 @@
         <section id="round" aria-labelledby="prompt" hidden>
           <div class="round-header">
             <p class="eyebrow" id="round-position"></p>
-            <span class="timer" id="timer" aria-label="Seconds remaining">25s</span>
+            <div class="round-controls">
+              <span class="timer" id="timer" role="timer" aria-label="Seconds remaining">25s</span>
+              <button class="plain-button" id="quit" type="button">Quit</button>
+            </div>
           </div>
           <progress id="time-bar" max="25" value="25" aria-label="Round time remaining"></progress>
           <p class="category" id="category"></p>
           <h2 id="prompt" tabindex="-1"></h2>
-          <form id="answer-form">
+          <div class="count-in" id="count-in" hidden>
+            Read the prompt <strong id="read-count" aria-hidden="true">3</strong>
+          </div>
+          <form id="answer-form" hidden>
             <label class="visually-hidden" for="answer">Your answer</label>
             <div class="answer-row">
               <input id="answer" type="text" placeholder="Your answer…" maxlength="300" autocomplete="off" spellcheck="false" required aria-describedby="prompt">
-              <button class="primary" type="submit">Submit</button>
+              <button class="primary" type="submit">Dive</button>
             </div>
-            <button class="plain-button skip" id="skip" type="button">Skip round</button>
+            <button class="plain-button skip" id="skip" type="button">Pass</button>
+            <p class="notice" id="retry-status" role="status"></p>
           </form>
           <div id="reveal" hidden>
-            <p class="feedback" id="feedback" role="status"></p>
-            <p class="notice" id="example"></p>
+            <div class="feedback" id="feedback" role="status">
+              <p class="tier-label" id="answer-tier"></p>
+              <p class="answer-name" id="answer-name"></p>
+              <p class="depth-gain" id="depth-gain"></p>
+            </div>
             <button class="primary" id="next" type="button">Next round</button>
           </div>
         </section>
@@ -70,7 +80,10 @@
 
       <aside class="instrument" aria-label="Depth gauge">
         <div class="instrument-header">
-          <span class="eyebrow"><span class="status-dot"></span> Depth gauge</span>
+          <div>
+            <span class="eyebrow"><span class="status-dot"></span> Depth gauge</span>
+            <span class="zone" id="zone">Surface</span>
+          </div>
           <span class="depth-number"><output id="depth">0</output> <small>m</small></span>
         </div>
         <div id="chart">
@@ -78,7 +91,7 @@
           <div class="scale" aria-hidden="true">
             <span>0 m</span><span>1,750</span><span>3,500</span><span>5,250</span><span>7,000</span>
           </div>
-          <div class="trace" aria-hidden="true"><span></span></div>
+          <div class="trace" aria-hidden="true"><span><i></i></span></div>
         </div>
         <div class="instrument-footer">
           <span id="score">0 / 700 pts</span>
@@ -96,11 +109,21 @@
     <h2 id="help-heading">How to play</h2>
     <ol>
       <li>Each dive draws seven different prompts from the answer bank.</li>
-      <li>You have 25 seconds to submit one answer per prompt. You can also skip.</li>
-      <li>Uncommon answers are worth more. Every point takes you 10 metres deeper.</li>
+      <li>Read each prompt for three seconds, then take up to 25 seconds to answer.</li>
+      <li>A guess outside the bank costs three seconds. You can guess again or pass.</li>
+      <li>Each point takes you 10 metres deeper.</li>
     </ol>
+    <ul class="tier-legend" id="tier-legend" aria-label="Rarity tiers"></ul>
     <p>Your best score is saved on this browser.</p>
     <form method="dialog"><button class="primary">Got it</button></form>
+  </dialog>
+  <dialog id="quit-dialog" aria-labelledby="quit-heading">
+    <h2 id="quit-heading">End this dive?</h2>
+    <p>You’ll lose the score for this game.</p>
+    <form method="dialog" class="result-actions">
+      <button class="primary" value="continue">Keep playing</button>
+      <button class="plain-button" value="quit">End dive</button>
+    </form>
   </dialog>
   <noscript>Enable JavaScript to play Krillion.</noscript>
 </body>

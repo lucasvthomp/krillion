@@ -1,11 +1,21 @@
 const roundsPerGame = 7;
+const readingSeconds = 3;
 const roundSeconds = 25;
+const missPenalty = 3;
 const maxScore = roundsPerGame * 100;
 const bestKey = 'krillion.best.v1';
-const rarity = new Map([
-  [100, 'Exceptional'], [85, 'Very uncommon'], [60, 'Uncommon'],
-  [30, 'Familiar'], [15, 'Common'], [10, 'Very common'],
-]);
+const rarity = {
+  plankton: ['Plankton', 10],
+  tooclever: ['Too Clever', 15],
+  schooler: ['Schooler', 30],
+  rare: ['Rare', 60],
+  deepcut: ['Deep Cut', 85],
+  krillion: ['One in a Krillion', 100],
+};
+const oceanZones = [
+  [6000, 'Hadal zone'], [4000, 'Abyssal zone'], [1000, 'Midnight zone'],
+  [200, 'Twilight zone'], [1, 'Sunlight zone'], [0, 'Surface'],
+];
 const byId = (id) => document.getElementById(id);
 const home = byId('home');
 const roundPanel = byId('round');
@@ -17,9 +27,14 @@ const replayButton = byId('replay');
 const nextButton = byId('next');
 const form = byId('answer-form');
 const answerInput = byId('answer');
+const countIn = byId('count-in');
+const timer = byId('timer');
+const timeBar = byId('time-bar');
+const retryStatus = byId('retry-status');
 const reveal = byId('reveal');
 const chart = byId('chart');
 const help = byId('help');
+const quitDialog = byId('quit-dialog');
 const markers = Array.from({ length: roundsPerGame }, () => {
   const marker = document.createElement('span');
   marker.className = 'marker';
@@ -35,7 +50,7 @@ let score = 0;
 let best = readBest();
 let deadline = 0;
 let ticker;
-let active = false;
+let phase = 'idle';
 
 function exactKey(text) {
   return text.normalize('NFKC').trim().toLowerCase().replace(/\s+/gu, ' ');
@@ -130,6 +145,7 @@ async function startGame() {
     row = 0;
     score = 0;
     log = [];
+    loadStatus.textContent = '';
     home.hidden = true;
     resultsPanel.hidden = true;
     roundPanel.hidden = false;
@@ -150,55 +166,73 @@ function showRound() {
   byId('category').textContent = current.category;
   byId('prompt').textContent = current.prompt;
   reveal.hidden = true;
-  form.hidden = false;
+  form.hidden = true;
+  countIn.hidden = false;
+  timer.hidden = true;
+  timer.classList.remove('urgent');
+  timeBar.classList.add('inactive');
   answerInput.value = '';
-  active = true;
-  deadline = performance.now() + roundSeconds * 1000;
+  retryStatus.textContent = '';
+  phase = 'reading';
+  deadline = performance.now() + readingSeconds * 1000;
+  byId('prompt').focus();
   updateTimer();
   ticker = setInterval(updateTimer, 100);
-  answerInput.focus();
 }
 
 function updateTimer() {
   const seconds = Math.max(0, (deadline - performance.now()) / 1000);
-  byId('timer').textContent = `${Math.ceil(seconds)}s`;
-  byId('time-bar').value = seconds;
+  if (phase === 'reading') {
+    byId('read-count').textContent = Math.ceil(seconds);
+    if (seconds) return;
+    phase = 'answering';
+    deadline = performance.now() + roundSeconds * 1000;
+    timer.textContent = `${roundSeconds}s`;
+    timeBar.value = roundSeconds;
+    countIn.hidden = true;
+    timeBar.classList.remove('inactive');
+    timer.hidden = form.hidden = false;
+    if (!quitDialog.open && !help.open) answerInput.focus();
+    return;
+  }
+  timer.textContent = `${Math.ceil(seconds)}s`;
+  timer.classList.toggle('urgent', seconds <= 5);
+  timeBar.value = seconds;
   if (!seconds) finishRound('timeout');
 }
 
-function finishRound(reason, guess = '') {
-  if (!active) return;
-  active = false;
+function finishRound(reason, matched) {
+  if (phase !== 'answering') return;
+  phase = 'idle';
   clearInterval(ticker);
   const current = rounds[row];
-  const matched = reason === 'guess' && current.match(guess);
   const points = matched ? matched[1] : 0;
+  const tier = matched ? matched[2] : 'none';
   score += points;
-  log.push({ prompt: current.prompt, guess, answer: matched ? matched[0] : '', points, reason });
+  log.push({ prompt: current.prompt, answer: matched?.[0], points, tier, example: current.example });
   updateGauge();
 
-  const feedback = byId('feedback');
-  if (matched) feedback.textContent = `${matched[0]} · +${points} pts · ${rarity.get(points) ?? 'Accepted'}`;
-  else if (reason === 'timeout') feedback.textContent = 'Time is up · 0 pts';
-  else if (reason === 'skip') feedback.textContent = 'Round skipped · 0 pts';
-  else feedback.textContent = `“${guess}” wasn’t in the answer bank · 0 pts`;
-
-  const [example, exampleScore] = current.example;
-  byId('example').textContent = points < exampleScore ? `High-scoring answer · ${example} (${exampleScore} pts)` : '';
-  form.hidden = true;
+  byId('feedback').dataset.tier = tier;
+  byId('answer-tier').textContent = rarity[tier]?.[0] ?? (matched ? 'Accepted' : 'No score');
+  byId('answer-name').textContent = matched?.[0] ?? (reason === 'timeout' ? 'Time is up' : 'Round passed');
+  byId('depth-gain').textContent = `+${points} pts · ${points * 10} m deeper`;
+  timeBar.classList.add('inactive');
+  timer.hidden = form.hidden = true;
   reveal.hidden = false;
   nextButton.textContent = row + 1 === roundsPerGame ? 'See dive log' : 'Next round';
-  nextButton.focus();
+  if (!quitDialog.open && !help.open) nextButton.focus();
 }
 
 function updateGauge() {
-  byId('depth').value = (score * 10).toLocaleString();
+  const depth = score * 10;
+  byId('depth').value = depth.toLocaleString();
+  byId('zone').textContent = oceanZones.find(([start]) => depth >= start)[1];
   byId('score').textContent = `${score} / ${maxScore} pts`;
   chart.style.setProperty('--depth', `${score / maxScore * 100}%`);
+  chart.style.setProperty('--water-darkness', score / maxScore * .65);
+  chart.dataset.tier = log.at(-1)?.tier ?? '';
   markers.forEach((marker, index) => {
-    const entry = log[index];
-    marker.classList.toggle('hit', Boolean(entry?.answer));
-    marker.classList.toggle('miss', Boolean(entry && !entry.answer));
+    marker.dataset.tier = log[index]?.tier ?? '';
   });
 }
 
@@ -233,8 +267,15 @@ function showResults() {
     const answer = document.createElement('small');
     const points = document.createElement('strong');
     name.textContent = entry.prompt;
-    answer.textContent = entry.answer || (entry.guess ? `Your guess · ${entry.guess}` : 'No answer');
+    answer.textContent = entry.answer ? `${entry.answer} · ${rarity[entry.tier]?.[0] ?? 'Accepted'}` : 'No answer';
     name.append(answer);
+    const [example, exampleScore] = entry.example;
+    if (entry.points < exampleScore) {
+      const bestAnswer = document.createElement('small');
+      bestAnswer.textContent = `High-scoring answer · ${example} (${exampleScore} pts)`;
+      name.append(bestAnswer);
+    }
+    item.dataset.tier = entry.tier;
     points.textContent = `${entry.points} pts`;
     item.append(name, points);
     return item;
@@ -282,14 +323,27 @@ function drawContours() {
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
+  if (phase !== 'answering') return;
   const guess = answerInput.value.trim();
   if (!guess) {
     answerInput.value = '';
     answerInput.reportValidity();
     return;
   }
-  if (performance.now() >= deadline) finishRound('timeout');
-  else finishRound('guess', guess);
+  if (performance.now() >= deadline) {
+    finishRound('timeout');
+    return;
+  }
+  const matched = rounds[row].match(guess);
+  if (matched) {
+    finishRound('guess', matched);
+    return;
+  }
+  deadline -= missPenalty * 1000;
+  answerInput.value = '';
+  retryStatus.textContent = `“${guess}” wasn’t in the bank · −${missPenalty}s. Try again.`;
+  updateTimer();
+  if (phase === 'answering') answerInput.focus();
 });
 byId('skip').addEventListener('click', () => finishRound('skip'));
 nextButton.addEventListener('click', () => {
@@ -300,6 +354,22 @@ nextButton.addEventListener('click', () => {
 startButton.addEventListener('click', startGame);
 replayButton.addEventListener('click', startGame);
 byId('help-button').addEventListener('click', () => help.showModal());
+byId('quit').addEventListener('click', () => {
+  quitDialog.returnValue = '';
+  quitDialog.showModal();
+});
+quitDialog.addEventListener('close', () => {
+  if (quitDialog.returnValue !== 'quit') return;
+  clearInterval(ticker);
+  phase = 'idle';
+  rounds = [];
+  log = [];
+  score = 0;
+  roundPanel.hidden = true;
+  home.hidden = false;
+  updateGauge();
+  startButton.focus();
+});
 byId('share').addEventListener('click', async () => {
   const details = log.map(({ points }) => points).join(' · ');
   const text = `Krillion · ${score}/${maxScore} points\n${details}\n${new URL('./', location.href)}`;
@@ -316,5 +386,11 @@ byId('share').addEventListener('click', async () => {
   }
 });
 new ResizeObserver(drawContours).observe(chart);
+for (const [tier, [label, points]] of Object.entries(rarity)) {
+  const item = document.createElement('li');
+  item.dataset.tier = tier;
+  item.textContent = `${label} · ${points} pts`;
+  byId('tier-legend').append(item);
+}
 showBest();
 initialize();

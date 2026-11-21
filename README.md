@@ -1,6 +1,6 @@
 # Krillion
 
-Krillion is a browser trivia game that draws seven distinct prompts for each game. Players have 25 seconds to submit an answer to each prompt. The answer bank supplies the scores, and every point adds ten metres to the dive.
+Krillion is a browser trivia game that draws seven distinct prompts for each game. Players get three seconds to read each prompt and 25 seconds to answer. A guess outside the bank costs three seconds. The answer bank supplies the names, rarity tiers and scores, and every point adds ten metres to the dive.
 
 ## Play locally
 
