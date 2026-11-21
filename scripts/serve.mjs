@@ -11,6 +11,7 @@ const types = new Map([
   ['.css', 'text/css; charset=utf-8'],
   ['.mjs', 'text/javascript; charset=utf-8'],
   ['.json', 'application/json'],
+  ['.ttf', 'font/ttf'],
 ]);
 
 createServer(async (request, response) => {

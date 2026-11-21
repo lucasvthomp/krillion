@@ -1,14 +1,88 @@
 const palette = [
-  [0, [21, 117, 141], [7, 50, 78]],
-  [450, [13, 78, 110], [6, 38, 65]],
-  [1500, [11, 48, 79], [7, 24, 48]],
-  [3400, [15, 32, 57], [6, 17, 34]],
-  [5500, [19, 24, 44], [8, 11, 24]],
-  [7000, [25, 21, 39], [9, 9, 19]],
+  [0, [25, 126, 150], [11, 57, 98]],
+  [450, [20, 87, 130], [9, 46, 83]],
+  [1500, [15, 58, 104], [9, 27, 61]],
+  [3400, [22, 36, 78], [9, 18, 44]],
+  [5500, [29, 30, 65], [13, 14, 34]],
+  [7000, [36, 25, 57], [14, 11, 27]],
+];
+
+// Each digit is a palette entry. A dot is transparent.
+const reefFish = [
+  '......1....',
+  '0...11111..',
+  '00.1222121.',
+  '01122212320',
+  '00.1111111.',
+  '0....11....',
+];
+const ray = [
+  [
+    '.......0........0.......',
+    '......010......010......',
+    '....01110......01110....',
+    '..01112210000001221110..',
+    '001122221111111222211100',
+    '.0001111122222211111000.',
+    '....0000123232100000....',
+    '........0111110.........',
+    '.........00100..........',
+    '...........0............',
+    '...........0............',
+    '..........0.............',
+  ],
+  [
+    '........0000000.........',
+    '......00111111100.......',
+    '....001122222221100.....',
+    '...01122223232221110....',
+    '..0111122222222211110...',
+    '.011110001111100011110..',
+    '011000...00100...000110.',
+    '00.........0.........00.',
+    '...........0............',
+    '..........0.............',
+    '.........0..............',
+  ],
+];
+const jelly = [
+  '....01110....',
+  '..011222110..',
+  '.01223232210.',
+  '0122222222210',
+  '1101101011011',
+  '..1..1.1..1..',
+  '..1.1...1.1..',
+  '...1....1..1.',
+  '...1.....1.1.',
+  '....1....1...',
+];
+const lanternfish = [
+  '......1.......',
+  '0...11111..3..',
+  '00.1111111.2..',
+  '011111112110..',
+  '00.022011110..',
+  '0....0.000....',
+];
+const kelp = [
+  '....2...',
+  '..122...',
+  '..12....',
+  '...2..1.',
+  '...2.11.',
+  '..1221..',
+  '.1122...',
+  '..12....',
+  '...22...',
+  '...12...',
+  '..112...',
+  '..112...',
 ];
 
 const clamp = (number, min = 0, max = 1) => Math.max(min, Math.min(max, number));
 const mix = (from, to, ratio) => from + (to - from) * ratio;
+const blend = (from, to, ratio) => from.map((value, index) => mix(value, to[index], ratio));
 const color = (rgb) => `rgb(${rgb.map(Math.round).join(', ')})`;
 const smooth = (ratio) => ratio * ratio * (3 - 2 * ratio);
 
@@ -19,6 +93,21 @@ function seededRandom(seed) {
   };
 }
 
+function makeSprite(rows, colors) {
+  const sheet = document.createElement('canvas');
+  sheet.width = Math.max(...rows.map((row) => row.length));
+  sheet.height = rows.length;
+  const ink = sheet.getContext('2d');
+  rows.forEach((row, y) => {
+    for (let x = 0; x < row.length; x++) {
+      if (row[x] === '.') continue;
+      ink.fillStyle = colors[Number(row[x])];
+      ink.fillRect(x, y, 1, 1);
+    }
+  });
+  return sheet;
+}
+
 export function createOcean(canvas) {
   const ctx = canvas.getContext('2d', { alpha: false });
   if (!ctx) return { descend() {} };
@@ -26,208 +115,209 @@ export function createOcean(canvas) {
   const motion = matchMedia('(prefers-reduced-motion: reduce)');
   const random = seededRandom(18832);
   const scatter = (count, make) => Array.from({ length: count }, () => make());
-  const particles = scatter(150, () => [random(), random(), random(), random()]);
-  const fish = scatter(27, () => [random(), random(), random(), random()]);
-  const jellies = scatter(9, () => [random(), random(), random()]);
-  const shelves = [690, 1720, 2940, 4380, 5620, 6930];
-  let width, height, density;
+  const particles = scatter(115, () => [random(), random(), random(), random()]);
+  const fish = scatter(22, () => [random(), random(), random(), random()]);
+  const deepCreatures = scatter(16, () => [random(), random(), random()]);
+  const shelves = [660, 1700, 2950, 4380, 5650, 6920];
+  const foldedTail = reefFish.map((row, index) => (index === 3 ? '.01' : '...') + row.slice(3));
+  const fishSprites = [
+    ['#123354', '#206085', '#508ba1', '#a8d4c6'],
+    ['#233653', '#526589', '#7c9bad', '#b6dfd5'],
+  ].map((colors) => [makeSprite(reefFish, colors), makeSprite(foldedTail, colors)]);
+  const raySprites = ray.map((rows) => makeSprite(rows, ['#123452', '#195573', '#347b95', '#5ba0a9']));
+  const jellySprite = makeSprite(jelly, ['#397394', '#559cb7', '#87d5d5', '#c1fff0']);
+  const lanternSprite = makeSprite(lanternfish, ['#162642', '#2c4b6e', '#4e819e', '#b5f7ce']);
+  const kelpSprite = makeSprite(kelp, ['#0a3046', '#14615f', '#248880']);
+  const dither = document.createElement('canvas');
+  dither.width = dither.height = 4;
+  const dots = dither.getContext('2d');
+  dots.fillStyle = '#102642';
+  dots.fillRect(0, 0, 1, 1);
+  dots.fillRect(2, 2, 1, 1);
+  const texture = ctx.createPattern(dither, 'repeat');
+
+  let width, height;
   let frame = 0;
   let renderedAt = -Infinity;
-  let depth = 0;
   let camera = 0;
   let target = 0;
   let travelFrom = 0;
   let travelStarted = 0;
   let travelDuration = 0;
 
+  function sprite(image, x, y, direction = 1) {
+    ctx.save();
+    ctx.translate(Math.round(x), Math.round(y));
+    ctx.scale(direction, 1);
+    ctx.drawImage(image, -Math.floor(image.width / 2), 0);
+    ctx.restore();
+  }
+
   function waterColor() {
-    const next = palette.findIndex(([start]) => start > depth);
-    const upper = palette[next < 0 ? palette.length - 1 : next];
-    const lower = palette[Math.max(0, (next < 0 ? palette.length : next) - 1)];
-    const ratio = upper[0] === lower[0] ? 0 : (depth - lower[0]) / (upper[0] - lower[0]);
-    const water = ctx.createLinearGradient(0, 0, 0, height);
-    water.addColorStop(0, color(lower[1].map((value, i) => mix(value, upper[1][i], ratio))));
-    water.addColorStop(1, color(lower[2].map((value, i) => mix(value, upper[2][i], ratio))));
-    ctx.fillStyle = water;
-    ctx.fillRect(0, 0, width, height);
+    const depth = clamp(camera - 70, 0, 7000);
+    let next = palette.findIndex(([start]) => start > depth);
+    if (next < 0) next = palette.length - 1;
+    const upper = palette[next];
+    const lower = palette[next - 1];
+    const ratio = (depth - lower[0]) / (upper[0] - lower[0]);
+    const top = blend(lower[1], upper[1], ratio);
+    const bottom = blend(lower[2], upper[2], ratio);
+    const bands = 13;
+    for (let band = 0; band < bands; band++) {
+      const y = Math.floor(band * height / bands);
+      const end = Math.floor((band + 1) * height / bands);
+      ctx.fillStyle = color(blend(top, bottom, band / (bands - 1)));
+      ctx.fillRect(0, y, width, end - y);
+      if (!band) continue;
+      ctx.fillStyle = color(blend(top, bottom, (band - 1) / (bands - 1)));
+      for (let x = (band % 2) * 2; x < width; x += 4) ctx.fillRect(x, y, 2, 1);
+    }
   }
 
   function surface(time, offset) {
     const surfaceY = height * .11 - offset * .89;
-    const light = clamp(1 - camera / 760);
+    const light = clamp(1 - camera / 900);
     if (!light) return;
 
-    for (let ray = 0; ray < 20; ray++) {
-      const phase = ray * 4.13;
-      const x = width * (.10 + ray * .041 + Math.sin(time * .2 + phase) * .025);
-      const tip = x + width * (.22 + Math.sin(phase) * .21);
-      const span = width * (.022 + .036 * (1 + Math.cos(phase)));
-      const end = surfaceY + height * (.66 + .27 * Math.sin(phase * 2));
-      const beam = ctx.createLinearGradient(x, surfaceY, tip, end);
-      beam.addColorStop(0, `rgba(196, 255, 240, ${light * (.05 + .032 * (1 + Math.sin(phase)))})`);
-      beam.addColorStop(1, 'rgba(155, 241, 241, 0)');
-      ctx.fillStyle = beam;
-      ctx.beginPath();
-      ctx.moveTo(x - span * .2, surfaceY);
-      ctx.lineTo(x + span * .2, surfaceY);
-      ctx.lineTo(tip + span, end);
-      ctx.lineTo(tip - span, end);
-      ctx.closePath();
-      ctx.fill();
+    for (let rayIndex = 0; rayIndex < 11; rayIndex++) {
+      const phase = rayIndex * 4.13;
+      const x = width * (.08 + rayIndex * .079 + Math.sin(time * .24 + phase) * .025);
+      const slant = width * (.17 + Math.sin(phase) * .12);
+      const span = width * (.021 + .014 * (1 + Math.cos(phase)));
+      const reach = height * (.63 + .24 * Math.sin(phase * 2));
+      for (let y = Math.max(0, Math.ceil(surfaceY)); y < surfaceY + reach; y += 3) {
+        const progress = (y - surfaceY) / reach;
+        const half = Math.max(1, Math.round(span * (.24 + progress * .66)));
+        ctx.fillStyle = `rgba(167, 243, 220, ${light * (1 - progress) * (.07 + .035 * Math.cos(phase))})`;
+        ctx.fillRect(Math.round(x + slant * progress) - half, y, half * 2, 3);
+      }
     }
 
-    if (surfaceY < -32) return;
-    const wave = (x, layer) => surfaceY + layer * 5 +
-      Math.sin(x / 62 + time * .91 + layer * .7) * (7 - layer) +
-      Math.sin(x / 25 - time * .7 + layer * .9) * 2.5;
-
-    const surfaceGlow = ctx.createLinearGradient(0, 0, 0, Math.max(1, surfaceY + 27));
-    surfaceGlow.addColorStop(0, '#226979');
-    surfaceGlow.addColorStop(.7, '#48acb2');
-    surfaceGlow.addColorStop(1, '#9ce0d7');
-    ctx.beginPath();
-    ctx.moveTo(0, -3);
-    ctx.lineTo(width, -3);
-    for (let x = width + 10; x >= -10; x -= 10) ctx.lineTo(x, wave(x, 0));
-    ctx.closePath();
-    ctx.fillStyle = surfaceGlow;
-    ctx.fill();
-
-    for (let layer = 0; layer < 6; layer++) {
-      ctx.beginPath();
-      for (let x = -10; x <= width + 10; x += 8) ctx.lineTo(x, wave(x, layer));
-      ctx.strokeStyle = `rgba(189, 251, 229, ${(.46 - layer * .067) * light})`;
-      ctx.lineWidth = layer ? 1 : 2;
-      ctx.stroke();
+    if (surfaceY < -8) return;
+    for (let x = 0; x < width; x += 2) {
+      const y = Math.round(surfaceY + Math.sin(x / 16 + time * 1.06) * 2.6 + Math.sin(x / 6 - time * .7) * 1.2);
+      ctx.fillStyle = '#296d85';
+      ctx.fillRect(x, 0, 2, Math.max(0, y));
+      ctx.fillStyle = '#4b969f';
+      ctx.fillRect(x, y - 4, 2, 4);
+      ctx.fillStyle = '#80cbc7';
+      ctx.fillRect(x, y, 2, 1);
+      ctx.fillStyle = '#6cb9ba';
+      ctx.fillRect(x, y + 2 + Math.round(Math.sin(x / 11 - time) * 2), 2, 1);
     }
   }
 
-  function terrain(offset, layer) {
+  function terrain(time, offset, foreground) {
+    const layer = foreground ? 1.06 : .72;
     for (const [index, anchor] of shelves.entries()) {
-      const baseline = (anchor / 1000) * height * .9 - offset * layer + height * .27;
-      if (baseline < -height * .6 || baseline > height * 1.4) continue;
-      const ridge = (fraction) => {
-        const edge = Math.pow(Math.abs(fraction * 2 - 1), 2.9) * .32;
-        const broad = Math.sin(fraction * 9 + index * 2 + layer) * .064;
-        const teeth = (Math.cos(fraction * 32 + index) + Math.sin(fraction * 67 - layer * 2)) * .015;
-        return baseline + height * (broad + teeth - edge);
+      const baseline = (anchor / 1000) * height * .9 - offset * layer + height * .29;
+      if (baseline < -height * .55 || baseline > height * 1.4) continue;
+      const ridge = (x) => {
+        const fraction = x / width;
+        const edge = Math.pow(Math.abs(fraction * 2 - 1), 2.1) * .37;
+        const broad = Math.sin(fraction * 10 + index * 2 + layer) * .077;
+        const teeth = (Math.cos(fraction * 33 + index) + Math.sin(fraction * 71 - layer * 2)) * .012;
+        return Math.round(baseline + height * (broad + teeth - edge));
       };
-      const step = Math.max(5, width / 180);
-      ctx.beginPath();
-      for (let x = 0; x <= width; x += step) ctx.lineTo(x, ridge(x / width));
-      ctx.lineTo(width, ridge(1));
-      ctx.lineTo(width, baseline + height * .62);
-      ctx.lineTo(0, baseline + height * .62);
-      ctx.closePath();
-      const rock = ctx.createLinearGradient(0, baseline - height * .38, 0, baseline + height * .46);
-      rock.addColorStop(0, layer >= 1 ? '#001927a6' : '#10526472');
-      rock.addColorStop(.55, layer >= 1 ? '#00121d8c' : '#092c4096');
-      rock.addColorStop(1, '#040e1b00');
-      ctx.fillStyle = rock;
-      ctx.fill();
-    }
-  }
-
-  function swimmingFish(time, offset) {
-    const opacity = clamp(1 - camera / 2300);
-    if (!opacity) return;
-    for (const [x, y, size, seed] of fish) {
-      const school = seed < .53 ? 0 : 1;
-      const direction = school ? -1 : 1;
-      const across = (time * (.013 + seed * .009) + x * .28 + school * .5) % 1;
-      const left = direction > 0 ? across : 1 - across;
-      const top = (.42 + school * .32 + y * .16) * height - offset * (.51 + seed * .24);
-      if (top < -36 || top > height + 36) continue;
+      const deep = index >= 3;
+      const rockColors = deep ? ['#343051', '#212641', '#151c34'] : ['#277080', '#1b485f', '#12384e'];
+      const top = deep ? '#454063' : '#3d8590';
       ctx.save();
-      ctx.translate(left * (width + 88) - 44, top + 6 * Math.sin(time * .95 + x * 15));
-      const magnitude = .44 + size * 1.06;
-      ctx.scale(direction * magnitude, magnitude);
-      ctx.fillStyle = `rgba(0, 24, 39, ${opacity * (.19 + size * .28)})`;
-      ctx.beginPath();
-      ctx.moveTo(-8, 0);
-      ctx.quadraticCurveTo(1, -8, 11, -3);
-      ctx.quadraticCurveTo(18, 0, 10, 4);
-      ctx.quadraticCurveTo(2, 8, -8, 1);
-      ctx.lineTo(-16 + Math.sin(time * 5 + seed * 12) * 3, 5);
-      ctx.lineTo(-14, 0);
-      ctx.lineTo(-17, -5);
-      ctx.closePath();
-      ctx.fill();
-      ctx.restore();
-    }
-  }
-
-  function deepLife(time, offset) {
-    for (const [x, y, seed] of jellies) {
-      const world = 1450 + y * 5400;
-      const top = world / 1000 * height * .9 - offset * (.91 + seed * .15);
-      if (top < -90 || top > height + 90) continue;
-      const left = width * (x < .5 ? .08 + x * .45 : .69 + (x - .5) * .46);
-      const radius = 12 + seed * 19;
-      const pulse = time * 1.35 + seed * 20;
-      ctx.save();
-      ctx.translate(left + Math.sin(time * .38 + seed * 33) * 17, top + Math.sin(pulse) * 10);
-      ctx.scale(1 + Math.sin(pulse) * .09, 1);
-      const glow = ctx.createRadialGradient(0, 0, 0, 0, 0, radius * 1.65);
-      glow.addColorStop(0, 'rgba(79, 219, 241, .18)');
-      glow.addColorStop(1, 'rgba(79, 219, 241, 0)');
-      ctx.fillStyle = glow;
-      ctx.fillRect(-radius * 2, -radius * 2, radius * 4, radius * 4);
-      ctx.beginPath();
-      ctx.ellipse(0, 0, radius, radius * .59, 0, Math.PI, Math.PI * 2);
-      ctx.quadraticCurveTo(0, radius * .4, -radius, 0);
-      ctx.fillStyle = 'rgba(121, 235, 244, .15)';
-      ctx.strokeStyle = 'rgba(146, 235, 247, .37)';
-      ctx.fill();
-      ctx.stroke();
-      for (let arm = -3; arm <= 3; arm++) {
-        const start = arm * radius * .23;
-        ctx.beginPath();
-        ctx.moveTo(start, radius * .13);
-        ctx.bezierCurveTo(start + 10 * Math.sin(pulse + arm), radius * .6, start - 6, radius * 1.08,
-          start + 10 * Math.cos(pulse + arm), radius * (1.45 + seed * .55));
-        ctx.strokeStyle = 'rgba(121, 235, 244, .22)';
-        ctx.stroke();
+      ctx.globalAlpha = foreground ? .87 : .37;
+      for (let x = 0; x < width; x += 3) {
+        const y = ridge(x);
+        const shelf = Math.round(3 + 4 * (1 + Math.sin(x / 11 + index * 4)));
+        ctx.fillStyle = rockColors[2];
+        ctx.fillRect(x, y, 3, height * .47);
+        ctx.fillStyle = rockColors[1];
+        ctx.fillRect(x, y, 3, shelf + 3);
+        ctx.fillStyle = rockColors[0];
+        ctx.fillRect(x, y, 3, Math.max(2, shelf / 2 | 0));
+        ctx.fillStyle = top;
+        ctx.fillRect(x, y, 3, 1);
+        if (x % 15 === 0) {
+          ctx.fillStyle = rockColors[1];
+          ctx.fillRect(x, y + shelf + 7 + (x % 11), 2, 2);
+        }
+      }
+      if (foreground && index < 2) {
+        for (const position of [.055, .12, .21, .79, .89, .95]) {
+          const x = width * position;
+          const y = ridge(x);
+          const lean = Math.sin(time * 1.8 + position * 30) > 0 ? 1 : -1;
+          sprite(kelpSprite, x, y - kelpSprite.height + 1, lean);
+        }
       }
       ctx.restore();
     }
   }
 
-  function suspendedMatter(time, offset) {
-    for (const [x, y, size, seed] of particles) {
-      const drift = Math.sin(time * .6 + seed * 27) * (7 + 12 * size);
-      const vertical = y * height - time * (2 + size * 4) - offset * (.35 + size * .65);
-      const top = ((vertical % height) + height) % height;
-      const deep = camera > 1100;
-      const opacity = (.09 + size * .31) * (.71 + .29 * Math.sin(time * 1.2 + seed * 22));
-      ctx.fillStyle = deep ? `rgba(138, 209, 255, ${opacity})` : `rgba(184, 246, 232, ${opacity})`;
-      ctx.beginPath();
-      ctx.arc(x * width + drift, top, .4 + size * (deep ? 1.5 : 1.9), 0, Math.PI * 2);
-      ctx.fill();
+  function swimmingFish(time, offset) {
+    const opacity = clamp(1 - camera / 1850);
+    if (!opacity) return;
+    for (const [x, y, size, seed] of fish) {
+      const school = seed < .53 ? 0 : 1;
+      const direction = school ? -1 : 1;
+      const across = (time * (.016 + seed * .006) + x * .34 + school * .59) % 1;
+      const left = direction > 0 ? across : 1 - across;
+      const top = (.41 + school * .29 + y * .19) * height - offset * (.51 + seed * .24);
+      ctx.globalAlpha = opacity * (.39 + size * .42);
+      const tail = Number(Math.sin(time * 6 + seed * 30) > 0);
+      sprite(fishSprites[school][tail], left * (width + 30) - 15, top + Math.sin(time * 1.6 + x * 15) * 2, direction);
+    }
+
+    ctx.globalAlpha = opacity * .94;
+    const across = (time * .023 + .18) % 1;
+    const y = height * .72 - offset * .67 + Math.sin(time * 1.3) * 3;
+    sprite(raySprites[Math.floor(time * 3) % 2], across * (width + 60) - 30, y);
+    ctx.globalAlpha = 1;
+  }
+
+  function deepLife(time, offset) {
+    for (const [x, y, seed] of deepCreatures) {
+      const world = 1240 + y * 5580;
+      const top = world / 1000 * height * .9 - offset * (.91 + seed * .13);
+      if (top < -24 || top > height + 24) continue;
+      const left = width * (x < .5 ? .06 + x * .52 : .68 + (x - .5) * .48);
+      if (seed > .54) {
+        const crossing = (x + time * .015) % 1;
+        sprite(lanternSprite, crossing * (width + 36) - 18, top + Math.sin(time * 1.3 + x * 19) * 4);
+        continue;
+      }
+      const pulse = time * 1.75 + seed * 20;
+      ctx.globalAlpha = .59 + Math.sin(pulse) * .21;
+      sprite(jellySprite, left + Math.sin(time * .62 + seed * 22) * 4, top + Math.sin(pulse) * 3, Math.sin(pulse) < 0 ? -1 : 1);
+      ctx.globalAlpha = 1;
     }
   }
 
-  function fadeEdges() {
-    const gradient = ctx.createRadialGradient(width / 2, height * .48, height * .1,
-      width / 2, height * .48, Math.max(width, height) * .64);
-    gradient.addColorStop(0, '#02162100');
-    gradient.addColorStop(1, '#010b1b92');
-    ctx.fillStyle = gradient;
-    ctx.fillRect(0, 0, width, height);
+  function suspendedMatter(time, offset) {
+    const deep = camera > 1100;
+    for (const [x, y, size, seed] of particles) {
+      const drift = Math.sin(time * .6 + seed * 27) * (1 + 3 * size);
+      const vertical = y * height - time * (.35 + size * .9) - offset * (.35 + size * .65);
+      const top = ((vertical % height) + height) % height;
+      ctx.globalAlpha = (.12 + size * .3) * (.72 + .28 * Math.sin(time * 1.8 + seed * 20));
+      ctx.fillStyle = deep ? '#92bcef' : '#b1e4d1';
+      ctx.fillRect(Math.round(x * width + drift), Math.round(top), 1, 1);
+    }
+    ctx.globalAlpha = 1;
   }
 
   function draw(now) {
     const time = motion.matches ? 0 : now / 1000;
     const offset = camera / 1000 * height * .9;
-    ctx.setTransform(density, 0, 0, density, 0, 0);
     waterColor();
     surface(time, offset);
-    terrain(offset, .72);
+    terrain(time, offset, false);
     swimmingFish(time, offset);
     deepLife(time, offset);
-    terrain(offset, 1.04);
+    terrain(time, offset, true);
     suspendedMatter(time, offset);
-    fadeEdges();
+    ctx.fillStyle = texture;
+    ctx.globalAlpha = .2;
+    ctx.fillRect(0, 0, width, height);
+    ctx.globalAlpha = 1;
   }
 
   function animate(now) {
@@ -235,7 +325,6 @@ export function createOcean(canvas) {
     if (now - renderedAt >= 29) {
       const progress = travelDuration ? smooth(clamp((now - travelStarted) / travelDuration)) : 1;
       camera = mix(travelFrom, target, progress);
-      depth = clamp(camera - 70, 0, 7000);
       draw(now);
       renderedAt = now;
     }
@@ -247,7 +336,6 @@ export function createOcean(canvas) {
     frame = 0;
     if (motion.matches) {
       camera = target;
-      depth = clamp(camera - 70, 0, 7000);
       draw(0);
     } else if (!document.hidden) {
       renderedAt = -Infinity;
@@ -256,11 +344,12 @@ export function createOcean(canvas) {
   }
 
   function resize() {
-    width = Math.max(1, canvas.clientWidth);
-    height = Math.max(1, canvas.clientHeight);
-    density = Math.min(devicePixelRatio || 1, 1.5);
-    canvas.width = Math.round(width * density);
-    canvas.height = Math.round(height * density);
+    const pixelSize = canvas.clientWidth <= 550 ? 3 : 5;
+    width = Math.max(1, Math.round(canvas.clientWidth / pixelSize));
+    height = Math.max(1, Math.round(canvas.clientHeight / pixelSize));
+    canvas.width = width;
+    canvas.height = height;
+    ctx.imageSmoothingEnabled = false;
     refresh();
   }
 

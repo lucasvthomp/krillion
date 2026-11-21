@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "Pixelify Sans";
+  src: url("./fonts/pixelify-sans.ttf") format("truetype");
+  font-weight: 400 700;
+  font-display: swap;
+}
+
 :root {
   color-scheme: dark;
   font-family: system-ui, sans-serif;
@@ -5,6 +12,7 @@
   --muted: #c1dce4;
   --accent: #b4f6f1;
   --mono: ui-monospace, "Cascadia Mono", Consolas, monospace;
+  --pixel-font: "Pixelify Sans", var(--mono);
   color: var(--text);
   background: #082b40;
 }
@@ -12,7 +20,14 @@
 *, *::before, *::after { box-sizing: border-box; }
 [hidden] { display: none !important; }
 body { margin: 0; min-height: 100dvh; }
-#ocean { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+#ocean {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  image-rendering: pixelated;
+}
 main {
   position: relative;
   min-height: 100dvh;
@@ -23,13 +38,18 @@ main {
 .screen { width: min(100%, 740px); text-align: center; }
 #home, #round { text-shadow: 0 2px 18px #00151ecc, 0 1px 3px #00151e; }
 #home h1, .screen h2 {
-  font-family: Georgia, "Times New Roman", serif;
-  font-weight: 500;
-  letter-spacing: -.045em;
+  font-weight: 750;
+  letter-spacing: -.04em;
   overflow-wrap: anywhere;
   text-wrap: balance;
 }
-#home h1 { margin: 0; font-size: clamp(4.5rem, 15vw, 10rem); line-height: .98; }
+#home h1 {
+  margin: 0;
+  font: 700 clamp(2.65rem, 12vw, 9rem)/1 var(--pixel-font);
+  letter-spacing: .025em;
+  text-transform: uppercase;
+  text-shadow: 4px 4px #174765, 8px 8px #102d4a, 0 0 24px #12314b;
+}
 #home .instructions {
   max-width: 37ch;
   margin: 20px auto 28px;
@@ -79,12 +99,12 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, summary:focus
 .primary {
   min-height: 48px;
   padding: 11px 24px;
-  border: 1px solid #aff5ed;
-  border-radius: 999px;
+  border: 2px solid #e0fffb;
+  border-radius: 2px;
   background: #b4f6f1;
   color: #092e3a;
   font-weight: 750;
-  box-shadow: 0 0 22px #9deee430;
+  box-shadow: 3px 3px #113955;
 }
 .primary:hover:not(:disabled) { background: #e0fffb; border-color: #e0fffb; }
 .plain-button {
@@ -115,7 +135,7 @@ progress::-moz-progress-bar { background: var(--accent); border-radius: 3px; }
   min-width: 0;
   min-height: 48px;
   border: 1px solid #bde8ef80;
-  border-radius: 24px;
+  border-radius: 2px;
   padding: 11px 16px;
   background: #071f35b8;
   color: var(--text);
@@ -124,12 +144,12 @@ progress::-moz-progress-bar { background: var(--accent); border-radius: 3px; }
 #skip { margin-top: 7px; }
 #retry-status { color: #ffb3c2; margin: 5px 0 0; }
 
-[data-tier="plankton"] { --tier-color: #78c0ff; }
-[data-tier="tooclever"] { --tier-color: #c3a2ff; }
-[data-tier="schooler"] { --tier-color: #65e4b5; }
-[data-tier="rare"] { --tier-color: #f8d86a; }
-[data-tier="deepcut"] { --tier-color: #ffa36e; }
-[data-tier="krillion"] { --tier-color: #ff82b0; }
+[data-tier="plankton"] { --tier-color: #78c6ff; }
+[data-tier="tooclever"] { --tier-color: #70ece8; }
+[data-tier="schooler"] { --tier-color: #97ed7a; }
+[data-tier="rare"] { --tier-color: #ff9a59; }
+[data-tier="deepcut"] { --tier-color: #c8a0ff; }
+[data-tier="krillion"] { --tier-color: #ffe477; }
 [data-tier="none"] { --tier-color: #bdd8df; }
 .feedback {
   margin-bottom: 26px;
@@ -140,8 +160,10 @@ progress::-moz-progress-bar { background: var(--accent); border-radius: 3px; }
 .tier-label { color: var(--tier-color); font-weight: 700; letter-spacing: .055em; }
 .feedback .answer-name {
   margin-block: 9px 10px;
-  font: 500 clamp(2.7rem, 7vw, 6rem)/1 Georgia, serif;
-  letter-spacing: -.035em;
+  color: var(--tier-color);
+  font: 700 clamp(2.55rem, 8.5vw, 7rem)/1.02 var(--pixel-font);
+  letter-spacing: -.025em;
+  text-shadow: 0 4px #071b34, 0 6px 16px #041126;
   text-wrap: balance;
 }
 .depth-gain { color: var(--tier-color); font-weight: 650; }
