@@ -1,7 +1,7 @@
 @font-face {
-  font-family: "Pixelify Sans";
-  src: url("./fonts/pixelify-sans.ttf") format("truetype");
-  font-weight: 400 700;
+  font-family: "Chakra Petch";
+  src: url("./fonts/chakra-petch-bold.ttf") format("truetype");
+  font-weight: 700;
   font-display: swap;
 }
 
@@ -12,7 +12,7 @@
   --muted: #c1dce4;
   --accent: #b4f6f1;
   --mono: ui-monospace, "Cascadia Mono", Consolas, monospace;
-  --pixel-font: "Pixelify Sans", var(--mono);
+  --display-font: "Chakra Petch", system-ui, sans-serif;
   color: var(--text);
   background: #082b40;
 }
@@ -37,15 +37,17 @@ main {
 }
 .screen { width: min(100%, 740px); text-align: center; }
 #home, #round { text-shadow: 0 2px 18px #00151ecc, 0 1px 3px #00151e; }
-#home h1, .screen h2 {
-  font-weight: 750;
-  letter-spacing: -.04em;
+#home h1, .screen h2, .feedback .answer-name {
+  font-family: var(--display-font);
+  font-weight: 700;
+  letter-spacing: -.02em;
   overflow-wrap: anywhere;
   text-wrap: balance;
 }
 #home h1 {
   margin: 0;
-  font: 700 clamp(2.65rem, 12vw, 9rem)/1 var(--pixel-font);
+  font-size: clamp(2.65rem, 12vw, 9rem);
+  line-height: 1;
   letter-spacing: .025em;
   text-transform: uppercase;
   text-shadow: 4px 4px #174765, 8px 8px #102d4a, 0 0 24px #12314b;
@@ -161,8 +163,8 @@ progress::-moz-progress-bar { background: var(--accent); border-radius: 3px; }
 .feedback .answer-name {
   margin-block: 9px 10px;
   color: var(--tier-color);
-  font: 700 clamp(2.55rem, 8.5vw, 7rem)/1.02 var(--pixel-font);
-  letter-spacing: -.025em;
+  font-size: clamp(2.55rem, 8vw, 6.5rem);
+  line-height: 1.04;
   text-shadow: 0 4px #071b34, 0 6px 16px #041126;
   text-wrap: balance;
 }

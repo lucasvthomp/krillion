@@ -79,6 +79,37 @@ const kelp = [
   '..112...',
   '..112...',
 ];
+const branchingCoral = [
+  '..3......3......',
+  '..22.....32...3.',
+  '...21....21..32.',
+  '3...21...21..21.',
+  '32..221..21.221.',
+  '.21..221.21.21..',
+  '..211.22121.21..',
+  '...222.2221221..',
+  '.....21222121...',
+  '......222221....',
+  '.....0022100....',
+];
+const fanCoral = [
+  '...2......3....',
+  '.2322..3.2322..',
+  '22232223233322.',
+  '211232233321221',
+  '.223122121232.',
+  '..21223222122.',
+  '....11222121..',
+  '......2221....',
+  '.......21.....',
+  '......0110....',
+];
+const reefDecor = [
+  [.046, 'coral', 1], [.100, 'kelp', 1], [.147, 'fan', -1], [.174, 'coral', -1],
+  [.234, 'kelp', -1], [.298, 'coral', -1], [.390, 'fan', 1], [.459, 'coral', 1],
+  [.606, 'fan', -1], [.688, 'kelp', 1], [.747, 'coral', -1], [.815, 'fan', 1],
+  [.873, 'coral', 1], [.924, 'kelp', -1], [.961, 'fan', -1],
+];
 
 const clamp = (number, min = 0, max = 1) => Math.max(min, Math.min(max, number));
 const mix = (from, to, ratio) => from + (to - from) * ratio;
@@ -121,13 +152,29 @@ export function createOcean(canvas) {
   const shelves = [660, 1700, 2950, 4380, 5650, 6920];
   const foldedTail = reefFish.map((row, index) => (index === 3 ? '.01' : '...') + row.slice(3));
   const fishSprites = [
-    ['#123354', '#206085', '#508ba1', '#a8d4c6'],
-    ['#233653', '#526589', '#7c9bad', '#b6dfd5'],
+    ['#173a67', '#2899b4', '#62ddd6', '#e2fff3'],
+    ['#82465b', '#e88857', '#ffc47d', '#fff2c9'],
+    ['#4f4182', '#ae75c5', '#db9fe2', '#f6dafa'],
+    ['#646340', '#bf9f56', '#e9d388', '#fff2c0'],
+    ['#273d69', '#658cb6', '#a7c8e1', '#ffffff'],
   ].map((colors) => [makeSprite(reefFish, colors), makeSprite(foldedTail, colors)]);
-  const raySprites = ray.map((rows) => makeSprite(rows, ['#123452', '#195573', '#347b95', '#5ba0a9']));
-  const jellySprite = makeSprite(jelly, ['#397394', '#559cb7', '#87d5d5', '#c1fff0']);
+  const raySprites = ray.map((rows) => makeSprite(rows, ['#263453', '#455a7e', '#778dab', '#afa9c6']));
+  const jellySprites = [
+    makeSprite(jelly, ['#397394', '#559cb7', '#87d5d5', '#c1fff0']),
+    makeSprite(jelly, ['#56427d', '#a268b7', '#e297ce', '#ffcef2']),
+  ];
   const lanternSprite = makeSprite(lanternfish, ['#162642', '#2c4b6e', '#4e819e', '#b5f7ce']);
   const kelpSprite = makeSprite(kelp, ['#0a3046', '#14615f', '#248880']);
+  const coralSprites = {
+    coral: [
+      makeSprite(branchingCoral, ['#743753', '#ae4c62', '#e07577', '#ffa38c']),
+      makeSprite(branchingCoral, ['#754c62', '#b57065', '#eaa36d', '#ffcc91']),
+    ],
+    fan: [
+      makeSprite(fanCoral, ['#66426e', '#9d609d', '#d68bc1', '#f4aad5']),
+      makeSprite(fanCoral, ['#775368', '#bc7064', '#e59671', '#f9c597']),
+    ],
+  };
   const dither = document.createElement('canvas');
   dither.width = dither.height = 4;
   const dots = dither.getContext('2d');
@@ -222,6 +269,7 @@ export function createOcean(canvas) {
       const deep = index >= 3;
       const rockColors = deep ? ['#343051', '#212641', '#151c34'] : ['#277080', '#1b485f', '#12384e'];
       const top = deep ? '#454063' : '#3d8590';
+      const sand = index === 0 ? ['#deb987', '#af8c68', '#777668'] : ['#a49a8d', '#817d78', '#5e646e'];
       ctx.save();
       ctx.globalAlpha = foreground ? .87 : .37;
       for (let x = 0; x < width; x += 3) {
@@ -235,17 +283,35 @@ export function createOcean(canvas) {
         ctx.fillRect(x, y, 3, Math.max(2, shelf / 2 | 0));
         ctx.fillStyle = top;
         ctx.fillRect(x, y, 3, 1);
+        if (foreground && index < 2) {
+          const bank = Math.sin(x / width * 13 + index * 2) + Math.sin(x / width * 22 + 1) * .26;
+          const thickness = Math.max(0, Math.round((bank + .38) * 5));
+          if (thickness > 0) {
+            ctx.fillStyle = sand[2];
+            ctx.fillRect(x, y + 2, 3, thickness + 2);
+            ctx.fillStyle = sand[1];
+            ctx.fillRect(x, y + 1, 3, thickness);
+            ctx.fillStyle = sand[0];
+            ctx.fillRect(x, y, 3, thickness > 4 ? 2 : 1);
+          }
+        }
         if (x % 15 === 0) {
           ctx.fillStyle = rockColors[1];
           ctx.fillRect(x, y + shelf + 7 + (x % 11), 2, 2);
         }
       }
       if (foreground && index < 2) {
-        for (const position of [.055, .12, .21, .79, .89, .95]) {
-          const x = width * position;
+        for (const [item, [position, kind, facing]] of reefDecor.entries()) {
+          if (index === 1 && item % 2) continue;
+          const x = width * position + (index === 1 ? 5 : 0);
           const y = ridge(x);
-          const lean = Math.sin(time * 1.8 + position * 30) > 0 ? 1 : -1;
-          sprite(kelpSprite, x, y - kelpSprite.height + 1, lean);
+          if (kind === 'kelp') {
+            const lean = Math.sin(time * 1.8 + position * 30) > 0 ? 1 : -1;
+            sprite(kelpSprite, x, y - kelpSprite.height + 1, lean);
+          } else {
+            const coral = coralSprites[kind][(item + index) % 2];
+            sprite(coral, x, y - coral.height + 1, facing);
+          }
         }
       }
       ctx.restore();
@@ -261,9 +327,10 @@ export function createOcean(canvas) {
       const across = (time * (.016 + seed * .006) + x * .34 + school * .59) % 1;
       const left = direction > 0 ? across : 1 - across;
       const top = (.41 + school * .29 + y * .19) * height - offset * (.51 + seed * .24);
-      ctx.globalAlpha = opacity * (.39 + size * .42);
+      ctx.globalAlpha = opacity * (.50 + size * .44);
       const tail = Number(Math.sin(time * 6 + seed * 30) > 0);
-      sprite(fishSprites[school][tail], left * (width + 30) - 15, top + Math.sin(time * 1.6 + x * 15) * 2, direction);
+      const species = Math.floor(x * fishSprites.length);
+      sprite(fishSprites[species][tail], left * (width + 30) - 15, top + Math.sin(time * 1.6 + x * 15) * 2, direction);
     }
 
     ctx.globalAlpha = opacity * .94;
@@ -286,6 +353,7 @@ export function createOcean(canvas) {
       }
       const pulse = time * 1.75 + seed * 20;
       ctx.globalAlpha = .59 + Math.sin(pulse) * .21;
+      const jellySprite = jellySprites[Number(x > .45)];
       sprite(jellySprite, left + Math.sin(time * .62 + seed * 22) * 4, top + Math.sin(pulse) * 3, Math.sin(pulse) < 0 ? -1 : 1);
       ctx.globalAlpha = 1;
     }
@@ -315,7 +383,7 @@ export function createOcean(canvas) {
     terrain(time, offset, true);
     suspendedMatter(time, offset);
     ctx.fillStyle = texture;
-    ctx.globalAlpha = .2;
+    ctx.globalAlpha = .12;
     ctx.fillRect(0, 0, width, height);
     ctx.globalAlpha = 1;
   }
