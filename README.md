@@ -1,8 +1,14 @@
 # Krillion
 
-Krillion is a browser trivia game that draws seven distinct prompts for each game. Players get three seconds to read each prompt and 25 seconds to answer. A guess outside the bank costs three seconds. The answer bank supplies the names, rarity tiers and scores, and every point adds ten metres to the dive.
+Krillion is a browser trivia game that draws seven distinct prompts for each game. Players get three seconds to read each prompt and 25 seconds to answer. A wrong guess leaves the clock running at its normal pace. The answer bank supplies the names, rarity tiers and scores, and every point adds ten metres to the dive.
 
 The animated ocean fills the screen and descends as the score increases. The scene respects the browser's reduced-motion preference.
+
+## Multiplayer
+
+Choose Multiplayer, enter a display name, and create a room or join with its six-character code. A room supports 2–12 players. Everyone gets the same prompts and a shared timer. Each round ends when everyone answers or passes, or when the timer expires. The host advances the round leaderboard. After the final leaderboard, each player can return to the same lobby with **Play again**. The host can start another dive once the players still in the room are back in the lobby.
+
+Rooms use [PeerJS Cloud](https://peerjs.com/server/cloud) for WebRTC signaling. The host's browser runs the game and validates answers. Room codes last as long as the host keeps the room open. WebRTC connectivity between players is required.
 
 ## Play locally
 

@@ -6,8 +6,8 @@
   <meta name="description" content="Seven random questions. Find an uncommon answer and see how deep you can go.">
   <meta name="theme-color" content="#023247">
   <title>Krillion | Rare-answer trivia</title>
-  <link rel="stylesheet" href="./style.css?v=10">
-  <script type="module" src="./game.mjs?v=11"></script>
+  <link rel="stylesheet" href="./style.css?v=12">
+  <script type="module" src="./game.mjs?v=12"></script>
 </head>
 <body>
   <canvas id="ocean" aria-hidden="true"></canvas>
@@ -15,10 +15,49 @@
     <section class="screen" id="home" aria-labelledby="home-heading">
       <h1 id="home-heading">Krillion</h1>
       <p class="instructions">Find an unusual answer to each of seven prompts. Rarer answers take you deeper.</p>
-      <button class="primary" id="start" type="button" disabled>Start dive</button>
+      <div class="result-actions">
+        <button class="primary" id="start" type="button" disabled>Start dive</button>
+        <button class="plain-button" id="multiplayer" type="button">Multiplayer</button>
+      </div>
       <button class="plain-button" id="help-button" type="button">How to play</button>
       <p class="notice" id="best"></p>
       <p class="notice" id="load-status" role="status">Loading the prompt bank…</p>
+    </section>
+
+    <section class="screen" id="room-screen" aria-label="Multiplayer" hidden>
+      <div id="room-entry">
+        <h2 id="room-entry-heading" tabindex="-1">Multiplayer</h2>
+        <form class="room-form" id="room-form">
+          <label for="display-name">Display name</label>
+          <input id="display-name" type="text" maxlength="24" autocomplete="nickname" required>
+          <label for="join-code">Room code</label>
+          <input id="join-code" type="text" maxlength="8" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="6 characters">
+          <div class="result-actions">
+            <button class="primary" id="create-room" type="button">Create room</button>
+            <button class="primary" id="join-room" type="submit">Join room</button>
+          </div>
+        </form>
+        <button class="plain-button" id="room-back" type="button">Main menu</button>
+      </div>
+      <div id="room-lobby" hidden>
+        <h2 id="room-lobby-heading" tabindex="-1">Room lobby</h2>
+        <div class="room-code-line">
+          <div><span class="category">Room code</span><output id="room-code" aria-label="Room code"></output></div>
+          <button class="plain-button" id="copy-code" type="button">Copy code</button>
+        </div>
+        <ul class="room-players" id="room-players" aria-label="Players in the room"></ul>
+        <p class="notice" id="lobby-status"></p>
+        <button class="primary" id="room-start" type="button" hidden>Start game</button>
+      </div>
+      <div id="room-board" hidden>
+        <h2 id="room-board-heading" tabindex="-1">Leaderboard</h2>
+        <ol class="room-ranks" id="room-ranks" aria-label="Player standings"></ol>
+        <p class="notice" id="board-status"></p>
+        <button class="primary" id="room-continue" type="button" hidden>Continue</button>
+        <button class="primary" id="room-replay" type="button" hidden>Play again</button>
+      </div>
+      <p class="notice" id="room-notice" role="status"></p>
+      <button class="plain-button" id="leave-room" type="button" hidden>Leave room</button>
     </section>
 
     <section class="screen" id="round" aria-labelledby="prompt" hidden>
@@ -56,6 +95,7 @@
           <p class="depth-gain" id="depth-gain"></p>
         </div>
         <button class="primary" id="next" type="button">Next round</button>
+        <p class="notice" id="room-waiting" role="status" hidden></p>
       </div>
     </section>
 
@@ -83,7 +123,7 @@
     <ol>
       <li>Each dive draws seven different prompts from the answer bank.</li>
       <li>Read each prompt for three seconds, then take up to 25 seconds to answer.</li>
-      <li>A guess outside the bank costs three seconds. You can guess again or pass.</li>
+      <li>Wrong guesses carry no time penalty. You can guess again or pass.</li>
       <li>If the game finds a close spelling, you can confirm it while the timer runs.</li>
       <li>Each point takes you 10 metres deeper.</li>
     </ol>
@@ -93,10 +133,10 @@
   </dialog>
   <dialog id="quit-dialog" aria-labelledby="quit-heading">
     <h2 id="quit-heading">End this dive?</h2>
-    <p>You’ll lose the score for this game.</p>
+    <p id="quit-description">You’ll lose the score for this game.</p>
     <form method="dialog" class="result-actions">
       <button class="primary" value="continue">Keep playing</button>
-      <button class="plain-button" value="quit">End dive</button>
+      <button class="plain-button" id="quit-confirm" value="quit">End dive</button>
     </form>
   </dialog>
   <noscript>Enable JavaScript to play Krillion.</noscript>

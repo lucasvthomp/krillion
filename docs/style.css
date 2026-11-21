@@ -36,7 +36,7 @@ main {
   padding: max(96px, 14dvh) 22px 64px;
 }
 .screen { width: min(100%, 740px); text-align: center; }
-#home, #round { text-shadow: 0 2px 18px #00151ecc, 0 1px 3px #00151e; }
+#home, #round, #room-screen { text-shadow: 0 2px 18px #00151ecc, 0 1px 3px #00151e; }
 #home h1, .screen h2, .feedback .answer-name {
   font-family: var(--display-font);
   font-weight: 700;
@@ -61,6 +61,7 @@ main {
   text-wrap: balance;
 }
 #home .plain-button { display: block; margin: 12px auto 0; }
+#home .result-actions .plain-button { margin: 0; }
 .screen h2 { margin: 0 auto 22px; font-size: clamp(2.15rem, 5.8vw, 4.6rem); line-height: 1.06; }
 .screen h2:focus { outline: none; }
 #round { align-self: center; }
@@ -145,6 +146,37 @@ progress::-moz-progress-bar { background: var(--accent); border-radius: 3px; }
 .answer-row input::placeholder { color: var(--muted); }
 #skip { margin-top: 7px; }
 #retry-status { color: #ffb3c2; margin: 5px 0 0; }
+.room-form { display: grid; gap: 8px; width: min(100%, 390px); margin: 0 auto 12px; text-align: left; }
+.room-form input {
+  min-height: 48px;
+  min-width: 0;
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #bde8ef80;
+  border-radius: 2px;
+  background: #071f35d9;
+  color: var(--text);
+}
+.room-form input::placeholder { color: var(--muted); }
+.room-form .result-actions { margin-top: 10px; }
+#join-code { text-transform: uppercase; }
+.room-code-line { display: flex; align-items: flex-end; justify-content: center; flex-wrap: wrap; gap: 10px 24px; }
+#room-code { display: block; margin-top: 3px; color: var(--accent); font: 700 clamp(1.65rem, 7vw, 3rem)/1 var(--mono); letter-spacing: .14em; }
+.room-players, .room-ranks { list-style: none; margin: 20px auto; padding: 0; max-width: 520px; text-align: left; }
+.room-players li, .room-ranks li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px 16px;
+  padding: 9px;
+  border-bottom: 1px solid #d1f3f750;
+  background: #082438b0;
+  overflow-wrap: anywhere;
+}
+.room-players li:first-child, .room-ranks li:first-child { border-top: 1px solid #d1f3f750; }
+.room-player-meta, .room-rank-total { flex-shrink: 0; color: var(--accent); font: .82rem var(--mono); }
+.room-rank-round { display: block; color: var(--muted); margin-top: 3px; font: .76rem var(--mono); }
+#leave-room { display: block; margin: 10px auto 0; }
 .spelling-suggestion {
   margin-top: 10px;
   padding: 10px 14px;
