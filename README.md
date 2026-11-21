@@ -2,6 +2,8 @@
 
 Krillion is a browser trivia game that draws seven distinct prompts for each game. Players get three seconds to read each prompt and 25 seconds to answer. A guess outside the bank costs three seconds. The answer bank supplies the names, rarity tiers and scores, and every point adds ten metres to the dive.
 
+The animated ocean fills the screen and descends as the score increases. The scene respects the browser's reduced-motion preference.
+
 ## Play locally
 
 Run `node scripts/serve.mjs` and open [the local game](http://127.0.0.1:8080/krillion/). The static site needs a modern browser with gzip decompression support.

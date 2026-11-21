@@ -1,3 +1,5 @@
+import { createOcean } from './ocean.mjs?v=3';
+
 const roundsPerGame = 7;
 const readingSeconds = 3;
 const roundSeconds = 25;
@@ -32,15 +34,9 @@ const timer = byId('timer');
 const timeBar = byId('time-bar');
 const retryStatus = byId('retry-status');
 const reveal = byId('reveal');
-const chart = byId('chart');
+const ocean = createOcean(byId('ocean'));
 const help = byId('help');
 const quitDialog = byId('quit-dialog');
-const markers = Array.from({ length: roundsPerGame }, () => {
-  const marker = document.createElement('span');
-  marker.className = 'marker';
-  byId('round-markers').append(marker);
-  return marker;
-});
 
 let promptGroups;
 let rounds = [];
@@ -149,7 +145,7 @@ async function startGame() {
     home.hidden = true;
     resultsPanel.hidden = true;
     roundPanel.hidden = false;
-    updateGauge();
+    updateDepth();
     showRound();
   } catch (error) {
     console.error(error);
@@ -165,12 +161,11 @@ function showRound() {
   byId('round-position').textContent = `Round ${row + 1} of ${roundsPerGame}`;
   byId('category').textContent = current.category;
   byId('prompt').textContent = current.prompt;
+  roundPanel.classList.remove('revealed');
   reveal.hidden = true;
   form.hidden = true;
   countIn.hidden = false;
-  timer.hidden = true;
   timer.classList.remove('urgent');
-  timeBar.classList.add('inactive');
   answerInput.value = '';
   retryStatus.textContent = '';
   phase = 'reading';
@@ -190,8 +185,7 @@ function updateTimer() {
     timer.textContent = `${roundSeconds}s`;
     timeBar.value = roundSeconds;
     countIn.hidden = true;
-    timeBar.classList.remove('inactive');
-    timer.hidden = form.hidden = false;
+    form.hidden = false;
     if (!quitDialog.open && !help.open) answerInput.focus();
     return;
   }
@@ -210,30 +204,25 @@ function finishRound(reason, matched) {
   const tier = matched ? matched[2] : 'none';
   score += points;
   log.push({ prompt: current.prompt, answer: matched?.[0], points, tier, example: current.example });
-  updateGauge();
+  updateDepth();
 
   byId('feedback').dataset.tier = tier;
   byId('answer-tier').textContent = rarity[tier]?.[0] ?? (matched ? 'Accepted' : 'No score');
   byId('answer-name').textContent = matched?.[0] ?? (reason === 'timeout' ? 'Time is up' : 'Round passed');
   byId('depth-gain').textContent = `+${points} pts · ${points * 10} m deeper`;
-  timeBar.classList.add('inactive');
-  timer.hidden = form.hidden = true;
+  form.hidden = true;
+  roundPanel.classList.add('revealed');
   reveal.hidden = false;
   nextButton.textContent = row + 1 === roundsPerGame ? 'See dive log' : 'Next round';
   if (!quitDialog.open && !help.open) nextButton.focus();
 }
 
-function updateGauge() {
+function updateDepth() {
   const depth = score * 10;
+  byId('depth-readout').hidden = !home.hidden;
   byId('depth').value = depth.toLocaleString();
   byId('zone').textContent = oceanZones.find(([start]) => depth >= start)[1];
-  byId('score').textContent = `${score} / ${maxScore} pts`;
-  chart.style.setProperty('--depth', `${score / maxScore * 100}%`);
-  chart.style.setProperty('--water-darkness', score / maxScore * .65);
-  chart.dataset.tier = log.at(-1)?.tier ?? '';
-  markers.forEach((marker, index) => {
-    marker.dataset.tier = log[index]?.tier ?? '';
-  });
+  ocean.descend(depth, home.hidden);
 }
 
 function readBest() {
@@ -252,6 +241,7 @@ function showResults() {
   roundPanel.hidden = true;
   resultsPanel.hidden = false;
   resultStatus.textContent = '';
+  resultsPanel.querySelector('details').open = false;
   byId('share-text').hidden = true;
   const record = score > best;
   if (record) {
@@ -281,44 +271,6 @@ function showResults() {
     return item;
   }));
   byId('results-heading').focus();
-}
-
-function drawContours() {
-  const canvas = byId('contours');
-  const { width, height } = chart.getBoundingClientRect();
-  if (!width || !height) return;
-  const scale = Math.min(devicePixelRatio, 2);
-  canvas.width = Math.round(width * scale);
-  canvas.height = Math.round(height * scale);
-  const context = canvas.getContext('2d');
-  if (!context) return;
-  context.scale(scale, scale);
-  context.lineWidth = 1;
-
-  for (let step = 0; step <= 4; step++) {
-    const y = 23 + (height - 45) * step / 4;
-    context.beginPath();
-    context.strokeStyle = '#9cdfcc35';
-    context.setLineDash([3, 5]);
-    context.moveTo(19, y);
-    context.lineTo(width - 66, y);
-    context.stroke();
-  }
-  context.setLineDash([]);
-  for (let line = 0; line < 37; line++) {
-    const radius = 14 + line * Math.max(width, height) / 37;
-    context.strokeStyle = line % 5 ? '#63c5ad38' : '#8cdfbf6b';
-    context.beginPath();
-    for (let step = 0; step <= 192; step++) {
-      const angle = step / 192 * Math.PI * 2;
-      const offset = 1 + .14 * Math.sin(angle * 3 + line * .06) + .08 * Math.cos(angle * 5 - line * .065);
-      const x = width * .31 + Math.cos(angle) * radius * offset * 1.1;
-      const y = height * .69 + Math.sin(angle) * radius * offset * .61;
-      if (step === 0) context.moveTo(x, y);
-      else context.lineTo(x, y);
-    }
-    context.stroke();
-  }
 }
 
 form.addEventListener('submit', (event) => {
@@ -367,7 +319,7 @@ quitDialog.addEventListener('close', () => {
   score = 0;
   roundPanel.hidden = true;
   home.hidden = false;
-  updateGauge();
+  updateDepth();
   startButton.focus();
 });
 byId('share').addEventListener('click', async () => {
@@ -385,7 +337,6 @@ byId('share').addEventListener('click', async () => {
     resultStatus.textContent = 'Select and copy this result.';
   }
 });
-new ResizeObserver(drawContours).observe(chart);
 for (const [tier, [label, points]] of Object.entries(rarity)) {
   const item = document.createElement('li');
   item.dataset.tier = tier;

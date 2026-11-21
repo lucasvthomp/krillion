@@ -4,105 +4,73 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Seven random questions. Find an uncommon answer and see how deep you can go.">
-  <meta name="theme-color" content="#101f29">
+  <meta name="theme-color" content="#023247">
   <title>Krillion | Rare-answer trivia</title>
-  <link rel="stylesheet" href="./style.css?v=2">
-  <script type="module" src="./game.mjs?v=2"></script>
+  <link rel="stylesheet" href="./style.css?v=3">
+  <script type="module" src="./game.mjs?v=3"></script>
 </head>
 <body>
-  <header class="site-header shell">
-    <a href="./" class="wordmark"><span class="mark" aria-hidden="true">◎</span> KRILLION</a>
-    <button class="plain-button" id="help-button" type="button">How to play <span aria-hidden="true">?</span></button>
-  </header>
+  <canvas id="ocean" aria-hidden="true"></canvas>
+  <main>
+    <section class="screen" id="home" aria-labelledby="home-heading">
+      <h1 id="home-heading">Krillion</h1>
+      <p class="instructions">Find an unusual answer to each of seven prompts. Rarer answers take you deeper.</p>
+      <button class="primary" id="start" type="button" disabled>Start dive</button>
+      <button class="plain-button" id="help-button" type="button">How to play</button>
+      <p class="notice" id="best"></p>
+      <p class="notice" id="load-status" role="status">Loading the prompt bank…</p>
+    </section>
 
-  <main class="shell">
-    <div class="layout">
-      <div class="play-panel">
-        <section id="home" aria-labelledby="home-heading">
-          <p class="eyebrow"><span class="status-dot"></span> Rare-answer trivia</p>
-          <h1 id="home-heading">Think deeper<span>.</span></h1>
-          <p class="intro">Seven random prompts. Find an answer most people would overlook. The rarer your answer, the deeper you dive.</p>
-          <button class="primary" id="start" type="button" disabled>Start dive</button>
-          <p class="notice" id="load-status" role="status">Loading the prompt bank…</p>
-          <div class="facts">
-            <div><strong>7</strong><span>rounds</span></div>
-            <div><strong>25s</strong><span>per round</span></div>
-            <div><strong>700</strong><span>max points</span></div>
-          </div>
-        </section>
-
-        <section id="round" aria-labelledby="prompt" hidden>
-          <div class="round-header">
-            <p class="eyebrow" id="round-position"></p>
-            <div class="round-controls">
-              <span class="timer" id="timer" role="timer" aria-label="Seconds remaining">25s</span>
-              <button class="plain-button" id="quit" type="button">Quit</button>
-            </div>
-          </div>
-          <progress id="time-bar" max="25" value="25" aria-label="Round time remaining"></progress>
-          <p class="category" id="category"></p>
-          <h2 id="prompt" tabindex="-1"></h2>
-          <div class="count-in" id="count-in" hidden>
-            Read the prompt <strong id="read-count" aria-hidden="true">3</strong>
-          </div>
-          <form id="answer-form" hidden>
-            <label class="visually-hidden" for="answer">Your answer</label>
-            <div class="answer-row">
-              <input id="answer" type="text" placeholder="Your answer…" maxlength="300" autocomplete="off" spellcheck="false" required aria-describedby="prompt">
-              <button class="primary" type="submit">Dive</button>
-            </div>
-            <button class="plain-button skip" id="skip" type="button">Pass</button>
-            <p class="notice" id="retry-status" role="status"></p>
-          </form>
-          <div id="reveal" hidden>
-            <div class="feedback" id="feedback" role="status">
-              <p class="tier-label" id="answer-tier"></p>
-              <p class="answer-name" id="answer-name"></p>
-              <p class="depth-gain" id="depth-gain"></p>
-            </div>
-            <button class="primary" id="next" type="button">Next round</button>
-          </div>
-        </section>
-
-        <section id="results" aria-labelledby="results-heading" hidden>
-          <p class="eyebrow">Dive complete</p>
-          <h2 id="results-heading" tabindex="-1">Your dive log</h2>
-          <p class="intro" id="summary"></p>
-          <ol id="log"></ol>
-          <div class="result-actions">
-            <button class="primary" id="replay" type="button">Play again</button>
-            <button class="plain-button" id="share" type="button">Copy result</button>
-          </div>
-          <p class="notice" id="result-status" role="status"></p>
-          <textarea id="share-text" readonly aria-label="Result to copy" hidden></textarea>
-        </section>
+    <section class="screen" id="round" aria-labelledby="prompt" hidden>
+      <div class="round-meta">
+        <p id="round-position"></p>
+        <button class="plain-button" id="quit" type="button">Quit</button>
       </div>
+      <p class="category" id="category"></p>
+      <h2 id="prompt" tabindex="-1"></h2>
+      <p class="count-in" id="count-in" hidden>Clock starts in <strong id="read-count">3</strong></p>
+      <form id="answer-form" hidden>
+        <div class="clock">
+          <progress id="time-bar" max="25" value="25" aria-label="Round time remaining"></progress>
+          <span class="timer" id="timer" role="timer" aria-label="Seconds remaining">25s</span>
+        </div>
+        <label class="visually-hidden" for="answer">Your answer</label>
+        <div class="answer-row">
+          <input id="answer" type="text" placeholder="Your answer…" maxlength="300" autocomplete="off" spellcheck="false" required aria-describedby="prompt">
+          <button class="primary" type="submit">Dive</button>
+        </div>
+        <button class="plain-button" id="skip" type="button">Pass</button>
+        <p class="notice" id="retry-status" role="status"></p>
+      </form>
+      <div id="reveal" hidden>
+        <div class="feedback" id="feedback" role="status">
+          <p class="tier-label" id="answer-tier"></p>
+          <p class="answer-name" id="answer-name"></p>
+          <p class="depth-gain" id="depth-gain"></p>
+        </div>
+        <button class="primary" id="next" type="button">Next round</button>
+      </div>
+    </section>
 
-      <aside class="instrument" aria-label="Depth gauge">
-        <div class="instrument-header">
-          <div>
-            <span class="eyebrow"><span class="status-dot"></span> Depth gauge</span>
-            <span class="zone" id="zone">Surface</span>
-          </div>
-          <span class="depth-number"><output id="depth">0</output> <small>m</small></span>
-        </div>
-        <div id="chart">
-          <canvas id="contours" aria-hidden="true"></canvas>
-          <div class="scale" aria-hidden="true">
-            <span>0 m</span><span>1,750</span><span>3,500</span><span>5,250</span><span>7,000</span>
-          </div>
-          <div class="trace" aria-hidden="true"><span><i></i></span></div>
-        </div>
-        <div class="instrument-footer">
-          <span id="score">0 / 700 pts</span>
-          <div id="round-markers" aria-hidden="true"></div>
-        </div>
-      </aside>
+    <section class="screen" id="results" aria-labelledby="results-heading" hidden>
+      <h2 id="results-heading" tabindex="-1">Dive complete</h2>
+      <p id="summary"></p>
+      <div class="result-actions">
+        <button class="primary" id="replay" type="button">Play again</button>
+        <button class="plain-button" id="share" type="button">Copy result</button>
+      </div>
+      <p class="notice" id="result-status" role="status"></p>
+      <textarea id="share-text" readonly aria-label="Result to copy" hidden></textarea>
+      <details class="dive-log">
+        <summary>Dive log</summary>
+        <ol id="log"></ol>
+      </details>
+    </section>
+
+    <div class="depth-readout" id="depth-readout" hidden>
+      <output id="depth" aria-label="Depth">0</output> <span class="unit">m</span>
+      <span class="zone" id="zone">Surface</span>
     </div>
-    <footer class="site-footer">
-      <span>Krillion</span>
-      <span id="best"></span>
-    </footer>
   </main>
 
   <dialog id="help" aria-labelledby="help-heading">
