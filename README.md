@@ -16,10 +16,15 @@ The site is ready to publish from `main` and the `/docs` directory using GitHub 
 
 The supplied dataset identifies itself as an export of Krillion public reveal data. The site preserves the prompt text, category, accepted answer text, tier, and score from that export. It samples prompts by distinct wording. When the same wording appears in more than one source game, it randomly chooses one matching answer bank.
 
+The coverage build checks every prompt against [the coverage rules](scripts/answer-coverage-rules.mjs). It can add answers and alternate names from a scoped [Wikidata CC0](https://www.wikidata.org/wiki/Wikidata:Licensing) collection, an equivalent prompt, or a narrower prompt whose answers also qualify. New answers get a provisional Rare score of 60. Direct matches take precedence over aliases, and ambiguous aliases are skipped.
+
+The [coverage report](scripts/answer-coverage.json) lists original and updated counts, alternate names, and the evidence used for every prompt. Prompts marked `needs-specific-source` still need a source that verifies their exact wording.
+
 To rebuild the static answer files after updating the dataset, run the following from the repository root.
 
 ```powershell
 node scripts/build-bank.mjs 'C:\path\to\krillion-answers.jsonl.gz'
+node scripts/enrich-bank.mjs
 ```
 
-The original archive is kept separately. GitHub Pages exposes the packaged answer bank as public site files.
+The enrichment uses the checked-in source snapshot, so rebuilding and playing require no Wikidata requests. Individual additions record a Wikidata entity ID or a donor prompt ID. The original archive is kept separately. GitHub Pages exposes the packaged answer bank as public site files.

@@ -1,5 +1,5 @@
 import { createOcean } from './ocean.mjs?v=5';
-import { buildLookup, exactKey } from './answers.mjs?v=7';
+import { buildLookup, exactKey } from './answers.mjs?v=8';
 
 const roundsPerGame = 7;
 const readingSeconds = 3;
@@ -54,7 +54,7 @@ let phase = 'idle';
 let pendingAnswer;
 
 function bankUrl(file) {
-  return new URL(`./bank/${file}`, import.meta.url);
+  return new URL(`./bank/${file}?v=8`, import.meta.url);
 }
 
 async function loadIndex() {

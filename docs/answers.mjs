@@ -96,6 +96,11 @@ export function buildLookup(answers, prompt) {
       else if (previous && previous[1] !== entry[1]) loose.set(folded, null);
       addUnique(unique, folded, entry);
     }
+    for (const alternate of entry[3] ?? []) addUnique(aliases, looseKey(alternate), entry);
+    if (name.startsWith('the ')) {
+      const shorter = looseKey(name.slice(4));
+      if (shorter.length >= 3) addUnique(aliases, shorter, entry);
+    }
     for (const form of shortenedForms(name, labels)) addUnique(aliases, form, entry);
   }
 
@@ -103,7 +108,16 @@ export function buildLookup(answers, prompt) {
     match(text) {
       const key = exactKey(text);
       const folded = looseKey(key);
-      return exact.get(key) ?? (loose.has(folded) ? loose.get(folded) : aliases.get(folded));
+      if (exact.has(key)) return exact.get(key);
+      if (loose.has(folded)) return loose.get(folded);
+      if (aliases.has(folded)) return aliases.get(folded);
+      if (key.startsWith('the ')) {
+        const withoutArticle = looseKey(key.slice(4));
+        if (withoutArticle.length >= 3) {
+          return unique.has(withoutArticle) ? unique.get(withoutArticle) : aliases.get(withoutArticle);
+        }
+      }
+      return undefined;
     },
 
     suggest(text) {
