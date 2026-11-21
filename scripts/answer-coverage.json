@@ -6,7 +6,13 @@
     "needsSpecificSource": 771,
     "addedAnswers": 33849,
     "addedAliases": 21252,
-    "answers": 1731607
+    "answers": 1731607,
+    "importedTiers": {
+      "rare": 10953,
+      "plankton": 2514,
+      "schooler": 6627,
+      "deepcut": 13755
+    }
   },
   "prompts": [
     {
@@ -16,6 +22,12 @@
       "originalAnswers": 39,
       "answers": 154,
       "aliases": 11,
+      "importedTiers": {
+        "rare": 39,
+        "plankton": 8,
+        "schooler": 22,
+        "deepcut": 46
+      },
       "verifiedCandidates": 122,
       "evidence": [
         "wikidata:mammal and bird common names"
@@ -43,6 +55,12 @@
       "originalAnswers": 57,
       "answers": 97,
       "aliases": 43,
+      "importedTiers": {
+        "deepcut": 26,
+        "rare": 10,
+        "plankton": 3,
+        "schooler": 1
+      },
       "verifiedCandidates": 69,
       "evidence": [
         "wikidata:pasta-shape"
@@ -69,6 +87,9 @@
       "originalAnswers": 79,
       "answers": 80,
       "aliases": 31,
+      "importedTiers": {
+        "schooler": 1
+      },
       "verifiedCandidates": 80,
       "evidence": [
         "wikidata:element",
@@ -118,6 +139,10 @@
       "originalAnswers": 66,
       "answers": 96,
       "aliases": 0,
+      "importedTiers": {
+        "deepcut": 25,
+        "rare": 5
+      },
       "verifiedCandidates": 44,
       "evidence": [
         "bank:0113"
@@ -131,6 +156,12 @@
       "originalAnswers": 61,
       "answers": 156,
       "aliases": 69,
+      "importedTiers": {
+        "rare": 32,
+        "deepcut": 34,
+        "schooler": 20,
+        "plankton": 9
+      },
       "verifiedCandidates": 97,
       "evidence": [
         "wikidata:cheese"
@@ -177,6 +208,12 @@
       "originalAnswers": 113,
       "answers": 894,
       "aliases": 525,
+      "importedTiers": {
+        "schooler": 92,
+        "deepcut": 486,
+        "rare": 190,
+        "plankton": 13
+      },
       "verifiedCandidates": 934,
       "evidence": [
         "wikidata:dog-breed",
@@ -191,6 +228,9 @@
       "originalAnswers": 51,
       "answers": 52,
       "aliases": 0,
+      "importedTiers": {
+        "deepcut": 1
+      },
       "verifiedCandidates": 46,
       "evidence": [
         "wikidata:country-capital"
@@ -287,6 +327,11 @@
       "originalAnswers": 40,
       "answers": 45,
       "aliases": 41,
+      "importedTiers": {
+        "rare": 1,
+        "schooler": 1,
+        "deepcut": 3
+      },
       "verifiedCandidates": 39,
       "evidence": [
         "wikidata:wild-cat"
@@ -300,6 +345,12 @@
       "originalAnswers": 70,
       "answers": 256,
       "aliases": 136,
+      "importedTiers": {
+        "deepcut": 75,
+        "rare": 60,
+        "schooler": 38,
+        "plankton": 13
+      },
       "verifiedCandidates": 206,
       "evidence": [
         "wikidata:bread"
@@ -335,6 +386,12 @@
       "originalAnswers": 78,
       "answers": 715,
       "aliases": 218,
+      "importedTiers": {
+        "schooler": 61,
+        "rare": 173,
+        "deepcut": 399,
+        "plankton": 4
+      },
       "verifiedCandidates": 690,
       "evidence": [
         "wikidata:card-game"
@@ -383,6 +440,12 @@
       "originalAnswers": 71,
       "answers": 103,
       "aliases": 94,
+      "importedTiers": {
+        "deepcut": 18,
+        "plankton": 1,
+        "rare": 8,
+        "schooler": 5
+      },
       "verifiedCandidates": 55,
       "evidence": [
         "wikidata:spice"
@@ -451,6 +514,12 @@
       "originalAnswers": 53,
       "answers": 451,
       "aliases": 197,
+      "importedTiers": {
+        "rare": 153,
+        "deepcut": 144,
+        "schooler": 84,
+        "plankton": 17
+      },
       "verifiedCandidates": 450,
       "evidence": [
         "wikidata:shark"
@@ -464,6 +533,12 @@
       "originalAnswers": 94,
       "answers": 360,
       "aliases": 84,
+      "importedTiers": {
+        "rare": 89,
+        "schooler": 53,
+        "deepcut": 117,
+        "plankton": 7
+      },
       "verifiedCandidates": 325,
       "evidence": [
         "wikidata:cocktail"
@@ -532,6 +607,9 @@
       "originalAnswers": 20,
       "answers": 21,
       "aliases": 9,
+      "importedTiers": {
+        "deepcut": 1
+      },
       "verifiedCandidates": 19,
       "evidence": [
         "wikidata:penguin"
@@ -578,6 +656,12 @@
       "originalAnswers": 90,
       "answers": 1984,
       "aliases": 315,
+      "importedTiers": {
+        "deepcut": 1426,
+        "rare": 321,
+        "schooler": 132,
+        "plankton": 15
+      },
       "verifiedCandidates": 1957,
       "evidence": [
         "wikidata:board-game"
@@ -591,6 +675,9 @@
       "originalAnswers": 79,
       "answers": 165,
       "aliases": 0,
+      "importedTiers": {
+        "deepcut": 86
+      },
       "verifiedCandidates": 149,
       "evidence": [
         "bank:0346"
@@ -615,6 +702,10 @@
       "originalAnswers": 39,
       "answers": 43,
       "aliases": 26,
+      "importedTiers": {
+        "rare": 2,
+        "deepcut": 2
+      },
       "verifiedCandidates": 14,
       "evidence": [
         "wikidata:baleen-whale"
@@ -683,6 +774,12 @@
       "originalAnswers": 53,
       "answers": 173,
       "aliases": 140,
+      "importedTiers": {
+        "schooler": 14,
+        "deepcut": 58,
+        "rare": 41,
+        "plankton": 7
+      },
       "verifiedCandidates": 176,
       "evidence": [
         "wikidata:desert",
@@ -708,6 +805,11 @@
       "originalAnswers": 67,
       "answers": 84,
       "aliases": 40,
+      "importedTiers": {
+        "deepcut": 10,
+        "schooler": 2,
+        "rare": 5
+      },
       "verifiedCandidates": 44,
       "evidence": [
         "wikidata:coffee"
@@ -745,6 +847,12 @@
       "originalAnswers": 65,
       "answers": 132,
       "aliases": 108,
+      "importedTiers": {
+        "deepcut": 33,
+        "plankton": 2,
+        "schooler": 10,
+        "rare": 22
+      },
       "verifiedCandidates": 90,
       "evidence": [
         "wikidata:hat"
@@ -813,6 +921,12 @@
       "originalAnswers": 78,
       "answers": 1043,
       "aliases": 450,
+      "importedTiers": {
+        "rare": 274,
+        "deepcut": 417,
+        "schooler": 213,
+        "plankton": 61
+      },
       "verifiedCandidates": 1038,
       "evidence": [
         "wikidata:programming-language"
@@ -848,6 +962,12 @@
       "originalAnswers": 85,
       "answers": 4242,
       "aliases": 1755,
+      "importedTiers": {
+        "schooler": 940,
+        "plankton": 389,
+        "deepcut": 1268,
+        "rare": 1560
+      },
       "verifiedCandidates": 4280,
       "evidence": [
         "wikidata:mountain-range"
@@ -872,6 +992,12 @@
       "originalAnswers": 58,
       "answers": 371,
       "aliases": 178,
+      "importedTiers": {
+        "deepcut": 127,
+        "rare": 103,
+        "schooler": 61,
+        "plankton": 22
+      },
       "verifiedCandidates": 338,
       "evidence": [
         "wikidata:soup"
@@ -942,6 +1068,12 @@
       "originalAnswers": 49,
       "answers": 433,
       "aliases": 728,
+      "importedTiers": {
+        "deepcut": 144,
+        "schooler": 81,
+        "rare": 129,
+        "plankton": 30
+      },
       "verifiedCandidates": 420,
       "evidence": [
         "wikidata:primate"
@@ -966,6 +1098,12 @@
       "originalAnswers": 58,
       "answers": 345,
       "aliases": 182,
+      "importedTiers": {
+        "schooler": 61,
+        "rare": 89,
+        "deepcut": 118,
+        "plankton": 19
+      },
       "verifiedCandidates": 303,
       "evidence": [
         "wikidata:boy-band"
@@ -1023,6 +1161,12 @@
       "originalAnswers": 41,
       "answers": 3360,
       "aliases": 1373,
+      "importedTiers": {
+        "deepcut": 1068,
+        "plankton": 317,
+        "schooler": 897,
+        "rare": 1037
+      },
       "verifiedCandidates": 3396,
       "evidence": [
         "wikidata:amphibian"
@@ -1091,6 +1235,9 @@
       "originalAnswers": 55,
       "answers": 56,
       "aliases": 0,
+      "importedTiers": {
+        "plankton": 1
+      },
       "verifiedCandidates": 48,
       "evidence": [
         "wikidata:country-capital"
@@ -1104,6 +1251,12 @@
       "originalAnswers": 50,
       "answers": 239,
       "aliases": 49,
+      "importedTiers": {
+        "deepcut": 63,
+        "schooler": 38,
+        "rare": 76,
+        "plankton": 12
+      },
       "verifiedCandidates": 210,
       "evidence": [
         "wikidata:spider"
@@ -1117,6 +1270,12 @@
       "originalAnswers": 73,
       "answers": 166,
       "aliases": 77,
+      "importedTiers": {
+        "rare": 28,
+        "deepcut": 45,
+        "schooler": 15,
+        "plankton": 5
+      },
       "verifiedCandidates": 121,
       "evidence": [
         "wikidata:sandwich"
@@ -1185,6 +1344,12 @@
       "originalAnswers": 5,
       "answers": 2261,
       "aliases": 1896,
+      "importedTiers": {
+        "deepcut": 775,
+        "plankton": 245,
+        "rare": 756,
+        "schooler": 480
+      },
       "verifiedCandidates": 2272,
       "evidence": [
         "wikidata:rodent"
@@ -1220,6 +1385,11 @@
       "originalAnswers": 55,
       "answers": 68,
       "aliases": 5,
+      "importedTiers": {
+        "rare": 7,
+        "deepcut": 5,
+        "schooler": 1
+      },
       "verifiedCandidates": 13,
       "evidence": [
         "wikidata:knot"
@@ -1244,6 +1414,12 @@
       "originalAnswers": 58,
       "answers": 628,
       "aliases": 409,
+      "importedTiers": {
+        "deepcut": 249,
+        "rare": 184,
+        "schooler": 120,
+        "plankton": 17
+      },
       "verifiedCandidates": 631,
       "evidence": [
         "wikidata:strait"
@@ -1336,6 +1512,12 @@
       "originalAnswers": 44,
       "answers": 262,
       "aliases": 122,
+      "importedTiers": {
+        "schooler": 36,
+        "rare": 91,
+        "deepcut": 76,
+        "plankton": 15
+      },
       "verifiedCandidates": 255,
       "evidence": [
         "wikidata:owl"
@@ -1349,6 +1531,12 @@
       "originalAnswers": 61,
       "answers": 198,
       "aliases": 91,
+      "importedTiers": {
+        "rare": 43,
+        "deepcut": 61,
+        "schooler": 24,
+        "plankton": 9
+      },
       "verifiedCandidates": 161,
       "evidence": [
         "wikidata:cake"
@@ -1419,6 +1607,12 @@
       "originalAnswers": 46,
       "answers": 315,
       "aliases": 29,
+      "importedTiers": {
+        "rare": 87,
+        "plankton": 27,
+        "deepcut": 95,
+        "schooler": 60
+      },
       "verifiedCandidates": 271,
       "evidence": [
         "wikidata:mammal and bird common names"
@@ -1432,6 +1626,12 @@
       "originalAnswers": 69,
       "answers": 150,
       "aliases": 36,
+      "importedTiers": {
+        "schooler": 19,
+        "rare": 24,
+        "plankton": 7,
+        "deepcut": 31
+      },
       "verifiedCandidates": 98,
       "evidence": [
         "wikidata:pie"
@@ -1513,6 +1713,10 @@
       "originalAnswers": 46,
       "answers": 62,
       "aliases": 53,
+      "importedTiers": {
+        "deepcut": 12,
+        "rare": 4
+      },
       "verifiedCandidates": 32,
       "evidence": [
         "wikidata:dumpling"
@@ -1592,6 +1796,12 @@
       "originalAnswers": 68,
       "answers": 128,
       "aliases": 65,
+      "importedTiers": {
+        "rare": 19,
+        "schooler": 10,
+        "deepcut": 27,
+        "plankton": 4
+      },
       "verifiedCandidates": 72,
       "evidence": [
         "wikidata:condiment"
@@ -1728,6 +1938,9 @@
       "originalAnswers": 60,
       "answers": 62,
       "aliases": 0,
+      "importedTiers": {
+        "deepcut": 2
+      },
       "verifiedCandidates": 57,
       "evidence": [
         "wikidata:country-capital"
@@ -1741,6 +1954,12 @@
       "originalAnswers": 52,
       "answers": 196,
       "aliases": 42,
+      "importedTiers": {
+        "deepcut": 64,
+        "rare": 48,
+        "schooler": 23,
+        "plankton": 9
+      },
       "verifiedCandidates": 175,
       "evidence": [
         "wikidata:waterfowl"
@@ -1831,6 +2050,12 @@
       "originalAnswers": 53,
       "answers": 155,
       "aliases": 75,
+      "importedTiers": {
+        "schooler": 20,
+        "rare": 34,
+        "plankton": 5,
+        "deepcut": 43
+      },
       "verifiedCandidates": 124,
       "evidence": [
         "wikidata:salad"
@@ -1877,6 +2102,12 @@
       "originalAnswers": 58,
       "answers": 429,
       "aliases": 79,
+      "importedTiers": {
+        "deepcut": 193,
+        "rare": 149,
+        "schooler": 26,
+        "plankton": 3
+      },
       "verifiedCandidates": 381,
       "evidence": [
         "wikidata:fairy-tale"
@@ -1901,6 +2132,12 @@
       "originalAnswers": 65,
       "answers": 492,
       "aliases": 182,
+      "importedTiers": {
+        "schooler": 96,
+        "deepcut": 173,
+        "rare": 130,
+        "plankton": 28
+      },
       "verifiedCandidates": 467,
       "evidence": [
         "wikidata:horse-breed"
@@ -1991,6 +2228,12 @@
       "originalAnswers": 67,
       "answers": 318,
       "aliases": 188,
+      "importedTiers": {
+        "rare": 82,
+        "deepcut": 101,
+        "plankton": 18,
+        "schooler": 50
+      },
       "verifiedCandidates": 277,
       "evidence": [
         "wikidata:pastry"
@@ -2026,6 +2269,10 @@
       "originalAnswers": 38,
       "answers": 40,
       "aliases": 0,
+      "importedTiers": {
+        "rare": 1,
+        "plankton": 1
+      },
       "verifiedCandidates": 17,
       "evidence": [
         "bank:0915"
@@ -2072,6 +2319,12 @@
       "originalAnswers": 50,
       "answers": 153,
       "aliases": 99,
+      "importedTiers": {
+        "deepcut": 47,
+        "rare": 36,
+        "schooler": 17,
+        "plankton": 3
+      },
       "verifiedCandidates": 120,
       "evidence": [
         "wikidata:rice-dish"
@@ -2096,6 +2349,12 @@
       "originalAnswers": 46,
       "answers": 152,
       "aliases": 119,
+      "importedTiers": {
+        "deepcut": 45,
+        "schooler": 21,
+        "rare": 37,
+        "plankton": 3
+      },
       "verifiedCandidates": 132,
       "evidence": [
         "wikidata:browser"
@@ -2120,6 +2379,9 @@
       "originalAnswers": 22,
       "answers": 24,
       "aliases": 8,
+      "importedTiers": {
+        "deepcut": 2
+      },
       "verifiedCandidates": 11,
       "evidence": [
         "wikidata:film-james-cameron"
@@ -2155,6 +2417,12 @@
       "originalAnswers": 47,
       "answers": 59,
       "aliases": 15,
+      "importedTiers": {
+        "plankton": 2,
+        "deepcut": 3,
+        "rare": 4,
+        "schooler": 3
+      },
       "verifiedCandidates": 24,
       "evidence": [
         "wikidata:beef"
@@ -2168,6 +2436,12 @@
       "originalAnswers": 97,
       "answers": 481,
       "aliases": 190,
+      "importedTiers": {
+        "rare": 155,
+        "deepcut": 135,
+        "schooler": 86,
+        "plankton": 8
+      },
       "verifiedCandidates": 429,
       "evidence": [
         "wikidata:girl-group"
@@ -2280,6 +2554,10 @@
       "originalAnswers": 74,
       "answers": 76,
       "aliases": 2,
+      "importedTiers": {
+        "deepcut": 1,
+        "plankton": 1
+      },
       "verifiedCandidates": 75,
       "evidence": [
         "wikidata:country"
@@ -2306,6 +2584,12 @@
       "originalAnswers": 69,
       "answers": 117,
       "aliases": 75,
+      "importedTiers": {
+        "deepcut": 21,
+        "rare": 18,
+        "schooler": 8,
+        "plankton": 1
+      },
       "verifiedCandidates": 67,
       "evidence": [
         "wikidata:furniture"
@@ -2387,6 +2671,12 @@
       "originalAnswers": 69,
       "answers": 267,
       "aliases": 226,
+      "importedTiers": {
+        "plankton": 7,
+        "deepcut": 80,
+        "rare": 81,
+        "schooler": 30
+      },
       "verifiedCandidates": 235,
       "evidence": [
         "wikidata:turtle"
@@ -2547,6 +2837,12 @@
       "originalAnswers": 67,
       "answers": 141,
       "aliases": 139,
+      "importedTiers": {
+        "rare": 26,
+        "schooler": 2,
+        "deepcut": 43,
+        "plankton": 3
+      },
       "verifiedCandidates": 112,
       "evidence": [
         "wikidata:sea"
@@ -2593,6 +2889,12 @@
       "originalAnswers": 54,
       "answers": 235,
       "aliases": 273,
+      "importedTiers": {
+        "rare": 61,
+        "plankton": 5,
+        "deepcut": 90,
+        "schooler": 25
+      },
       "verifiedCandidates": 235,
       "evidence": [
         "wikidata:medical-specialty"
@@ -2606,6 +2908,12 @@
       "originalAnswers": 73,
       "answers": 172,
       "aliases": 55,
+      "importedTiers": {
+        "rare": 33,
+        "deepcut": 54,
+        "schooler": 7,
+        "plankton": 5
+      },
       "verifiedCandidates": 101,
       "evidence": [
         "wikidata:typeface"
@@ -2663,6 +2971,12 @@
       "originalAnswers": 81,
       "answers": 1794,
       "aliases": 1200,
+      "importedTiers": {
+        "schooler": 358,
+        "plankton": 155,
+        "rare": 535,
+        "deepcut": 665
+      },
       "verifiedCandidates": 1741,
       "evidence": [
         "wikidata:minerals"
@@ -2744,6 +3058,10 @@
       "originalAnswers": 262,
       "answers": 308,
       "aliases": 0,
+      "importedTiers": {
+        "deepcut": 43,
+        "rare": 3
+      },
       "verifiedCandidates": 109,
       "evidence": [
         "bank:0453"
@@ -2768,6 +3086,12 @@
       "originalAnswers": 101,
       "answers": 112,
       "aliases": 19,
+      "importedTiers": {
+        "plankton": 1,
+        "rare": 2,
+        "deepcut": 5,
+        "schooler": 3
+      },
       "verifiedCandidates": 11,
       "evidence": [
         "wikidata:hairstyle"
@@ -2851,6 +3175,12 @@
       "originalAnswers": 83,
       "answers": 128,
       "aliases": 56,
+      "importedTiers": {
+        "schooler": 9,
+        "rare": 14,
+        "deepcut": 19,
+        "plankton": 3
+      },
       "verifiedCandidates": 52,
       "evidence": [
         "wikidata:shoe"
@@ -2886,6 +3216,12 @@
       "originalAnswers": 116,
       "answers": 254,
       "aliases": 92,
+      "importedTiers": {
+        "deepcut": 61,
+        "plankton": 8,
+        "schooler": 19,
+        "rare": 50
+      },
       "verifiedCandidates": 187,
       "evidence": [
         "wikidata:sauce"
@@ -2965,6 +3301,11 @@
       "originalAnswers": 76,
       "answers": 86,
       "aliases": 33,
+      "importedTiers": {
+        "deepcut": 8,
+        "schooler": 1,
+        "rare": 1
+      },
       "verifiedCandidates": 55,
       "evidence": [
         "wikidata:film-matt-damon"
@@ -3011,6 +3352,12 @@
       "originalAnswers": 78,
       "answers": 172,
       "aliases": 67,
+      "importedTiers": {
+        "deepcut": 43,
+        "schooler": 16,
+        "rare": 32,
+        "plankton": 3
+      },
       "verifiedCandidates": 122,
       "evidence": [
         "wikidata:poem"
@@ -3046,6 +3393,11 @@
       "originalAnswers": 93,
       "answers": 266,
       "aliases": 189,
+      "importedTiers": {
+        "schooler": 30,
+        "rare": 78,
+        "deepcut": 65
+      },
       "verifiedCandidates": 244,
       "evidence": [
         "wikidata:apple"
@@ -3246,6 +3598,11 @@
       "originalAnswers": 37,
       "answers": 47,
       "aliases": 25,
+      "importedTiers": {
+        "rare": 3,
+        "deepcut": 6,
+        "schooler": 1
+      },
       "verifiedCandidates": 14,
       "evidence": [
         "wikidata:brass"
@@ -3272,6 +3629,12 @@
       "originalAnswers": 233,
       "answers": 4184,
       "aliases": 924,
+      "importedTiers": {
+        "rare": 1337,
+        "schooler": 798,
+        "plankton": 388,
+        "deepcut": 1428
+      },
       "verifiedCandidates": 3978,
       "evidence": [
         "wikidata:mammal and bird common names"
@@ -3430,6 +3793,12 @@
       "originalAnswers": 207,
       "answers": 4161,
       "aliases": 2073,
+      "importedTiers": {
+        "schooler": 856,
+        "deepcut": 1379,
+        "rare": 1413,
+        "plankton": 306
+      },
       "verifiedCandidates": 4187,
       "evidence": [
         "wikidata:airline"
@@ -3465,6 +3834,12 @@
       "originalAnswers": 238,
       "answers": 797,
       "aliases": 467,
+      "importedTiers": {
+        "deepcut": 208,
+        "rare": 210,
+        "schooler": 95,
+        "plankton": 46
+      },
       "verifiedCandidates": 648,
       "evidence": [
         "wikidata:operating-system"
@@ -3489,6 +3864,10 @@
       "originalAnswers": 204,
       "answers": 226,
       "aliases": 148,
+      "importedTiers": {
+        "rare": 9,
+        "deepcut": 13
+      },
       "verifiedCandidates": 82,
       "evidence": [
         "wikidata:nursery-rhyme"
@@ -3524,6 +3903,10 @@
       "originalAnswers": 110,
       "answers": 114,
       "aliases": 11,
+      "importedTiers": {
+        "rare": 2,
+        "deepcut": 2
+      },
       "verifiedCandidates": 16,
       "evidence": [
         "wikidata:dip"
@@ -3581,6 +3964,11 @@
       "originalAnswers": 828,
       "answers": 1054,
       "aliases": 0,
+      "importedTiers": {
+        "deepcut": 167,
+        "rare": 54,
+        "schooler": 5
+      },
       "verifiedCandidates": 809,
       "evidence": [
         "bank:0016",
@@ -3675,6 +4063,12 @@
       "originalAnswers": 468,
       "answers": 530,
       "aliases": 3,
+      "importedTiers": {
+        "deepcut": 27,
+        "rare": 18,
+        "schooler": 13,
+        "plankton": 4
+      },
       "verifiedCandidates": 102,
       "evidence": [
         "wikidata:mammal and bird common names"
@@ -3688,6 +4082,11 @@
       "originalAnswers": 144,
       "answers": 154,
       "aliases": 16,
+      "importedTiers": {
+        "deepcut": 5,
+        "rare": 2,
+        "schooler": 3
+      },
       "verifiedCandidates": 18,
       "evidence": [
         "wikidata:curry"
@@ -3745,6 +4144,9 @@
       "originalAnswers": 45,
       "answers": 47,
       "aliases": 0,
+      "importedTiers": {
+        "rare": 2
+      },
       "verifiedCandidates": 31,
       "evidence": [
         "bank:0897"
@@ -3824,6 +4226,9 @@
       "originalAnswers": 18,
       "answers": 19,
       "aliases": 0,
+      "importedTiers": {
+        "deepcut": 1
+      },
       "verifiedCandidates": 12,
       "evidence": [
         "wikidata:country-country"
@@ -3837,6 +4242,12 @@
       "originalAnswers": 2494,
       "answers": 2661,
       "aliases": 122,
+      "importedTiers": {
+        "rare": 47,
+        "schooler": 29,
+        "deepcut": 75,
+        "plankton": 16
+      },
       "verifiedCandidates": 1613,
       "evidence": [
         "wikidata:mammal and bird common names"
@@ -3982,6 +4393,9 @@
       "originalAnswers": 59,
       "answers": 60,
       "aliases": 0,
+      "importedTiers": {
+        "deepcut": 1
+      },
       "verifiedCandidates": 35,
       "evidence": [
         "wikidata:country-capital"
@@ -4162,6 +4576,12 @@
       "originalAnswers": 374,
       "answers": 404,
       "aliases": 64,
+      "importedTiers": {
+        "plankton": 3,
+        "deepcut": 12,
+        "rare": 12,
+        "schooler": 3
+      },
       "verifiedCandidates": 82,
       "evidence": [
         "wikidata:cookie"
@@ -4197,6 +4617,12 @@
       "originalAnswers": 285,
       "answers": 340,
       "aliases": 144,
+      "importedTiers": {
+        "deepcut": 24,
+        "schooler": 11,
+        "rare": 16,
+        "plankton": 4
+      },
       "verifiedCandidates": 149,
       "evidence": [
         "wikidata:unit-of-length"
@@ -4368,6 +4794,12 @@
       "originalAnswers": 121,
       "answers": 135,
       "aliases": 57,
+      "importedTiers": {
+        "deepcut": 9,
+        "rare": 2,
+        "schooler": 2,
+        "plankton": 1
+      },
       "verifiedCandidates": 41,
       "evidence": [
         "wikidata:bicycle"
@@ -4513,6 +4945,12 @@
       "originalAnswers": 246,
       "answers": 328,
       "aliases": 536,
+      "importedTiers": {
+        "deepcut": 45,
+        "rare": 24,
+        "schooler": 11,
+        "plankton": 2
+      },
       "verifiedCandidates": 193,
       "evidence": [
         "wikidata:video-game-genre"
@@ -4603,6 +5041,12 @@
       "originalAnswers": 1361,
       "answers": 1809,
       "aliases": 797,
+      "importedTiers": {
+        "deepcut": 207,
+        "schooler": 90,
+        "rare": 128,
+        "plankton": 23
+      },
       "verifiedCandidates": 760,
       "evidence": [
         "wikidata:literary-genre"
@@ -4649,6 +5093,9 @@
       "originalAnswers": 10,
       "answers": 11,
       "aliases": 0,
+      "importedTiers": {
+        "plankton": 1
+      },
       "verifiedCandidates": 10,
       "evidence": [
         "wikidata:country"
@@ -4967,6 +5414,9 @@
       "originalAnswers": 23,
       "answers": 24,
       "aliases": 5,
+      "importedTiers": {
+        "deepcut": 1
+      },
       "verifiedCandidates": 10,
       "evidence": [
         "wikidata:film-wes-anderson"
@@ -5444,6 +5894,9 @@
       "originalAnswers": 79,
       "answers": 80,
       "aliases": 31,
+      "importedTiers": {
+        "schooler": 1
+      },
       "verifiedCandidates": 80,
       "evidence": [
         "wikidata:element",
@@ -5469,6 +5922,9 @@
       "originalAnswers": 21,
       "answers": 22,
       "aliases": 1,
+      "importedTiers": {
+        "plankton": 1
+      },
       "verifiedCandidates": 22,
       "evidence": [
         "wikidata:country"
@@ -5515,6 +5971,12 @@
       "originalAnswers": 584,
       "answers": 606,
       "aliases": 79,
+      "importedTiers": {
+        "rare": 4,
+        "deepcut": 11,
+        "schooler": 5,
+        "plankton": 2
+      },
       "verifiedCandidates": 78,
       "evidence": [
         "wikidata:search-engine"
@@ -5684,6 +6146,12 @@
       "originalAnswers": 9373,
       "answers": 9587,
       "aliases": 151,
+      "importedTiers": {
+        "rare": 59,
+        "deepcut": 108,
+        "plankton": 17,
+        "schooler": 30
+      },
       "verifiedCandidates": 1918,
       "evidence": [
         "wikidata:mammal and bird common names"
@@ -5730,6 +6198,10 @@
       "originalAnswers": 31,
       "answers": 33,
       "aliases": 1,
+      "importedTiers": {
+        "schooler": 1,
+        "rare": 1
+      },
       "verifiedCandidates": 31,
       "evidence": [
         "wikidata:country"
@@ -6438,6 +6910,10 @@
       "originalAnswers": 37,
       "answers": 39,
       "aliases": 1,
+      "importedTiers": {
+        "deepcut": 1,
+        "plankton": 1
+      },
       "verifiedCandidates": 38,
       "evidence": [
         "wikidata:country"
@@ -6638,6 +7114,9 @@
       "originalAnswers": 46,
       "answers": 47,
       "aliases": 2,
+      "importedTiers": {
+        "deepcut": 1
+      },
       "verifiedCandidates": 44,
       "evidence": [
         "wikidata:country"
@@ -6884,6 +7363,12 @@
       "originalAnswers": 3118,
       "answers": 3352,
       "aliases": 384,
+      "importedTiers": {
+        "rare": 79,
+        "schooler": 25,
+        "deepcut": 111,
+        "plankton": 19
+      },
       "verifiedCandidates": 734,
       "evidence": [
         "wikidata:instrument",
@@ -6954,6 +7439,12 @@
       "originalAnswers": 10338,
       "answers": 10346,
       "aliases": 17,
+      "importedTiers": {
+        "deepcut": 4,
+        "schooler": 1,
+        "plankton": 1,
+        "rare": 2
+      },
       "verifiedCandidates": 147,
       "evidence": [
         "wikidata:mammal and bird common names"
@@ -7099,6 +7590,10 @@
       "originalAnswers": 90,
       "answers": 92,
       "aliases": 4,
+      "importedTiers": {
+        "deepcut": 1,
+        "plankton": 1
+      },
       "verifiedCandidates": 89,
       "evidence": [
         "wikidata:country"
@@ -7310,6 +7805,9 @@
       "originalAnswers": 55,
       "answers": 57,
       "aliases": 21,
+      "importedTiers": {
+        "deepcut": 2
+      },
       "verifiedCandidates": 41,
       "evidence": [
         "wikidata:film-natalie-portman"
@@ -7446,6 +7944,10 @@
       "originalAnswers": 467,
       "answers": 472,
       "aliases": 0,
+      "importedTiers": {
+        "deepcut": 4,
+        "plankton": 1
+      },
       "verifiedCandidates": 14,
       "evidence": [
         "wikidata:mammal and bird common names"
@@ -7694,6 +8196,9 @@
       "originalAnswers": 50,
       "answers": 51,
       "aliases": 3,
+      "importedTiers": {
+        "deepcut": 1
+      },
       "verifiedCandidates": 50,
       "evidence": [
         "wikidata:country"
@@ -8094,6 +8599,12 @@
       "originalAnswers": 3653,
       "answers": 4373,
       "aliases": 1870,
+      "importedTiers": {
+        "deepcut": 227,
+        "plankton": 112,
+        "schooler": 180,
+        "rare": 201
+      },
       "verifiedCandidates": 2154,
       "evidence": [
         "wikidata:national-park",
@@ -8218,6 +8729,10 @@
       "originalAnswers": 1466,
       "answers": 1469,
       "aliases": 0,
+      "importedTiers": {
+        "deepcut": 2,
+        "rare": 1
+      },
       "verifiedCandidates": 72,
       "evidence": [
         "bank:0044",
@@ -8298,6 +8813,12 @@
       "originalAnswers": 775,
       "answers": 797,
       "aliases": 40,
+      "importedTiers": {
+        "deepcut": 8,
+        "schooler": 5,
+        "rare": 5,
+        "plankton": 4
+      },
       "verifiedCandidates": 66,
       "evidence": [
         "wikidata:pasta-dish"
@@ -8731,6 +9252,10 @@
       "originalAnswers": 30,
       "answers": 33,
       "aliases": 4,
+      "importedTiers": {
+        "rare": 1,
+        "deepcut": 2
+      },
       "verifiedCandidates": 32,
       "evidence": [
         "wikidata:country"
@@ -8931,6 +9456,10 @@
       "originalAnswers": 292,
       "answers": 297,
       "aliases": 0,
+      "importedTiers": {
+        "deepcut": 2,
+        "rare": 3
+      },
       "verifiedCandidates": 147,
       "evidence": [
         "bank:0004",
@@ -9268,6 +9797,9 @@
       "originalAnswers": 123,
       "answers": 125,
       "aliases": 0,
+      "importedTiers": {
+        "deepcut": 2
+      },
       "verifiedCandidates": 37,
       "evidence": [
         "bank:0189"
@@ -9780,6 +10312,9 @@
       "originalAnswers": 47,
       "answers": 48,
       "aliases": 2,
+      "importedTiers": {
+        "plankton": 1
+      },
       "verifiedCandidates": 48,
       "evidence": [
         "wikidata:country"
@@ -10092,6 +10627,9 @@
       "originalAnswers": 24,
       "answers": 25,
       "aliases": 0,
+      "importedTiers": {
+        "plankton": 1
+      },
       "verifiedCandidates": 24,
       "evidence": [
         "wikidata:country"
@@ -10185,6 +10723,11 @@
       "originalAnswers": 31,
       "answers": 47,
       "aliases": 0,
+      "importedTiers": {
+        "deepcut": 6,
+        "rare": 5,
+        "schooler": 5
+      },
       "verifiedCandidates": 45,
       "evidence": [
         "bank:0322"
@@ -10198,6 +10741,12 @@
       "originalAnswers": 50,
       "answers": 173,
       "aliases": 140,
+      "importedTiers": {
+        "schooler": 15,
+        "deepcut": 59,
+        "rare": 41,
+        "plankton": 8
+      },
       "verifiedCandidates": 177,
       "evidence": [
         "wikidata:desert",
@@ -10343,6 +10892,9 @@
       "originalAnswers": 52,
       "answers": 68,
       "aliases": 0,
+      "importedTiers": {
+        "deepcut": 16
+      },
       "verifiedCandidates": 68,
       "evidence": [
         "bank:0019"

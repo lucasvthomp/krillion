@@ -54,7 +54,7 @@ let phase = 'idle';
 let pendingAnswer;
 
 function bankUrl(file) {
-  return new URL(`./bank/${file}?v=8`, import.meta.url);
+  return new URL(`./bank/${file}?v=9`, import.meta.url);
 }
 
 async function loadIndex() {
