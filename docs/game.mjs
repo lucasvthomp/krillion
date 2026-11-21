@@ -18,6 +18,12 @@ const oceanZones = [
   [6000, 'Hadal zone'], [4000, 'Abyssal zone'], [1000, 'Midnight zone'],
   [200, 'Twilight zone'], [1, 'Sunlight zone'], [0, 'Surface'],
 ];
+const answerAliases = new Map([
+  ['name a type of cake', new Map([
+    ['bundt', 'bundt cake'],
+    ['tres leches', 'tres leches cake'],
+  ])],
+]);
 const byId = (id) => document.getElementById(id);
 const home = byId('home');
 const roundPanel = byId('round');
@@ -57,7 +63,7 @@ function looseKey(text) {
     .replace(/&/gu, 'and').replace(/[^\p{L}\p{N}+#]/gu, '');
 }
 
-function buildLookup(answers) {
+function buildLookup(answers, prompt) {
   const exact = new Map();
   const loose = new Map();
   for (const entry of answers) {
@@ -70,7 +76,11 @@ function buildLookup(answers) {
     if (!loose.has(folded)) loose.set(folded, entry);
     else if (previousLoose && previousLoose[1] !== entry[1]) loose.set(folded, null);
   }
-  return (text) => exact.get(exactKey(text)) ?? loose.get(looseKey(text));
+  const aliases = answerAliases.get(exactKey(prompt));
+  return (text) => {
+    const key = exactKey(text);
+    return exact.get(key) ?? loose.get(looseKey(text)) ?? exact.get(aliases?.get(key));
+  };
 }
 
 function bankUrl(file) {
@@ -108,7 +118,7 @@ async function loadRound(prompt) {
   if (answers.length !== prompt.count || !answers.length) throw new Error('Incomplete answer bank.');
   return {
     ...prompt,
-    match: buildLookup(answers),
+    match: buildLookup(answers, prompt.prompt),
     example: answers.reduce((top, answer) => answer[1] > top[1] ? answer : top),
   };
 }
