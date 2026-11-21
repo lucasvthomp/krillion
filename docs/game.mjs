@@ -1,4 +1,5 @@
 import { createOcean } from './ocean.mjs?v=5';
+import { buildLookup, exactKey } from './answers.mjs?v=7';
 
 const roundsPerGame = 7;
 const readingSeconds = 3;
@@ -18,12 +19,6 @@ const oceanZones = [
   [6000, 'Hadal zone'], [4000, 'Abyssal zone'], [1000, 'Midnight zone'],
   [200, 'Twilight zone'], [1, 'Sunlight zone'], [0, 'Surface'],
 ];
-const answerAliases = new Map([
-  ['name a type of cake', new Map([
-    ['bundt', 'bundt cake'],
-    ['tres leches', 'tres leches cake'],
-  ])],
-]);
 const byId = (id) => document.getElementById(id);
 const home = byId('home');
 const roundPanel = byId('round');
@@ -39,6 +34,9 @@ const countIn = byId('count-in');
 const timer = byId('timer');
 const timeBar = byId('time-bar');
 const retryStatus = byId('retry-status');
+const suggestionBox = byId('spelling-suggestion');
+const suggestedName = byId('suggested-name');
+const useSuggestion = byId('use-suggestion');
 const reveal = byId('reveal');
 const ocean = createOcean(byId('ocean'));
 const help = byId('help');
@@ -53,35 +51,7 @@ let best = readBest();
 let deadline = 0;
 let ticker;
 let phase = 'idle';
-
-function exactKey(text) {
-  return text.normalize('NFKC').trim().toLowerCase().replace(/\s+/gu, ' ');
-}
-
-function looseKey(text) {
-  return exactKey(text).normalize('NFKD').replace(/\p{M}/gu, '')
-    .replace(/&/gu, 'and').replace(/[^\p{L}\p{N}+#]/gu, '');
-}
-
-function buildLookup(answers, prompt) {
-  const exact = new Map();
-  const loose = new Map();
-  for (const entry of answers) {
-    const key = exactKey(entry[0]);
-    const previousExact = exact.get(key);
-    if (!previousExact || previousExact[1] < entry[1]) exact.set(key, entry);
-    const folded = looseKey(entry[0]);
-    if (!folded) continue;
-    const previousLoose = loose.get(folded);
-    if (!loose.has(folded)) loose.set(folded, entry);
-    else if (previousLoose && previousLoose[1] !== entry[1]) loose.set(folded, null);
-  }
-  const aliases = answerAliases.get(exactKey(prompt));
-  return (text) => {
-    const key = exactKey(text);
-    return exact.get(key) ?? loose.get(looseKey(text)) ?? exact.get(aliases?.get(key));
-  };
-}
+let pendingAnswer;
 
 function bankUrl(file) {
   return new URL(`./bank/${file}`, import.meta.url);
@@ -118,7 +88,7 @@ async function loadRound(prompt) {
   if (answers.length !== prompt.count || !answers.length) throw new Error('Incomplete answer bank.');
   return {
     ...prompt,
-    match: buildLookup(answers, prompt.prompt),
+    lookup: buildLookup(answers, prompt.prompt),
     example: answers.reduce((top, answer) => answer[1] > top[1] ? answer : top),
   };
 }
@@ -178,6 +148,7 @@ function showRound() {
   timer.classList.remove('urgent');
   answerInput.value = '';
   retryStatus.textContent = '';
+  hideSuggestion();
   phase = 'reading';
   deadline = performance.now() + readingSeconds * 1000;
   byId('prompt').focus();
@@ -209,6 +180,7 @@ function finishRound(reason, matched) {
   if (phase !== 'answering') return;
   phase = 'idle';
   clearInterval(ticker);
+  hideSuggestion();
   const current = rounds[row];
   const points = matched ? matched[1] : 0;
   const tier = matched ? matched[2] : 'none';
@@ -225,6 +197,11 @@ function finishRound(reason, matched) {
   reveal.hidden = false;
   nextButton.textContent = row + 1 === roundsPerGame ? 'See dive log' : 'Next round';
   if (!quitDialog.open && !help.open) nextButton.focus();
+}
+
+function hideSuggestion() {
+  pendingAnswer = null;
+  suggestionBox.hidden = true;
 }
 
 function updateDepth() {
@@ -296,9 +273,20 @@ form.addEventListener('submit', (event) => {
     finishRound('timeout');
     return;
   }
-  const matched = rounds[row].match(guess);
+  hideSuggestion();
+  const lookup = rounds[row].lookup;
+  const matched = lookup.match(guess);
   if (matched) {
     finishRound('guess', matched);
+    return;
+  }
+  const suggestion = lookup.suggest(guess);
+  if (suggestion) {
+    pendingAnswer = suggestion;
+    suggestedName.textContent = suggestion[0];
+    retryStatus.textContent = '';
+    suggestionBox.hidden = false;
+    useSuggestion.focus();
     return;
   }
   deadline -= missPenalty * 1000;
@@ -306,6 +294,17 @@ form.addEventListener('submit', (event) => {
   retryStatus.textContent = `“${guess}” wasn’t in the bank · −${missPenalty}s. Try again.`;
   updateTimer();
   if (phase === 'answering') answerInput.focus();
+});
+answerInput.addEventListener('input', hideSuggestion);
+useSuggestion.addEventListener('click', () => {
+  if (phase !== 'answering' || !pendingAnswer) return;
+  if (performance.now() >= deadline) finishRound('timeout');
+  else finishRound('guess', pendingAnswer);
+});
+byId('edit-suggestion').addEventListener('click', () => {
+  hideSuggestion();
+  answerInput.focus();
+  answerInput.select();
 });
 byId('skip').addEventListener('click', () => finishRound('skip'));
 nextButton.addEventListener('click', () => {
@@ -323,6 +322,7 @@ byId('quit').addEventListener('click', () => {
 quitDialog.addEventListener('close', () => {
   if (quitDialog.returnValue !== 'quit') return;
   clearInterval(ticker);
+  hideSuggestion();
   phase = 'idle';
   rounds = [];
   log = [];

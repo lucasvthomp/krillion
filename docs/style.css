@@ -145,6 +145,20 @@ progress::-moz-progress-bar { background: var(--accent); border-radius: 3px; }
 .answer-row input::placeholder { color: var(--muted); }
 #skip { margin-top: 7px; }
 #retry-status { color: #ffb3c2; margin: 5px 0 0; }
+.spelling-suggestion {
+  margin-top: 10px;
+  padding: 10px 14px;
+  border: 1px solid #bde8ef80;
+  border-radius: 2px;
+  background: #082438ed;
+  text-align: left;
+  text-shadow: none;
+  overflow-wrap: anywhere;
+}
+.spelling-suggestion p { margin: 0 0 6px; }
+.spelling-suggestion strong { color: var(--accent); }
+.suggestion-actions { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; }
+.suggestion-actions .primary { min-height: 34px; padding: 4px 10px; }
 
 [data-tier="plankton"] { --tier-color: #78c6ff; }
 [data-tier="tooclever"] { --tier-color: #70ece8; }
