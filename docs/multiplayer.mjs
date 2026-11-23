@@ -1,7 +1,8 @@
-import { displayName, roomCode, validRoomCode } from './room-game.mjs';
-import { hostRoom, joinRoom } from './room-network.mjs';
+import { renderDiveLog } from './dive-log.mjs?v=16';
+import { displayName, roomCode, validRoomCode } from './room-game.mjs?v=16';
+import { hostRoom, joinRoom } from './room-network.mjs?v=16';
 
-export function setupMultiplayer({ loadRounds, showSurface, showRound, onAnswer, goHome }) {
+export function setupMultiplayer({ loadRounds, loadAnswers, rarity, showSurface, showRound, onAnswer, goHome }) {
   const get = (id) => document.getElementById(id);
   const screen = get('room-screen');
   const entry = get('room-entry');
@@ -14,9 +15,12 @@ export function setupMultiplayer({ loadRounds, showSurface, showRound, onAnswer,
   const startButton = get('room-start');
   const continueButton = get('room-continue');
   const playAgain = get('room-replay');
+  const review = get('room-answer-review');
+  const reviewLog = get('room-answer-log');
   let session;
   let state;
   let generation = 0;
+  let reviewKey;
 
   function busy(active) {
     get('create-room').disabled = get('join-room').disabled = active;
@@ -42,11 +46,22 @@ export function setupMultiplayer({ loadRounds, showSurface, showRound, onAnswer,
 
   function playerRow(player, extra, rank) {
     const item = document.createElement('li');
+    const identity = document.createElement('div');
     const name = document.createElement('span');
     name.textContent = rank ? `${rank}. ${player.name}` : player.name;
     const marker = labelPlayer(player);
     if (marker) name.textContent += ` (${marker})`;
-    item.append(name, extra);
+    identity.append(name);
+    if (player.result) {
+      const { answer, tier, status } = player.result;
+      const line = document.createElement('small');
+      line.className = 'room-rank-answer';
+      line.dataset.tier = tier;
+      line.textContent = answer ? `${answer} · ${rarity[tier]?.[0] ?? 'Accepted'}` :
+        status === 'passed' ? 'Passed' : 'Time ran out';
+      identity.append(line);
+    }
+    item.append(identity, extra);
     return item;
   }
 
@@ -68,25 +83,37 @@ export function setupMultiplayer({ loadRounds, showSurface, showRound, onAnswer,
     startButton.disabled = !packet.canStart;
   }
 
-  function renderBoard(packet, host) {
+  function renderBoard(packet, host, player) {
     const finished = packet.phase === 'finished';
     boardHeading.textContent = finished ? 'Final leaderboard' : `Round ${packet.index + 1} leaderboard`;
     const ranked = [...packet.players].sort((a, b) => b.score - a.score || a.name.localeCompare(b.name));
     let rank = 0;
-    get('room-ranks').replaceChildren(...ranked.map((player, index) => {
-      if (!index || ranked[index - 1].score !== player.score) rank = index + 1;
+    get('room-ranks').replaceChildren(...ranked.map((rankedPlayer, index) => {
+      if (!index || ranked[index - 1].score !== rankedPlayer.score) rank = index + 1;
       const extra = document.createElement('div');
       extra.className = 'room-rank-total';
-      extra.textContent = `${player.score} pts`;
+      extra.textContent = `${rankedPlayer.score} pts`;
       const round = document.createElement('small');
       round.className = 'room-rank-round';
-      round.textContent = `+${player.roundPoints} this round`;
+      round.textContent = `+${rankedPlayer.result.points} this round`;
       extra.append(round);
-      return playerRow(player, extra, rank);
+      return playerRow(rankedPlayer, extra, rank);
     }));
     continueButton.hidden = !host || finished;
     playAgain.hidden = !finished;
+    review.hidden = !finished;
+    if (finished && reviewKey !== packet.key) {
+      const log = packet.reviewRounds.map(({ prompt }, index) => ({ prompt, ...player.history[index] }));
+      renderDiveLog(reviewLog, log, packet.reviewRounds, rarity, loadAnswers);
+      reviewKey = packet.key;
+    }
     get('board-status').textContent = !finished && !host ? 'Waiting for the host to continue.' : '';
+  }
+
+  function clearReview() {
+    review.hidden = true;
+    reviewLog.replaceChildren();
+    reviewKey = undefined;
   }
 
   function render(packet) {
@@ -111,8 +138,10 @@ export function setupMultiplayer({ loadRounds, showSurface, showRound, onAnswer,
     board.hidden = inLobby;
     get('leave-room').hidden = false;
     if (moved) notice.textContent = '';
-    if (inLobby) renderLobby(packet, host);
-    else renderBoard(packet, host);
+    if (inLobby) {
+      if (reviewKey) clearReview();
+      renderLobby(packet, host);
+    } else renderBoard(packet, host, player);
     if (moved) (inLobby ? get('room-lobby-heading') : boardHeading).focus();
   }
 
@@ -120,6 +149,7 @@ export function setupMultiplayer({ loadRounds, showSurface, showRound, onAnswer,
     generation += 1;
     session?.close();
     session = state = null;
+    clearReview();
     busy(false);
   }
 

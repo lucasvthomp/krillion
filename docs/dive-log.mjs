@@ -78,19 +78,49 @@ function answerBank(answers, question, rarity) {
   return panel;
 }
 
-export function renderDiveLog(container, log, rounds, rarity) {
+export function renderDiveLog(container, log, rounds, rarity, loadAnswers) {
   container.replaceChildren(...log.map((entry, index) => {
     const item = element('li', 'log-item');
     const details = element('details', 'log-details');
-    details.name = 'dive-answers';
+    details.name = `${container.id}-answers`;
     const summary = element('summary', 'log-question');
     const question = element('span', 'log-question-text', entry.prompt);
-    const playerAnswer = entry.answer ? `${entry.answer} · ${rarity[entry.tier]?.[0] ?? 'Accepted'}` : 'No answer';
+    const noAnswer = entry.status === 'passed' ? 'Passed' : entry.status === 'timeout' ? 'Time ran out' : 'No answer';
+    const playerAnswer = entry.answer ? `${entry.answer} · ${rarity[entry.tier]?.[0] ?? 'Accepted'}` : noAnswer;
     question.append(element('small', 'log-player-answer', playerAnswer));
     const points = element('strong', 'log-points', `${entry.points} pts`);
     summary.dataset.tier = entry.tier;
     summary.append(question, points);
     const body = element('div');
+    const round = rounds[index];
+    let bankRequest;
+
+    async function showAnswers() {
+      if (round.answers) {
+        body.replaceChildren(answerBank(round.answers, entry.prompt, rarity));
+        return;
+      }
+      const status = element('p', 'notice', 'Loading answers…');
+      status.role = 'status';
+      body.replaceChildren(status);
+      const request = bankRequest ??= loadAnswers(round);
+      try {
+        const answers = await request;
+        if (details.open && body.isConnected && body.firstChild === status) {
+          body.replaceChildren(answerBank(answers, entry.prompt, rarity));
+        }
+      } catch {
+        if (bankRequest === request) bankRequest = undefined;
+        if (details.open && body.isConnected && body.firstChild === status) {
+          status.textContent = 'The answers could not load.';
+          const retry = element('button', 'plain-button', 'Retry');
+          retry.type = 'button';
+          retry.addEventListener('click', showAnswers);
+          body.append(retry);
+        }
+      }
+    }
+
     details.append(summary, body);
     details.addEventListener('toggle', () => {
       if (!details.open) {
@@ -100,7 +130,7 @@ export function renderDiveLog(container, log, rounds, rarity) {
       for (const other of container.querySelectorAll('details[open]')) {
         if (other !== details) other.open = false;
       }
-      if (!body.firstChild) body.append(answerBank(rounds[index].answers, entry.prompt, rarity));
+      if (!body.firstChild) showAnswers();
       summary.scrollIntoView({ block: 'nearest' });
     });
     item.append(details);

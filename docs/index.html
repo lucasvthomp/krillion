@@ -6,8 +6,8 @@
   <meta name="description" content="Seven random questions. Find an uncommon answer and see how deep you can go.">
   <meta name="theme-color" content="#023247">
   <title>Krillion | Rare-answer trivia</title>
-  <link rel="stylesheet" href="./style.css?v=12">
-  <script type="module" src="./game.mjs?v=15"></script>
+  <link rel="stylesheet" href="./style.css?v=16">
+  <script type="module" src="./game.mjs?v=16"></script>
 </head>
 <body>
   <canvas id="ocean" aria-hidden="true"></canvas>
@@ -55,6 +55,10 @@
         <p class="notice" id="board-status"></p>
         <button class="primary" id="room-continue" type="button" hidden>Continue</button>
         <button class="primary" id="room-replay" type="button" hidden>Play again</button>
+        <section id="room-answer-review" aria-labelledby="room-answer-heading" hidden>
+          <h3 id="room-answer-heading">Answer banks</h3>
+          <ol class="dive-log" id="room-answer-log" aria-label="Questions from this dive"></ol>
+        </section>
       </div>
       <p class="notice" id="room-notice" role="status"></p>
       <button class="plain-button" id="leave-room" type="button" hidden>Leave room</button>
@@ -129,6 +133,7 @@
     </ol>
     <ul class="tier-legend" id="tier-legend" aria-label="Rarity tiers"></ul>
     <p>Your best score is saved on this browser.</p>
+    <p><a class="source-link" href="./bank/SOURCES.txt">Answer bank sources</a></p>
     <form method="dialog"><button class="primary">Got it</button></form>
   </dialog>
   <dialog id="quit-dialog" aria-labelledby="quit-heading">

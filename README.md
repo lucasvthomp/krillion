@@ -6,7 +6,7 @@ The animated ocean fills the screen and descends as the score increases. The sce
 
 ## Multiplayer
 
-Choose Multiplayer, enter a display name, and create a room or join with its six-character code. A room supports 2–12 players. Everyone gets the same prompts and a shared timer. Each round ends when everyone answers or passes, or when the timer expires. The host advances the round leaderboard. After the final leaderboard, each player can return to the same lobby with **Play again**. The host can start another dive once the players still in the room are back in the lobby.
+Choose Multiplayer, enter a display name, and create a room or join with its six-character code. A room supports 2–12 players. Everyone gets the same prompts and a shared timer. Each round ends when everyone answers or passes, or when the timer expires. The leaderboard shows players’ accepted answers in their rarity colors, and the host advances the round. Each player can search all seven answer banks on the final screen or return to the same lobby with **Play again**. The host can start another dive once the players still in the room are back in the lobby.
 
 Rooms use [PeerJS Cloud](https://peerjs.com/server/cloud) for WebRTC signaling. The host's browser runs the game and validates answers. Room codes last as long as the host keeps the room open. WebRTC connectivity between players is required.
 
@@ -33,6 +33,8 @@ The [coverage report](scripts/answer-coverage.json) lists original and updated c
 [Reviewed additions](scripts/answer-additions.mjs) cover gaps found by spot-checking unrelated prompts. Each new answer uses an existing rarity, and an alternate name inherits the existing answer’s score. The console pass uses model names from [Nintendo](https://en-americas-support.nintendo.com/app/answers/detail/a_id/5066), [PlayStation](https://www.playstation.com/en-us/ps5/buy-now/), and [Xbox](https://www.xbox.com/en-us/consoles/xbox-series-x). Tree species include common and scientific names from the [USDA Forest Service](https://www.fs.usda.gov/pnw/pubs/pnw_rb168.pdf).
 
 The [prompt-by-prompt review](ANSWER-REVIEW.md) records the guesses checked, the gains, and the reason each bank stayed unchanged. It includes a spot check for every prompt and full rosters for selected closed questions. The enrichment script applies the [reviewed guesses](scripts/answer-sweep.txt) when the prompt wording matches. Run `node scripts/report-answer-sweep.mjs 9a0e0d0` after rebuilding to compare with the release before the sweep.
+
+The [catalog review](CATALOG-REVIEW.md) records a later expansion from taxonomies, geographic catalogs, and noun senses. The [source credits](docs/bank/SOURCES.txt) identify the editions and licenses. The packaged catalog snapshot makes the build self-contained. To regenerate it from source downloads, place the files listed in the credits in a local folder and pass that folder to `node scripts/build-answer-catalogs.mjs`, then run the enrichment script.
 
 To rebuild the static answer files after updating the dataset, run the following from the repository root.
 

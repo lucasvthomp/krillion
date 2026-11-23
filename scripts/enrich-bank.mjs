@@ -10,8 +10,10 @@ const bank = new URL('../docs/bank/', import.meta.url);
 const indexUrl = new URL('index.json', bank);
 const reportUrl = new URL('answer-coverage.json', import.meta.url);
 const snapshotUrl = new URL('answer-sources.json.gz', import.meta.url);
+const catalogUrl = new URL('answer-catalogs.json.gz', import.meta.url);
 const familiarityUrl = new URL('answer-familiarity.json.gz', import.meta.url);
 const { collections } = JSON.parse(gunzipSync(await readFile(snapshotUrl)));
+const catalogs = JSON.parse(gunzipSync(await readFile(catalogUrl)));
 const familiarity = JSON.parse(gunzipSync(await readFile(familiarityUrl)));
 const index = JSON.parse(await readFile(indexUrl, 'utf8'));
 const { prompts } = index;
@@ -155,6 +157,14 @@ function createMerge(records, candidates, grade, minimumAliasLength = 3) {
   };
 }
 
+function mergeCandidates(records, candidates, grade) {
+  if (!candidates.length) return false;
+  const merge = createMerge(records, candidates, grade);
+  let changed = false;
+  for (const candidate of candidates) if (merge(candidate)) changed = true;
+  return changed;
+}
+
 const tiersByPoints = { 10: 'plankton', 30: 'schooler', 60: 'rare', 85: 'deepcut' };
 
 function applyFamilies(records, promptId, catalog) {
@@ -243,6 +253,7 @@ for (const prompt of prompts) {
   const families = editorialAnswers(prompt.id);
   const reviewed = reviewedAnswers(prompt.id);
   const reviewReference = `reviewed:${prompt.id}`;
+  const catalog = Object.entries(catalogs[promptKey(prompt.prompt)] ?? {}).filter(([, rows]) => rows.length);
 
   const candidateMap = new Map();
   // Matching the same name to a Wikidata entity lets us reuse its exact aliases.
@@ -264,14 +275,11 @@ for (const prompt of prompts) {
     }
   }
   const candidates = [...candidateMap.values()];
-  let changed = false;
-  if (candidates.length) {
-    const merge = createMerge(records, candidates, grade);
-    for (const candidate of candidates) if (merge(candidate)) changed = true;
-  }
+  let changed = mergeCandidates(records, candidates, grade);
 
   for (const record of records) {
-    if (!record[4] || record[4].startsWith('family:') || record[4] === reviewReference || record[4] === `sweep:${prompt.id}`) continue;
+    if (!record[4] || record[4].startsWith('family:') || record[4].startsWith('catalog:') ||
+      record[4] === reviewReference || record[4] === `sweep:${prompt.id}`) continue;
     const [points, tier] = grade(record[4], record[0]);
     if (record[1] !== points || record[2] !== tier) {
       record[1] = points;
@@ -280,16 +288,43 @@ for (const prompt of prompts) {
     }
   }
   if (families.length && applyFamilies(records, prompt.id, families)) changed = true;
-  if (reviewed.length) {
-    const pointsByName = new Map(reviewed.map(([name, points]) => [name, points]));
-    const additions = reviewed.map(([name, , aliases]) => ({ name, aliases, reference: reviewReference }));
-    const merge = createMerge(records, additions, (_reference, name) => {
-      const points = pointsByName.get(name);
-      return [points, tiersByPoints[points]];
+  const pointsByName = new Map(reviewed.map(([name, points]) => [name, points]));
+  const curated = reviewed.map(([name, , aliases]) => ({ name, aliases, reference: reviewReference }));
+  const reviewGrade = (_reference, name) => {
+    const points = pointsByName.get(name);
+    return [points, tiersByPoints[points]];
+  };
+  if (mergeCandidates(records, curated, reviewGrade)) changed = true;
+  const batches = catalog.map(([source, rows]) => {
+    const pointsByReference = new Map();
+    const additions = rows.map(([name, points, aliases, id]) => {
+      const reference = `catalog:${source}:${id}`;
+      pointsByReference.set(reference, points);
+      return { name, aliases, reference };
     });
-    for (const candidate of additions) if (merge(candidate)) changed = true;
-  }
-  if (applySweep(records, prompt)) changed = true;
+    const catalogGrade = (reference) => {
+      const points = pointsByReference.get(reference);
+      return [points, tiersByPoints[points]];
+    };
+    return { additions, catalogGrade };
+  });
+  // A catalog spelling can identify a synonym from another source. Repeat the
+  // additive merges until every source has seen the newly accepted names.
+  let expanded;
+  do {
+    expanded = false;
+    for (const { additions, catalogGrade } of batches) {
+      if (mergeCandidates(records, additions, catalogGrade)) expanded = true;
+    }
+    if (applySweep(records, prompt)) expanded = true;
+    if (expanded) {
+      changed = true;
+      if (batches.length) {
+        mergeCandidates(records, candidates, grade);
+        mergeCandidates(records, curated, reviewGrade);
+      }
+    }
+  } while (batches.length && expanded);
   const importedTiers = {};
   for (const [, , tier, , reference] of records) {
     if (reference) importedTiers[tier] = (importedTiers[tier] ?? 0) + 1;
@@ -314,6 +349,7 @@ for (const prompt of prompts) {
       ...donors.map(({ id }) => `bank:${id}`),
       ...(families.length ? [`family:${prompt.id}`] : []),
       ...(reviewed.length ? [reviewReference] : []),
+      ...catalog.map(([source]) => `catalog:${source}`),
       ...(sweep.has(prompt.id) ? [`sweep:${prompt.id}`] : []),
     ],
     status: updated ? 'expanded' : candidates.length ? 'checked-against-source' : 'needs-specific-source',

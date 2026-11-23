@@ -1,6 +1,6 @@
-import { createRoomGame, maxPlayers, roomAlphabet } from './room-game.mjs';
+import { createRoomGame, maxPlayers, roomAlphabet } from './room-game.mjs?v=16';
 
-const protocol = 'krillion-room-v1';
+const protocol = 'krillion-room-v2';
 const connectionTimeout = 14000;
 const peerId = (code) => `${protocol}-${code.toLowerCase()}`;
 let library;

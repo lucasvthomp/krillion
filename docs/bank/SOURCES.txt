@@ -1,0 +1,71 @@
+Krillion catalog sources
+
+Krillion selected entries by prompt, normalized some names, and assigned game scores.
+Each source retains its listed license.
+
+CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
+CC BY-NC 4.0 — https://creativecommons.org/licenses/by-nc/4.0/
+
+World Spider Catalog, Natural History Museum Bern, GBIF-distributed snapshot dated 2026-11-22
+CC BY 4.0 | https://doi.org/10.24436/2
+spiders.zip — https://hosted-datasets.gbif.org/datasets/wsc.zip
+
+GlobalTreeSearch 1.9, Botanic Gardens Conservation International, GBIF checklist edition
+CC BY-NC 4.0 | https://ipt.brc.ac.uk/resource?r=globaltreesearch&v=1.9
+trees.zip — https://ipt.brc.ac.uk/archive.do?r=globaltreesearch&v=1.9
+
+AviList Core Team, AviList v2026
+CC BY 4.0 | https://doi.org/10.2173/avilist.v2026
+birds.json — https://explore.avilist.org/data/avilist-2026.json
+
+American Society of Mammalogists, Mammal Diversity Database v2.5
+CC BY 4.0 | https://doi.org/10.5281/zenodo.21654811
+mammals.zip — https://raw.githubusercontent.com/mammaldiversity/mammaldiversity.github.io/master/assets/data/MDD.zip
+
+Paleobiology Database, extinct vertebrate taxon data retrieved 2026-11-22
+CC BY 4.0 | https://ipt.vertnet.org/resource?r=pbdb_paleo&v=1.3
+fossils-verified.csv — https://paleobiodb.org/data1.2/taxa/list.csv?base_name=Vertebrata&rel=all_children&rank=genus,species&extant=no&status=accepted&show=full,app,classext&limit=all&vocab=pbdb
+
+GeoNames populated places, cities15000
+CC BY 4.0 | https://www.geonames.org/export/
+cities.zip — https://download.geonames.org/export/dump/cities15000.zip
+
+OurAirports
+Public domain | https://ourairports.com/data/
+airports.csv — https://raw.githubusercontent.com/davidmegginson/ourairports-data/main/airports.csv
+
+Princeton University, WordNet 3.0, packaged by NLTK
+WordNet license below | https://wordnet.princeton.edu/
+wordnet.zip — https://raw.githubusercontent.com/nltk/nltk_data/gh-pages/packages/corpora/wordnet.zip
+
+WordNet Release 3.0
+
+This software and database is being provided to you, the LICENSEE, by
+Princeton University under the following license.  By obtaining, using
+and/or copying this software and database, you agree that you have
+read, understood, and will comply with these terms and conditions.:
+
+Permission to use, copy, modify and distribute this software and
+database and its documentation for any purpose and without fee or
+royalty is hereby granted, provided that you agree to comply with
+the following copyright notice and statements, including the disclaimer,
+and that the same appear on ALL copies of the software, database and
+documentation, including modifications that you make for internal
+use or for distribution.
+
+WordNet 3.0 Copyright 2006 by Princeton University.  All rights reserved.
+
+THIS SOFTWARE AND DATABASE IS PROVIDED "AS IS" AND PRINCETON
+UNIVERSITY MAKES NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR
+IMPLIED.  BY WAY OF EXAMPLE, BUT NOT LIMITATION, PRINCETON
+UNIVERSITY MAKES NO REPRESENTATIONS OR WARRANTIES OF MERCHANT-
+ABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE OR THAT THE USE
+OF THE LICENSED SOFTWARE, DATABASE OR DOCUMENTATION WILL NOT
+INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR
+OTHER RIGHTS.
+
+The name of Princeton University or Princeton may not be used in
+advertising or publicity pertaining to distribution of the software
+and/or database.  Title to copyright in this software, database and
+any associated documentation shall at all times remain with
+Princeton University and LICENSEE agrees to preserve same.

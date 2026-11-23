@@ -1,7 +1,7 @@
 import { createOcean } from './ocean.mjs?v=5';
 import { buildLookup, exactKey } from './answers.mjs?v=13';
-import { renderDiveLog } from './dive-log.mjs?v=10';
-import { setupMultiplayer } from './multiplayer.mjs?v=12';
+import { renderDiveLog } from './dive-log.mjs?v=16';
+import { setupMultiplayer } from './multiplayer.mjs?v=16';
 
 const roundsPerGame = 7;
 const readingSeconds = 3;
@@ -64,7 +64,7 @@ let roomGuess;
 let roomPending = false;
 
 function bankUrl(file) {
-  return new URL(`./bank/${file}?v=15`, import.meta.url);
+  return new URL(`./bank/${file}?v=16`, import.meta.url);
 }
 
 async function loadIndex() {
@@ -90,12 +90,20 @@ function drawPrompts() {
   return pool.slice(0, roundsPerGame).map((group) => group[Math.floor(Math.random() * group.length)]);
 }
 
-async function loadRound(prompt) {
-  const response = await fetch(bankUrl(`${prompt.id}.bank`));
+async function loadBankAnswers({ id, count }) {
+  if (typeof id !== 'string' || !/^\d{4,}$/u.test(id) || !Number.isSafeInteger(count) || count < 1) {
+    throw new Error('Invalid answer bank details.');
+  }
+  const response = await fetch(bankUrl(`${id}.bank`));
   if (!response.ok || !response.body) throw new Error(`Answer bank returned ${response.status}`);
   const decompressed = response.body.pipeThrough(new DecompressionStream('gzip'));
   const answers = await new Response(decompressed).json();
-  if (answers.length !== prompt.count || !answers.length) throw new Error('Incomplete answer bank.');
+  if (!Array.isArray(answers) || answers.length !== count) throw new Error('Incomplete answer bank.');
+  return answers;
+}
+
+async function loadRound(prompt) {
+  const answers = await loadBankAnswers(prompt);
   return {
     ...prompt,
     answers,
@@ -356,6 +364,8 @@ function sendRoomAnswer(type, guess) {
 
 const multiplayer = setupMultiplayer({
   loadRounds: prepareRounds,
+  loadAnswers: loadBankAnswers,
+  rarity,
   showSurface: showRoomSurface,
   showRound: showMultiplayerRound,
   goHome: returnToMenu,

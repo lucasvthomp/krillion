@@ -1,17 +1,17 @@
 {
   "summary": {
     "audited": 923,
-    "expanded": 527,
-    "checkedAgainstSource": 16,
-    "needsSpecificSource": 380,
-    "addedAnswers": 36206,
-    "addedAliases": 22401,
-    "answers": 1733964,
+    "expanded": 556,
+    "checkedAgainstSource": 15,
+    "needsSpecificSource": 352,
+    "addedAnswers": 197328,
+    "addedAliases": 65889,
+    "answers": 1895086,
     "importedTiers": {
-      "rare": 11563,
-      "plankton": 2662,
-      "schooler": 7592,
-      "deepcut": 14389
+      "rare": 31184,
+      "plankton": 2665,
+      "schooler": 7648,
+      "deepcut": 155831
     }
   },
   "prompts": [
@@ -20,10 +20,10 @@
       "prompt": "Name an animal whose name starts with K",
       "category": "Animals & Nature",
       "originalAnswers": 39,
-      "answers": 154,
-      "aliases": 11,
+      "answers": 400,
+      "aliases": 93,
       "importedTiers": {
-        "rare": 39,
+        "rare": 285,
         "plankton": 8,
         "schooler": 22,
         "deepcut": 46
@@ -31,6 +31,8 @@
       "verifiedCandidates": 122,
       "evidence": [
         "wikidata:mammal and bird common names",
+        "catalog:avilist",
+        "catalog:mdd",
         "sweep:0001"
       ],
       "status": "expanded"
@@ -147,11 +149,11 @@
       "prompt": "Name a bird of prey",
       "category": "Animals & Nature",
       "originalAnswers": 66,
-      "answers": 321,
-      "aliases": 115,
+      "answers": 629,
+      "aliases": 674,
       "importedTiers": {
         "deepcut": 101,
-        "rare": 98,
+        "rare": 406,
         "schooler": 40,
         "plankton": 16
       },
@@ -159,6 +161,7 @@
       "evidence": [
         "wikidata:owl",
         "bank:0113",
+        "catalog:avilist",
         "sweep:0009"
       ],
       "status": "expanded"
@@ -168,10 +171,10 @@
       "prompt": "Name a type of cheese",
       "category": "Food & Drink",
       "originalAnswers": 61,
-      "answers": 171,
-      "aliases": 80,
+      "answers": 180,
+      "aliases": 90,
       "importedTiers": {
-        "rare": 36,
+        "rare": 45,
         "deepcut": 42,
         "schooler": 22,
         "plankton": 10
@@ -181,6 +184,7 @@
         "wikidata:cheese",
         "family:0010",
         "reviewed:0010",
+        "catalog:wordnet",
         "sweep:0010"
       ],
       "status": "expanded"
@@ -323,12 +327,16 @@
       "prompt": "Name a root vegetable",
       "category": "Food & Drink",
       "originalAnswers": 40,
-      "answers": 40,
-      "aliases": 18,
+      "answers": 43,
+      "aliases": 32,
+      "importedTiers": {
+        "rare": 3
+      },
       "verifiedCandidates": 7,
       "evidence": [
         "wikidata:root-vegetable",
         "reviewed:0020",
+        "catalog:wordnet",
         "sweep:0020"
       ],
       "status": "expanded"
@@ -368,16 +376,17 @@
       "prompt": "Name a species of wild cat",
       "category": "Animals & Nature",
       "originalAnswers": 40,
-      "answers": 45,
-      "aliases": 41,
+      "answers": 52,
+      "aliases": 126,
       "importedTiers": {
-        "rare": 1,
+        "rare": 8,
         "schooler": 1,
         "deepcut": 3
       },
       "verifiedCandidates": 39,
       "evidence": [
         "wikidata:wild-cat",
+        "catalog:mdd",
         "sweep:0023"
       ],
       "status": "expanded"
@@ -387,18 +396,19 @@
       "prompt": "Name a type of bread",
       "category": "Food & Drink",
       "originalAnswers": 70,
-      "answers": 267,
-      "aliases": 144,
+      "answers": 343,
+      "aliases": 192,
       "importedTiers": {
         "deepcut": 77,
-        "rare": 67,
-        "schooler": 40,
+        "rare": 140,
+        "schooler": 43,
         "plankton": 13
       },
       "verifiedCandidates": 206,
       "evidence": [
         "wikidata:bread",
         "reviewed:0024",
+        "catalog:wordnet",
         "sweep:0024"
       ],
       "status": "expanded"
@@ -437,17 +447,18 @@
       "prompt": "Name a card game",
       "category": "Sports & Games",
       "originalAnswers": 78,
-      "answers": 715,
-      "aliases": 219,
+      "answers": 729,
+      "aliases": 246,
       "importedTiers": {
         "schooler": 61,
-        "rare": 173,
+        "rare": 187,
         "deepcut": 399,
         "plankton": 4
       },
       "verifiedCandidates": 690,
       "evidence": [
         "wikidata:card-game",
+        "catalog:wordnet",
         "sweep:0027"
       ],
       "status": "expanded"
@@ -500,18 +511,19 @@
       "prompt": "Name an herb or spice",
       "category": "Food & Drink",
       "originalAnswers": 71,
-      "answers": 111,
-      "aliases": 102,
+      "answers": 125,
+      "aliases": 116,
       "importedTiers": {
         "deepcut": 20,
         "plankton": 1,
-        "rare": 12,
+        "rare": 26,
         "schooler": 7
       },
       "verifiedCandidates": 55,
       "evidence": [
         "wikidata:spice",
         "reviewed:0031",
+        "catalog:wordnet",
         "sweep:0031"
       ],
       "status": "expanded"
@@ -537,13 +549,17 @@
       "prompt": "Name a unit of measurement",
       "category": "Science, Space & Tech",
       "originalAnswers": 96,
-      "answers": 97,
-      "aliases": 0,
+      "answers": 342,
+      "aliases": 161,
       "importedTiers": {
-        "deepcut": 1
+        "deepcut": 1,
+        "rare": 237,
+        "schooler": 7,
+        "plankton": 1
       },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:wordnet",
         "sweep:0033"
       ],
       "status": "expanded"
@@ -618,10 +634,10 @@
       "prompt": "Name a cocktail",
       "category": "Food & Drink",
       "originalAnswers": 94,
-      "answers": 366,
-      "aliases": 85,
+      "answers": 372,
+      "aliases": 87,
       "importedTiers": {
-        "rare": 93,
+        "rare": 99,
         "schooler": 53,
         "deepcut": 119,
         "plankton": 7
@@ -630,6 +646,7 @@
       "evidence": [
         "wikidata:cocktail",
         "family:0038",
+        "catalog:wordnet",
         "sweep:0038"
       ],
       "status": "expanded"
@@ -710,14 +727,16 @@
       "prompt": "Name a penguin species",
       "category": "Animals & Nature",
       "originalAnswers": 20,
-      "answers": 21,
-      "aliases": 9,
+      "answers": 23,
+      "aliases": 28,
       "importedTiers": {
-        "deepcut": 1
+        "deepcut": 1,
+        "rare": 2
       },
       "verifiedCandidates": 19,
       "evidence": [
         "wikidata:penguin",
+        "catalog:avilist",
         "sweep:0044"
       ],
       "status": "expanded"
@@ -756,30 +775,35 @@
       "prompt": "Name a gemstone",
       "category": "Science, Space & Tech",
       "originalAnswers": 64,
-      "answers": 64,
-      "aliases": 0,
+      "answers": 70,
+      "aliases": 5,
+      "importedTiers": {
+        "rare": 6
+      },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:wordnet",
         "sweep:0047"
       ],
-      "status": "needs-specific-source"
+      "status": "expanded"
     },
     {
       "id": "0048",
       "prompt": "Name a board game",
       "category": "Sports & Games",
       "originalAnswers": 90,
-      "answers": 1985,
-      "aliases": 315,
+      "answers": 1989,
+      "aliases": 326,
       "importedTiers": {
         "deepcut": 1426,
-        "rare": 321,
+        "rare": 325,
         "schooler": 133,
         "plankton": 15
       },
       "verifiedCandidates": 1957,
       "evidence": [
         "wikidata:board-game",
+        "catalog:wordnet",
         "sweep:0048"
       ],
       "status": "expanded"
@@ -819,16 +843,17 @@
       "prompt": "Name a whale species",
       "category": "Animals & Nature",
       "originalAnswers": 39,
-      "answers": 45,
-      "aliases": 30,
+      "answers": 60,
+      "aliases": 192,
       "importedTiers": {
-        "rare": 4,
+        "rare": 19,
         "deepcut": 2
       },
       "verifiedCandidates": 14,
       "evidence": [
         "wikidata:baleen-whale",
         "reviewed:0051",
+        "catalog:mdd",
         "sweep:0051"
       ],
       "status": "expanded"
@@ -867,11 +892,15 @@
       "prompt": "Name a type of cloud",
       "category": "Animals & Nature",
       "originalAnswers": 35,
-      "answers": 35,
-      "aliases": 6,
+      "answers": 40,
+      "aliases": 18,
+      "importedTiers": {
+        "rare": 5
+      },
       "verifiedCandidates": 0,
       "evidence": [
         "reviewed:0054",
+        "catalog:wordnet",
         "sweep:0054"
       ],
       "status": "expanded"
@@ -928,13 +957,15 @@
       "prompt": "Name a snake species",
       "category": "Animals & Nature",
       "originalAnswers": 71,
-      "answers": 73,
-      "aliases": 0,
+      "answers": 113,
+      "aliases": 107,
       "importedTiers": {
-        "schooler": 2
+        "schooler": 3,
+        "rare": 39
       },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:wordnet",
         "sweep:0058"
       ],
       "status": "expanded"
@@ -944,18 +975,19 @@
       "prompt": "Name a coffee drink",
       "category": "Food & Drink",
       "originalAnswers": 67,
-      "answers": 91,
-      "aliases": 47,
+      "answers": 93,
+      "aliases": 53,
       "importedTiers": {
         "deepcut": 10,
         "schooler": 5,
-        "rare": 8,
+        "rare": 10,
         "plankton": 1
       },
       "verifiedCandidates": 44,
       "evidence": [
         "wikidata:coffee",
         "reviewed:0059",
+        "catalog:wordnet",
         "sweep:0059"
       ],
       "status": "expanded"
@@ -986,30 +1018,36 @@
       "prompt": "Name a muscle in the human body",
       "category": "Body, Health & Medicine",
       "originalAnswers": 69,
-      "answers": 69,
-      "aliases": 0,
+      "answers": 150,
+      "aliases": 97,
+      "importedTiers": {
+        "rare": 78,
+        "schooler": 3
+      },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:wordnet",
         "sweep:0061"
       ],
-      "status": "needs-specific-source"
+      "status": "expanded"
     },
     {
       "id": "0062",
       "prompt": "Name a style of hat",
       "category": "Objects, Tools & Materials",
       "originalAnswers": 65,
-      "answers": 132,
-      "aliases": 108,
+      "answers": 140,
+      "aliases": 129,
       "importedTiers": {
         "deepcut": 33,
         "plankton": 2,
         "schooler": 10,
-        "rare": 22
+        "rare": 30
       },
       "verifiedCandidates": 90,
       "evidence": [
         "wikidata:hat",
+        "catalog:wordnet",
         "sweep:0062"
       ],
       "status": "expanded"
@@ -1048,13 +1086,17 @@
       "prompt": "Name a dinosaur",
       "category": "Animals & Nature",
       "originalAnswers": 76,
-      "answers": 76,
-      "aliases": 0,
+      "answers": 103,
+      "aliases": 34,
+      "importedTiers": {
+        "rare": 27
+      },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:wordnet",
         "sweep:0065"
       ],
-      "status": "needs-specific-source"
+      "status": "expanded"
     },
     {
       "id": "0066",
@@ -1163,18 +1205,19 @@
       "prompt": "Name an insect",
       "category": "Animals & Nature",
       "originalAnswers": 52,
-      "answers": 361,
-      "aliases": 5,
+      "answers": 713,
+      "aliases": 401,
       "importedTiers": {
         "deepcut": 123,
-        "rare": 95,
+        "rare": 444,
         "plankton": 20,
-        "schooler": 71
+        "schooler": 74
       },
       "verifiedCandidates": 312,
       "evidence": [
         "wikidata:ground-beetle+stag-beetle+longhorn-beetle",
         "bank:0155",
+        "catalog:wordnet",
         "sweep:0072"
       ],
       "status": "expanded"
@@ -1184,17 +1227,18 @@
       "prompt": "Name a soup",
       "category": "Food & Drink",
       "originalAnswers": 58,
-      "answers": 372,
-      "aliases": 178,
+      "answers": 382,
+      "aliases": 187,
       "importedTiers": {
         "deepcut": 127,
-        "rare": 104,
+        "rare": 114,
         "schooler": 61,
         "plankton": 22
       },
       "verifiedCandidates": 338,
       "evidence": [
         "wikidata:soup",
+        "catalog:wordnet",
         "sweep:0073"
       ],
       "status": "expanded"
@@ -1234,13 +1278,15 @@
       "prompt": "Name a kitchen utensil",
       "category": "Objects, Tools & Materials",
       "originalAnswers": 57,
-      "answers": 60,
-      "aliases": 0,
+      "answers": 116,
+      "aliases": 17,
       "importedTiers": {
-        "schooler": 3
+        "schooler": 5,
+        "rare": 54
       },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:wordnet",
         "sweep:0076"
       ],
       "status": "expanded"
@@ -1279,17 +1325,18 @@
       "prompt": "Name a primate species",
       "category": "Animals & Nature",
       "originalAnswers": 49,
-      "answers": 433,
-      "aliases": 728,
+      "answers": 560,
+      "aliases": 1975,
       "importedTiers": {
         "deepcut": 144,
         "schooler": 81,
-        "rare": 129,
+        "rare": 256,
         "plankton": 30
       },
       "verifiedCandidates": 420,
       "evidence": [
         "wikidata:primate",
+        "catalog:mdd",
         "sweep:0079"
       ],
       "status": "expanded"
@@ -1513,10 +1560,10 @@
       "prompt": "Name a species of spider",
       "category": "Animals & Nature",
       "originalAnswers": 50,
-      "answers": 240,
-      "aliases": 53,
+      "answers": 53606,
+      "aliases": 9724,
       "importedTiers": {
-        "deepcut": 63,
+        "deepcut": 53429,
         "schooler": 39,
         "rare": 76,
         "plankton": 12
@@ -1524,6 +1571,7 @@
       "verifiedCandidates": 210,
       "evidence": [
         "wikidata:spider",
+        "catalog:wsc",
         "sweep:0093"
       ],
       "status": "expanded"
@@ -1533,10 +1581,10 @@
       "prompt": "Name a type of sandwich",
       "category": "Food & Drink",
       "originalAnswers": 73,
-      "answers": 171,
-      "aliases": 82,
+      "answers": 175,
+      "aliases": 89,
       "importedTiers": {
-        "rare": 32,
+        "rare": 36,
         "deepcut": 45,
         "schooler": 16,
         "plankton": 5
@@ -1545,6 +1593,7 @@
       "evidence": [
         "wikidata:sandwich",
         "reviewed:0094",
+        "catalog:wordnet",
         "sweep:0094"
       ],
       "status": "expanded"
@@ -1625,11 +1674,11 @@
       "prompt": "Name a rodent",
       "category": "Animals & Nature",
       "originalAnswers": 5,
-      "answers": 2310,
-      "aliases": 1909,
+      "answers": 3033,
+      "aliases": 6218,
       "importedTiers": {
         "deepcut": 780,
-        "rare": 773,
+        "rare": 1496,
         "schooler": 498,
         "plankton": 254
       },
@@ -1638,6 +1687,7 @@
         "wikidata:rodent",
         "family:0100",
         "reviewed:0100",
+        "catalog:mdd",
         "sweep:0100"
       ],
       "status": "expanded"
@@ -1676,16 +1726,17 @@
       "prompt": "Name a type of knot",
       "category": "Objects, Tools & Materials",
       "originalAnswers": 55,
-      "answers": 71,
-      "aliases": 5,
+      "answers": 81,
+      "aliases": 19,
       "importedTiers": {
-        "rare": 7,
+        "rare": 17,
         "deepcut": 5,
         "schooler": 4
       },
       "verifiedCandidates": 13,
       "evidence": [
         "wikidata:knot",
+        "catalog:wordnet",
         "sweep:0103"
       ],
       "status": "expanded"
@@ -1779,10 +1830,14 @@
       "prompt": "Name a phobia (its formal name, like 'arachnophobia')",
       "category": "Body, Health & Medicine",
       "originalAnswers": 71,
-      "answers": 71,
-      "aliases": 1,
+      "answers": 90,
+      "aliases": 2,
+      "importedTiers": {
+        "rare": 19
+      },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:wordnet",
         "sweep:0109"
       ],
       "status": "expanded"
@@ -1835,17 +1890,18 @@
       "prompt": "Name an owl species",
       "category": "Animals & Nature",
       "originalAnswers": 44,
-      "answers": 262,
-      "aliases": 122,
+      "answers": 284,
+      "aliases": 361,
       "importedTiers": {
         "schooler": 36,
-        "rare": 91,
+        "rare": 113,
         "deepcut": 76,
         "plankton": 15
       },
       "verifiedCandidates": 255,
       "evidence": [
         "wikidata:owl",
+        "catalog:avilist",
         "sweep:0113"
       ],
       "status": "expanded"
@@ -1855,10 +1911,10 @@
       "prompt": "Name a type of cake",
       "category": "Food & Drink",
       "originalAnswers": 61,
-      "answers": 215,
-      "aliases": 102,
+      "answers": 235,
+      "aliases": 115,
       "importedTiers": {
-        "rare": 53,
+        "rare": 73,
         "deepcut": 65,
         "schooler": 27,
         "plankton": 9
@@ -1868,6 +1924,7 @@
         "wikidata:cake",
         "family:0114",
         "reviewed:0114",
+        "catalog:wordnet",
         "sweep:0114"
       ],
       "status": "expanded"
@@ -1890,13 +1947,17 @@
       "prompt": "Name a metal alloy",
       "category": "Objects, Tools & Materials",
       "originalAnswers": 61,
-      "answers": 61,
-      "aliases": 0,
+      "answers": 123,
+      "aliases": 30,
+      "importedTiers": {
+        "rare": 62
+      },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:wordnet",
         "sweep:0116"
       ],
-      "status": "needs-specific-source"
+      "status": "expanded"
     },
     {
       "id": "0117",
@@ -1949,10 +2010,10 @@
       "prompt": "Name an animal whose name starts with H",
       "category": "Animals & Nature",
       "originalAnswers": 46,
-      "answers": 315,
-      "aliases": 29,
+      "answers": 720,
+      "aliases": 166,
       "importedTiers": {
-        "rare": 87,
+        "rare": 492,
         "plankton": 27,
         "deepcut": 95,
         "schooler": 60
@@ -1960,6 +2021,8 @@
       "verifiedCandidates": 271,
       "evidence": [
         "wikidata:mammal and bird common names",
+        "catalog:avilist",
+        "catalog:mdd",
         "sweep:0120"
       ],
       "status": "expanded"
@@ -1969,11 +2032,11 @@
       "prompt": "Name a type of pie",
       "category": "Food & Drink",
       "originalAnswers": 69,
-      "answers": 157,
-      "aliases": 38,
+      "answers": 168,
+      "aliases": 39,
       "importedTiers": {
         "schooler": 22,
-        "rare": 27,
+        "rare": 38,
         "plankton": 7,
         "deepcut": 32
       },
@@ -1981,6 +2044,7 @@
       "evidence": [
         "wikidata:pie",
         "reviewed:0121",
+        "catalog:wordnet",
         "sweep:0121"
       ],
       "status": "expanded"
@@ -2003,16 +2067,17 @@
       "prompt": "Name a species of tree",
       "category": "Animals & Nature",
       "originalAnswers": 75,
-      "answers": 120,
+      "answers": 57669,
       "aliases": 60,
       "importedTiers": {
         "schooler": 19,
         "rare": 25,
-        "deepcut": 1
+        "deepcut": 57550
       },
       "verifiedCandidates": 0,
       "evidence": [
         "reviewed:0123",
+        "catalog:bgci",
         "sweep:0123"
       ],
       "status": "expanded"
@@ -2062,13 +2127,15 @@
       "prompt": "Name a freshwater fish",
       "category": "Animals & Nature",
       "originalAnswers": 60,
-      "answers": 63,
-      "aliases": 0,
+      "answers": 71,
+      "aliases": 5,
       "importedTiers": {
-        "schooler": 3
+        "schooler": 3,
+        "rare": 8
       },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:wordnet",
         "sweep:0127"
       ],
       "status": "expanded"
@@ -2079,7 +2146,7 @@
       "category": "Food & Drink",
       "originalAnswers": 46,
       "answers": 66,
-      "aliases": 60,
+      "aliases": 61,
       "importedTiers": {
         "deepcut": 14,
         "rare": 5,
@@ -2089,6 +2156,7 @@
       "evidence": [
         "wikidata:dumpling",
         "reviewed:0128",
+        "catalog:wordnet",
         "sweep:0128"
       ],
       "status": "expanded"
@@ -2111,13 +2179,18 @@
       "prompt": "Name a weather phenomenon",
       "category": "Animals & Nature",
       "originalAnswers": 50,
-      "answers": 50,
-      "aliases": 0,
+      "answers": 132,
+      "aliases": 59,
+      "importedTiers": {
+        "rare": 77,
+        "schooler": 5
+      },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:wordnet",
         "sweep:0130"
       ],
-      "status": "needs-specific-source"
+      "status": "expanded"
     },
     {
       "id": "0131",
@@ -2166,13 +2239,16 @@
       "prompt": "Name a parrot species",
       "category": "Animals & Nature",
       "originalAnswers": 41,
-      "answers": 42,
-      "aliases": 0,
+      "answers": 416,
+      "aliases": 403,
       "importedTiers": {
-        "schooler": 1
+        "schooler": 1,
+        "rare": 374
       },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:avilist",
+        "catalog:wordnet",
         "sweep:0134"
       ],
       "status": "expanded"
@@ -2182,10 +2258,10 @@
       "prompt": "Name a condiment",
       "category": "Food & Drink",
       "originalAnswers": 68,
-      "answers": 130,
-      "aliases": 65,
+      "answers": 228,
+      "aliases": 113,
       "importedTiers": {
-        "rare": 19,
+        "rare": 117,
         "schooler": 12,
         "deepcut": 27,
         "plankton": 4
@@ -2193,6 +2269,7 @@
       "verifiedCandidates": 72,
       "evidence": [
         "wikidata:condiment",
+        "catalog:wordnet",
         "sweep:0135"
       ],
       "status": "expanded"
@@ -2381,17 +2458,18 @@
       "prompt": "Name a type of waterfowl",
       "category": "Animals & Nature",
       "originalAnswers": 52,
-      "answers": 197,
-      "aliases": 42,
+      "answers": 204,
+      "aliases": 210,
       "importedTiers": {
         "deepcut": 65,
-        "rare": 48,
+        "rare": 55,
         "schooler": 24,
         "plankton": 8
       },
       "verifiedCandidates": 177,
       "evidence": [
         "wikidata:waterfowl",
+        "catalog:avilist",
         "sweep:0148"
       ],
       "status": "expanded"
@@ -2491,17 +2569,18 @@
       "prompt": "Name a beetle",
       "category": "Animals & Nature",
       "originalAnswers": 48,
-      "answers": 312,
-      "aliases": 5,
+      "answers": 343,
+      "aliases": 57,
       "importedTiers": {
         "deepcut": 97,
-        "rare": 82,
+        "rare": 113,
         "plankton": 17,
         "schooler": 68
       },
       "verifiedCandidates": 269,
       "evidence": [
         "wikidata:beetle",
+        "catalog:wordnet",
         "sweep:0155"
       ],
       "status": "expanded"
@@ -2511,17 +2590,18 @@
       "prompt": "Name a type of salad",
       "category": "Food & Drink",
       "originalAnswers": 53,
-      "answers": 156,
-      "aliases": 75,
+      "answers": 161,
+      "aliases": 78,
       "importedTiers": {
         "schooler": 20,
-        "rare": 35,
+        "rare": 40,
         "plankton": 5,
         "deepcut": 43
       },
       "verifiedCandidates": 124,
       "evidence": [
         "wikidata:salad",
+        "catalog:wordnet",
         "sweep:0156"
       ],
       "status": "expanded"
@@ -2713,13 +2793,15 @@
       "prompt": "Name a lizard species",
       "category": "Animals & Nature",
       "originalAnswers": 46,
-      "answers": 47,
-      "aliases": 0,
+      "answers": 70,
+      "aliases": 46,
       "importedTiers": {
-        "schooler": 1
+        "schooler": 1,
+        "rare": 23
       },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:wordnet",
         "sweep:0169"
       ],
       "status": "expanded"
@@ -2931,13 +3013,18 @@
       "prompt": "Name an animal threatened with extinction",
       "category": "Animals & Nature",
       "originalAnswers": 105,
-      "answers": 105,
-      "aliases": 0,
+      "answers": 2455,
+      "aliases": 4201,
+      "importedTiers": {
+        "rare": 2350
+      },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:avilist",
+        "catalog:mdd",
         "sweep:0183"
       ],
-      "status": "needs-specific-source"
+      "status": "expanded"
     },
     {
       "id": "0184",
@@ -3140,17 +3227,18 @@
       "prompt": "Name a piece of furniture",
       "category": "Objects, Tools & Materials",
       "originalAnswers": 69,
-      "answers": 119,
-      "aliases": 75,
+      "answers": 250,
+      "aliases": 147,
       "importedTiers": {
         "deepcut": 21,
-        "rare": 18,
-        "schooler": 10,
+        "rare": 145,
+        "schooler": 14,
         "plankton": 1
       },
       "verifiedCandidates": 67,
       "evidence": [
         "wikidata:furniture",
+        "catalog:wordnet",
         "sweep:0197"
       ],
       "status": "expanded"
@@ -3351,18 +3439,19 @@
       "prompt": "Name a marsupial",
       "category": "Animals & Nature",
       "originalAnswers": 53,
-      "answers": 249,
-      "aliases": 188,
+      "answers": 467,
+      "aliases": 1015,
       "importedTiers": {
         "schooler": 42,
         "deepcut": 65,
-        "rare": 72,
+        "rare": 290,
         "plankton": 17
       },
       "verifiedCandidates": 203,
       "evidence": [
         "wikidata:marsupial",
         "family:0211",
+        "catalog:mdd",
         "sweep:0211"
       ],
       "status": "expanded"
@@ -3433,13 +3522,15 @@
       "prompt": "Name a fabric or textile",
       "category": "Objects, Tools & Materials",
       "originalAnswers": 99,
-      "answers": 100,
-      "aliases": 1,
+      "answers": 304,
+      "aliases": 88,
       "importedTiers": {
-        "schooler": 1
+        "schooler": 4,
+        "rare": 201
       },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:wordnet",
         "sweep:0216"
       ],
       "status": "expanded"
@@ -3486,13 +3577,15 @@
       "prompt": "Name a songbird",
       "category": "Animals & Nature",
       "originalAnswers": 61,
-      "answers": 66,
-      "aliases": 0,
+      "answers": 5309,
+      "aliases": 5256,
       "importedTiers": {
-        "schooler": 5
+        "schooler": 5,
+        "rare": 5243
       },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:avilist",
         "sweep:0219"
       ],
       "status": "expanded"
@@ -3636,17 +3729,18 @@
       "prompt": "Name a rock or mineral",
       "category": "Science, Space & Tech",
       "originalAnswers": 81,
-      "answers": 1796,
-      "aliases": 1200,
+      "answers": 1898,
+      "aliases": 1272,
       "importedTiers": {
-        "schooler": 360,
+        "schooler": 362,
         "plankton": 155,
-        "rare": 535,
+        "rare": 635,
         "deepcut": 665
       },
       "verifiedCandidates": 1741,
       "evidence": [
         "wikidata:minerals",
+        "catalog:wordnet",
         "sweep:0228"
       ],
       "status": "expanded"
@@ -3893,17 +3987,18 @@
       "prompt": "Name a type of shoe",
       "category": "Objects, Tools & Materials",
       "originalAnswers": 83,
-      "answers": 130,
-      "aliases": 56,
+      "answers": 158,
+      "aliases": 73,
       "importedTiers": {
         "schooler": 11,
-        "rare": 14,
+        "rare": 42,
         "deepcut": 19,
         "plankton": 3
       },
       "verifiedCandidates": 52,
       "evidence": [
         "wikidata:shoe",
+        "catalog:wordnet",
         "sweep:0244"
       ],
       "status": "expanded"
@@ -3929,13 +4024,15 @@
       "prompt": "Name a type of mushroom",
       "category": "Food & Drink",
       "originalAnswers": 54,
-      "answers": 57,
-      "aliases": 1,
+      "answers": 65,
+      "aliases": 15,
       "importedTiers": {
-        "schooler": 3
+        "schooler": 3,
+        "rare": 8
       },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:wordnet",
         "sweep:0246"
       ],
       "status": "expanded"
@@ -4007,13 +4104,16 @@
       "prompt": "Name a type of bag",
       "category": "Objects, Tools & Materials",
       "originalAnswers": 79,
-      "answers": 81,
-      "aliases": 0,
+      "answers": 113,
+      "aliases": 27,
       "importedTiers": {
-        "schooler": 2
+        "schooler": 2,
+        "rare": 31,
+        "plankton": 1
       },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:wordnet",
         "sweep:0251"
       ],
       "status": "expanded"
@@ -4124,17 +4224,18 @@
       "prompt": "Name a type of poem",
       "category": "Words, Language & Numbers",
       "originalAnswers": 78,
-      "answers": 172,
-      "aliases": 67,
+      "answers": 188,
+      "aliases": 87,
       "importedTiers": {
         "deepcut": 43,
         "schooler": 16,
-        "rare": 32,
+        "rare": 48,
         "plankton": 3
       },
       "verifiedCandidates": 122,
       "evidence": [
         "wikidata:poem",
+        "catalog:wordnet",
         "sweep:0258"
       ],
       "status": "expanded"
@@ -4467,10 +4568,10 @@
       "prompt": "Name an animal that has a G in its name",
       "category": "Animals & Nature",
       "originalAnswers": 233,
-      "answers": 4185,
-      "aliases": 924,
+      "answers": 7414,
+      "aliases": 3058,
       "importedTiers": {
-        "rare": 1337,
+        "rare": 4566,
         "schooler": 799,
         "plankton": 388,
         "deepcut": 1428
@@ -4478,6 +4579,8 @@
       "verifiedCandidates": 3978,
       "evidence": [
         "wikidata:mammal and bird common names",
+        "catalog:avilist",
+        "catalog:mdd",
         "sweep:0281"
       ],
       "status": "expanded"
@@ -4577,13 +4680,17 @@
       "prompt": "Name a prehistoric mammal",
       "category": "Animals & Nature",
       "originalAnswers": 114,
-      "answers": 114,
+      "answers": 8978,
       "aliases": 0,
+      "importedTiers": {
+        "deepcut": 8864
+      },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:pbdb",
         "sweep:0288"
       ],
-      "status": "needs-specific-source"
+      "status": "expanded"
     },
     {
       "id": "0289",
@@ -4606,13 +4713,15 @@
       "prompt": "Name a logical fallacy",
       "category": "Words, Language & Numbers",
       "originalAnswers": 135,
-      "answers": 136,
-      "aliases": 0,
+      "answers": 138,
+      "aliases": 2,
       "importedTiers": {
-        "schooler": 1
+        "schooler": 1,
+        "rare": 2
       },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:wordnet",
         "sweep:0290"
       ],
       "status": "expanded"
@@ -4667,10 +4776,14 @@
       "prompt": "Name a berry",
       "category": "Food & Drink",
       "originalAnswers": 104,
-      "answers": 104,
-      "aliases": 1,
+      "answers": 105,
+      "aliases": 17,
+      "importedTiers": {
+        "rare": 1
+      },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:wordnet",
         "sweep:0294"
       ],
       "status": "expanded"
@@ -4793,13 +4906,17 @@
       "prompt": "Name a living bird that cannot fly",
       "category": "Animals & Nature",
       "originalAnswers": 64,
-      "answers": 64,
-      "aliases": 0,
+      "answers": 67,
+      "aliases": 32,
+      "importedTiers": {
+        "rare": 3
+      },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:avilist",
         "sweep:0302"
       ],
-      "status": "needs-specific-source"
+      "status": "expanded"
     },
     {
       "id": "0303",
@@ -4975,13 +5092,19 @@
       "prompt": "Name a type of paper",
       "category": "Objects, Tools & Materials",
       "originalAnswers": 176,
-      "answers": 176,
-      "aliases": 0,
+      "answers": 272,
+      "aliases": 60,
+      "importedTiers": {
+        "rare": 93,
+        "schooler": 2,
+        "plankton": 1
+      },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:wordnet",
         "sweep:0314"
       ],
-      "status": "needs-specific-source"
+      "status": "expanded"
     },
     {
       "id": "0315",
@@ -5001,17 +5124,19 @@
       "prompt": "Name an animal that has an X in its name",
       "category": "Animals & Nature",
       "originalAnswers": 468,
-      "answers": 531,
-      "aliases": 3,
+      "answers": 777,
+      "aliases": 139,
       "importedTiers": {
         "deepcut": 27,
-        "rare": 18,
+        "rare": 264,
         "schooler": 14,
         "plankton": 4
       },
       "verifiedCandidates": 102,
       "evidence": [
         "wikidata:mammal and bird common names",
+        "catalog:avilist",
+        "catalog:mdd",
         "sweep:0316"
       ],
       "status": "expanded"
@@ -5223,10 +5348,10 @@
       "prompt": "Name an animal whose name starts with B (breeds count too)",
       "category": "Animals & Nature",
       "originalAnswers": 2494,
-      "answers": 2661,
-      "aliases": 122,
+      "answers": 3431,
+      "aliases": 438,
       "importedTiers": {
-        "rare": 47,
+        "rare": 817,
         "schooler": 29,
         "deepcut": 75,
         "plankton": 16
@@ -5234,6 +5359,8 @@
       "verifiedCandidates": 1613,
       "evidence": [
         "wikidata:mammal and bird common names",
+        "catalog:avilist",
+        "catalog:mdd",
         "sweep:0330"
       ],
       "status": "expanded"
@@ -5526,13 +5653,17 @@
       "prompt": "Name a living mammal native to Africa",
       "category": "Animals & Nature",
       "originalAnswers": 225,
-      "answers": 225,
-      "aliases": 0,
+      "answers": 1734,
+      "aliases": 3956,
+      "importedTiers": {
+        "rare": 1509
+      },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:mdd",
         "sweep:0351"
       ],
-      "status": "needs-specific-source"
+      "status": "expanded"
     },
     {
       "id": "0352",
@@ -5633,17 +5764,18 @@
       "prompt": "Name a type of cookie (brands don't count)",
       "category": "Food & Drink",
       "originalAnswers": 374,
-      "answers": 405,
-      "aliases": 64,
+      "answers": 419,
+      "aliases": 71,
       "importedTiers": {
         "plankton": 3,
         "deepcut": 12,
-        "rare": 12,
+        "rare": 26,
         "schooler": 4
       },
       "verifiedCandidates": 82,
       "evidence": [
         "wikidata:cookie",
+        "catalog:wordnet",
         "sweep:0359"
       ],
       "status": "expanded"
@@ -5682,17 +5814,18 @@
       "prompt": "Name a unit of distance",
       "category": "Science, Space & Tech",
       "originalAnswers": 285,
-      "answers": 340,
-      "aliases": 145,
+      "answers": 358,
+      "aliases": 172,
       "importedTiers": {
         "deepcut": 24,
-        "schooler": 11,
-        "rare": 16,
+        "schooler": 12,
+        "rare": 33,
         "plankton": 4
       },
       "verifiedCandidates": 149,
       "evidence": [
         "wikidata:unit-of-length",
+        "catalog:wordnet",
         "sweep:0362"
       ],
       "status": "expanded"
@@ -5702,13 +5835,15 @@
       "prompt": "Name a medical instrument",
       "category": "Body, Health & Medicine",
       "originalAnswers": 323,
-      "answers": 324,
-      "aliases": 0,
+      "answers": 346,
+      "aliases": 14,
       "importedTiers": {
-        "schooler": 1
+        "schooler": 1,
+        "rare": 22
       },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:wordnet",
         "sweep:0363"
       ],
       "status": "expanded"
@@ -5776,26 +5911,35 @@
       "prompt": "Name a mode of transportation",
       "category": "Objects, Tools & Materials",
       "originalAnswers": 808,
-      "answers": 808,
-      "aliases": 0,
+      "answers": 1104,
+      "aliases": 282,
+      "importedTiers": {
+        "rare": 284,
+        "schooler": 12
+      },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:wordnet",
         "sweep:0368"
       ],
-      "status": "needs-specific-source"
+      "status": "expanded"
     },
     {
       "id": "0369",
       "prompt": "Name a type of home or dwelling",
       "category": "Objects, Tools & Materials",
       "originalAnswers": 374,
-      "answers": 374,
-      "aliases": 0,
+      "answers": 400,
+      "aliases": 16,
+      "importedTiers": {
+        "rare": 26
+      },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:wordnet",
         "sweep:0369"
       ],
-      "status": "needs-specific-source"
+      "status": "expanded"
     },
     {
       "id": "0370",
@@ -6065,11 +6209,11 @@
       "prompt": "Name an aquatic mammal",
       "category": "Animals & Nature",
       "originalAnswers": 353,
-      "answers": 360,
-      "aliases": 19,
+      "answers": 376,
+      "aliases": 484,
       "importedTiers": {
         "schooler": 3,
-        "rare": 1,
+        "rare": 17,
         "plankton": 2,
         "deepcut": 1
       },
@@ -6077,6 +6221,7 @@
       "evidence": [
         "wikidata:baleen-whale",
         "bank:0051",
+        "catalog:mdd",
         "sweep:0388"
       ],
       "status": "expanded"
@@ -6086,18 +6231,19 @@
       "prompt": "Name a carnivorous mammal",
       "category": "Animals & Nature",
       "originalAnswers": 1439,
-      "answers": 1452,
-      "aliases": 31,
+      "answers": 1473,
+      "aliases": 566,
       "importedTiers": {
         "schooler": 1,
         "plankton": 1,
-        "rare": 3,
+        "rare": 24,
         "deepcut": 8
       },
       "verifiedCandidates": 55,
       "evidence": [
         "wikidata:wild-cat",
         "bank:0023",
+        "catalog:mdd",
         "sweep:0389"
       ],
       "status": "expanded"
@@ -6410,13 +6556,15 @@
       "prompt": "Name a tool you would find in a toolbox",
       "category": "Objects, Tools & Materials",
       "originalAnswers": 627,
-      "answers": 630,
-      "aliases": 1,
+      "answers": 725,
+      "aliases": 67,
       "importedTiers": {
-        "schooler": 3
+        "schooler": 3,
+        "rare": 95
       },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:wordnet",
         "sweep:0410"
       ],
       "status": "expanded"
@@ -6485,13 +6633,17 @@
       "prompt": "Name a grain or cereal crop",
       "category": "Food & Drink",
       "originalAnswers": 254,
-      "answers": 254,
-      "aliases": 0,
+      "answers": 287,
+      "aliases": 97,
+      "importedTiers": {
+        "rare": 33
+      },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:wordnet",
         "sweep:0415"
       ],
-      "status": "needs-specific-source"
+      "status": "expanded"
     },
     {
       "id": "0416",
@@ -6583,13 +6735,15 @@
       "prompt": "Name a legume",
       "category": "Food & Drink",
       "originalAnswers": 303,
-      "answers": 305,
-      "aliases": 0,
+      "answers": 331,
+      "aliases": 83,
       "importedTiers": {
-        "schooler": 2
+        "schooler": 2,
+        "rare": 26
       },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:wordnet",
         "sweep:0422"
       ],
       "status": "expanded"
@@ -7151,13 +7305,17 @@
       "prompt": "Name a type of door",
       "category": "Objects, Tools & Materials",
       "originalAnswers": 222,
-      "answers": 222,
-      "aliases": 0,
+      "answers": 225,
+      "aliases": 5,
+      "importedTiers": {
+        "rare": 3
+      },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:wordnet",
         "sweep:0462"
       ],
-      "status": "needs-specific-source"
+      "status": "expanded"
     },
     {
       "id": "0463",
@@ -7588,13 +7746,15 @@
       "prompt": "Name a kitchen appliance (something powered)",
       "category": "Objects, Tools & Materials",
       "originalAnswers": 151,
-      "answers": 152,
-      "aliases": 0,
+      "answers": 161,
+      "aliases": 10,
       "importedTiers": {
-        "schooler": 1
+        "schooler": 1,
+        "rare": 9
       },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:wordnet",
         "sweep:0492"
       ],
       "status": "expanded"
@@ -7620,10 +7780,10 @@
       "prompt": "Name an animal without the letter A in its name (breeds count too)",
       "category": "Animals & Nature",
       "originalAnswers": 9373,
-      "answers": 9588,
-      "aliases": 151,
+      "answers": 9769,
+      "aliases": 635,
       "importedTiers": {
-        "rare": 59,
+        "rare": 240,
         "deepcut": 108,
         "plankton": 17,
         "schooler": 31
@@ -7631,6 +7791,8 @@
       "verifiedCandidates": 1918,
       "evidence": [
         "wikidata:mammal and bird common names",
+        "catalog:avilist",
+        "catalog:mdd",
         "sweep:0494"
       ],
       "status": "expanded"
@@ -7723,13 +7885,16 @@
       "prompt": "Name an international airport (no airport codes)",
       "category": "Country / Geography / Places",
       "originalAnswers": 2025,
-      "answers": 2026,
+      "answers": 2416,
       "aliases": 0,
       "importedTiers": {
-        "schooler": 1
+        "schooler": 1,
+        "rare": 282,
+        "deepcut": 108
       },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:ourairports",
         "sweep:0501"
       ],
       "status": "expanded"
@@ -8101,26 +8266,34 @@
       "prompt": "Name a type of chair",
       "category": "Objects, Tools & Materials",
       "originalAnswers": 1017,
-      "answers": 1017,
-      "aliases": 0,
+      "answers": 1029,
+      "aliases": 11,
+      "importedTiers": {
+        "rare": 12
+      },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:wordnet",
         "sweep:0527"
       ],
-      "status": "needs-specific-source"
+      "status": "expanded"
     },
     {
       "id": "0528",
       "prompt": "Name a standard type of insurance policy (all vehicles count as one type)",
       "category": "Work, Money & Society",
       "originalAnswers": 433,
-      "answers": 433,
-      "aliases": 0,
+      "answers": 434,
+      "aliases": 1,
+      "importedTiers": {
+        "rare": 1
+      },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:wordnet",
         "sweep:0528"
       ],
-      "status": "needs-specific-source"
+      "status": "expanded"
     },
     {
       "id": "0529",
@@ -8359,13 +8532,16 @@
       "prompt": "Name an animal with a color in its name",
       "category": "Animals & Nature",
       "originalAnswers": 32270,
-      "answers": 32271,
-      "aliases": 0,
+      "answers": 32704,
+      "aliases": 618,
       "importedTiers": {
-        "schooler": 1
+        "schooler": 1,
+        "rare": 433
       },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:avilist",
+        "catalog:mdd",
         "sweep:0545"
       ],
       "status": "expanded"
@@ -8537,13 +8713,15 @@
       "prompt": "Name a type of sausage",
       "category": "Food & Drink",
       "originalAnswers": 549,
-      "answers": 550,
-      "aliases": 0,
+      "answers": 552,
+      "aliases": 12,
       "importedTiers": {
-        "schooler": 1
+        "schooler": 1,
+        "rare": 2
       },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:wordnet",
         "sweep:0557"
       ],
       "status": "expanded"
@@ -8808,12 +8986,13 @@
       "category": "Objects, Tools & Materials",
       "originalAnswers": 404,
       "answers": 405,
-      "aliases": 0,
+      "aliases": 5,
       "importedTiers": {
         "schooler": 1
       },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:wordnet",
         "sweep:0576"
       ],
       "status": "expanded"
@@ -8946,13 +9125,19 @@
       "prompt": "Name a city in Europe with over 100,000 people",
       "category": "Country / Geography / Places",
       "originalAnswers": 764,
-      "answers": 764,
-      "aliases": 0,
+      "answers": 857,
+      "aliases": 24,
+      "importedTiers": {
+        "deepcut": 61,
+        "rare": 30,
+        "schooler": 2
+      },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:geonames",
         "sweep:0585"
       ],
-      "status": "needs-specific-source"
+      "status": "expanded"
     },
     {
       "id": "0586",
@@ -9144,13 +9329,18 @@
       "prompt": "Name a city in the UK (towns count too)",
       "category": "Country / Geography / Places",
       "originalAnswers": 2248,
-      "answers": 2248,
+      "answers": 2260,
       "aliases": 0,
+      "importedTiers": {
+        "rare": 4,
+        "deepcut": 8
+      },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:geonames",
         "sweep:0599"
       ],
-      "status": "needs-specific-source"
+      "status": "expanded"
     },
     {
       "id": "0600",
@@ -9186,10 +9376,10 @@
       "prompt": "Name a musical instrument",
       "category": "People & Entertainment",
       "originalAnswers": 3118,
-      "answers": 3356,
-      "aliases": 387,
+      "answers": 3401,
+      "aliases": 475,
       "importedTiers": {
-        "rare": 81,
+        "rare": 126,
         "schooler": 26,
         "deepcut": 112,
         "plankton": 19
@@ -9200,6 +9390,7 @@
         "bank:0279",
         "bank:0007",
         "reviewed:0602",
+        "catalog:wordnet",
         "sweep:0602"
       ],
       "status": "expanded"
@@ -9241,13 +9432,19 @@
       "prompt": "Name a city with the word \"City\" in its name (like Mexico City)",
       "category": "Country / Geography / Places",
       "originalAnswers": 842,
-      "answers": 842,
+      "answers": 856,
       "aliases": 0,
+      "importedTiers": {
+        "deepcut": 7,
+        "schooler": 1,
+        "rare": 6
+      },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:geonames",
         "sweep:0605"
       ],
-      "status": "needs-specific-source"
+      "status": "expanded"
     },
     {
       "id": "0606",
@@ -9286,17 +9483,19 @@
       "prompt": "Name an animal whose name ends in Y",
       "category": "Animals & Nature",
       "originalAnswers": 10338,
-      "answers": 10346,
-      "aliases": 17,
+      "answers": 10373,
+      "aliases": 150,
       "importedTiers": {
         "deepcut": 4,
         "schooler": 1,
         "plankton": 1,
-        "rare": 2
+        "rare": 29
       },
       "verifiedCandidates": 147,
       "evidence": [
         "wikidata:mammal and bird common names",
+        "catalog:avilist",
+        "catalog:mdd",
         "sweep:0608"
       ],
       "status": "expanded"
@@ -9725,13 +9924,17 @@
       "prompt": "Name a type of astronomical object found in space (like an asteroid)",
       "category": "Science, Space & Tech",
       "originalAnswers": 719,
-      "answers": 719,
-      "aliases": 0,
+      "answers": 730,
+      "aliases": 17,
+      "importedTiers": {
+        "rare": 11
+      },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:wordnet",
         "sweep:0637"
       ],
-      "status": "needs-specific-source"
+      "status": "expanded"
     },
     {
       "id": "0638",
@@ -9949,15 +10152,18 @@
       "prompt": "Name an animal whose name is exactly four letters long",
       "category": "Animals & Nature",
       "originalAnswers": 467,
-      "answers": 472,
-      "aliases": 0,
+      "answers": 475,
+      "aliases": 1,
       "importedTiers": {
         "deepcut": 4,
-        "plankton": 1
+        "plankton": 1,
+        "rare": 3
       },
       "verifiedCandidates": 14,
       "evidence": [
         "wikidata:mammal and bird common names",
+        "catalog:avilist",
+        "catalog:mdd",
         "sweep:0652"
       ],
       "status": "expanded"
@@ -10732,13 +10938,17 @@
       "prompt": "Name a type of bed (for sleeping)",
       "category": "Objects, Tools & Materials",
       "originalAnswers": 294,
-      "answers": 294,
-      "aliases": 0,
+      "answers": 300,
+      "aliases": 7,
+      "importedTiers": {
+        "rare": 6
+      },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:wordnet",
         "sweep:0707"
       ],
-      "status": "needs-specific-source"
+      "status": "expanded"
     },
     {
       "id": "0708",
@@ -10851,6 +11061,7 @@
       "aliases": 0,
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:geonames",
         "sweep:0715"
       ],
       "status": "needs-specific-source"
@@ -10928,11 +11139,11 @@
       "prompt": "Name a bird that lives in or by water",
       "category": "Animals & Nature",
       "originalAnswers": 1466,
-      "answers": 1485,
-      "aliases": 41,
+      "answers": 1512,
+      "aliases": 709,
       "importedTiers": {
         "deepcut": 12,
-        "rare": 6,
+        "rare": 33,
         "schooler": 1
       },
       "verifiedCandidates": 222,
@@ -10940,6 +11151,7 @@
         "wikidata:penguin+waterfowl",
         "bank:0044",
         "bank:0148",
+        "catalog:avilist",
         "sweep:0721"
       ],
       "status": "expanded"
@@ -11186,14 +11398,19 @@
       "prompt": "Name an animal with a one-word name containing \"ck\"",
       "category": "Animals & Nature",
       "originalAnswers": 395,
-      "answers": 395,
+      "answers": 396,
       "aliases": 0,
+      "importedTiers": {
+        "rare": 1
+      },
       "verifiedCandidates": 15,
       "evidence": [
         "wikidata:mammal and bird common names",
+        "catalog:avilist",
+        "catalog:mdd",
         "sweep:0738"
       ],
-      "status": "checked-against-source"
+      "status": "expanded"
     },
     {
       "id": "0739",
@@ -11258,13 +11475,18 @@
       "prompt": "Name a city whose name starts with the word Los, Las, La, Le, El or The",
       "category": "Country / Geography / Places",
       "originalAnswers": 11506,
-      "answers": 11506,
+      "answers": 11509,
       "aliases": 0,
+      "importedTiers": {
+        "deepcut": 2,
+        "rare": 1
+      },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:geonames",
         "sweep:0743"
       ],
-      "status": "needs-specific-source"
+      "status": "expanded"
     },
     {
       "id": "0744",
@@ -11493,13 +11715,15 @@
       "prompt": "Name an animal that is native to South America",
       "category": "Animals & Nature",
       "originalAnswers": 19409,
-      "answers": 19410,
-      "aliases": 0,
+      "answers": 19417,
+      "aliases": 3387,
       "importedTiers": {
-        "schooler": 1
+        "schooler": 1,
+        "rare": 7
       },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:mdd",
         "sweep:0759"
       ],
       "status": "expanded"
@@ -11728,13 +11952,15 @@
       "prompt": "Name a type of container (no appliances)",
       "category": "Objects, Tools & Materials",
       "originalAnswers": 2350,
-      "answers": 2353,
-      "aliases": 0,
+      "answers": 2524,
+      "aliases": 200,
       "importedTiers": {
-        "schooler": 3
+        "schooler": 7,
+        "rare": 167
       },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:wordnet",
         "sweep:0776"
       ],
       "status": "expanded"
@@ -11760,17 +11986,19 @@
       "prompt": "Name a sea animal that isn't a fish or a bird",
       "category": "Animals & Nature",
       "originalAnswers": 11826,
-      "answers": 11832,
-      "aliases": 18,
+      "answers": 11839,
+      "aliases": 411,
       "importedTiers": {
         "schooler": 3,
         "plankton": 2,
-        "deepcut": 1
+        "deepcut": 1,
+        "rare": 7
       },
       "verifiedCandidates": 49,
       "evidence": [
         "wikidata:baleen-whale",
         "bank:0051",
+        "catalog:mdd",
         "sweep:0778"
       ],
       "status": "expanded"
@@ -11793,13 +12021,17 @@
       "prompt": "Name an item used for eating or serving food (like a plate or spoon)",
       "category": "Objects, Tools & Materials",
       "originalAnswers": 2284,
-      "answers": 2284,
-      "aliases": 0,
+      "answers": 2290,
+      "aliases": 1,
+      "importedTiers": {
+        "rare": 6
+      },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:wordnet",
         "sweep:0780"
       ],
-      "status": "needs-specific-source"
+      "status": "expanded"
     },
     {
       "id": "0781",
@@ -12483,13 +12715,18 @@
       "prompt": "Name a one-word animal that starts with T",
       "category": "Animals & Nature",
       "originalAnswers": 4822,
-      "answers": 4822,
-      "aliases": 0,
+      "answers": 4825,
+      "aliases": 2,
+      "importedTiers": {
+        "rare": 3
+      },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:avilist",
+        "catalog:mdd",
         "sweep:0828"
       ],
-      "status": "needs-specific-source"
+      "status": "expanded"
     },
     {
       "id": "0829",
@@ -12776,13 +13013,17 @@
       "prompt": "Name an extinct animal that isn't an insect or invertebrate.",
       "category": "Animals & Nature",
       "originalAnswers": 20215,
-      "answers": 20216,
-      "aliases": 0,
+      "answers": 41705,
+      "aliases": 171,
       "importedTiers": {
-        "schooler": 1
+        "schooler": 1,
+        "rare": 20,
+        "deepcut": 21469
       },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:mdd",
+        "catalog:pbdb",
         "sweep:0848"
       ],
       "status": "expanded"
@@ -12792,13 +13033,17 @@
       "prompt": "Name a living animal that moves on 2 feet and can't fly.",
       "category": "Animals & Nature",
       "originalAnswers": 340,
-      "answers": 340,
-      "aliases": 0,
+      "answers": 342,
+      "aliases": 32,
+      "importedTiers": {
+        "rare": 2
+      },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:avilist",
         "sweep:0849"
       ],
-      "status": "needs-specific-source"
+      "status": "expanded"
     },
     {
       "id": "0850",
@@ -13100,13 +13345,18 @@
       "prompt": "Name a one-word animal whose name is 7 or more letters",
       "category": "Animals & Nature",
       "originalAnswers": 73270,
-      "answers": 73270,
-      "aliases": 0,
+      "answers": 73322,
+      "aliases": 21,
+      "importedTiers": {
+        "rare": 52
+      },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:avilist",
+        "catalog:mdd",
         "sweep:0870"
       ],
-      "status": "needs-specific-source"
+      "status": "expanded"
     },
     {
       "id": "0871",
@@ -13126,13 +13376,17 @@
       "prompt": "Name a city ending in -ville, -burg, -burgh or -bourg",
       "category": "Country / Geography / Places",
       "originalAnswers": 3264,
-      "answers": 3264,
-      "aliases": 0,
+      "answers": 3265,
+      "aliases": 2,
+      "importedTiers": {
+        "schooler": 1
+      },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:geonames",
         "sweep:0872"
       ],
-      "status": "needs-specific-source"
+      "status": "expanded"
     },
     {
       "id": "0873",
@@ -13207,13 +13461,18 @@
       "prompt": "Name a city whose name starts with D",
       "category": "Country / Geography / Places",
       "originalAnswers": 19049,
-      "answers": 19049,
-      "aliases": 0,
+      "answers": 19059,
+      "aliases": 6,
+      "importedTiers": {
+        "deepcut": 8,
+        "rare": 2
+      },
       "verifiedCandidates": 0,
       "evidence": [
+        "catalog:geonames",
         "sweep:0878"
       ],
-      "status": "needs-specific-source"
+      "status": "expanded"
     },
     {
       "id": "0879",

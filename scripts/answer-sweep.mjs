@@ -1,9 +1,8 @@
 import { readFile } from 'node:fs/promises';
 
-export async function readSweep(prompts, requireComplete = false) {
+export async function readReviewDefinitions() {
   const source = await readFile(new URL('answer-sweep.txt', import.meta.url), 'utf8');
   const byId = new Map();
-  const byWording = new Map();
   for (const line of source.split(/\r?\n/u)) {
     if (!line || line.startsWith('#')) continue;
     const [id, wording, ...answers] = line.split('|');
@@ -20,8 +19,14 @@ export async function readSweep(prompts, requireComplete = false) {
       return { name, aliases, points };
     });
     byId.set(id, { wording, checks });
-    if (!byWording.has(wording)) byWording.set(wording, checks);
   }
+  return byId;
+}
+
+export async function readSweep(prompts, requireComplete = false) {
+  const byId = await readReviewDefinitions();
+  const byWording = new Map();
+  for (const { wording, checks } of byId.values()) if (!byWording.has(wording)) byWording.set(wording, checks);
   const cases = new Map();
   for (const { id, prompt } of prompts) {
     const row = byId.get(id);

@@ -3,6 +3,7 @@ export const maxPlayers = 12;
 export const readingMs = 3000;
 export const answeringMs = 25000;
 const hostId = 'host';
+const missedTurn = { status: 'timeout', points: 0, tier: 'none' };
 
 export function displayName(value) {
   if (typeof value !== 'string') return '';
@@ -18,7 +19,7 @@ export function validRoomCode(code) {
 }
 
 export function createRoomGame({ code, name, loadRounds, publicUpdate, privateUpdate, now = Date.now, schedule = setTimeout, cancel = clearTimeout }) {
-  const players = new Map([[hostId, { name, score: 0, ready: true, turn: null }]]);
+  const players = new Map([[hostId, { name, score: 0, ready: true, turn: null, history: [] }]]);
   let phase = 'lobby';
   let rounds = [];
   let index = 0;
@@ -38,9 +39,11 @@ export function createRoomGame({ code, name, loadRounds, publicUpdate, privateUp
       type: 'state', code, phase, index, total: rounds.length, key: roundKey(), canStart: canStart(),
       serverNow: now(), readUntil, endAt,
       prompt: phase === 'round' ? { prompt: current.prompt, category: current.category } : null,
+      ...(phase === 'finished' ? { reviewRounds: rounds.map(({ id, prompt, count }) => ({ id, prompt, count })) } : {}),
       players: [...players].map(([id, player]) => ({
         id, name: player.name, score: player.score, ready: player.ready, done: Boolean(player.turn),
-        ...(showScores ? { roundPoints: player.turn?.points ?? 0 } : {}),
+        ...(showScores ? { result: player.history[index] ?? missedTurn } : {}),
+        ...(phase === 'finished' ? { history: player.history.slice() } : {}),
       })),
     };
   }
@@ -52,6 +55,7 @@ export function createRoomGame({ code, name, loadRounds, publicUpdate, privateUp
   function leaderboard() {
     if (phase !== 'round' || closed) return;
     cancel(alarm);
+    for (const player of players.values()) player.history.push(player.turn ?? missedTurn);
     phase = index + 1 === rounds.length ? 'finished' : 'leaderboard';
     if (phase === 'finished') {
       for (const player of players.values()) player.ready = false;
@@ -79,7 +83,10 @@ export function createRoomGame({ code, name, loadRounds, publicUpdate, privateUp
       if (players.size < 2) throw new Error('At least two players are needed to start.');
       if (!nextRounds.length) throw new Error('The prompt bank could not load.');
       rounds = nextRounds;
-      for (const player of players.values()) player.score = 0;
+      for (const player of players.values()) {
+        player.score = 0;
+        player.history = [];
+      }
       index = 0;
       run += 1;
       beginRound();
@@ -119,12 +126,12 @@ export function createRoomGame({ code, name, loadRounds, publicUpdate, privateUp
         return;
       }
     }
-    const points = matched?.[1] ?? 0;
-    player.turn = { points };
-    player.score += points;
-    answerPacket(matched ?
-      { status: 'accepted', name: matched[0], points, tier: matched[2] } :
-      { status: 'passed', points: 0, tier: 'none' });
+    const result = matched ?
+      { status: 'accepted', answer: matched[0], points: matched[1], tier: matched[2] } :
+      { status: 'passed', points: 0, tier: 'none' };
+    player.turn = result;
+    player.score += result.points;
+    answerPacket({ status: result.status, name: result.answer, points: result.points, tier: result.tier });
     if ([...players.values()].every((member) => member.turn)) leaderboard();
     else broadcast();
   }
@@ -137,7 +144,7 @@ export function createRoomGame({ code, name, loadRounds, publicUpdate, privateUp
       if (closed || (phase !== 'lobby' && phase !== 'finished')) return 'This room is in a dive. Try again when it finishes.';
       if (players.size >= maxPlayers) return 'This room is full.';
       if (players.has(id)) return 'You are already in this room.';
-      players.set(id, { name, score: 0, ready: true, turn: null });
+      players.set(id, { name, score: 0, ready: true, turn: null, history: [] });
       broadcast();
       return '';
     },
