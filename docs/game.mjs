@@ -1,5 +1,5 @@
 import { createOcean } from './ocean.mjs?v=5';
-import { buildLookup, exactKey } from './answers.mjs?v=11';
+import { buildLookup, exactKey } from './answers.mjs?v=13';
 import { renderDiveLog } from './dive-log.mjs?v=10';
 import { setupMultiplayer } from './multiplayer.mjs?v=12';
 
@@ -64,7 +64,7 @@ let roomGuess;
 let roomPending = false;
 
 function bankUrl(file) {
-  return new URL(`./bank/${file}?v=9`, import.meta.url);
+  return new URL(`./bank/${file}?v=13`, import.meta.url);
 }
 
 async function loadIndex() {

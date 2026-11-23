@@ -1,17 +1,17 @@
 {
   "summary": {
     "audited": 923,
-    "expanded": 132,
+    "expanded": 138,
     "checkedAgainstSource": 20,
-    "needsSpecificSource": 771,
-    "addedAnswers": 33849,
-    "addedAliases": 21252,
-    "answers": 1731607,
+    "needsSpecificSource": 765,
+    "addedAnswers": 34552,
+    "addedAliases": 21484,
+    "answers": 1732310,
     "importedTiers": {
-      "rare": 10953,
-      "plankton": 2514,
-      "schooler": 6627,
-      "deepcut": 13755
+      "rare": 11163,
+      "plankton": 2599,
+      "schooler": 6787,
+      "deepcut": 14003
     }
   },
   "prompts": [
@@ -154,17 +154,18 @@
       "prompt": "Name a type of cheese",
       "category": "Food & Drink",
       "originalAnswers": 61,
-      "answers": 156,
-      "aliases": 69,
+      "answers": 163,
+      "aliases": 73,
       "importedTiers": {
-        "rare": 32,
-        "deepcut": 34,
-        "schooler": 20,
+        "rare": 35,
+        "deepcut": 36,
+        "schooler": 22,
         "plankton": 9
       },
       "verifiedCandidates": 97,
       "evidence": [
-        "wikidata:cheese"
+        "wikidata:cheese",
+        "family:0010"
       ],
       "status": "expanded"
     },
@@ -531,17 +532,18 @@
       "prompt": "Name a cocktail",
       "category": "Food & Drink",
       "originalAnswers": 94,
-      "answers": 360,
-      "aliases": 84,
+      "answers": 364,
+      "aliases": 85,
       "importedTiers": {
-        "rare": 89,
+        "rare": 91,
         "schooler": 53,
-        "deepcut": 117,
+        "deepcut": 119,
         "plankton": 7
       },
       "verifiedCandidates": 325,
       "evidence": [
-        "wikidata:cocktail"
+        "wikidata:cocktail",
+        "family:0038"
       ],
       "status": "expanded"
     },
@@ -1159,17 +1161,18 @@
       "prompt": "Name an amphibian",
       "category": "Animals & Nature",
       "originalAnswers": 41,
-      "answers": 3360,
-      "aliases": 1373,
+      "answers": 3466,
+      "aliases": 1372,
       "importedTiers": {
-        "deepcut": 1068,
-        "plankton": 317,
-        "schooler": 897,
-        "rare": 1037
+        "deepcut": 1123,
+        "plankton": 359,
+        "schooler": 902,
+        "rare": 1041
       },
-      "verifiedCandidates": 3396,
+      "verifiedCandidates": 3501,
       "evidence": [
-        "wikidata:amphibian"
+        "wikidata:amphibian",
+        "family:0086"
       ],
       "status": "expanded"
     },
@@ -1342,17 +1345,18 @@
       "prompt": "Name a rodent",
       "category": "Animals & Nature",
       "originalAnswers": 5,
-      "answers": 2261,
-      "aliases": 1896,
+      "answers": 2303,
+      "aliases": 1898,
       "importedTiers": {
-        "deepcut": 775,
-        "plankton": 245,
-        "rare": 756,
-        "schooler": 480
+        "deepcut": 780,
+        "rare": 772,
+        "schooler": 495,
+        "plankton": 251
       },
-      "verifiedCandidates": 2272,
+      "verifiedCandidates": 2299,
       "evidence": [
-        "wikidata:rodent"
+        "wikidata:rodent",
+        "family:0100"
       ],
       "status": "expanded"
     },
@@ -1529,17 +1533,18 @@
       "prompt": "Name a type of cake",
       "category": "Food & Drink",
       "originalAnswers": 61,
-      "answers": 198,
-      "aliases": 91,
+      "answers": 205,
+      "aliases": 93,
       "importedTiers": {
-        "rare": 43,
-        "deepcut": 61,
-        "schooler": 24,
+        "rare": 47,
+        "deepcut": 62,
+        "schooler": 26,
         "plankton": 9
       },
       "verifiedCandidates": 161,
       "evidence": [
-        "wikidata:cake"
+        "wikidata:cake",
+        "family:0114"
       ],
       "status": "expanded"
     },
@@ -1952,15 +1957,15 @@
       "prompt": "Name a type of waterfowl",
       "category": "Animals & Nature",
       "originalAnswers": 52,
-      "answers": 196,
+      "answers": 197,
       "aliases": 42,
       "importedTiers": {
-        "deepcut": 64,
+        "deepcut": 65,
         "rare": 48,
-        "schooler": 23,
-        "plankton": 9
+        "schooler": 24,
+        "plankton": 8
       },
-      "verifiedCandidates": 175,
+      "verifiedCandidates": 177,
       "evidence": [
         "wikidata:waterfowl"
       ],
@@ -2037,11 +2042,19 @@
       "prompt": "Name a beetle",
       "category": "Animals & Nature",
       "originalAnswers": 48,
-      "answers": 48,
-      "aliases": 0,
-      "verifiedCandidates": 0,
-      "evidence": [],
-      "status": "needs-specific-source"
+      "answers": 312,
+      "aliases": 5,
+      "importedTiers": {
+        "deepcut": 97,
+        "rare": 82,
+        "plankton": 17,
+        "schooler": 68
+      },
+      "verifiedCandidates": 269,
+      "evidence": [
+        "wikidata:beetle"
+      ],
+      "status": "expanded"
     },
     {
       "id": "0156",
@@ -2669,17 +2682,18 @@
       "prompt": "Name a type of turtle or tortoise",
       "category": "Animals & Nature",
       "originalAnswers": 69,
-      "answers": 267,
-      "aliases": 226,
+      "answers": 279,
+      "aliases": 221,
       "importedTiers": {
-        "plankton": 7,
-        "deepcut": 80,
-        "rare": 81,
-        "schooler": 30
+        "plankton": 9,
+        "deepcut": 82,
+        "rare": 80,
+        "schooler": 39
       },
-      "verifiedCandidates": 235,
+      "verifiedCandidates": 248,
       "evidence": [
-        "wikidata:turtle"
+        "wikidata:turtle",
+        "family:0204"
       ],
       "status": "expanded"
     },
@@ -2756,11 +2770,20 @@
       "prompt": "Name a marsupial",
       "category": "Animals & Nature",
       "originalAnswers": 53,
-      "answers": 53,
-      "aliases": 0,
-      "verifiedCandidates": 0,
-      "evidence": [],
-      "status": "needs-specific-source"
+      "answers": 249,
+      "aliases": 188,
+      "importedTiers": {
+        "schooler": 42,
+        "deepcut": 65,
+        "rare": 72,
+        "plankton": 17
+      },
+      "verifiedCandidates": 203,
+      "evidence": [
+        "wikidata:marsupial",
+        "family:0211"
+      ],
+      "status": "expanded"
     },
     {
       "id": "0212",
@@ -2947,11 +2970,18 @@
       "prompt": "Name an Indian dish",
       "category": "Food & Drink",
       "originalAnswers": 120,
-      "answers": 120,
-      "aliases": 0,
+      "answers": 143,
+      "aliases": 15,
+      "importedTiers": {
+        "schooler": 7,
+        "rare": 10,
+        "deepcut": 6
+      },
       "verifiedCandidates": 0,
-      "evidence": [],
-      "status": "needs-specific-source"
+      "evidence": [
+        "family:0226"
+      ],
+      "status": "expanded"
     },
     {
       "id": "0227",
@@ -4080,16 +4110,17 @@
       "prompt": "Name a curry",
       "category": "Food & Drink",
       "originalAnswers": 144,
-      "answers": 154,
-      "aliases": 16,
+      "answers": 169,
+      "aliases": 20,
       "importedTiers": {
-        "deepcut": 5,
-        "rare": 2,
-        "schooler": 3
+        "deepcut": 10,
+        "rare": 9,
+        "schooler": 6
       },
       "verifiedCandidates": 18,
       "evidence": [
-        "wikidata:curry"
+        "wikidata:curry",
+        "family:0317"
       ],
       "status": "expanded"
     },
@@ -8399,11 +8430,19 @@
       "prompt": "Name a South Asian dish (India, Pakistan, Bangladesh, Sri Lanka, Nepal, Bhutan, Maldives, Afghanistan)",
       "category": "Food & Drink",
       "originalAnswers": 2154,
-      "answers": 2154,
-      "aliases": 0,
+      "answers": 2174,
+      "aliases": 15,
+      "importedTiers": {
+        "plankton": 1,
+        "rare": 9,
+        "deepcut": 5,
+        "schooler": 5
+      },
       "verifiedCandidates": 0,
-      "evidence": [],
-      "status": "needs-specific-source"
+      "evidence": [
+        "family:0692"
+      ],
+      "status": "expanded"
     },
     {
       "id": "0693",
@@ -8896,11 +8935,16 @@
       "prompt": "Name a French or British food",
       "category": "Food & Drink",
       "originalAnswers": 3528,
-      "answers": 3528,
+      "answers": 3529,
       "aliases": 0,
+      "importedTiers": {
+        "plankton": 1
+      },
       "verifiedCandidates": 0,
-      "evidence": [],
-      "status": "needs-specific-source"
+      "evidence": [
+        "family:0735"
+      ],
+      "status": "expanded"
     },
     {
       "id": "0736",
@@ -10972,11 +11016,18 @@
       "prompt": "Name a noodle dish",
       "category": "Food & Drink",
       "originalAnswers": 298,
-      "answers": 298,
-      "aliases": 0,
+      "answers": 303,
+      "aliases": 2,
+      "importedTiers": {
+        "deepcut": 2,
+        "schooler": 1,
+        "rare": 2
+      },
       "verifiedCandidates": 0,
-      "evidence": [],
-      "status": "needs-specific-source"
+      "evidence": [
+        "family:0917"
+      ],
+      "status": "expanded"
     },
     {
       "id": "0918",

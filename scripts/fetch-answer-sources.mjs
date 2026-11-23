@@ -40,7 +40,9 @@ const regional = process.argv.includes('--regional');
 const taxa = process.argv.includes('--taxa');
 const everyday = process.argv.includes('--everyday');
 const food = process.argv.includes('--food');
-const source = supplement || regional || taxa || everyday || food ? JSON.parse(gunzipSync(await readFile(output))) : { collections: {} };
+const groups = process.argv.includes('--groups');
+const beetles = process.argv.includes('--beetles');
+const source = supplement || regional || taxa || everyday || food || groups || beetles ? JSON.parse(gunzipSync(await readFile(output))) : { collections: {} };
 const endpoint = new URL('https://query.wikidata.org/sparql');
 const articlePattern = `?article schema:about ?item; schema:isPartOf <https://en.wikipedia.org/>.
   ?item rdfs:label ?label. FILTER(LANG(?label) = "en")`;
@@ -80,7 +82,7 @@ function store(collection, bindings) {
     .sort((a, b) => a.name.localeCompare(b.name, 'en') || a.id.localeCompare(b.id));
 }
 
-const activeClasses = food ? everydayClasses.slice(0, 5) : everyday ? everydayClasses : supplement || regional || taxa ? [] : classes;
+const activeClasses = food ? everydayClasses.slice(0, 5) : everyday ? everydayClasses : supplement || regional || taxa || groups || beetles ? [] : classes;
 const batchSize = food ? 2 : 5;
 for (let start = 0; start < activeClasses.length; start += batchSize) {
   const batch = activeClasses.slice(start, start + batchSize);
@@ -116,7 +118,7 @@ const supplemental = [
   ['botanical-garden', '?item wdt:P31 wd:Q167346.'],
   ['architecture', '?item wdt:P31 wd:Q32880.'],
 ];
-const special = regional || taxa || everyday || food ? [] : supplement ? supplemental : [
+const special = regional || taxa || everyday || food || groups || beetles ? [] : supplement ? supplemental : [
   ['country', '?item wdt:P463 wd:Q1065; wdt:P297 ?iso.'],
   ['element', '?item wdt:P31 wd:Q11344; wdt:P1086 ?number; wdt:P246 ?symbol. FILTER(?number >= 1 && ?number <= 118)', '?number ?symbol'],
 ];
@@ -239,6 +241,35 @@ if (taxa) {
   for (let start = 0; start < groups.length; start += 3) {
     await Promise.all(groups.slice(start, start + 3).map(taxon));
   }
+}
+
+if (groups) {
+  await taxon(['marsupial', 'Q25336']);
+  const parents = [
+    ['rodent-groups', 'Q10850'], ['amphibian-groups', 'Q10908'],
+    ['turtle-groups', 'Q223044'], ['waterfowl-groups', 'Q7556'], ['marsupial-groups', 'Q25336'],
+  ];
+  for (const [name, parent] of parents) {
+    try {
+      const result = await query(name, `SELECT ?item (MIN(?common) AS ?label) WHERE {
+        VALUES ?rank { wd:Q34740 wd:Q35409 }
+        ?item wdt:P105 ?rank; wdt:P171+ wd:${parent}; wdt:P1843 ?common.
+        FILTER(LANG(?common) = "en")
+        ?article schema:about ?item; schema:isPartOf <https://en.wikipedia.org/>.
+      } GROUP BY ?item`);
+      if (result.length) store(name, result);
+      console.log(`${name}: ${result.length} source records`);
+    } catch (error) {
+      console.error(`${name}: ${error.message}`);
+    }
+  }
+}
+if (beetles) {
+  await Promise.all([
+    taxon(['ground-beetle', 'Q27046']),
+    taxon(['stag-beetle', 'Q208786']),
+    taxon(['longhorn-beetle', 'Q205295']),
+  ]);
 }
 
 if (!Object.values(source.collections).some((entries) => entries.length)) throw new Error('No source records fetched.');

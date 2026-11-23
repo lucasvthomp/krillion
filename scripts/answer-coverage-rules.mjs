@@ -40,6 +40,8 @@ const collections = [
   ['owl', /^name an owl species$/u],
   ['waterfowl', /^name a type of waterfowl$/u],
   ['turtle', /^name a type of turtle or tortoise$/u],
+  ['marsupial', /^name a marsupial$/u],
+  ['beetle', /^name a beetle$/u],
   ['salad', /^name a type of salad$/u],
   ['dumpling', /^name a type of dumpling$/u],
   ['pastry', /^name a type of pastry or doughnut$/u],
@@ -288,11 +290,18 @@ export function sourceCandidates(text, snapshot) {
   const collection = collections.find(([, pattern]) => pattern.test(key))?.[0];
   return {
     collection,
-    items: (snapshot[collection] ?? []).filter((item) => !excluded[collection]?.has(exactKey(item.name)) &&
-      (collection !== 'wild-cat' || item.id !== 'Q146'))
+    items: (collection === 'beetle' ?
+      ['ground-beetle', 'stag-beetle', 'longhorn-beetle'].flatMap((group) => snapshot[group] ?? []) :
+      [...(snapshot[collection] ?? []), ...(snapshot[`${collection}-groups`] ?? [])])
+      .filter((item) => !excluded[collection]?.has(exactKey(item.name)) &&
+        (collection !== 'wild-cat' || item.id !== 'Q146') &&
+        (collection !== 'rodent' || item.id !== 'Q30359'))
       .map((item) => collection === 'us-state' ? {
         ...item,
         aliases: item.aliases.filter((alias) => exactKey(alias) === `state of ${exactKey(item.name)}`),
+      } : collection === 'rodent' && item.id === 'Q936978' ? {
+        ...item,
+        aliases: item.aliases.filter((alias) => exactKey(alias) !== 'ruddy mongoose'),
       } : item),
   };
 }

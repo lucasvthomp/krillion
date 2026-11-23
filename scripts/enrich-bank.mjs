@@ -2,6 +2,7 @@ import { readFile, writeFile } from 'node:fs/promises';
 import { gunzipSync, gzipSync } from 'node:zlib';
 import { exactKey } from '../docs/answers.mjs';
 import { donorKeys, promptKey, sourceCandidates } from './answer-coverage-rules.mjs';
+import { editorialAnswers } from './answer-families.mjs';
 
 const bank = new URL('../docs/bank/', import.meta.url);
 const indexUrl = new URL('index.json', bank);
@@ -151,6 +152,52 @@ function createMerge(records, candidates, grade) {
   };
 }
 
+const familyTiers = { 10: 'plankton', 30: 'schooler', 60: 'rare', 85: 'deepcut' };
+
+function applyFamilies(records, promptId, catalog) {
+  const byName = new Map();
+  for (const record of records) {
+    const key = nameKey(record[0]);
+    if (!byName.has(key)) byName.set(key, []);
+    byName.get(key).push(record);
+  }
+  let changed = false;
+  for (const [name, points, aliases = []] of catalog) {
+    const key = nameKey(name);
+    const alternatives = [...new Set(aliases.map(nameKey))].filter((form) => form !== key);
+    const equivalents = alternatives.flatMap((form) => byName.get(form) ?? []);
+    let direct = byName.get(key);
+    if (!direct?.length) {
+      direct = [[name, points, familyTiers[points], [], `family:${promptId}`]];
+      byName.set(key, direct);
+      records.push(...direct);
+      changed = true;
+    }
+    for (const record of [...direct, ...equivalents]) {
+      if (record[2] === 'krillion' || record[2] === 'tooclever') continue;
+      if (record[1] !== points || record[2] !== familyTiers[points]) {
+        record[1] = points;
+        record[2] = familyTiers[points];
+        changed = true;
+      }
+    }
+    const primary = direct.reduce((first, record) => record[1] > first[1] ? record : first);
+    const previous = primary[3] ?? [];
+    const spellingKeys = new Set([key, ...previous.map(nameKey)]);
+    const additions = aliases.filter((alias) => {
+      const spelling = nameKey(alias);
+      if (spellingKeys.has(spelling) || byName.has(spelling)) return false;
+      spellingKeys.add(spelling);
+      return true;
+    });
+    if (additions.length) {
+      primary[3] = [...previous, ...additions];
+      changed = true;
+    }
+  }
+  return changed;
+}
+
 const audit = [];
 let answerCount = 0;
 for (const prompt of prompts) {
@@ -163,6 +210,7 @@ for (const prompt of prompts) {
   const narrower = donorKeys(prompt.prompt).flatMap((key) => promptGroups.get(key) ?? []);
   const donors = [...equivalent, ...narrower];
   const grade = gradeAnswers(items, donors, prompt.prompt);
+  const families = editorialAnswers(prompt.id);
 
   const candidateMap = new Map();
   // Matching the same name to a Wikidata entity lets us reuse its exact aliases.
@@ -190,16 +238,19 @@ for (const prompt of prompts) {
     for (const candidate of candidates) if (merge(candidate)) changed = true;
   }
 
-  const importedTiers = {};
   for (const record of records) {
-    if (!record[4]) continue;
+    if (!record[4] || record[4].startsWith('family:')) continue;
     const [points, tier] = grade(record[4], record[0]);
     if (record[1] !== points || record[2] !== tier) {
       record[1] = points;
       record[2] = tier;
       changed = true;
     }
-    importedTiers[tier] = (importedTiers[tier] ?? 0) + 1;
+  }
+  if (families.length && applyFamilies(records, prompt.id, families)) changed = true;
+  const importedTiers = {};
+  for (const [, , tier, , reference] of records) {
+    if (reference) importedTiers[tier] = (importedTiers[tier] ?? 0) + 1;
   }
 
   if (changed) {
@@ -216,7 +267,11 @@ for (const prompt of prompts) {
     aliases,
     ...(Object.keys(importedTiers).length ? { importedTiers } : {}),
     verifiedCandidates: candidates.length,
-    evidence: [...(collection ? [`wikidata:${collection}`] : []), ...donors.map(({ id }) => `bank:${id}`)],
+    evidence: [
+      ...(collection ? [`wikidata:${collection}`] : []),
+      ...donors.map(({ id }) => `bank:${id}`),
+      ...(families.length ? [`family:${prompt.id}`] : []),
+    ],
     status: updated ? 'expanded' : candidates.length ? 'checked-against-source' : 'needs-specific-source',
   });
   prompt.count = records.length;
