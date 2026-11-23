@@ -32,6 +32,8 @@ The [coverage report](scripts/answer-coverage.json) lists original and updated c
 
 [Reviewed additions](scripts/answer-additions.mjs) cover gaps found by spot-checking unrelated prompts. Each new answer uses an existing rarity, and an alternate name inherits the existing answer’s score. The console pass uses model names from [Nintendo](https://en-americas-support.nintendo.com/app/answers/detail/a_id/5066), [PlayStation](https://www.playstation.com/en-us/ps5/buy-now/), and [Xbox](https://www.xbox.com/en-us/consoles/xbox-series-x). Tree species include common and scientific names from the [USDA Forest Service](https://www.fs.usda.gov/pnw/pubs/pnw_rb168.pdf).
 
+The [prompt-by-prompt review](ANSWER-REVIEW.md) records the guesses checked, the gains, and the reason each bank stayed unchanged. It includes a spot check for every prompt and full rosters for selected closed questions. The enrichment script applies the [reviewed guesses](scripts/answer-sweep.txt) when the prompt wording matches. Run `node scripts/report-answer-sweep.mjs 9a0e0d0` after rebuilding to compare with the release before the sweep.
+
 To rebuild the static answer files after updating the dataset, run the following from the repository root.
 
 ```powershell

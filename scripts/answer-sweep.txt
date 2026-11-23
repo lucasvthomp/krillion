@@ -1,0 +1,925 @@
+# Each line records the ID, exact prompt wording, and reviewed answers separated by |.
+# Scores apply to new entries only. Use = to specify verified alternate names for an answer.
+0001|Name an animal whose name starts with K|Kinkajou|Klipspringer|Kakapo|Kouprey@85
+0002|Name a country in Africa|Eswatini=Swaziland|Cabo Verde=Cape Verde|Comoros|São Tomé and Príncipe
+0003|Name a pasta shape|Trofie|Lorighittas@85|Malloreddus=Sardinian gnocchi@60|Cavatelli
+0004|Name a Pixar feature film|Elio|Hoppers|Toy Story 5|Monsters University
+0005|Name a chemical element whose name ends in "-ium"|Darmstadtium@85|Hassium@60|Roentgenium@85|Meitnerium@60
+0006|Name a sport that has ever been part of the Summer Olympics|Breaking|Skateboarding|Sport climbing|Artistic swimming=Synchronized swimming
+0007|Name an instrument found in a symphony orchestra|English horn=Cor anglais|Bass clarinet|Contrabassoon|Celesta@60
+0008|Name a country in the Americas (North, Central, or South)|Suriname|Saint Kitts and Nevis=St Kitts and Nevis|Antigua and Barbuda|Belize
+0009|Name a bird of prey|Secretarybird=Secretary bird|Harpy eagle|Caracara|Osprey
+0010|Name a type of cheese|Raclette|Saint-Nectaire@85|Cotija|Crottin de Chavignol@85
+0011|Name a Beatles song|Hey Jude|Rain|You Know My Name (Look Up the Number)@85|The Inner Light@60
+0012|Name a letter of the Greek alphabet|Alpha|Beta|Gamma|Delta|Epsilon|Zeta|Eta|Theta|Iota|Kappa|Lambda|Mu|Nu|Xi|Omicron|Pi|Rho|Sigma|Tau|Upsilon|Phi|Chi|Psi|Omega
+0013|Name a US state capital|Montgomery|Juneau|Phoenix|Little Rock|Sacramento|Denver|Hartford|Dover|Tallahassee|Atlanta|Honolulu|Boise|Springfield|Indianapolis|Des Moines|Topeka|Frankfort|Baton Rouge|Augusta|Annapolis|Boston|Lansing|Saint Paul=St. Paul|Jackson|Jefferson City|Helena|Lincoln|Carson City|Concord|Trenton|Santa Fe|Albany|Raleigh|Bismarck|Columbus|Oklahoma City|Salem|Harrisburg|Providence|Columbia|Pierre|Nashville|Austin|Salt Lake City|Montpelier|Richmond|Olympia|Charleston|Madison|Cheyenne
+0014|Name a dog breed|Mudi@60|Azawakh@60|Barbet@60|Biewer Terrier@60
+0015|Name the capital city of a European country|Podgorica|Andorra la Vella|Vaduz|Chișinău=Chisinau
+0016|Name a citrus fruit|Sudachi@60|Yuzu|Tangelo|Calamansi=Calamondin
+0017|Name a movie that won the Best Picture Oscar|One Battle After Another|Anora|Oppenheimer|Wings
+0018|Name an officially recognized constellation|Camelopardalis@60|Coma Berenices@60|Reticulum@60|Pictor@60
+0019|Name an NBA team|Atlanta Hawks|Boston Celtics|Brooklyn Nets|Charlotte Hornets|Chicago Bulls|Cleveland Cavaliers|Dallas Mavericks|Denver Nuggets|Detroit Pistons|Golden State Warriors|Houston Rockets|Indiana Pacers|LA Clippers=Los Angeles Clippers|Los Angeles Lakers|Memphis Grizzlies|Miami Heat|Milwaukee Bucks|Minnesota Timberwolves|New Orleans Pelicans|New York Knicks|Oklahoma City Thunder=OKC Thunder|Orlando Magic|Philadelphia 76ers=Philadelphia Sixers|Phoenix Suns|Portland Trail Blazers|Sacramento Kings|San Antonio Spurs|Toronto Raptors|Utah Jazz|Washington Wizards
+0020|Name a root vegetable|Daikon|Celeriac=Celery root|Salsify|Burdock root
+0021|Name a Greek god or goddess|Hestia|Hecate|Hebe|Eileithyia@85
+0022|Name an island country|Timor-Leste=East Timor|São Tomé and Príncipe|Kiribati|Nauru
+0023|Name a species of wild cat|Pallas's cat=Manul|Sand cat|Fishing cat|Clouded leopard
+0024|Name a type of bread|Bing bread@60|Parker House roll@60|Kubaneh@85|Pan de sal=Pandesal
+0025|Name a Studio Ghibli film|The Boy and the Heron|Earwig and the Witch|The Red Turtle|My Neighbors the Yamadas
+0026|Name a bone in the human body|Vomer@85|Scaphoid@60|Talus@60|Hyoid bone@60|Patella
+0027|Name a card game|Skat|Durak|Euchre|Palace (card game)=Shithead
+0028|Name a US president|Grover Cleveland|Chester A. Arthur|John Tyler|Donald Trump
+0029|Name a country in Asia|Timor-Leste=East Timor|Brunei|Bhutan|Kyrgyzstan
+0030|Name a venomous or poisonous animal|Cone snail|Blue-ringed octopus|Gila monster|Inland taipan
+0031|Name an herb or spice|Nigella seed=Kalonji@60|Epazote|Amchur=Amchoor@60|Cubeb@85
+0032|Name a Walt Disney Animation Studios feature film|Zootopia 2|Moana 2|Wish|Strange World
+0033|Name a unit of measurement|Pascal|Katal@85|Kilowatt-hour=Kilowatt hour|Parsec
+0034|Name a city that has hosted the Summer or Winter Olympics|Milan|Cortina d'Ampezzo|Sapporo|Innsbruck|Squaw Valley=Olympic Valley
+0035|Name a type of flower|Torenia=Wishbone flower@60|Clarkia@60|Hollyhock|Foxglove
+0036|Name a landlocked country|Lesotho|Eswatini|Vatican City|Liechtenstein|Uzbekistan
+0037|Name a shark species|Cookiecutter shark|Goblin shark|Frilled shark|Tasselled wobbegong@60
+0038|Name a cocktail|Paper Plane|Naked and Famous|Division Bell@60|Jungle Bird|Saturn@60
+0039|Name a Harry Potter character|Fleur Delacour|Moaning Myrtle|Barty Crouch Jr.|Nymphadora Tonks
+0040|Name a moon of a planet in our solar system|Enceladus|Triton|Nereid@60|Amalthea@60|Himalia@60
+0041|Name a martial art|Sanda=Sanshou@60|Capoeira|Sambo|Pencak silat
+0042|Name a mythical creature|Banshee|Leshy@60|Kelpie|Basilisk
+0043|Name a river in Europe|Dniester|Tisza@60|Vistula|Moldau=Vltava
+0044|Name a penguin species|Royal penguin|Fiordland penguin@60|Snares penguin@60|Galápagos penguin
+0045|Name a breakfast cereal brand|Grape-Nuts|Weetabix|Cascadian Farm|Post Shredded Wheat
+0046|Name a James Bond film|On Her Majesty's Secret Service|For Your Eyes Only|The Living Daylights|No Time to Die
+0047|Name a gemstone|Tanzanite|Spinel|Tsavorite@60|Benitoite@85
+0048|Name a board game|Sky Team|Heat: Pedal to the Metal|The Quest for El Dorado|Cascadia
+0049|Name a language spoken in Europe|Faroese|Breton|Frisian|Romansh
+0050|Name a country with a Mediterranean coastline|Montenegro|Slovenia|Bosnia and Herzegovina|Israel
+0051|Name a whale species|Rice's whale@60|Omura's whale@85|North Atlantic right whale|Cuvier's beaked whale
+0052|Name a tropical fruit|Mangosteen|Langsat=Lanzones@60|Breadfruit|Cupuaçu
+0053|Name a Scooby-Doo character|Daphne Blake|Velma Dinkley|Scrappy-Doo|Flim-Flam@60
+0054|Name a type of cloud|Cirrocumulus|Nimbostratus|Pileus@60|Flammagenitus=Pyrocumulus@60
+0055|Name a style of dance|Waacking@60|Lindy Hop|Popping|Krumping
+0056|Name a Roman emperor|Aurelian|Pertinax@60|Severus Alexander|Vespasian
+0057|Name a desert|Danakil Desert|Dasht-e Kavir@60|Atacama Desert|Taklamakan Desert
+0058|Name a snake species|Corn snake|Burmese python|Mangrove snake|Boomslang|Black mamba
+0059|Name a coffee drink|Red eye|Black eye@60|Carajillo|Bicerin@60
+0060|Name a video game console|Nintendo DSi|Neo Geo Pocket Color|Xbox Series S|PlayStation 5 Pro
+0061|Name a muscle in the human body|Sartorius|Masseter|Soleus|Piriformis|Palmaris longus@60
+0062|Name a style of hat|Cloche|Pork pie hat|Homburg|Boonie hat
+0063|Name a Shakespeare play|Cymbeline|Pericles, Prince of Tyre|The Two Noble Kinsmen@60|The Winter's Tale
+0064|Name a former republic of the Soviet Union|Armenia|Azerbaijan|Belarus|Estonia|Georgia|Kazakhstan|Kyrgyzstan|Latvia|Lithuania|Moldova|Russia|Tajikistan|Turkmenistan|Ukraine|Uzbekistan
+0065|Name a dinosaur|Parasaurolophus|Deinonychus|Therizinosaurus|Pachycephalosaurus|Suchomimus@60
+0066|Name a pizza topping|Hot honey|Pepperoncini|Figs|Potato|Clams
+0067|Name a TV sitcom|Detectorists|Derry Girls|Superstore|Ghosts (UK)|Abbott Elementary
+0068|Name a programming language|Odin|V (programming language)=Vlang|Nim|Wren (programming language)=Wren
+0069|Name an Olympic track and field event|Women's 400 m hurdles|Men's hammer throw|Women's heptathlon|Men's 3,000 m steeplechase
+0070|Name a nut|Baru nut@60|Pili nut|Hickory nut|Pine nut|Brazil nut
+0071|Name a mountain range|Dinaric Alps=Dinarides|Kunlun Mountains|Sierra Madre Occidental|Anti-Atlas
+0072|Name an insect|Earwig|Dobsonfly|Lacewing|Silverfish|Booklouse@60
+0073|Name a soup|Avgolemono|Shchi|Bird's nest soup|Bún bò Huế|Canh chua@60
+0074|Name a movie starring Tom Hanks|A Man Called Otto|News of the World|Greyhound|A Beautiful Day in the Neighborhood
+0075|Name a shade of blue|Prussian blue|Phthalo blue|International Klein Blue|YInMn blue@60
+0076|Name a kitchen utensil|Spider strainer|Fish spatula|Microplane|Dough whisk|Bench scraper
+0077|Name a Norse god or goddess|Týr=Tyr|Hel|Skaði=Skadi|Iðunn=Idunn
+0078|Name a country where Spanish is an official language|Equatorial Guinea|Bolivia|Paraguay|Panama
+0079|Name a primate species|Aye-aye|Diana monkey|Proboscis monkey|Emperor tamarin
+0080|Name a candy bar|Whatchamacallit|Skor|Aero|Caramello
+0081|Name a boy band|Bay City Rollers|Hanson|Big Time Rush|Stray Kids
+0082|Name an organ of the human body|Pancreas|Spleen|Thymus|Gallbladder
+0083|Name a yoga pose|Half moon pose=Ardha Chandrasana|Crow pose=Bakasana|Boat pose=Navasana|Pigeon pose
+0084|Name a US national park|New River Gorge National Park|Indiana Dunes National Park|Gateway Arch National Park|Pinnacles National Park
+0085|Name a country that drives on the left|Suriname|Guyana|Japan|Timor-Leste|Mozambique
+0086|Name an amphibian|Axolotl|Caecilian|Hellbender|Midwife toad
+0087|Name an ice cream flavor|Honey lavender|Malted milk|Brown butter|Blue moon|Black raspberry
+0088|Name a Star Wars character|Cad Bane|Hera Syndulla|Grand Admiral Thrawn=Thrawn|Cassian Andor
+0089|Name a collective noun for a group of animals (like 'murder' for crows)|A business of ferrets|A zeal of zebras|A raft of otters|A kettle of hawks
+0090|Name a gym exercise|Farmer's carry=Farmer's walk|Bulgarian split squat|Pallof press|Pendlay row
+0091|Name a classic French dish|Sole meunière|Brandade de morue|Choucroute garnie|Poulet basquaise
+0092|Name the capital city of an Asian country|Dili|Thimphu|Bandar Seri Begawan|Sri Jayawardenepura Kotte
+0093|Name a species of spider|Brown recluse=Loxosceles reclusa|Goliath birdeater=Theraphosa blondi|Chilean rose tarantula=Grammostola rosea|Golden silk orb-weaver=Trichonephila clavipes
+0094|Name a type of sandwich|Fried bologna sandwich|French dip|Toast Hawaii@60|Smørrebrød
+0095|Name a Toy Story character|Forky|Duke Caboom|Trixie|Al McWhiggin
+0096|Name a cryptid (a creature like Bigfoot whose existence is claimed but unproven)|Mothman|Flatwoods monster|Ahool@60|Yowie
+0097|Name a sport played with a racquet or paddle|Padel|Pickleball|Platform tennis|Beach tennis|Racketlon@60
+0098|Name a Renaissance artist|Piero della Francesca|Sofonisba Anguissola|Pinturicchio|Domenico Ghirlandaio
+0099|Name a country whose flag uses all three of red, white, and blue, and no other colors|France|Thailand|Iceland|Panama
+0100|Name a rodent|Cane rat|Dassie rat@60|Mountain beaver@60|Woodrat=Pack rat
+0101|Name a Broadway musical|Hadestown|Come From Away|Suffs|The Outsiders
+0102|Name a metric (SI) prefix|Quetta|Ronna|Yotta|Zetta|Exa|Peta|Tera|Giga|Mega|Kilo|Hecto|Deca=Deka|Deci|Centi|Milli|Micro|Nano|Pico|Femto|Atto|Zepto|Yocto|Ronto|Quecto
+0103|Name a type of knot|Alpine butterfly knot|Figure-eight follow-through|Double fisherman's knot|Prusik knot
+0104|Name an ancient civilization|Minoan civilization|Nok culture|Elamite civilization|Aksumite Empire=Kingdom of Aksum
+0105|Name a strait (a narrow sea passage between two landmasses)|Sunda Strait|Tsugaru Strait|Strait of Hormuz|Strait of Otranto
+0106|Name a creature that lives in the deep sea|Giant isopod|Vampire squid|Barreleye|Tripod fish|Black swallower
+0107|Name a variety of chili pepper|Calabrian chili|Aji charapita@60|Jimmy Nardello@60|Fish pepper@60
+0108|Name a Pokémon from the original 151|Seel|Farfetch'd|Omanyte|Porygon
+0109|Name a phobia (its formal name, like 'arachnophobia')|Emetophobia|Trypanophobia|Mysophobia=Germophobia|Thanatophobia
+0110|Name a world chess champion|Ding Liren|Gukesh Dommaraju=Gukesh D|Viswanathan Anand|Veselin Topalov
+0111|Name a famous ship (real or fictional)|Endurance|HMS Erebus|USS Monitor|RMS Carpathia|HMS Beagle
+0112|Name a country in the European Union|Austria|Belgium|Bulgaria|Croatia|Cyprus|Czechia=Czech Republic|Denmark|Estonia|Finland|France|Germany|Greece|Hungary|Ireland|Italy|Latvia|Lithuania|Luxembourg|Malta|Netherlands|Poland|Portugal|Romania|Slovakia|Slovenia|Spain|Sweden
+0113|Name an owl species|Northern saw-whet owl|Eurasian eagle-owl|Blakiston's fish owl@60|Elf owl
+0114|Name a type of cake|Princesstårta=Princess cake|Battenberg cake|Wacky cake=Depression cake|Dundee cake
+0115|Name a DreamWorks Animation movie|The Wild Robot|Dog Man|The Bad Guys 2|Kung Fu Panda 4
+0116|Name a metal alloy|Duralumin|Invar|Nichrome|Cupronickel
+0117|Name a soccer club that has won the European Cup or Champions League|Red Star Belgrade=Crvena zvezda|Steaua București|Hamburger SV|Paris Saint-Germain=PSG
+0118|Name a famous classical composer|Clara Schumann|Florence Price|Hildegard of Bingen|Erik Satie
+0119|Name a country with a monarchy|Andorra|Eswatini|Lesotho|Malaysia
+0120|Name an animal whose name starts with H|Hoatzin|Hartebeest|Hyrax|Hammerhead shark
+0121|Name a type of pie|Banoffee pie|Crawfish pie|Shoofly pie|Tourtière
+0122|Name a Marvel Cinematic Universe movie|The Fantastic Four: First Steps|Thunderbolts*|Captain America: Brave New World|Deadpool & Wolverine
+0123|Name a species of tree|Cucumber magnolia=Magnolia acuminata|Red mulberry=Morus rubra|American hornbeam=Carpinus caroliniana|Eastern redbud=Cercis canadensis
+0124|Name a tennis player who has won a Grand Slam singles title|Li Na|Adriano Panatta|Iga Świątek|Jannik Sinner|Aryna Sabalenka
+0125|Name a famous painting|Christina's World|Las Meninas|A Sunday Afternoon on the Island of La Grande Jatte|The Garden of Earthly Delights
+0126|Name a US state|Alabama|Alaska|Arizona|Arkansas|California|Colorado|Connecticut|Delaware|Florida|Georgia|Hawaii|Idaho|Illinois|Indiana|Iowa|Kansas|Kentucky|Louisiana|Maine|Maryland|Massachusetts|Michigan|Minnesota|Mississippi|Missouri|Montana|Nebraska|Nevada|New Hampshire|New Jersey|New Mexico|New York|North Carolina|North Dakota|Ohio|Oklahoma|Oregon|Pennsylvania|Rhode Island|South Carolina|South Dakota|Tennessee|Texas|Utah|Vermont|Virginia|Washington|West Virginia|Wisconsin|Wyoming
+0127|Name a freshwater fish|Freshwater drum|Tench|Grass carp|Channel catfish|White sturgeon
+0128|Name a type of dumpling|Knedle@60|Pelmeni|Modak|Spaetzle=Spätzle
+0129|Name a Nintendo video game franchise|Advance Wars|Pilotwings|Golden Sun|Rhythm Heaven=Rhythm Tengoku
+0130|Name a weather phenomenon|Derecho|Freezing rain|Dust devil|Sleet|Thundersnow
+0131|Name a heavyweight boxing world champion|Oleksandr Usyk|Lennox Lewis|Evander Holyfield|Ezzard Charles
+0132|Name a Dr. Seuss book|The Sneetches and Other Stories|On Beyond Zebra!|I Had Trouble in Getting to Solla Sollew|The Butter Battle Book
+0133|Name a country in the Middle East|Bahrain|Oman|Qatar|Kuwait
+0134|Name a parrot species|Kakapo|Hyacinth macaw|African grey parrot|Kea
+0135|Name a condiment|Chili crisp|Sambal oelek|Toum|Hot honey|Kecap manis
+0136|Name a Batman villain|Calendar Man|Hush|Hugo Strange|Firefly
+0137|Name a part of the human eye|Aqueous humor|Ciliary body|Fovea|Sclera
+0138|Name a Formula 1 world champion|Max Verstappen|Kimi Räikkönen|Keke Rosberg|Jody Scheckter
+0139|Name a Stephen King novel|Fairy Tale|The Institute|Joyland|Billy Summers
+0140|Name a country whose name starts with S|Saint Lucia=St Lucia|South Sudan|São Tomé and Príncipe|Seychelles
+0141|Name a crab or other crustacean|Mantis shrimp|Coconut crab|Krill|Goose barnacle|Copepod
+0142|Name a cooking method|Sous vide|Reverse searing|Spatchcock roasting|Poaching|Pressure cooking
+0143|Name a Simpsons character|Hans Moleman|Gil Gunderson|Disco Stu|Agnes Skinner
+0144|Name a state of matter|Bose–Einstein condensate|Fermionic condensate|Plasma|Superfluid
+0145|Name a position in American football|Long snapper|Slot receiver|Nose tackle|Free safety
+0146|Name a Steven Spielberg movie|The Fabelmans|West Side Story (2021)|Bridge of Spies|The Sugarland Express
+0147|Name an African capital city|Gitega|Yamoussoukro|Nouakchott|Praia
+0148|Name a type of waterfowl|Canvasback|Eider|Merganser|Black swan
+0149|Name a Mexican dish|Mole negro|Tacos de suadero|Quesabirria|Caldo de res|Zacahuil@85
+0150|Name a Disney villain|Yzma|Dr. Facilier|Madam Mim|Percival C. McLeach
+0151|Name a geometric shape|Rhombicosidodecahedron@85|Trapezium|Reuleaux triangle|Torus
+0152|Name a country that has hosted the FIFA World Cup|South Africa|Switzerland|Qatar|Uruguay
+0153|Name a famous poet|Gwendolyn Brooks|Pablo Neruda|Wisława Szymborska|Sappho
+0154|Name a Caribbean island|Curaçao|Dominica|Saba|Vieques
+0155|Name a beetle|Bombardier beetle|Violet ground beetle|Goliath beetle|Blister beetle
+0156|Name a type of salad|Gado-gado|Yum woon sen@60|Wedge salad|Fattoush|Salade lyonnaise@60
+0157|Name a Saturday Night Live cast member|Maya Rudolph|Tim Meadows|Bowen Yang|Sarah Sherman
+0158|Name a vitamin or dietary mineral|Biotin=Vitamin B7|Niacin=Vitamin B3|Molybdenum@60|Selenium
+0159|Name an NFL team|Arizona Cardinals|Atlanta Falcons|Baltimore Ravens|Buffalo Bills|Carolina Panthers|Chicago Bears|Cincinnati Bengals|Cleveland Browns|Dallas Cowboys|Denver Broncos|Detroit Lions|Green Bay Packers|Houston Texans|Indianapolis Colts|Jacksonville Jaguars|Kansas City Chiefs|Las Vegas Raiders|Los Angeles Chargers=LA Chargers|Los Angeles Rams=LA Rams|Miami Dolphins|Minnesota Vikings|New England Patriots|New Orleans Saints|New York Giants|New York Jets|Philadelphia Eagles|Pittsburgh Steelers|San Francisco 49ers|Seattle Seahawks|Tampa Bay Buccaneers|Tennessee Titans|Washington Commanders
+0160|Name a fairy tale|East of the Sun and West of the Moon|The Twelve Dancing Princesses|The Snow Queen|Vasilisa the Beautiful
+0161|Name a country that no longer exists|Czechoslovakia|German Democratic Republic=East Germany|Sikkim@60|Gran Colombia
+0162|Name a horse breed|Criollo|Akhal-Teke|Marwari|Knabstrupper@60
+0163|Name a Japanese dish|Yudofu@60|Sukiyaki|Hitsumabushi@60|Zōni=Ozoni
+0164|Name a Shrek character|Farquaad=Lord Farquaad|Fairy Godmother|Prince Charming|Doris
+0165|Name a space mission or program|Hayabusa2|Lunar Reconnaissance Orbiter=LRO|OSIRIS-REx|Parker Solar Probe|Artemis II
+0166|Name a golfer who has won a major championship|Annika Sörenstam|Yani Tseng|Ariya Jutanugarn|Hideki Matsuyama
+0167|Name a Roald Dahl book|Danny, the Champion of the World|The Magic Finger|Esio Trot|The Giraffe and the Pelly and Me
+0168|Name a world capital city south of the equator|Suva|Nukuʻalofa|Port Vila|Dodoma|Mbabane
+0169|Name a lizard species|Gila monster|Komodo dragon|Marine iguana|Thorny devil|Madagascar giant day gecko
+0170|Name a type of pastry or doughnut|Pączek=Paczki|Pastelito de guayaba@60|Rosquillas@60|Berliner doughnut=Berliner
+0171|Name a Grammy Album of the Year winner|Debí Tirar Más Fotos=DTMF|Cowboy Carter|Midnights|We Are
+0172|Name a human hormone|Melatonin|Growth hormone=Somatotropin|Leptin|Aldosterone|Glucagon
+0173|Name a sport or discipline ever contested or demonstrated at the Winter Olympics|Ski mountaineering=Skimo|Bandy|Ice stock sport=Eisstock|Skeleton
+0174|Name a 2026 movie that had grossed at least $200 million worldwide by August 8|Toy Story 5|The Super Mario Galaxy Movie|The Odyssey|Spider-Man: Brand New Day
+0175|Name a country that shares a land or maritime border with Russia|United States=USA|Japan|North Korea=DPRK|Norway|Georgia
+0176|Name a farm animal|Guinea fowl|Alpaca|Yak|Water buffalo|Goose
+0177|Name a rice dish|Hoppin' John|Congee|Bibimbap|Arroz caldo|Chahan=Japanese fried rice
+0178|Name a talk show host|Graham Norton|Tamron Hall|Seth Meyers|Sherri Shepherd
+0179|Name a web browser|Vivaldi|Brave Browser=Brave|Waterfox|Pale Moon|Samsung Internet
+0180|Name a first-billed actor in a Christopher Nolan-directed feature film|Jeremy Theobald|John David Washington|Matt Damon|Hugh Jackman
+0181|Name a movie James Cameron directed, wrote, or produced|The Abyss|Strange Days|Alita: Battle Angel|Avatar: Fire and Ash
+0182|Name a sovereign country whose flag contains both red and white|Georgia|Lebanon|Singapore|Malta
+0183|Name an animal threatened with extinction|Vaquita|Saola|Kakapo|Javan rhinoceros|Philippine eagle
+0184|Name a cut of beef|Picanha=Top sirloin cap|Hanger steak=Onglet|Tri-tip|Chuck eye steak|Flat iron steak
+0185|Name a girl group|Girls Aloud|Sugababes|Little Mix|Perfume|XG
+0186|Name a famous scientist|Chien-Shiung Wu|Jane Goodall|Katalin Karikó|Satyendra Nath Bose
+0187|Name an arcade game|BurgerTime|Rampage|Robotron: 2084|Time Crisis|Gauntlet
+0188|Name a team that played in the 2026 FIFA World Cup|Canada|Mexico|United States=USA|Australia|Iraq|Iran=IR Iran|Japan|Jordan|South Korea=Korea Republic|Qatar|Saudi Arabia|Uzbekistan|Algeria|Cabo Verde=Cape Verde|DR Congo=Democratic Republic of the Congo|Côte d'Ivoire=Ivory Coast|Egypt|Ghana|Morocco|Senegal|South Africa|Tunisia|Curaçao|Haiti|Panama|Argentina|Brazil|Colombia|Ecuador|Paraguay|Uruguay|New Zealand|Austria|Belgium|Bosnia and Herzegovina|Croatia|Czechia|England|France|Germany|Netherlands|Norway|Portugal|Scotland|Spain|Sweden|Switzerland|Türkiye=Turkey
+0189|Name a language with more than 50 million total speakers|Javanese|Telugu|Marathi|Hausa|Swahili
+0190|Name a nocturnal animal|Kinkajou|Slow loris|Tarsier|Aardvark|Sugar glider
+0191|Name a breakfast food or drink|Congee|Idli|Kaya toast|Porridge|Lassi
+0192|Name a member of the Avengers|She-Hulk|Vision|Wonder Man|Squirrel Girl
+0193|Name a branch of science ending in -ology|Ethology|Palynology@60|Seismology|Paleontology=Palaeontology
+0194|Name a religion with more than one million followers|Sikhism|Jainism|Baháʼí Faith|Caodaism@60
+0195|Name a country whose name ends in the letter A|Eritrea|Mauritania|Micronesia|Tonga
+0196|Name a country that has a G in its name|Kyrgyzstan|Bangladesh|Portugal|Antigua and Barbuda
+0197|Name a piece of furniture|Credenza|Chaise longue|Daybed|Baker's rack|Hall tree
+0198|Name a current world leader (head of state or government)|Volodymyr Zelenskyy|Emmanuel Macron|Claudia Sheinbaum|Donald Trump
+0199|Name a horror movie franchise|V/H/S|Final Destination|The Grudge|Terrifier|Puppet Master
+0200|Name a country that uses the dollar|Ecuador|El Salvador|Timor-Leste|Australia|Fiji
+0201|Name an extreme sport|Wingsuit flying|Ice climbing|Big-wave surfing|Speed flying
+0202|Name a Ryan Gosling movie|The Fall Guy|Half Nelson|Lars and the Real Girl|The Nice Guys
+0203|Name a country with a four-letter English name|Chad|Mali|Peru|Laos|Fiji
+0204|Name a type of turtle or tortoise|Indian star tortoise|Matamata=Mata mata|Pig-nosed turtle|Diamondback terrapin
+0205|Name a soda brand|Irn-Bru|Jarritos|Vernors|Cheerwine|Big Red
+0206|Name an ice cream brand|McConnell's Fine Ice Creams|Tillamook|Jeni's Splendid Ice Creams|Magnolia Ice Cream
+0207|Name a geologic eon, era, period, or epoch|Hadean|Tonian@60|Ediacaran|Paleocene
+0208|Name a playground game|Gaga ball|Four square|Red rover|Duck duck goose|What Time Is It, Mr Wolf?
+0209|Name a current national or shared currency|Moroccan dirham|Ghanaian cedi|West African CFA franc|Vietnamese đồng
+0210|Name a country whose name starts with B|Belize|Bhutan|Bosnia and Herzegovina|Burkina Faso
+0211|Name a marsupial|Quoll|Bilby|Pademelon|Bandicoot|Numbat
+0212|Name an Italian dish|Cacio e pepe|Pasta alla Norma|Vitello tonnato|Pappa al pomodoro|Pasta e ceci
+0213|Name an official Disney Princess|Raya|Merida|Tiana|Aurora
+0214|Name a famous physicist|Lise Meitner|Cecilia Payne-Gaposchkin|Emmy Noether|Richard Feynman
+0215|Name a current or former MLB team|Cleveland Guardians|Seattle Pilots|Montreal Expos|Florida Marlins
+0216|Name a fabric or textile|Ripstop nylon|Tencel=Lyocell|Brocade|Seersucker|Organza
+0217|Name a country whose name ends in the letter O|Burkina Faso|Monaco|Lesotho|Congo
+0218|Name a sea|Sea of Azov|Wadden Sea|Bohai Sea|Sargasso Sea
+0219|Name a songbird|American robin|Northern cardinal|European starling|Zebra finch|House wren
+0220|Name a Chinese dish|Biangbiang noodles|Buddha's delight|Lion's head meatballs|Luosifen=Snail rice noodles
+0221|Name a Star Trek character|Seven of Nine|Data|Garak=Elim Garak|T'Pol|Michael Burnham
+0222|Name a medical specialty|Neonatology|Sports medicine|Clinical genetics|Infectious disease|Geriatrics
+0223|Name a font|Atkinson Hyperlegible|Inter|Geist|DIN 1451|Verdana
+0224|Name a country bigger than Mexico (by area)|Democratic Republic of the Congo=DR Congo|Saudi Arabia|Argentina|Kazakhstan
+0225|Name a river in the Americas|Yukon River|São Francisco River|Orinoco|Rio Grande|Tocantins River
+0226|Name an Indian dish|Bisi bele bath@60|Sarson ka saag|Kozhukattai@60|Dal dhokli@60|Patra@60
+0227|Name a Looney Tunes character|Marvin the Martian|Foghorn Leghorn|Wile E. Coyote|Gossamer
+0228|Name a rock or mineral|Obsidian|Banded iron formation|Augite|Kyanite|Lepidolite
+0229|Name a piece of armor|Vambrace|Greave|Pauldron|Gorget|Tasset
+0230|Name a type of tape|Gaffer tape|Kapton tape|Drywall joint tape|Self-amalgamating tape|Double-sided tape
+0231|Name a country that starts with the letter L|Laos|Lesotho|Liechtenstein|Luxembourg
+0232|Name an island in the Mediterranean|Gozo|Pantelleria|Menorca|Elba|Lampedusa
+0233|Name an animal that hibernates|Groundhog|Hazel dormouse|Little brown bat|Arctic ground squirrel|European hedgehog
+0234|Name a Thai or Vietnamese dish|Khao kha mu@60|Bún riêu@60|Bò lúc lắc=Shaking beef|Pad kra pao=Phat kaphrao|Khua kling@60
+0235|Name a Pixar character|Elio Solís|Mabel Tanaka|Glordon|Ember Lumen|Anxiety (Inside Out)
+0236|Name a planet or dwarf planet in our solar system|Mercury|Venus|Earth|Mars|Jupiter|Saturn|Uranus|Neptune|Pluto|Ceres|Haumea|Makemake|Eris
+0237|Name a hairstyle|Wolf cut|French crop|Bantu knots|Finger waves|Two-strand twists
+0238|Name a country whose name starts with M|Marshall Islands|Micronesia|Montenegro|Mozambique
+0239|Name a mollusk or shellfish|Geoduck|Abalone|Cuttlefish|Razor clam|Sea hare
+0240|Name a German dish|Dampfnudel|Schnitzel Holstein@60|Frankfurter grüne Soße@60|Kartoffelpuffer=German potato pancake
+0241|Name a YouTuber with more than 100 million subscribers|MrBeast|T-Series|PewDiePie|Cocomelon
+0242|Name a subatomic particle|Gluon|Tau lepton|Electron neutrino|Kaon|Graviton
+0243|Name a country that has a Z in its name|Belize|Azerbaijan|New Zealand|Switzerland
+0244|Name a type of shoe|Brogue|Espadrille|Monk strap|Derby shoe|Jodhpur boot
+0245|Name a road or traffic sign|No U-turn|Slippery when wet|Pedestrian crossing|Low clearance|Roundabout ahead
+0246|Name a type of mushroom|Shaggy mane|Yellowfoot chanterelle|Chestnut mushroom|Wine cap mushroom=King stropharia|Turkey tail
+0247|Name a sauce|Ajika|Romesco|Salmoriglio@60|Salsa macha|Ponzu
+0248|Name a gulf or bay|Gulf of Bothnia|Bay of Fundy|Gulf of Aqaba|Gulf of Carpentaria
+0249|Name a type of energy|Electrostatic potential energy|Elastic potential energy|Radiant energy|Thermal energy
+0250|Name a Premier League club|Coventry City|Hull City|Ipswich Town|Sunderland
+0251|Name a type of bag|Drawstring bag|Pannier|Dopp kit|Dry bag|Garment bag
+0252|Name a Korean dish|Naengmyeon|Bossam|Ojingeo bokkeum@60|Doenjang jjigae|Mulhoe@60
+0253|Name a lake|Lake Sevan|Lake Tana|Great Slave Lake|Lake Nicaragua=Lake Cocibolca
+0254|Name a movie Matt Damon appears in|Oppenheimer|The Last Duel|Ford v Ferrari=Le Mans '66|The Odyssey
+0255|Name a Lord of the Rings character|Faramir|Treebeard=Fangorn|Glorfindel|Radagast the Brown
+0256|Name a famous person named Michael|Michael Faraday|Michael B. Jordan|Michael Phelps|Michael Chabon
+0257|Name a casino game|Pai gow poker|Baccarat|Sic bo|Caribbean stud poker|Let It Ride
+0258|Name a type of poem|Villanelle|Pantoum|Sestina|Ghazal|Terza rima
+0259|Name a country with a coastline on the Indian Ocean|Somalia|Mozambique|Timor-Leste|Comoros|Maldives
+0260|Name an animal that lives in the jungle|Okapi|Binturong|Harpy eagle|Bornean orangutan|Tapir
+0261|Name an apple variety|Cosmic Crisp|Opal apple|Ashmead's Kernel|Cox's Orange Pippin|Gravenstein
+0262|Name a Friends character|Janice Litman-Goralnik|Richard Burke|Emily Waltham|Estelle Leonard
+0263|Name a country music artist|Charley Pride|Gillian Welch|Molly Tuttle|Sierra Ferrell
+0264|Name an actor who has starred in a 2026 movie that grossed over $100 million worldwide|Matt Damon|Tom Holland|Zendaya|Chris Pratt|Jack Black
+0265|Name a punctuation mark or typographic symbol|Interrobang|Pilcrow|Dagger|Ampersand|En dash
+0266|Name a bottled water brand|Topo Chico|Gerolsteiner|Voss|Waiākea|Buxton
+0267|Name a country that was once part of the British Empire|Belize|Mauritius|Fiji|Sierra Leone|Brunei
+0268|Name a chocolate brand|Tony's Chocolonely|Ritter Sport|Guittard|Whittaker's|Ghirardelli
+0269|Name a PlayStation-exclusive franchise|Gran Turismo|Astro Bot|Killzone|Resistance (PlayStation)|Wipeout
+0270|Name a type of graph or chart|Violin plot|Sankey diagram|Waterfall chart|Treemap|Radar chart
+0271|Name a sports movie|Breaking Away|Bend It Like Beckham|The Iron Claw|Nyad|The Wrestler
+0272|Name a top-25 anime (by MyAnimeList popularity)|Attack on Titan|Death Note|Fullmetal Alchemist: Brotherhood|One Punch Man
+0273|Name a country with a crescent on its flag|Comoros|Mauritania|Azerbaijan|Singapore|Uzbekistan
+0274|Name a math symbol|Nabla|Plus-minus sign|Integral sign|Subset symbol|Approximately equal sign
+0275|Name a street food from anywhere in the world|Bánh tráng nướng@60|Tanghulu|Poffertjes|Pani puri|Espetinho@60
+0276|Name a character from The Office (US)|Creed Bratton|Karen Filippelli|Nate Nickerson|Jo Bennett
+0277|Name a platform where you can scroll short-form videos|YouTube Shorts|Instagram Reels|Snapchat Spotlight|TikTok|Facebook Reels
+0278|Name an animal that is a herbivore|Manatee|Capybara|Koala|Okapi|Green sea turtle
+0279|Name a brass instrument|Euphonium|Flugelhorn|Cornet|Sousaphone|Wagner tuba
+0280|Name a country whose name starts with C|Comoros|Cabo Verde=Cape Verde|Côte d'Ivoire|Czechia=Czech Republic
+0281|Name an animal that has a G in its name|Hedgehog|Sugar glider|Pangolin|Budgerigar|Gargoyle gecko
+0282|Name a pancake or flatbread from any cuisine|Poffertjes|Injera|Msemen|Pikelet|Lángos
+0283|Name a Netflix original series|Dark|Russian Doll|Baby Reindeer|Adolescence
+0284|Name a Hollywood director|Ava DuVernay|Greta Gerwig|Ryan Coogler|Chloé Zhao
+0285|Name a country with more than 100 million people|Nigeria|Bangladesh|Ethiopia|Democratic Republic of the Congo
+0286|Name a craft or handicraft — a hobby where you make things by hand|Punch needle embroidery|Marquetry|Chainmail weaving|Bookbinding|Needle felting
+0287|Name a country where Christianity is the majority religion|Armenia|East Timor|Zambia|Papua New Guinea
+0288|Name a prehistoric mammal|Glyptodon|Paraceratherium|Macrauchenia|Procoptodon|Basilosaurus
+0289|Name a candy|Pocky|Nerds Gummy Clusters|Pulparindo|Milk Duds|Tamarind candy
+0290|Name a logical fallacy|Appeal to nature|Composition fallacy|No true Scotsman|Texas sharpshooter fallacy
+0291|Name something found in a bathroom|Drain stopper|Water flosser|Plunger|Cotton pads|Scale
+0292|Name an NBA player in the Hall of Fame|Dwyane Wade|Vince Carter|Dirk Nowitzki|Chris Bosh
+0293|Name a holiday celebrated around the world|Vesak=Buddha Day|Eid al-Adha|Lunar New Year|International Workers' Day
+0294|Name a berry|Cloudberry|Lingonberry|Haskap=Honeyberry|Boysenberry|Salmonberry
+0295|Name an airline|Porter Airlines|Air Premia|Air Astana|Air Greenland|Breeze Airways
+0296|Name a doughnut chain|Shipley Do-Nuts|Duck Donuts|Mister Donut|Tim Hortons|Honey Dew Donuts
+0297|Name a language written in the Latin alphabet|Vietnamese|Icelandic|Swahili|Quechua|Maltese
+0298|Name a computer operating system|Haiku|SerenityOS|ChromeOS Flex|Fedora Linux|FreeBSD|OpenIndiana
+0299|Name an animal that lives in groups|Meerkat|Dhole|Przewalski's horse|Vampire bat|African wild dog
+0300|Name a nursery rhyme|Little Bo-Peep|Oranges and Lemons|The Grand Old Duke of York|Hickory Dickory Dock
+0301|Name a country or territory with the Union Jack on its flag|Tuvalu|Cook Islands|Fiji|Montserrat|Pitcairn Islands
+0302|Name a living bird that cannot fly|Kākāpō|Takahē|Campbell teal|Inaccessible Island rail@60|Weka
+0303|Name a dip|Green goddess dip|Bagna càuda|Buffalo chicken dip|Muhammara|Tirokafteri@60
+0304|Name a Game of Thrones character|Oberyn Martell|Lyanna Mormont|Jaqen H'ghar|Thoros of Myr
+0305|Name a chemical element that is a gas at room temperature|Argon|Xenon|Radon|Chlorine|Fluorine
+0306|Name a Drake song|Nice for What|Passionfruit|Headlines|Nokia
+0307|Name a famous museum|Uffizi Gallery|Rijksmuseum|Musée d'Orsay|National Museum of Anthropology (Mexico City)
+0308|Name a fruit|Medlar|Pawpaw|Tamarillo|Mamoncillo@60|White sapote
+0309|Name a type of wood|Padauk|Ipe|Wenge|Western red cedar|Sapele
+0310|Name a fermented food or drink|Tempeh|Kvass|Injera|Natto|Water kefir|Doenjang
+0311|Name a country that borders more than five other countries|Burkina Faso|Austria|Hungary|Ukraine|Tanzania
+0312|Name a Microsoft application|PowerToys|Microsoft Loop|Microsoft Forms|Visio|Microsoft To Do
+0313|Name a member of the Justice League|Zatanna|Martian Manhunter=J'onn J'onzz|Plastic Man|Vixen
+0314|Name a type of paper|Glassine|Newsprint|Kraft paper|Bristol board|Mulberry paper
+0315|Name a company in the S&P 500|Microsoft|Nvidia|Coca-Cola|Berkshire Hathaway|Procter & Gamble
+0316|Name an animal that has an X in its name|Axolotl|Muskox|Oryx|Arctic fox|X-ray tetra
+0317|Name a curry|Saag aloo|Chicken chettinad|Pork vindaloo|Meen moilee=Fish molee|Kare raisu=Japanese curry
+0318|Name a Sesame Street character|Abby Cadabby|Slimey|Prairie Dawn|Count von Count=The Count
+0319|Name an Apple device|Apple Vision Pro|Mac Studio|AirPods Max|Apple Pencil Pro
+0320|Name a position in soccer|Sweeper|Wing-back|False nine|Center back=Centre back|Defensive midfielder
+0321|Name a Bible character|Huldah|Mephibosheth|Mordecai|Priscilla|Barnabas
+0322|Name a national capital that is not its country's largest city|Ngerulmud|Yamoussoukro|Dodoma|Wellington|Ottawa
+0323|Name a vegetable (culinarily and technically)|Kohlrabi|Salsify|Celeriac|Fiddlehead fern|Nopales
+0324|Name a food served on a stick|Tanghulu|Corn dog|Satay|Dango|Kwek-kwek@60
+0325|Name a fictional robot|Twiki|Marvin the Paranoid Android|Bender|TARS|K-2SO
+0326|Name an ancient Greek philosopher|Diogenes of Sinope=Diogenes|Hypatia|Anaximander|Zeno of Citium|Epicurus
+0327|Name a sport played over a net|Sepak takraw|Footvolley|Padel|Pickleball|Badminton
+0328|Name a country with an official state religion|Maldives|Cambodia|Saudi Arabia|Malta
+0329|Name a country in Oceania|Nauru|Tuvalu|Solomon Islands|Vanuatu|Palau
+0330|Name an animal whose name starts with B (breeds count too)|Binturong|Brocket deer|Basking shark|Belgian Malinois|Blesbok
+0331|Name a deep fried food|Pakora|Acarajé|Tostones|Fried pickles|Scotch egg
+0332|Name a Transformers character|Starscream|Soundwave|Shockwave|Jetfire|Rhinox
+0333|Name a member of the Beatles|John Lennon|Paul McCartney|George Harrison|Ringo Starr|Pete Best|Stuart Sutcliffe
+0334|Name a country that has territories or dependencies|Denmark|Netherlands|Norway|New Zealand|Australia
+0335|Name an American airline (U.S.-based, past or present)|Avelo Airlines|Breeze Airways|Allegiant Air|Sun Country Airlines|Hawaiian Airlines
+0336|Name a type of gun (types and models both count)|Flintlock musket|Matchlock musket|Blunderbuss|Pepperbox pistol
+0337|Name a creature you might find in a tide pool|Chiton|Limpet|Shore crab|Sea anemone|Tidepool sculpin
+0338|Name an HBO show|Somebody Somewhere|The Leftovers|The Comeback|The White Lotus
+0339|Name a DreamWorks animated character|Roz=Roz (The Wild Robot)|Brightbill|Po=Po (Kung Fu Panda)|Tigress|Megamind
+0340|Name a country that was an ally of the Soviet Union during the Cold War|Czechoslovakia|East Germany|Cuba|Bulgaria
+0341|Name an athlete with multiple Olympic gold medals|Katie Ledecky|Simone Biles|Paavo Nurmi|Ireen Wüst|Mikaela Shiffrin
+0342|Name a chess term|Zugzwang|Zwischenzug|Fianchetto|En passant|Skewer
+0343|Name a capital city in the Americas|Belmopan|Paramaribo|Basseterre|Castries|Kingstown
+0344|Name an animal known for camouflage|Leaf-tailed gecko|Dead leaf butterfly|Stonefish|Ghost pipefish|Peppered moth
+0345|Name a country that fought in World War II|Brazil|Mexico|Mongolian People's Republic|Ethiopia|Norway
+0346|Name a language that is an official language of a European country|Romansh|Luxembourgish|Irish|Maltese|Icelandic
+0347|Name an astronaut or cosmonaut|Jeremy Hansen|Christina Koch|Jessica Meir|Samantha Cristoforetti|Guion Bluford
+0348|Name a block in Minecraft|Crafter|Copper bulb|Tuff bricks|Mud bricks|Sculk shrieker
+0349|Name a country smaller than Belgium (by area)|Lesotho|Armenia|Albania|Burundi|Djibouti
+0350|Name a European country|Andorra|San Marino|Moldova|North Macedonia|Montenegro
+0351|Name a living mammal native to Africa|Gerenuk|Aardwolf|Klipspringer|Sitatunga|Giant forest hog
+0352|Name an American fast food chain|Culver's|Zaxby's|Raising Cane's|Bojangles|Cook Out
+0353|Name a Taylor Swift song|Cruel Summer|Maroon|You're On Your Own, Kid|The Albatross|Guilty as Sin?
+0354|Name a country that celebrates an independence day|Timor-Leste|Ghana|Indonesia|Estonia|Chile
+0355|Name a game in Wii Sports or Wii Sports Resort|Air Sports|Frisbee|Wakeboarding|Power Cruising|Swordplay
+0356|Name a palindrome that's a real English dictionary word|Civic|Level|Redder|Refer|Solos
+0357|Name a national capital city that starts with B|Baku|Bamako|Bishkek|Brazzaville|Bratislava
+0358|Name a mammal or reptile that lives in the desert|Fennec fox|Sand cat|Gila monster|Thorny devil|Jerboa
+0359|Name a type of cookie (brands don't count)|Alfajor|Pizzelle|Krumkake|Linzer cookie|Speculaas
+0360|Name a Seinfeld character|Art Vandelay|Frank Costanza|Jackie Chiles|Kenny Bania
+0361|Name a type of engineering|Geotechnical engineering|Acoustical engineering|Robotics engineering|Materials engineering|Petroleum engineering
+0362|Name a unit of distance|Nautical mile|Fathom|Ångström|Micrometre=Micrometer|Astronomical unit
+0363|Name a medical instrument|Otoscope|Ophthalmoscope|Retractor|Pulse oximeter|Goniometer
+0364|Name a luxury watch brand|Jaeger-LeCoultre|F.P. Journe|A. Lange & Söhne|Glashütte Original|Breguet
+0365|Name a mammal with stripes|Okapi|Striped hyena|Striped skunk|Aardwolf|Zebra duiker
+0366|Name a style or cut of jeans|Bootcut jeans|Barrel jeans|Wide-leg jeans|Mom jeans|Flared jeans
+0367|Name a Disney song|Surface Pressure|Almost There|I See the Light|How Far I'll Go|I've Got a Dream
+0368|Name a mode of transportation|Funicular|Hydrofoil|Trolleybus|Hovercraft|Gondola lift
+0369|Name a type of home or dwelling|Yurt|Houseboat|Bungalow|Stilt house|A-frame house
+0370|Name a country whose name starts with T|Tajikistan|Timor-Leste|Tuvalu|Turkmenistan
+0371|Name a country where English is an official language|Vanuatu|Uganda|Rwanda|Singapore|Papua New Guinea
+0372|Name an animal that lives in the Arctic or Antarctica|Arctic hare|Narwhal|Walrus|Emperor penguin|Weddell seal
+0373|Name a dead language|Akkadian|Hittite|Gothic (language)|Etruscan|Tocharian B
+0374|Name a Mario character|Nabbit|Pauline|Rosalina|Toadette|Captain Toad
+0375|Name a country with the letter Y in its name|Kyrgyzstan|Seychelles|Uruguay|Malaysia|Guyana
+0376|Name a sport played with a stick, bat, or club|Bandy|Shinty|Hurling|Floorball|Rounders
+0377|Name a type of bicycle|Gravel bike|Cyclocross bike|Cargo bike|Recumbent bicycle|Track bicycle
+0378|Name a city in Canada with over 100,000 people|Kelowna|Waterloo|Guelph|Lévis|St. John's
+0379|Name an animal with a shell|Pill bug|Nautilus|Horseshoe crab|Limpet|Leatherback sea turtle
+0380|Name a Middle Eastern dish|Musakhan|Maqluba|Mansaf|Kibbeh nayyeh|Sabich|Fesenjan
+0381|Name a Breaking Bad character|Huell Babineaux|Gale Boetticher|Gustavo Fring=Gus Fring|Mike Ehrmantraut|Badger (Breaking Bad)
+0382|Name a war fought in the 20th century|Chaco War|Ogaden War|Winter War|Biafran War=Nigerian Civil War|Football War
+0383|Name a country that borders Brazil|Suriname|Guyana|Bolivia|Venezuela|Colombia
+0384|Name a mobile game with over 100 million downloads|Subway Surfers|Candy Crush Saga|Clash of Clans|Pokémon GO
+0385|Name a city in California|Davis|Ventura|Cathedral City|Palm Springs|Eureka
+0386|Name an animal with horns or antlers|Saiga antelope|Markhor|Bighorn sheep|Addax|Sable antelope
+0387|Name a Spanish or Portuguese dish|Caldo verde|Bacalhau à Brás|Açorda alentejana|Salmorejo|Marmitako|Pisto manchego
+0388|Name an aquatic mammal|Dugong|Sea otter|West Indian manatee|Beluga whale|Baikal seal
+0389|Name a carnivorous mammal|Fossa|Wolverine|Striped polecat|Least weasel|African wild dog
+0390|Name a video game genre|Metroidvania|Deckbuilding roguelike|Extraction shooter|Immersive sim|Bullet heaven
+0391|Name a street suffix (like Street or Avenue)|Crescent|Esplanade|Mews|Quay|Terrace
+0392|Name someone with over 100 million Instagram followers|Cristiano Ronaldo|Lionel Messi|Selena Gomez|Kylie Jenner
+0393|Name a black and white mammal or bird|Pied avocet|Black-and-white colobus|Orca|Striped skunk|Black-and-white ruffed lemur
+0394|Name a type of skincare product|Cleansing balm|Eye cream|Micellar water|Sunscreen stick|Hydrocolloid pimple patch
+0395|Name a video game that has earned over $1 billion|Grand Theft Auto V|Fortnite|Pokémon GO|Genshin Impact
+0396|Name a Roman god or goddess|Janus|Vesta|Bellona|Ops|Diana
+0397|Name a golf term|Fried egg lie|Albatross|Punch shot|Scramble|Dogleg
+0398|Name a literary genre|Epistolary novel|Afrofuturism|Cli-fi=Climate fiction|Alternate history|Gothic fiction
+0399|Name a city with more than 10 million people in its metro area|Greater Tokyo=Tokyo|São Paulo|Cairo|Dhaka|Jakarta
+0400|Name a sacred text of Christianity, Islam, Judaism, Hinduism, or Buddhism|Dhammapada|Bhagavad Gita|Heart Sutra|Book of Psalms|Quran=Koran
+0401|Name a protagonist of a Marvel Cinematic Universe movie|Shang-Chi|Carol Danvers|Natasha Romanoff|Scott Lang|Yelena Belova
+0402|Name a country whose name starts with P|Palau|Papua New Guinea|Paraguay|Peru
+0403|Name a part of the human brain|Fusiform gyrus|Superior colliculus|Cerebellar vermis|Substantia nigra|Hippocampus
+0404|Name a unit of weight or mass|Troy ounce|Slug|Stone|Carat|Grain
+0405|Name a Shakespeare protagonist|Imogen|Rosalind|Viola (Twelfth Night)|King Lear|Prince Hal
+0406|Name a country whose name starts with I|Iceland|Ireland|Israel|Indonesia
+0407|Name a delivery service|DHL Express|Purolator|Evri|DoorDash|Canada Post
+0408|Name a country in Eastern Europe|Belarus|Moldova|Ukraine|Romania
+0409|Name a word for a huge number (million or bigger)|Googolplex|Nonillion|Undecillion|Googol|Centillion
+0410|Name a tool you would find in a toolbox|Locking pliers=Vise-Grips|Feeler gauge|Diagonal cutters|Torx driver|Socket extension
+0411|Name a chemical element lighter than iron|Titanium|Manganese|Vanadium|Scandium
+0412|Name a sport played without a ball|Curling|Fencing|Skateboarding|Badminton|Track cycling
+0413|Name a Google product|Google Lens|Google Keep|NotebookLM|Google Takeout|Google Arts & Culture
+0414|Name an animal that can top 40 mph (65 km/h)|Pronghorn|Cheetah|Peregrine falcon|Common ostrich
+0415|Name a grain or cereal crop|Fonio|Teff|Sorghum|Finger millet|Triticale
+0416|Name a character from Avatar: The Last Airbender (the original series, not Korra)|Master Pakku|King Bumi|Ty Lee|Guru Pathik|Hama
+0417|Name a country with both a G and an A in its name|Bangladesh|Madagascar|Singapore|Nicaragua
+0418|Name a theme park chain|Six Flags|Cedar Fair|LEGOLAND|Parques Reunidos|Herschend
+0419|Name a literary device|Chiasmus|Anadiplosis|Zeugma|Synecdoche|Litotes
+0420|Name a modern country that Alexander the Great's empire reached|Afghanistan|Uzbekistan|Pakistan|Egypt|Iran
+0421|Name a mammal that lives underground|Blind mole rat|Naked mole-rat|Gopher|European mole|Spalax@60
+0422|Name a legume|Pigeon pea|Hyacinth bean|Cowpea|Adzuki bean|Lupin bean
+0423|Name a country whose national flag has exactly two colors|Vietnam|Albania|Palau|Bangladesh|North Macedonia
+0424|Name an office supply|Binder clip|Correction tape|Label maker|Document sleeve|Page flags
+0425|Name a movie starring Timothée Chalamet|Marty Supreme|A Complete Unknown|Dune: Part Two|Wonka|The King
+0426|Name a New York Times game|Pips|Crossplay|Strands|Letter Boxed|Tiles
+0427|Name something you drink out of|Demitasse|Mason jar|Wineskin|Champagne flute|Tumbler
+0428|Name a fruit with a core|Medlar|Quince|Pear|Asian pear
+0429|Name a leafy green|Tat soi=Tatsoi|Purslane|Watercress|Collard greens|Escarole
+0430|Name a film directed by Wes Anderson|The Phoenician Scheme|Asteroid City|The French Dispatch|Isle of Dogs
+0431|Name something in a first aid kit|Elastic bandage|Blister plaster|Saline wound wash|Gauze roll|Disposable gloves
+0432|Name a type of diet|DASH diet|Mediterranean diet|Pescatarian diet|Low-FODMAP diet|Flexitarian diet
+0433|Name a country with an animal on its flag|Albania|Bhutan|Sri Lanka|Uganda|Papua New Guinea
+0434|Name a domesticated animal (kinds of animal, not breeds)|Guinea pig|Alpaca|Yak|Silkworm|Domestic duck
+0435|Name a cat breed (coat patterns don't count)|Korat|Lykoi|Chartreux|Havana Brown|Singapura
+0436|Name a Water-type Pokémon|Finizen|Palafin|Dondozo|Tatsugiri|Quaxly
+0437|Name a movie starring Will Smith|Bad Boys: Ride or Die|King Richard|Emancipation|Ali
+0438|Name a household chore|Descale the kettle|Clean the lint trap|Sweep the porch|Water houseplants|Scrub the grout
+0439|Name a country with two syllables (English pronunciation; constituent countries don't count)|Benin|Bhutan|Qatar|Denmark|Turkey
+0440|Name a modern country that was partly ruled by the Roman Empire (constituent countries don't count)|Belgium|Germany|Armenia|Austria|Slovenia
+0441|Name a current Fortune 500 CEO|Andy Jassy|Jensen Huang|John Furner|Satya Nadella
+0442|Name a word for a baby animal|Leveret|Eyas|Cria|Poult|Puggle
+0443|Name a country that has nuclear weapons (constituent countries don't count)|France|United Kingdom=UK|North Korea|Pakistan|Israel
+0444|Name a calisthenics exercise (bodyweight exercises only)|Dragon flag|Planche|L-sit|Pistol squat|Nordic hamstring curl
+0445|Name an article of clothing (jewelry, glasses and bags don't count)|Balaclava|Rain poncho|Henley shirt|Pleated skirt|Duster coat
+0446|Name a social media platform that's still operating|Bluesky|Mastodon|Threads|Lemmy|Pixelfed
+0447|Name a gas found in Earth's atmosphere|Neon|Krypton|Methane|Nitrous oxide|Sulfur hexafluoride
+0448|Name a country that borders India by land or sea|Bangladesh|Myanmar|Sri Lanka|Maldives|Thailand
+0449|Name an occupation that involves working with children (the job itself must focus on kids)|Child life specialist|Pediatric occupational therapist|School counselor|Preschool teacher|Childcare worker
+0450|Name an animal that produces its own light|Firefly squid|Comb jelly|Flashlight fish|Cookiecutter shark|Sea firefly
+0451|Name a Michael Jackson song|Human Nature|Stranger in Moscow|Liberian Girl|Keep the Faith
+0452|Name another English word for a nose (any creature's counts)|Proboscis|Snout|Muzzle|Trunk|Schnoz
+0453|Name a Pixar protagonist (co-leads count)|Elio Solís|Mabel Tanaka|Ember Lumen|Wade Ripple|Mei Lee
+0454|Name a type of building used for prayer|Gurdwara|Mandir|Synagogue|Oratory|Chapel
+0455|Name an area in a school|Nurse's office|Music practice room|Science lab|Bus loop|Cafeteria
+0456|Name a national capital city that starts with A or C|Asmara|Ashgabat|Antananarivo|Chișinău|Conakry
+0457|Name a type of milk|Goat milk|Oat milk|Pea milk|A2 milk|Evaporated milk
+0458|Name a Queen song|'39|Spread Your Wings|Stone Cold Crazy|These Are the Days of Our Lives
+0459|Name a sport that involves catching a ball|Netball|Team handball|Gaelic football|Dodgeball|Cricket
+0460|Name a rank in the military|Warrant officer|Gunnery sergeant|Commodore|Corporal|Flight lieutenant
+0461|Name a shade of green|Celadon|Viridian|Jade green|Harlequin green|Chartreuse
+0462|Name a type of door|Dutch door|Pocket door|Louvered door|Pivot door|Storm door
+0463|Name something you can sweeten coffee with|Agave syrup|Date syrup|Maple syrup|Sweetened condensed milk|Coconut sugar
+0464|Name a place people keep or hide cash|Cash box|Shoe box|Under a mattress|Inside a book|Home safe
+0465|Name a country with stripes on its flag|Mauritius|Uruguay|Seychelles|Cape Verde|Gambia
+0466|Name a disease that has a vaccine|Measles|Polio=Poliomyelitis|Yellow fever|Tetanus|Japanese encephalitis
+0467|Name a boxing weight class|Cruiserweight|Super middleweight|Super bantamweight=Junior featherweight|Light flyweight=Junior flyweight
+0468|Name a pattern or print (for example, stripes)|Herringbone|Windowpane check|Glen plaid|Chevron|Gingham
+0469|Name the most widely spoken language of an Asian country|Dhivehi=Divehi|Dzongkha|Lao|Khmer|Korean
+0470|Name a mammal or reptile that lives in rivers|Gharial|Giant otter|Amazon river dolphin=Boto|Platypus|Mata mata
+0471|Name a city in Japan|Kurashiki|Kanazawa|Hachinohe|Beppu|Kagoshima
+0472|Name a space on a Monopoly board (US/UK)|Free Parking|Go To Jail|Whitechapel Road|Illinois Avenue|Reading Railroad
+0473|Name a chemical element whose name ends in -ium|Darmstadtium|Hassium|Roentgenium|Bohrium
+0474|Name a part of a smartphone you can see or touch (accessories don't count)|SIM tray|Microphone grille|Camera lens|Volume rocker|Charging port
+0475|Name a country with both a U and an S in its name|Suriname|Mauritius|United States|Saudi Arabia|Sudan
+0476|Name a salad dressing|Russian dressing|Miso dressing|Green goddess dressing|Ginger carrot dressing|Poppy seed dressing
+0477|Name a language named after a country (constituent countries count; for example England → English)|Icelandic|Armenian|Mongolian|Norwegian|Estonian
+0478|Name a current top 200 website (by Tranco; named sites and services only)|Google|YouTube|Wikipedia|Facebook
+0479|Name a search engine|Mojeek|Ecosia|Qwant|Brave Search|Kagi
+0480|Name a field of math|Number theory|Algebraic topology|Combinatorics|Measure theory|Graph theory
+0481|Name a sunglasses brand (has a label line)|Persol|Maui Jim|Gentle Monster|Julbo|Vuarnet
+0482|Name a facial hair style|Balbo beard|Circle beard|Imperial mustache|Chevron mustache|Mutton chops
+0483|Name a way to prepare eggs|Basted egg|Coddled egg|Shirred eggs|Tea egg|Tamagoyaki
+0484|Name a country whose name starts with A|Angola|Antigua and Barbuda|Azerbaijan|Andorra
+0485|Name a celebrity chef|José Andrés|Dominique Crenn|Padma Lakshmi|Samin Nosrat|Massimo Bottura
+0486|Name a building material|Rammed earth|AAC block=Autoclaved aerated concrete|Terracotta|Oriented strand board=OSB|Cross-laminated timber
+0487|Name a phone carrier|Mint Mobile|Visible|Google Fi Wireless=Google Fi|Freedom Mobile|Airtel
+0488|Name a computer part (accessories don't count)|Motherboard|Heatsink|CMOS battery|Sound card|PCIe riser
+0489|Name something sprayed out of a can (pump bottles don't count)|Fabric spray starch|Aerosol sunscreen|Canned whipped cream|Spray adhesive|Spray paint
+0490|Name a US city with over 100,000 people|Buckeye, Arizona|Boise, Idaho|Fremont, California|Frisco, Texas|Tacoma, Washington
+0491|Name a country that borders China|Afghanistan|Bhutan|India|Kazakhstan|Kyrgyzstan|Laos|Mongolia|Myanmar|Nepal|North Korea|Pakistan|Russia|Tajikistan|Vietnam
+0492|Name a kitchen appliance (something powered)|Immersion blender|Rice cooker|Stand mixer|Electric kettle|Bread maker
+0493|Name a villain from a Marvel Cinematic Universe movie|Mysterio|Xu Wenwu|Gorr the God Butcher|The High Evolutionary|Ghost (Ant-Man and the Wasp)
+0494|Name an animal without the letter A in its name (breeds count too)|Oryx|Wolf|Otter|Stonefish|Chinch bug
+0495|Name a mobile phone brand|Fairphone|Nothing|OnePlus|Fujitsu|Motorola
+0496|Name a platform people use to listen to music (apps and services, not devices)|Bandcamp|Qobuz|Tidal|Deezer|YouTube Music
+0497|Name a country with three syllables (English pronunciation)|Canada|Grenada|Ecuador|Zimbabwe|Mexico
+0498|Name a country without the letter A in its name|Peru|Togo|Belgium|Cyprus|Lesotho
+0499|Name the most widely spoken language of any African country|Amharic|Hausa|Arabic|Swahili|Wolof
+0500|Name a video game that includes Mario|Donkey Kong|Super Mario Bros. Wonder|Mario Kart World|Super Smash Bros. Ultimate|Super Mario RPG
+0501|Name an international airport (no airport codes)|Incheon International Airport|Kansai International Airport|Bandaranaike International Airport|Keflavík International Airport|Portland International Airport
+0502|Name a garden tool|Hori-hori|Dibber|Soil sieve|Broadfork|Lawn edger
+0503|Name a stock trading term|Limit order|Short interest|Circuit breaker|Bid-ask spread|Stock split
+0504|Name an app that comes preinstalled on an iPhone|Passwords|Freeform|Journal|Magnifier|Tips|Preview
+0505|Name a deodorant brand|Mitchum|Lume|Native|Dove Men+Care|Secret
+0506|Name something with wheels that isn't a vehicle|Rolling suitcase|AV cart|Desk chair|Laundry hamper on casters|Hospital bed
+0507|Name a shade of red (pinks don't count)|Oxblood|Vermilion|Carmine|Barn red|Fire engine red
+0508|Name a state or province anywhere in the world (must be officially called a state or province)|New South Wales|Prince Edward Island|Eastern Cape|British Columbia|Gauteng
+0509|Name a real-life melee weapon|Quarterstaff|Rapier|Saber|Mace|Halberd
+0510|Name a city with a metro system|Tbilisi|Yerevan|Almaty|Taipei|Sofia
+0511|Name a fruit or vegetable that starts with S|Soursop|Sapodilla|Salsify|Sugar snap pea|Spaghetti squash
+0512|Name a territory, constituent country or autonomous region|Åland Islands|Aruba|Guam|Faroe Islands|Nunavut
+0513|Name a Fire-type Pokémon|Fuecoco|Skeledirge|Armarouge|Ceruledge|Scovillain
+0514|Name a city in Italy (must hold the official città title)|Urbino|Assisi|Noto|Siena|Matera
+0515|Name a career in finance|Treasury analyst|Portfolio manager|Credit analyst|Actuary|Equity research analyst
+0516|Name a sport that has a goalkeeper|Handball|Water polo|Floorball|Futsal|Lacrosse
+0517|Name a type of card (like a birthday card or a library card)|Loyalty card|Place card|Get-well card|Voter registration card|Room key card
+0518|Name a superpower Superman has in the comics or movies|Heat vision|Freeze breath|Super hearing|X-ray vision|Flight
+0519|Name a language whose English name ends in -ish|Yiddish|Irish|Danish|Flemish|Cornish
+0520|Name something used to block the sun|Parasol|Awnings|Sun sail=Shade sail|Beach tent|Window blinds
+0521|Name a laptop brand|Framework|System76|Tuxedo Computers|MSI|Fujitsu
+0522|Name a part of an airplane, inside or out (anything built in or mounted)|Spoiler|Slat|Overhead bin|Yaw damper|Pitot tube
+0523|Name a body part people have more than two of (like fingers)|Carpal bone|Toe|Lumbar vertebra|Rib|Molar
+0524|Name an item of formal wear (clothing and shoes, not jewelry)|Morning coat|Opera pumps|Dress shirt|Tuxedo trousers|Dinner jacket
+0525|Name something sold in a tube|Tomato paste|Petroleum jelly|Paint marker refill|Lip balm|Watercolor paint
+0526|Name a symbol or shape that appears on a national flag (like a star)|Crescent|Druk dragon|Sun disk|Five-pointed star|Trident
+0527|Name a type of chair|Windsor chair|Papasan chair|Bergère|Glider chair|Slipper chair
+0528|Name a standard type of insurance policy (all vehicles count as one type)|Pet insurance|Flood insurance|Travel insurance|Renters insurance|Long-term care insurance
+0529|Name a song with over a billion streams on Spotify|Blinding Lights|Shape of You|As It Was|Dance Monkey|Someone You Loved
+0530|Name an animal that can grow longer than 10 feet (3 m), including the tail|King cobra|Komodo dragon|Green anaconda|Saltwater crocodile|Beluga whale
+0531|Name a product used to wash or style hair (product types, not brands)|Purple shampoo|Dry shampoo|Leave-in conditioner|Mousse|Heat protectant spray
+0532|Name a coffee shop chain|The Coffee Bean & Tea Leaf|Scooter's Coffee|Gregorys Coffee|Blank Street Coffee|Joe & The Juice
+0533|Name an item designed to be filled with air|Air mattress|Basketball|Inflatable kayak|Exercise ball|Life raft
+0534|Name a medical scan or imaging test (pictures of the body, not readouts like an EKG)|Mammogram|Echocardiogram|PET scan|DEXA scan=DXA scan|CT angiogram
+0535|Name a power tool|Oscillating multitool|Reciprocating saw|Impact driver|Magnetic drill|Random orbital sander
+0536|Name a word for an animal's home (nests and shelters, not habitats like the ocean)|Sett|Drey|Holt|Eyrie|Warren
+0537|Name a phone accessory|Ring grip|MagSafe wallet|Phone lanyard|Portable battery pack|Screen protector
+0538|Name a real-life language that uses a non-Latin writing system|Georgian|Amharic|Armenian|Greek|Dzongkha
+0539|Name a feature on Instagram|Close Friends|Instagram Notes|Broadcast channel|Pin a post|Collab post
+0540|Name a sauce used in Asian cooking (like soy sauce)|Doubanjiang|Kecap manis|Tonkatsu sauce|Nuoc cham|Nam prik pao
+0541|Name a music festival|Roskilde Festival|Primavera Sound|Sziget Festival|Glastonbury Festival|Shambhala Music Festival
+0542|Name a present-day nationality that ends in -ian (like Canadian)|Tunisian|Ivorian|Surinamian|Namibian|Barbadian
+0543|Name a yellow fruit or vegetable|Yellow squash|Yellow bell pepper|Golden beet|Canary melon|Mirabelle plum
+0544|Name an app where you can video call|Signal|WhatsApp|Google Meet|Discord|FaceTime
+0545|Name an animal with a color in its name|Red ruffed lemur|Green moray|Blue wildebeest|White-tailed kite|Yellow-bellied marmot
+0546|Name a place in the Harry Potter universe|Azkaban|Hogsmeade|12 Grimmauld Place|Shell Cottage|The Burrow
+0547|Name a type of shot in a sport (like a free throw)|Bank shot|Drop shot|Jump shot|Chip shot|Slap shot
+0548|Name a part of a shoe|Vamp|Eyelet|Heel counter|Midsole|Toecap
+0549|Name a country whose name ends in N|Benin|Bahrain|Liechtenstein|Azerbaijan|Cameroon
+0550|Name a country with glaciers|Peru|Bolivia|Uganda|Tajikistan|Switzerland
+0551|Name a standard type of tax (currently levied in at least one country)|Stamp duty|Value-added tax=VAT|Inheritance tax|Excise tax|Capital gains tax
+0552|Name a type of living bird (general types; species names are grouped)|Caracara|Hoopoe|Ibis|Dipper|Nightjar
+0553|Name a TV genre|Police procedural|Workplace comedy|Docuseries|Game show|Period drama
+0554|Name a device used to magnify things|Jeweler's loupe|Stereomicroscope|Reading magnifier|Hand lens|Digital microscope
+0555|Name a type of structure built underground (man-made)|Storm shelter|Cold War bunker|Subway platform|Wine cellar|Underground cistern
+0556|Name a body part an animal has for fighting or protection|Stinger|Tusk|Spur|Quill|Stag beetle mandibles
+0557|Name a type of sausage|Kielbasa|Merguez|Sobrasada|Lap cheong|Lorne sausage
+0558|Name a board, card or hand game made for exactly two players|Patchwork|Hive|Lost Cities|Jaipur|7 Wonders Duel|Fox in the Forest
+0559|Name a country in the Americas where Spanish is not the most widely spoken language|Belize|Brazil|Guyana|Haiti|Suriname
+0560|Name a YouTuber with more than 10 million subscribers|Mark Rober|Kurzgesagt – In a Nutshell|Veritasium|Dude Perfect|Marques Brownlee=MKBHD
+0561|Name a gas station chain|Wawa|QuikTrip|Speedway|Buc-ee's|Casey's
+0562|Name a country with both an O and an R in its name|Comoros|Jordan|Norway|Honduras|Côte d'Ivoire
+0563|Name a folder in an email inbox|Outbox|Snoozed|Drafts|Archive|Spam
+0564|Name something listed on a nutrition facts label|Dietary fiber|Added sugars|Saturated fat|Iron|Sodium
+0565|Name a country larger than the UK by area|Uganda|Italy|Finland|Philippines|Madagascar
+0566|Name a religious role or title in Christianity, Islam, Buddhism, Hinduism or Judaism|Muezzin|Cantor|Bhikkhuni|Rabbi|Pandit|Priest
+0567|Name an artist with at least 1 million monthly listeners on Spotify|Taylor Swift|Kendrick Lamar|SZA|Bad Bunny|Adele
+0568|Name a part of a fruit|Aril|Exocarp|Mesocarp|Pit|Pith
+0569|Name a country whose name ends in an "ee" sound (like Italy)|Chile|Turkey|Italy|Germany|Hungary
+0570|Name a TV brand|TCL|Hisense|Vizio|Sceptre|Philips
+0571|Name something you can do with a keyboard shortcut (like copy with Ctrl+C)|Reopen a closed tab|Lock the screen|Open task manager|Find text|Switch apps
+0572|Name a fruit or vegetable that starts with P|Pattypan squash|Plantain|Persimmon|Prickly pear|Pomegranate
+0573|Name a website or app built mainly for ratings and reviews|Letterboxd|Goodreads|Rate Your Music|OpenCritic|Trustpilot
+0574|Name a language ending in -ese|Javanese|Cantonese|Burmese|Maltese|Sundanese
+0575|Name a sport or game where you score by getting a ball or object into a hole, hoop, basket or pocket|Crokinole|Eight-ball|Cornhole|Miniature golf|Skee-Ball
+0576|Name a type of brush|Stippling brush|Bottle brush|Pastry brush|Kabuki brush|Masonry brush
+0577|Name a home safety device (like a smoke detector)|Carbon monoxide detector|Water leak alarm|Circuit breaker|Flame detector|Window lock
+0578|Name something you can do to a photo in your phone's photo editor (like crop)|Straighten|Adjust highlights|Remove red-eye|Rotate|Change white balance
+0579|Name a form of pay a worker can receive|Piece rate|Shift differential|Overtime pay|Commission|Performance bonus
+0580|Name a country with both an A and an M in its name|Madagascar|Mozambique|The Bahamas|Suriname|Malawi
+0581|Name a dating app|Hinge|Feeld|Grindr|Coffee Meets Bagel|BLK
+0582|Name a food you'd grate (kinds of cheese count once)|Nutmeg|Fresh horseradish|Daikon|Raw beetroot|Ginger
+0583|Name a stand-up comedian|Maria Bamford|Taylor Tomlinson|Aparna Nancherla|James Acaster|Nate Bargatze
+0584|Name a kind of gun that isn't designed as a weapon (like a glue gun)|Caulking gun|Heat gun|Staple gun|Paint spray gun|Grease gun
+0585|Name a city in Europe with over 100,000 people|Aarhus|Ghent|Graz|Brno|Bilbao
+0586|Name a kind of live stage show (like a magic show)|Pantomime|Puppet show|Cabaret|Spoken word show|Shadow theatre
+0587|Name a solo sport (no card games, board games, or esports)|Archery|Indoor bouldering|Dressage|Singles luge|Individual time trial
+0588|Name a sports car brand|Lotus|Alpine|McLaren|Pagani|Koenigsegg
+0589|Name something that uses a filter (physical filters, not photo filters)|Pour-over coffee maker|Swimming pool pump|Respirator|Air purifier|Oil furnace
+0590|Name a part of a shirt|Placket|Yoke|Collar stand|Cuff|Gusset
+0591|Name a symptom of a cold or flu|Chills|Runny nose|Muscle aches|Scratchy throat|Congestion
+0592|Name a country whose name uses only one vowel letter (a, e, i, o, or u), repeats allowed (like Canada)|Qatar|Greece|Yemen|Chad|Kyrgyzstan
+0593|Name a ceremony or celebration that marks a stage of life|Quinceañera|Bar mitzvah|Naming ceremony|Graduation|Retirement party
+0594|Name a sport normally played on grass|Lawn bowls|Field hockey|Rugby union|Croquet|Polo
+0595|Name a Justin Bieber song|Ghost|Peaches|Sorry|Love Yourself|Never Say Never
+0596|Name an animal with another animal in its name (like seahorse)|Elephant seal|Tiger shark|Spider monkey|Leopard frog|Cuckoo wasp
+0597|Name a Twitch streamer with more than 500k followers|Pokimane|Ludwig|Shroud|Kai Cenat|Ironmouse
+0598|Name a country whose flag has both green and red|Tajikistan|Belarus|Guyana|Maldives|Bangladesh
+0599|Name a city in the UK (towns count too)|St Davids|Milton Keynes|Dunfermline|Hastings|Bury St Edmunds
+0600|Name an email service (like Gmail)|Fastmail|Tuta Mail=Tutanota|Proton Mail|Zoho Mail|GMX Mail
+0601|Name a type of camera|Rangefinder camera|Pinhole camera|Trail camera|SLR camera|Instant camera
+0602|Name a musical instrument|Dulcimer|Cümbüş|Mbira|Theorbo|Shakuhachi
+0603|Name a vegetable that's botanically a fruit|Tomatillo|Chayote|Cucumber|Eggplant|Bell pepper
+0604|Name a body part people have exactly two of (like ears)|Patella|Earlobe|Kidney|Scapula|Index finger
+0605|Name a city with the word "City" in its name (like Mexico City)|Cebu City|Oklahoma City|Salt Lake City|Ho Chi Minh City|Vatican City
+0606|Name a juice brand|Lakewood Organic|Langers|Welch's|Ocean Spray|Minute Maid
+0607|Name a piece of baking equipment|Banneton|Pastry blender|Dough lame|Cooling rack|Springform pan
+0608|Name an animal whose name ends in Y|Wallaby|Guppy|Turkey|Blue jay|Donkey
+0609|Name something sold in a roll|Athletic tape|Parchment paper|Sod|Ribbon|Duct tape
+0610|Name a type of table (the furniture)|Pedestal table|Gateleg table|Nesting table|Trestle table|Console table
+0611|Name a metal (pure elements only; alloys like steel don't count)|Gallium|Indium|Tantalum|Bismuth|Hafnium
+0612|Name a kind of license or permit a person can get|Learner's permit|Food handler permit|Building permit|Fishing license|Marriage license
+0613|Name an app or service for paying or sending money (like PayPal; banks and card networks don't count)|Venmo|Wise|Remitly|Interac e-Transfer|Apple Cash|Payoneer
+0614|Name a sport that is a race (fastest to the finish wins)|Cyclocross|Canoe sprint|BMX racing|Skeleton|Speed skating
+0615|Name a country that borders Iraq or Iran by land|Armenia|Azerbaijan|Kuwait|Pakistan|Jordan
+0616|Name a job-search website or app (like LinkedIn)|USAJOBS|Wellfound|Handshake|Glassdoor|ZipRecruiter
+0617|Name an item of winter clothing|Balaclava|Neck gaiter|Parka|Thermal leggings|Insulated bib overalls
+0618|Name a body part animals have but humans don't (like wings)|Gills|Prehensile tail|Hoof|Ovipositor|Lateral line
+0619|Name a hotel brand|Kimpton|CitizenM|Moxy Hotels|Fairfield by Marriott|Aloft Hotels
+0620|Name a department in a company (like HR)|Internal audit|Purchasing|Corporate communications|Facilities|Customer success
+0621|Name a country with 8 or more letters|Bangladesh|Montenegro|Uzbekistan|Switzerland|Mauritania
+0622|Name a feature on YouTube|YouTube Clips|Ambient mode|Chapters|Super Chat|Picture-in-picture
+0623|Name an Amazon product, service or company Amazon owns|Kindle Unlimited|Twitch|Audible|AWS=Amazon Web Services|Amazon Luna
+0624|Name a fruit or vegetable that starts with B|Buddha's hand|Bitter melon|Bok choy|Blackcurrant|Breadfruit
+0625|Name a driving or traffic offence|Illegal U-turn|Distracted driving|Running a stop sign|Driving uninsured|Tailgating
+0626|Name a fictional character played by more than one actor in live-action movies|James Bond|Hannibal Lecter|Peter Parker|J. Jonah Jameson|Jimmy Olsen
+0627|Name a country that has part of the Alps, the Andes or the Himalayas|Slovenia|Bhutan|Chile|Liechtenstein|Bolivia
+0628|Name a city in Asia with over 1 million people within city limits|Yokohama|Busan|Surabaya|Fukuoka|Daegu
+0629|Name a shampoo brand|Nizoral|Pureology|Kérastase|OGX|Redken
+0630|Name an app or website for writing documents or taking notes|Obsidian|Joplin|Logseq|Microsoft OneNote|Simplenote
+0631|Name the most widely spoken language of a country in the Americas|English|Spanish|Portuguese|Haitian Creole|Dutch|Guaraní
+0632|Name the current capital of a state or province anywhere in the world (must be officially called a state or province)|Victoria, British Columbia|Dispur|Gandhinagar|Bloemfontein|Columbus, Ohio
+0633|Name a current or former NBA, MLB, Premier League or NFL team|New York Nets|Seattle Pilots|Coventry City|San Diego Chargers|Vancouver Grizzlies
+0634|Name a character from the Cars movies|Luigi|Guido|Ramone|Doc Hudson|Cruz Ramirez
+0635|Name a type of powder|Arrowroot powder|Graphite powder|Whey protein powder|Alum powder|Cocoa powder
+0636|Name something you shake before using it|Salad dressing|Paint marker|Snow globe|Protein shake|Aerosol whipped cream
+0637|Name a type of astronomical object found in space (like an asteroid)|Brown dwarf|Magnetar|Quasar|Globular cluster|Planetary nebula
+0638|Name a professional sports league with at least 10 teams|Major League Soccer=MLS|National Football League=NFL|Liga MX|Nippon Professional Baseball=NPB|Women's Super League
+0639|Name a living animal that weighs over a metric ton (1,000 kg)|Common hippopotamus|White rhinoceros|Walrus|Gaur|Southern elephant seal
+0640|Name a movie featuring Natalie Portman|May December|V for Vendetta|Jackie|Cold Mountain|Annihilation
+0641|Name a city south of the equator with over 1 million people (by metro area)|Luanda|Lusaka|Dar es Salaam|Perth|Auckland
+0642|Name an app or service meant for editing photos|Snapseed|Pixelmator Pro|Affinity Photo|darktable|GIMP
+0643|Name a country whose name starts with two consonants (like France; Y counts too)|Sri Lanka|Slovakia|Sweden|Chad|Croatia
+0644|Name something that comes in a pump bottle (like moisturizer)|Foaming hand soap|Cleansing oil|Shampoo|Syrup|Liquid foundation
+0645|Name a service you can get at a hair salon|Balayage|Perm|Root touch-up|Brazilian blowout|Hair gloss treatment
+0646|Name a feature a modern car can have (like cruise control)|Blind-spot monitoring|Heated steering wheel|Adaptive cruise control|Head-up display|Wireless charging pad
+0647|Name a country in East Africa|Burundi|Rwanda|Djibouti|Comoros|South Sudan
+0648|Name a white sauce, dip, or condiment|Béchamel|Alabama white barbecue sauce|Toum|Garlic aioli|Tartar sauce
+0649|Name a sport where people sit when they compete (no esports, board games or card games)|Wheelchair racing|Kayak sprint|Rowing|Dressage|Wheelchair basketball
+0650|Name something that uses steam|Steam mop|Autoclave|Steam iron|Heat recovery steam generator|Steam locomotive
+0651|Name a way to prepare potatoes|Hasselback potatoes|Potatoes au gratin|Potato rösti|Fondant potatoes|Twice-baked potatoes
+0652|Name an animal whose name is exactly four letters long|Newt|Pika|Orca|Mink|Tahr
+0653|Name someone who’s won MVP (NBA/NFL/MLB), Premier League Player of the Season, or won the Ballon d’Or|Josh Allen|Nikola Jokić=Jokic|Shohei Ohtani|Rodri|Erling Haaland
+0654|Name a chemical element whose symbol is one letter|Boron|Carbon|Fluorine|Hydrogen|Iodine|Potassium|Nitrogen|Oxygen|Phosphorus|Sulfur=Sulphur|Uranium|Vanadium|Tungsten|Yttrium
+0655|Name a type of station (like a train station)|Fire station|Polling station|Bus station|Radio station|Space station
+0656|Name a country whose name ends in the letter E|Belize|Mozambique|Suriname|Cape Verde|Sierra Leone
+0657|Name a superhero team|Doom Patrol|Thunderbolts|Birds of Prey|Teen Titans|Alpha Flight
+0658|Name a fruit bigger than an apple|Jackfruit|Breadfruit|Papaya|Pomelo|Soursop
+0659|Name a symbol of Hinduism, Judaism, Christianity, Islam or Buddhism (like the cross)|Dharmachakra|Om|Star of David|Ichthys|Crescent and star
+0660|Name a perfume or fragrance brand|Diptyque|Maison Francis Kurkdjian|Le Labo|Amouage|Byredo
+0661|Name a sport where competitors wear gloves|Cricket|Ice hockey|Boxing|Fencing|American football
+0662|Name a leg exercise at the gym (no cardio)|Seated leg curl|Bulgarian split squat|Nordic hamstring curl|Hack squat|Standing calf raise
+0663|Name a Fortnite character or skin|Peely|Fishstick|Jonesy|Meowscles|Midas
+0664|Name a rapper with more than 500k monthly Spotify listeners|Kendrick Lamar|JID|Little Simz|A$AP Rocky|Tyler, the Creator
+0665|Name a female singer with over 500,000 monthly listeners on Spotify|SZA|Chappell Roan|RAYE|Gracie Abrams|Billie Eilish
+0666|Name a foul or rule violation in soccer, basketball, American football, cricket, rugby or ice hockey|Icing|Goaltending|Back-pass violation|Ineligible receiver downfield|Obstructing the field
+0667|Name an underwear brand|SAXX|MeUndies|Calvin Klein|Jockey|Hanes
+0668|Name a university in the US or UK|University of St Andrews|Rice University|Carnegie Mellon University|University of Bath|Boston University
+0669|Name a language that’s the most spoken in at least two countries|Portuguese|Korean|Arabic|German|Spanish|Romanian
+0670|Name a character that has been playable in a Super Smash Bros. game|Sora|Terry Bogard|Byleth|Richter Belmont|Piranha Plant
+0671|Name a fruit normally eaten with its skin on|Nectarine|Fig|Persimmon|Plum|Guava
+0672|Name something sold as a stick, not on one (like deodorant)|Lip balm stick|Glue stick|Chalk stick|Solid sunscreen stick|Butter stick
+0673|Name a food made by mashing or puréeing (like guacamole)|Muhammara|Baba ganoush|Refried beans|Apple butter|Chestnut purée
+0674|Name a country with the letter D in its name (like Canada)|Iceland|Grenada|Bangladesh|Chad|Madagascar
+0675|Name a device made to blow air|Bellows|Leaf blower|Hair dryer|Air curtain|Centrifugal blower
+0676|Name a mammal smaller than a house cat|Vole|Shrew|Pika|Hazel dormouse|Least weasel
+0677|Name an internet service provider|Sonic|Ziply Fiber|Teksavvy|Hyperoptic|CenturyLink
+0678|Name something that has a saddle (like a bicycle)|Horse|Unicycle|Stationary bike|Camel|Moped
+0679|Name a TV show that's rated 8.5+ on IMDb (1,000+ votes)|The Wire|Breaking Bad|Chernobyl|Band of Brothers|Better Call Saul
+0680|Name a current NBA player|Victor Wembanyama|Anthony Edwards|Jalen Brunson|Shai Gilgeous-Alexander
+0681|Name a food you have to shell or crack open before eating|Pistachio|Hazelnut|Clam|Sunflower seed|Walnut
+0682|Name a vehicle that doesn't travel on wheels|Hovercraft|Sled|Submarine|Canoe|Hydrofoil
+0683|Name a body part people have exactly one of (like the nose)|Pancreas|Thymus|Spleen|Glottis|Sacrum
+0684|Name a country that borders Greece or Austria|Slovenia|North Macedonia|Albania|Liechtenstein|Switzerland
+0685|Name an extra that airlines charge for|Priority boarding|Sporting equipment fee|Checked baggage|Onboard Wi-Fi|Extra legroom
+0686|Name a character from Attack on Titan, One Piece or Naruto|Hange Zoë|Roronoa Zoro|Nico Robin|Shikamaru Nara|Gaara
+0687|Name a job with median annual pay over $100,000 in the US|Airline pilot|Pharmacist|Computer hardware engineer|Physician assistant|Dentist
+0688|Name a game with a number in its name (sequels and 3D variants don't count)|Connect Four=Connect 4|7 Wonders|2048|6 nimmt!|13 Dead End Drive
+0689|Name a field, art or skill ending in -graphy|Cartography|Calligraphy|Oceanography|Choreography|Entomography
+0690|Name a country with a five-letter English name|Gabon|Niger|Palau|Tonga|Libya
+0691|Name an environmental problem (like pollution)|Ocean acidification|Desertification|Habitat fragmentation|Soil salinization|Groundwater depletion
+0692|Name a South Asian dish (India, Pakistan, Bangladesh, Sri Lanka, Nepal, Bhutan, Maldives, Afghanistan)|Ema datshi|Dal bhat|Kukul mas curry|Chapli kebab|Mas huni|Mantu
+0693|Name a branded fast-food menu item (like the Big Mac).|McFlurry|Crunchwrap Supreme|Spicy Deluxe Sandwich (Chick-fil-A)|Whopper|Cheesy Gordita Crunch
+0694|Name an animal that sprays, spits or squirts something to defend itself.|Bombardier beetle|Striped skunk|Spitting cobra|Horned lizard|Hagfish
+0695|Name a part of a 2D or 3D shape (like a radius).|Vertex|Apothem|Chord|Major axis|Face
+0696|Name an upper-body gym exercise (strength exercises only; no full-body moves).|Dumbbell lateral raise|Incline dumbbell press|Lat pulldown|Triceps pushdown|Preacher curl
+0697|Name a Nintendo Wii game.|Wii Play|Punch-Out!! (Wii)|Muramasa: The Demon Blade|Zack & Wiki: Quest for Barbaros' Treasure|Rhythm Heaven Fever
+0698|Name a rap song with over 100 million Spotify streams.|Lose Yourself|HUMBLE.|Sicko Mode|Lucid Dreams|Not Like Us
+0699|Name a machine traditionally operated by inserting coins.|Parking meter|Jukebox|Coin-operated laundromat washer|Photo booth|Public payphone
+0700|Name a movie first released in theaters in 2026|The Odyssey|Hoppers|Toy Story 5|Project Hail Mary|Scream 7
+0701|Name something with a spinning blade|Garbage disposal|Food processor|Lawn mower|Circular saw|Coffee grinder
+0702|Name a book that has sold at least 500,000 copies worldwide.|The Hobbit|Pride and Prejudice|Dune|The Alchemist|The Very Hungry Caterpillar
+0703|Name a word that could be in Wordle (5 letters)|Crane|Stare|Heron|Ounce|Skein
+0704|Name an app or program that comes built into Windows or macOS (older versions count).|Character Map|ColorSync Utility|PowerShell|QuickTime Player|Disk Utility
+0705|Name a language that originated in South Asia or Southeast Asia|Lao|Khmer|Sinhala|Tamil|Burmese|Dhivehi
+0706|Name something with a legal minimum age|Voting|Driving unsupervised|Buying tobacco|Buying lottery tickets|Adopting a child
+0707|Name a type of bed (for sleeping)|Trundle bed|Murphy bed|Loft bed|Canopy bed|Platform bed
+0708|Name a food or ingredient that costs over US$100/kg ($45/lb), like caviar|Saffron|Vanilla beans|White truffle|Dried morels|Kopi luwak
+0709|Name a song that has reached number one on the Billboard Hot 100|A Bar Song (Tipsy)|Bad Guy|Anti-Hero|Flowers|Old Town Road
+0710|Name a national park anywhere in the world|Los Glaciares National Park|Sagarmatha National Park|Ranthambore National Park|Kruger National Park|Gros Morne National Park
+0711|Name a TV comedy (tagged Comedy on IMDb, 1,000+ votes)|Abbott Elementary|Reservation Dogs|What We Do in the Shadows|Derry Girls|Detectorists
+0712|Name a country with a desert climate (in any part of it)|Namibia|Chile|United States|Jordan|China
+0713|Name a player currently on an English Premier League or NFL team|Patrick Mahomes|Josh Allen|Bukayo Saka|Erling Haaland
+0714|Name a currency worth less than the US dollar|Japanese yen|Indian rupee|South African rand|Mexican peso|Indonesian rupiah
+0715|Name a city whose name ends in -ton|Taunton|Boston|Hamilton|Stockton|Wellington
+0716|Name something traditionally expressed as a percentage (like body fat)|Relative humidity|Attendance rate|Value-added tax rate|Battery level|Probability of precipitation
+0717|Name something used to hit a ball in a sport (the same tool counts once across sports)|Paddle|Cue|Mallet|Hurl=Hurley|Racket=Racquet
+0718|Name a Latin American dish|Encebollado|Pupusa|Bandeja paisa|Pepián|Pabellón criollo|Coxinha
+0719|Name a fruit or vegetable with a one-syllable name|Yam|Leek|Pea|Squash|Plum
+0720|Name a phone setting you can switch on and off|Wi-Fi|Airplane mode|Focus mode|Location services|Auto-rotate
+0721|Name a bird that lives in or by water|Anhinga|Purple gallinule|Great crested grebe|Pied kingfisher|American dipper
+0722|Name something with physical pages (named works don't count)|Passport|Sketchbook|Field guide|Comic book|Receipt book
+0723|Name a type of ball outside of sports|Disco ball|Stress ball|Cotton ball|Dryer ball|Pomander ball
+0724|Name a boy band or girl group with over 500,000 monthly listeners on Spotify|Blackpink|Girls Aloud|Little Mix|Backstreet Boys|One Direction
+0725|Name a part of the school year (events like prom count too)|Orientation day|Midterms|School picture day|Spirit week|Spring break
+0726|Name a country whose flag has a white stripe through the centre (horizontal or vertical).|Latvia|Austria|Nigeria|Peru|Lebanon
+0727|Name a one-word food or drink that starts with Ch|Chorizo|Chapati|Chimichanga|Chai|Chowder
+0728|Name a pasta dish|Pasta e fagioli|Pasta alla gricia|Spaghetti all'assassina|Linguine alle vongole|Macaroni pie
+0729|Name a part of the human head|Philtrum|Uvula|Temporomandibular joint|Occiput|Cheekbone
+0730|Name a region of the world that spans multiple countries (like the Middle East)|Balkans|Maghreb|Nordic countries|Andean region|Horn of Africa
+0731|Name a food or drink that has an emoji (don't open your emoji keyboard please)|Tamale|Falafel|Fondue|Oyster|Boba tea=Bubble tea
+0732|Name a superpower any superhero has in the MCU|Phasing|Size manipulation|Chaos magic|Teleportation|Superhuman healing
+0733|Name a 3+ letter word you can spell with the letters in "krillion" (using each letter only as many times as it appears)|Kiln|Rill|Kilo|Loin|Link|Irk|Kin|Krill
+0734|Name something you ride while standing up|Paddleboard|Skateboard|Kick scooter|Surfboard|Electric unicycle
+0735|Name a French or British food|Glamorgan sausage|Bubble and squeak|Sole meunière|Bannock|Kedgeree|Tarte Tatin
+0736|Name something you can measure about the human body|Wingspan=Arm span|Resting heart rate|Grip strength|Body temperature|Head circumference
+0737|Name a strategy board game|Tigris & Euphrates|Hansa Teutonica|Brass: Birmingham|Hive|Arcs
+0738|Name an animal with a one-word name containing "ck"|Jackal|Mackerel|Cockatoo|Mockingbird|Cockchafer
+0739|Name a country where another religion has more followers than Christianity|Bhutan|Thailand|Israel|Mauritania|India
+0740|Name someone who has been a teammate of Lionel Messi, Cristiano Ronaldo, LeBron James or Tom Brady|Neymar|Luka Modrić|Dwyane Wade|Rob Gronkowski|Wes Welker
+0741|Name a hair type, texture, or natural color|Auburn|Strawberry blond|Kinky hair|Type 4C hair|Wavy hair
+0742|Name a sport where athletes do flips or somersaults|Trampoline gymnastics|Diving|Figure skating|Aerial skiing|Parkour
+0743|Name a city whose name starts with the word Los, Las, La, Le, El or The|Las Cruces|La Paz|Le Havre|El Paso|The Hague|Los Mochis
+0744|Name something used to grip or pick things up|Needle-nose pliers|Tweezers|Kitchen tongs|Magnetic pickup tool|Reacher grabber
+0745|Name a non-human character from Star Wars, the MCU, or Lord of the Rings|Groot|Chewbacca|Treebeard|K-2SO|Gollum
+0746|Name a nail care product or tool (types, not brands)|Cuticle pusher|Nail buffer|Cuticle oil|Nail hardener|Emery board
+0747|Name a way to contact someone (methods, not brands/apps)|Email|Postal letter|Radio call|Voicemail|In-person visit
+0748|Name a fast food chain that operates in more than one country|Jollibee|Nando's|MOS Burger|Popeyes|Bonchon
+0749|Name a Halloween tradition|Carving jack-o'-lanterns|Bobbing for apples|Costume parade|Visiting a haunted house|Trunk-or-treat
+0750|Name a chocolate with wafer, biscuit, or cookie in it|Kit Kat|Twix|Kinder Bueno|Take 5|Coffee Crisp|Loacker Quadratini
+0751|Name a fictional character who wears a mask|V (V for Vendetta)|Zorro|Shy Guy|Ghostface|Tuxedo Mask
+0752|Name an animal that feeds on blood|Vampire bat|Horsefly|Black fly|Vampire finch|Flea
+0753|Name an orange fruit or vegetable|Persimmon|Kabocha squash|Orange bell pepper|Hubbard squash|Cara Cara orange
+0754|Name a country with black or orange on its flag|Jamaica|Bhutan|Germany|India|Zambia
+0755|Name a word that starts with “boo”|Boomerang|Boondoggle|Bootleg|Bookend|Boolean
+0756|Name someone with over 10 million Instagram followers|Cristiano Ronaldo|Dua Lipa|Zendaya|Ariana Grande|Virat Kohli
+0757|Name a holiday from anywhere in the world that is celebrated in October, November or December|Kwanzaa|Bonfire Night|Boxing Day|Day of the Dead|St. Lucia Day
+0758|Name a music release type or format (like an album or CD)|EP=Extended play|Cassette|Compilation album|Digital single|Flexi disc
+0759|Name an animal that is native to South America|Maned wolf|Capybara|Spectacled bear|Humboldt penguin|Pampas cat
+0760|Name a tool used for digging|Post-hole digger|Trenching shovel|Mattock|Auger|Trowel
+0761|Name a chips or crisps brand|Cape Cod|Takis|Tayto|Herr's|Zapp's
+0762|Name one of the 1,000 most common first names in the world|Maria|Muhammad|Wei|Anna|John
+0763|Name a substance the human body produces|Saliva|Cerumen=Earwax|Insulin|Bile|Synovial fluid
+0764|Name a news organization|Reuters|Associated Press=AP|Agence France-Presse=AFP|ProPublica|Nikkei Asia
+0765|Name something shaped like a cone|Plumb bob|Traffic cone|Witch's hat|Piping cone|Waffle cone
+0766|Name a clear, colourless drink|Water|Vodka|Seltzer|White rum|Unflavored sparkling water
+0767|Name a country with the letter H in its name (ignore the word "the")|Bhutan|Bangladesh|Chad|South Sudan|Seychelles
+0768|Name a movie rated 8.0 or higher on IMDb (at least 1,000 votes)|12 Angry Men|Spirited Away|Parasite|The Apartment|The Lives of Others
+0769|Name a music genre (listed as a genre on Spotify)|Shoegaze|Drum and bass|Bossa nova|Afrobeats|Synthpop
+0770|Name a TV show that released or had a new season this year or last year|Severance|Andor|The Pitt|Adolescence|Alien: Earth
+0771|Name a superhero that can fly|Storm|Carol Danvers=Captain Marvel|Hawkgirl|Shazam|The Wasp
+0772|Name a skincare brand|Prequel|Vanicream|Bioderma|Geek & Gorgeous|Eucerin
+0773|Name any Pokémon|Tinkaton|Gholdengo|Annihilape|Pawmot|Dipplin
+0774|Name a team sport (no esports, board games or card games)|Korfball|Kabaddi|Sepak takraw|Floorball|Flag football
+0775|Name someone currently serving in a national government or parliament.|Claudia Sheinbaum|Volodymyr Zelenskyy|Emmanuel Macron|Donald Trump
+0776|Name a type of container (no appliances)|Vacuum flask|Document tube|Iced tea pitcher|Carboy|Food storage tub
+0777|Name something that's mined from the ground|Bauxite|Potash|Trona|Lithium ore|Kaolin
+0778|Name a sea animal that isn't a fish or a bird|Comb jelly|Sea cucumber|Basket star|Cuttlefish|Marine iguana
+0779|Name something that's naturally blue|Blue morpho|Blue-footed booby|Sodalite|Lapis lazuli|Blue corn
+0780|Name an item used for eating or serving food (like a plate or spoon)|Spork|Chafing dish|Chopstick rest|Ramekin|Cake server
+0781|Name a sci-fi movie (tagged Sci-Fi on IMDb, 1,000+ votes)|Arrival|Coherence|Timecrimes|Moon|Children of Men
+0782|Name a city with 1–10 million people (within city limits)|Calgary|Medellín|Busan|Barcelona|Surabaya
+0783|Name a dessert that's made out of dough|Churro|Knafeh|Beignet|Sfogliatella|Sufganiyah
+0784|Name an animal that can run faster than a human|Pronghorn|Giraffe|Ostrich|Kangaroo|Greyhound
+0785|Name a movie from Pixar, DreamWorks Animation, Illumination, Disney Animation (including Disneytoon and Disney TV Animation), Sony Pictures Animation or Blue Sky Studios|KPop Demon Hunters|Hoppers|Elio|Zootopia 2|The Bad Guys 2|Dog Man
+0786|Name a milk-based drink|Salep|Milk tea|Horchata de arroz con leche|Eggnog|Golden milk|Yogurt lassi
+0787|Name a country that shares a land border with at least four other countries|Tanzania|Bolivia|Côte d'Ivoire|Türkiye|Guatemala
+0788|Name a god from mythology (Hindu, Greek, Roman, Norse or Egyptian)|Anubis|Saraswati|Athena|Janus|Týr
+0789|Name a type of dress|Tea dress|Smock dress|Shirtdress|Fit-and-flare dress|Slip dress
+0790|Name a type of balloon (it's my birthday)|Mylar balloon=Foil balloon|Latex balloon|Water balloon|Modeling balloon=Twisting balloon
+0791|Name a fruit or vegetable that is red on the inside.|Blood orange|Red-fleshed dragon fruit|Red-fleshed apple|Watermelon|Beetroot
+0792|Name a setting you can change in a video game’s settings.|Field of view|Vibration strength|Toggle sprint|Aim sensitivity|Subtitle background opacity
+0793|Name a country with "and" in its name|Trinidad and Tobago|São Tomé and Príncipe|Bosnia and Herzegovina|Antigua and Barbuda
+0794|Name something players aim at to score in a sport (like a hoop).|Curling house|Dartboard|Rugby goalposts|Golf hole|Basketball hoop
+0795|Name a high-protein food ingredient—at least 8g of protein per 100g.|Tempeh|Lentils|Quinoa flour|Peanut butter|Hemp seeds
+0796|Name a way a person can feel, emotionally or physically (one word only)|Overwhelmed|Restless|Nauseated|Jittery|Relieved
+0797|Name something people wear that is designed for protection (everyday clothing doesn’t count)|Face shield|Bicycle helmet|Knee pads|Cut-resistant gloves|Steel-toe boots
+0798|Name a food with a filling inside.|Khinkali|Pierogi|Pączki|Coxinha|Arancini
+0799|Name an animated TV show that isn't meant for kids (no anime).|BoJack Horseman|Scavengers Reign|Undone|Smiling Friends|Pantheon
+0800|Name a country bigger than the UK but smaller than Egypt, by area.|Zambia|Mozambique|France|Germany|Ecuador
+0801|Name a cardio exercise.|Jumping rope|Stair climbing|Rowing machine workout|Jumping jacks|Cycling
+0802|Name a song released in 2025 or 2026 with over 10 million Spotify streams.|Ordinary=Ordinary (Alex Warren)|Golden=Golden (HUNTR/X)|Manchild=Manchild (Sabrina Carpenter)|Abracadabra=Abracadabra (Lady Gaga)
+0803|Name a red sauce, dip or condiment.|Harissa|Salsa roja|Ajvar|Salsa macha|Gochujang
+0804|Name an app or website where you book things (like Expedia for travel).|Resy|OpenTable|Fresha|Eventbrite|Trainline
+0805|Name a recurring household bill|Internet bill|Water bill|Gas bill|Trash collection bill|Electricity bill
+0806|Name an animal that stings|Fire ant|Box jellyfish|Velvet ant|Stingray|Paper wasp
+0807|Name a living bird bigger than a chicken|Cassowary|Emu|Great bustard|Mute swan|Sandhill crane
+0808|Name a place or landmark with Great or Grand in its name (like the Grand Canyon)|Great Sand Dunes National Park|Grand Teton|Great Dividing Range|Grand Staircase-Escalante National Monument|Great Mosque of Djenné
+0809|Name any item in Minecraft (older versions count too)|Wind charge|Spyglass|Elytra|Recovery compass|Mace=Mace (Minecraft)
+0810|Name something you empty regularly at home|Compost bin|Vacuum dust cup|Lint trap|Dishwasher|Dehumidifier tank
+0811|Name a method of advertising|Bus shelter ad|Podcast sponsorship|Search engine advertising|Cinema advertising|Direct mail
+0812|Name a podcast (1K+ ratings on Spotify)|The Joe Rogan Experience|Call Her Daddy|Huberman Lab|The Daily
+0813|Name a villain from Star Wars, DC, or Lord of the Rings|Grand Admiral Thrawn|Darkseid|Witch-king of Angmar|Count Dooku|Black Manta
+0814|Name a part of the human body below the waist|Meniscus|Achilles tendon|Iliotibial band|Tibia|Hamstring
+0815|Name a language with more than 10 million total speakers|Amharic|Wolof|Ilocano|Shona|Oromo
+0816|Name an animal that eats bugs (documented regular part of diet)|Aardwolf|Pangolin|Big brown bat|European bee-eater|Rainbow trout
+0817|Name a toy brand|LEGO|Schleich|Jellycat|Playmobil|Melissa & Doug
+0818|Name a country with "in" in its name|Finland|Singapore|Argentina|United Kingdom|Dominican Republic
+0819|Name a Disney Channel, Nickelodeon or Cartoon Network show|Kim Possible|Avatar: The Last Airbender|Infinity Train|Craig of the Creek|The Owl House
+0820|Name a branch or denomination of Christianity, Islam, Hinduism, Judaism, or Buddhism|Soto Zen|Twelver Shia|Reform Judaism|Eastern Orthodoxy|Vaishnavism
+0821|Name a sports team whose logo contains red (NFL, NBA, MLB, NHL, IPL, Premier League, La Liga, Bundesliga, Serie A, Ligue 1, or UEFA Champions League)|Cincinnati Reds|Chicago Bulls|Liverpool|Bayern Munich|AC Milan
+0822|Name any anime (listed on MAL)|Frieren: Beyond Journey's End|The Apothecary Diaries|Odd Taxi|Sonny Boy|Keep Your Hands Off Eizouken!
+0823|Name a song by Taylor Swift, Ariana Grande, Olivia Rodrigo, or Sabrina Carpenter.|Bed Chem|Supernatural (Ariana Grande)|Ballad of a Homeschooled Girl|The Prophecy (Taylor Swift)
+0824|Name a flower that naturally blooms blue, purple, or red|Blue flax|Red columbine|Purple coneflower|Grape hyacinth|Cardinal flower
+0825|Name a country whose second letter is O|Comoros|Côte d'Ivoire|Norway|South Sudan|Bosnia and Herzegovina
+0826|Name a country where at least 50% of people speak English|Singapore|Netherlands|Malta|Canada|New Zealand
+0827|Name a bodily function or biological process (like breathing)|Thermoregulation|Peristalsis|Blood clotting|Sneezing|Glycogenolysis
+0828|Name a one-word animal that starts with T|Tahr|Tenrec|Tarsier|Tuatara|Tench
+0829|Name something that has a needle|Record player|Compass|Sewing machine|Syringe|Analog speedometer
+0830|Name an original movie or show from Netflix, Prime Video, Apple TV, or Disney+|Silo|Severance|The Boys|The Mandalorian|The Queen's Gambit
+0831|Name a named object in space that's bigger than Earth's Moon (like Jupiter)|Ganymede|Titan|Callisto|Io|Kepler-22b
+0832|Name a character from Mario, Zelda, Donkey Kong, Sonic, or Kirby|Fi|Tulin|Marx (Kirby)|Big the Cat|Dixie Kong
+0833|Name something you can see in the sky (kinds of things, not types)|Rainbow|Moon|Meteor|Balloon|Aurora
+0834|Name a material or product that comes from animals (excluding meat and dairy)|Lanolin|Beeswax|Silk|Cochineal dye|Musk
+0835|Name a vegetable smaller than an onion|Radish|Shallot|Garlic clove|Brussels sprout|Baby carrot
+0836|Name a TV game show|Only Connect|Um, Actually|Taskmaster|The Floor|Cash Cab
+0837|Name a dance move (named moves)|Roger Rabbit|Running Man|Floss|Cabbage Patch|Moonwalk
+0838|Name a type of injury (like a sprain, not a sprained ankle)|Avulsion|Dislocation|Contusion|Abrasion|Puncture wound
+0839|Name a chocolate that has caramel in it|Rolo|Caramello|Mars bar|Twix|Ghirardelli Milk Chocolate Caramel Square
+0840|Name a video game you can play on PS5, Xbox Series X, Nintendo Switch 1 or 2.|Balatro|Hades II|Astro Bot|Elden Ring|Mario Kart World
+0841|Name a country that has been colonized by Spain or Portugal.|Equatorial Guinea|Timor-Leste|Angola|Cape Verde|Philippines
+0842|Name a chemical element that makes up the human body.|Zinc|Molybdenum|Selenium|Phosphorus|Magnesium
+0843|Name an invention that existed before 1500 (no food or drinks).|Movable type|Stirrup|Spinning wheel|Mechanical clock|Magnetic compass
+0844|Name anyone who has acted in an MCU film.|Iman Vellani|Simu Liu|Barry Keoghan|Mads Mikkelsen|Tony Leung Chiu-wai
+0845|Name a book that has been adapted into a movie.|The Prestige|The Martian|The Color Purple|The Wild Robot|Cloud Atlas
+0846|Name a feature in TikTok.|Duet|Stitch|TikTok Shop|Photo mode|TikTok Live
+0847|Name a billionaire.|Bernard Arnault|Warren Buffett|Jensen Huang|Mark Zuckerberg
+0848|Name an extinct animal that isn't an insect or invertebrate.|Broad-billed moa|Steller's sea cow|Thylacine|Great auk|Carolina parakeet
+0849|Name a living animal that moves on 2 feet and can't fly.|Emperor penguin|Kakapo|Takahē|Cassowary|Rhea
+0850|Name a ball sport where you don't score by getting the ball into or through an object.|Squash|Volleyball|Tennis|Cricket|Softball
+0851|Name any island (must be inhabited).|Spitsbergen|São Miguel|Jeju Island|Kodiak Island|Barbados
+0852|Name a fictional way to travel.|Bifröst|Floo powder|Star Trek transporter|TARDIS|Stargate
+0853|Name any national government agency.|US Census Bureau|Canada Border Services Agency=CBSA|Japan Meteorological Agency=JMA|Australian Bureau of Statistics=ABS|UK Met Office
+0854|Name a movie involving time travel.|Primer|Triangle|About Time|Predestination|Timecrimes
+0855|Name a country where French is an official language|Gabon|Benin|Senegal|Monaco|Seychelles
+0856|Name a brand with an animal in its logo.|Arc'teryx|Lacoste|Puma|John Deere|Penguin Books
+0857|Name a college or university major.|Food science|Linguistics|Urban planning|Materials science|Statistics
+0858|Name something you light with a match or lighter.|Incense stick|Birthday candle|Gas stove burner|Charcoal starter|Campfire
+0859|Name a deep-fried chicken dish.|Korean fried chicken|Dakgangjeong|Chicken karaage|Chicken katsu|Popcorn chicken
+0860|Name a job where people wear a uniform.|Flight attendant|Paramedic|Train conductor|Housekeeper|Security guard
+0861|Name a country with the letter B in its name.|Benin|Barbados|Colombia|Cambodia|Zimbabwe
+0862|Name a fictional weapon.|Batarang|Master Sword|Lightsaber|Keyblade|Mjolnir (Marvel)
+0863|Name a job focused on repairing physical things.|Watchmaker|Automotive mechanic|Appliance technician|Bicycle mechanic|Instrument repair technician
+0864|Name an author who has a book that has sold over 500,000 copies.|Andy Weir|Ursula K. Le Guin|Sally Rooney|Rick Riordan|Octavia E. Butler
+0865|Name a sport involving a board (no board games, tabletop games or esports).|Wakesurfing|Sandboarding|Mountainboarding|Snowboarding|Stand-up paddleboarding
+0866|Name a chemical element whose name has 6 or fewer letters.|Boron|Copper|Silver|Xenon|Sulfur
+0867|Name a part of the body above the waist, excluding the head.|Clavicle|Radius|Biceps|Sternum|Trapezius
+0868|Name a movie where the main character is a talking animal|Chicken Run|Puss in Boots: The Last Wish|Fantastic Mr. Fox|Ratatouille|Babe
+0869|Name a one-word food or drink that ends in O|Caldo|Cappuccino|Prosciutto|Risotto|Affogato|Burrito
+0870|Name a one-word animal whose name is 7 or more letters|Cassowary|Binturong|Coelacanth|Cuttlefish|Crocodile
+0871|Name a retired player from the NBA, Premier League, La Liga, AFL or IPL (women’s equivalents count too)|Sue Bird|Maya Moore|Thierry Henry|Gary Lineker|Kobe Bryant
+0872|Name a city ending in -ville, -burg, -burgh or -bourg|Huntsville|Gainesville|Pittsburgh|Hamburg|Strasbourg
+0873|Name a fruit or vegetable that’s white on the inside|Lychee|Daikon|Jicama|Mangosteen|White peach
+0874|Name a playable character from Valorant, Overwatch, League of Legends or Apex Legends|Venture=Venture (Overwatch)|Clove=Clove (Valorant)|Briar=Briar (League of Legends)|Conduit=Conduit (Apex Legends)|Breach=Breach (Valorant)
+0875|Name a fictional food or drink|Butterbeer|Lembas bread=Lembas|Bertie Bott's Every Flavour Beans|Senzu bean|Slurm
+0876|Name a website or app designed for learning or studying (not apps/sites only for taking notes)|Brilliant|Khan Academy|Anki|Duolingo|Quizlet
+0877|Name a sport where competitors wear helmets|Luge|Road cycling|Ice hockey|Skeleton|American football
+0878|Name a city whose name starts with D|Dili|Dresden|Daejeon|Duluth|Dar es Salaam
+0879|Name a fruit or vegetable that starts with a vowel|Ugli fruit|Apricot|Oca|Atemoya|Eggplant
+0880|Name any athlete who competed at the 2024 Summer Olympics or 2026 Winter Olympics|Simone Biles|Sydney McLaughlin-Levrone|Mikaela Shiffrin|Ilia Malinin|Katie Ledecky
+0881|Name a real-life language that ends in -an|Estonian|Macedonian|Tibetan|Croatian|Mongolian
+0882|Name a living animal bigger than a human|Orca|Gaur|Moose|Hippo|Saltwater crocodile
+0883|Name a location from Star Wars, Lord of the Rings, Fortnite, SpongeBob, or a Disney/Pixar movie (real places don't count)|Coruscant|Bikini Bottom|Hobbiton|Arendelle|Zootopia
+0884|Name something designed to stick to your skin that you peel off later|Hydrocolloid patch|Nose pore strip|ECG electrode=EKG electrode|Nicotine patch|KT tape=Kinesiology tape
+0885|Name someone who directed a movie with at least 1,000 votes on IMDb|Greta Gerwig|Bong Joon Ho|Agnès Varda|Jordan Peele|Hayao Miyazaki
+0886|Name something an app can ask permission to access on your phone|Precise location|Microphone|Photos|Bluetooth|Motion and fitness activity
+0887|Name a country where soccer isn't the most watched sport|United States|Canada|India|Pakistan|Australia
+0888|Name a TV show with at least five seasons (listed on IMDb)|Bob's Burgers|The Expanse|Brooklyn Nine-Nine|Justified|The Good Doctor
+0889|Name a country with the letter P in its name|Cape Verde|Philippines|Spain|Nepal|Cyprus
+0890|Name a movie that released before 2010 (1,000+ IMDb votes)|Perfect Blue|Before Sunrise|The Iron Giant|The Conversation|Singin' in the Rain
+0891|Name a one-word color|Vermilion|Cerulean|Aubergine|Chartreuse|Periwinkle
+0892|Name a song by Drake, Kendrick Lamar, Kanye West, Nicki Minaj, SZA, or Playboi Carti.|Not Like Us|Good Days|Super Bass|Magnolia|Through the Wire
+0893|Name a dog breed that on average weighs 25+ pounds (11 kg)|Vizsla|Belgian Malinois|Standard Schnauzer|Airedale Terrier|Irish Setter
+0894|Name a protagonist from an anime or animated TV show (1,000+ votes on IMDb or listed on MAL)|Frieren|Maomao|Bojji|Hilda|Anne Boonchuy
+0895|Name an awards show|Independent Spirit Awards|Critics Choice Awards|BAFTA Film Awards|Daytime Emmy Awards|Clio Awards
+0896|Name a country in Africa|Eswatini=Swaziland|Cabo Verde=Cape Verde|Comoros|São Tomé and Príncipe
+0897|Name a national capital that is not its country’s largest city|Ngerulmud|Yamoussoukro|Dodoma|Wellington|Ottawa
+0898|Name a desert|Danakil Desert|Dasht-e Kavir|Atacama Desert|Taklamakan Desert
+0899|Name a country whose flag includes at least one star|Timor-Leste|Suriname|Morocco|Panama|Jordan
+0900|Name a country whose English name contains J, K, or V|Vanuatu|Kyrgyzstan|Djibouti|Cape Verde|Kazakhstan
+0901|Name an island country|Timor-Leste=East Timor|São Tomé and Príncipe|Kiribati|Nauru
+0902|Name a country that shares a land border with Germany|Austria|Belgium|Czechia=Czech Republic|Denmark|France|Luxembourg|Netherlands|Poland|Switzerland
+0903|Name a Pixar feature film|Elio|Hoppers|Toy Story 5|Monsters University
+0904|Name a movie starring Samuel L. Jackson|The Long Kiss Goodnight|187=One Eight Seven|Black Snake Moan|The Negotiator
+0905|Name a character from Aladdin|Abu|Rajah|Iago|Razoul|Cave of Wonders
+0906|Name a famous movie monster|The Gill-man=Creature from the Black Lagoon|The Thing|King Ghidorah|The Blob|The Babadook
+0907|Name a western movie|High Noon|The Ox-Bow Incident|The Proposition|The Assassination of Jesse James by the Coward Robert Ford
+0908|Name a movie starring Harrison Ford|Witness|Presumed Innocent|The Fugitive|The Age of Adaline
+0909|Name an actor who has played James Bond in an official Bond film|Sean Connery|George Lazenby|Roger Moore|Timothy Dalton|Pierce Brosnan|Daniel Craig
+0910|Name an NBA team|Atlanta Hawks|Boston Celtics|Brooklyn Nets|Charlotte Hornets|Chicago Bulls|Cleveland Cavaliers|Dallas Mavericks|Denver Nuggets|Detroit Pistons|Golden State Warriors|Houston Rockets|Indiana Pacers|LA Clippers=Los Angeles Clippers|Los Angeles Lakers|Memphis Grizzlies|Miami Heat|Milwaukee Bucks|Minnesota Timberwolves|New Orleans Pelicans|New York Knicks|Oklahoma City Thunder=OKC Thunder|Orlando Magic|Philadelphia 76ers=Philadelphia Sixers|Phoenix Suns|Portland Trail Blazers|Sacramento Kings|San Antonio Spurs|Toronto Raptors|Utah Jazz|Washington Wizards
+0911|Name a Los Angeles Lakers player (2020-2026)|Austin Reaves|Rui Hachimura|Alex Caruso|Dwight Howard|Max Christie
+0912|Name a pitch a baseball pitcher can throw|Sweeper|Cutter|Splitter|Slurve|Eephus pitch
+0913|Name a famous sports trophy|Grey Cup|Copa Libertadores Trophy|Billie Jean King Cup|Sudirman Cup|Naismith Trophy
+0914|Name a famous tennis player|Casper Ruud|Ons Jabeur|Coco Gauff|Carlos Alcaraz|Li Na
+0915|Name a sport contested at the Winter Olympics|Ski mountaineering=Skimo|Biathlon|Short track speed skating|Curling|Skeleton
+0916|Name a country that has won the men's soccer World Cup|Uruguay|Spain|England|Argentina|France|Germany|Italy|Brazil
+0917|Name a noodle dish|Kesme|Laghman|Kitsune udon|Tallarines verdes|Bakmi ayam
+0918|Name a species of great ape|Bornean orangutan=Pongo pygmaeus|Tapanuli orangutan=Pongo tapanuliensis|Western gorilla=Gorilla gorilla|Eastern gorilla=Gorilla beringei|Bonobo|Sumatran orangutan=Pongo abelii|Common chimpanzee=Pan troglodytes
+0919|Name a character from Stranger Things|Eddie Munson|Robin Buckley|Erica Sinclair|Murray Bauman|Suzie Bingham
+0920|Name a hot drink|Salep|Hot toddy|Teh tarik|Café de olla|Atole
+0921|Name a variety of wine|Grüner Veltliner|Xinomavro|Pét-nat|Sauternes|Albariño|Furmint
+0922|Name an interjection or exclamation|Yikes|Phew|Good grief|Egad|Oof
+0923|Name a country with a coastline|Eritrea|Guyana|Montenegro|Slovenia|Bosnia and Herzegovina

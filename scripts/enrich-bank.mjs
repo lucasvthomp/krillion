@@ -1,9 +1,10 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import { gunzipSync, gzipSync } from 'node:zlib';
-import { exactKey } from '../docs/answers.mjs';
+import { buildLookup, exactKey } from '../docs/answers.mjs';
 import { donorKeys, promptKey, sourceCandidates } from './answer-coverage-rules.mjs';
 import { editorialAnswers } from './answer-families.mjs';
 import { reviewedAnswers } from './answer-additions.mjs';
+import { readSweep } from './answer-sweep.mjs';
 
 const bank = new URL('../docs/bank/', import.meta.url);
 const indexUrl = new URL('index.json', bank);
@@ -14,6 +15,7 @@ const { collections } = JSON.parse(gunzipSync(await readFile(snapshotUrl)));
 const familiarity = JSON.parse(gunzipSync(await readFile(familiarityUrl)));
 const index = JSON.parse(await readFile(indexUrl, 'utf8'));
 const { prompts } = index;
+const sweep = await readSweep(prompts);
 const scopedSources = new Map(prompts.map(({ id, prompt }) => [id, sourceCandidates(prompt, collections)]));
 const missingFamiliarity = new Set();
 for (const { items } of scopedSources.values()) {
@@ -99,7 +101,7 @@ function gradeAnswers(items, donors, recipient) {
   };
 }
 
-function createMerge(records, candidates, grade) {
+function createMerge(records, candidates, grade, minimumAliasLength = 3) {
   const exact = new Map();
   const names = new Map();
   const candidateOwners = new Map();
@@ -119,10 +121,10 @@ function createMerge(records, candidates, grade) {
 
   return (candidate) => {
     const name = candidate.name.trim();
-    if (!validName(name)) return false;
+    if (!validName(name) && !exact.has(exactKey(name))) return false;
     const primary = nameKey(name);
     if (!primary) return false;
-    const variants = [...new Set(candidate.aliases ?? [])].filter((alias) => validName(alias, 3) &&
+    const variants = [...new Set(candidate.aliases ?? [])].filter((alias) => validName(alias, minimumAliasLength) &&
       nameKey(alias) !== primary && candidateOwners.get(nameKey(alias)) === candidate);
     let record = exact.get(exactKey(name)) ?? names.get(primary);
     if (!record && names.has(primary)) return false;
@@ -199,6 +201,33 @@ function applyFamilies(records, promptId, catalog) {
   return changed;
 }
 
+function applySweep(records, prompt) {
+  const checks = sweep.get(prompt.id);
+  if (!checks) return false;
+  const lookup = buildLookup(records, prompt.prompt);
+  const reference = `sweep:${prompt.id}`;
+  const additions = new Map();
+  for (const { name, aliases, points } of checks) {
+    const accepted = lookup.match(name);
+    const missingAliases = aliases.filter((alias) => !lookup.match(alias));
+    if (accepted && !missingAliases.length) continue;
+    const canonical = accepted?.[0] ?? name;
+    const candidate = additions.get(canonical) ?? { name: canonical, aliases: [], reference, points };
+    candidate.aliases.push(...missingAliases);
+    // Keep an existing alternate name as an anchor if the canonical spelling is absent.
+    if (!accepted) candidate.aliases.push(...aliases.filter((alias) => lookup.match(alias)));
+    additions.set(canonical, candidate);
+  }
+  if (!additions.size) return false;
+  const merge = createMerge(records, additions.values(), (_reference, name) => {
+    const { points } = additions.get(name);
+    return [points, tiersByPoints[points]];
+  }, 2);
+  let changed = false;
+  for (const candidate of additions.values()) if (merge(candidate)) changed = true;
+  return changed;
+}
+
 const audit = [];
 let answerCount = 0;
 for (const prompt of prompts) {
@@ -242,7 +271,7 @@ for (const prompt of prompts) {
   }
 
   for (const record of records) {
-    if (!record[4] || record[4].startsWith('family:') || record[4] === reviewReference) continue;
+    if (!record[4] || record[4].startsWith('family:') || record[4] === reviewReference || record[4] === `sweep:${prompt.id}`) continue;
     const [points, tier] = grade(record[4], record[0]);
     if (record[1] !== points || record[2] !== tier) {
       record[1] = points;
@@ -260,6 +289,7 @@ for (const prompt of prompts) {
     });
     for (const candidate of additions) if (merge(candidate)) changed = true;
   }
+  if (applySweep(records, prompt)) changed = true;
   const importedTiers = {};
   for (const [, , tier, , reference] of records) {
     if (reference) importedTiers[tier] = (importedTiers[tier] ?? 0) + 1;
@@ -284,6 +314,7 @@ for (const prompt of prompts) {
       ...donors.map(({ id }) => `bank:${id}`),
       ...(families.length ? [`family:${prompt.id}`] : []),
       ...(reviewed.length ? [reviewReference] : []),
+      ...(sweep.has(prompt.id) ? [`sweep:${prompt.id}`] : []),
     ],
     status: updated ? 'expanded' : candidates.length ? 'checked-against-source' : 'needs-specific-source',
   });

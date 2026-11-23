@@ -128,6 +128,17 @@ const related = new Map([
   ]],
   ['name a bird of prey', ['name an owl species']],
   ['name a bird that lives in or by water', ['name a penguin species', 'name a type of waterfowl']],
+  ['name an insect', ['name a beetle']],
+  ['name an animal with a shell', ['name a type of turtle or tortoise']],
+  ['name an aquatic mammal', ['name a whale species']],
+  ["name a sea animal that isn't a fish or a bird", ['name a whale species']],
+  ['name a carnivorous mammal', ['name a species of wild cat']],
+  ['name a vegetable (culinarily and technically)', ['name a root vegetable', 'name a leafy green']],
+  ['name a current or former nba, mlb, premier league or nfl team', [
+    'name an nba team', 'name a current or former mlb team', 'name a premier league club', 'name an nfl team',
+  ]],
+  ['name a state or province anywhere in the world (must be officially called a state or province)', ['name a us state']],
+  ['name the current capital of a state or province anywhere in the world (must be officially called a state or province)', ['name a us state capital']],
   ['name a language spoken in europe', ['name a language that is an official language of a european country']],
   ['name a language with more than 10 million total speakers', ['name a language with more than 50 million total speakers']],
   ['name a sport or discipline ever contested or demonstrated at the winter olympics', [
@@ -192,6 +203,16 @@ const regions = new Map([
   ['europe', ['Q46']],
   ['oceania', ['Q55643']],
   ['americas', ['Q49', 'Q18', 'Q828']],
+]);
+
+const donorPool = new Map([
+  ['name an insect', ['ground-beetle', 'stag-beetle', 'longhorn-beetle']],
+  ['name a bird of prey', ['owl']],
+  ['name a bird that lives in or by water', ['penguin', 'waterfowl']],
+  ['name an aquatic mammal', ['baleen-whale']],
+  ["name a sea animal that isn't a fish or a bird", ['baleen-whale']],
+  ['name a carnivorous mammal', ['wild-cat']],
+  ['name an animal with a shell', ['turtle']],
 ]);
 
 function factIncludes(item, field, values) {
@@ -285,6 +306,14 @@ export function sourceCandidates(text, snapshot) {
       collection: 'mammal and bird common names',
       items: [...(snapshot.mammal ?? []), ...(snapshot.bird ?? [])]
         .flatMap((item) => filterNames(item, animal)),
+    };
+  }
+  if (donorPool.has(key)) {
+    const groups = donorPool.get(key);
+    return {
+      collection: groups.join('+'),
+      items: groups.flatMap((group) => (snapshot[group] ?? []).filter((item) =>
+        !excluded[group]?.has(exactKey(item.name)) && (group !== 'wild-cat' || item.id !== 'Q146'))),
     };
   }
   const collection = collections.find(([, pattern]) => pattern.test(key))?.[0];
