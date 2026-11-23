@@ -3,6 +3,7 @@ import { gunzipSync, gzipSync } from 'node:zlib';
 import { exactKey } from '../docs/answers.mjs';
 import { donorKeys, promptKey, sourceCandidates } from './answer-coverage-rules.mjs';
 import { editorialAnswers } from './answer-families.mjs';
+import { reviewedAnswers } from './answer-additions.mjs';
 
 const bank = new URL('../docs/bank/', import.meta.url);
 const indexUrl = new URL('index.json', bank);
@@ -152,7 +153,7 @@ function createMerge(records, candidates, grade) {
   };
 }
 
-const familyTiers = { 10: 'plankton', 30: 'schooler', 60: 'rare', 85: 'deepcut' };
+const tiersByPoints = { 10: 'plankton', 30: 'schooler', 60: 'rare', 85: 'deepcut' };
 
 function applyFamilies(records, promptId, catalog) {
   const byName = new Map();
@@ -168,16 +169,16 @@ function applyFamilies(records, promptId, catalog) {
     const equivalents = alternatives.flatMap((form) => byName.get(form) ?? []);
     let direct = byName.get(key);
     if (!direct?.length) {
-      direct = [[name, points, familyTiers[points], [], `family:${promptId}`]];
+      direct = [[name, points, tiersByPoints[points], [], `family:${promptId}`]];
       byName.set(key, direct);
       records.push(...direct);
       changed = true;
     }
     for (const record of [...direct, ...equivalents]) {
       if (record[2] === 'krillion' || record[2] === 'tooclever') continue;
-      if (record[1] !== points || record[2] !== familyTiers[points]) {
+      if (record[1] !== points || record[2] !== tiersByPoints[points]) {
         record[1] = points;
-        record[2] = familyTiers[points];
+        record[2] = tiersByPoints[points];
         changed = true;
       }
     }
@@ -211,6 +212,8 @@ for (const prompt of prompts) {
   const donors = [...equivalent, ...narrower];
   const grade = gradeAnswers(items, donors, prompt.prompt);
   const families = editorialAnswers(prompt.id);
+  const reviewed = reviewedAnswers(prompt.id);
+  const reviewReference = `reviewed:${prompt.id}`;
 
   const candidateMap = new Map();
   // Matching the same name to a Wikidata entity lets us reuse its exact aliases.
@@ -239,7 +242,7 @@ for (const prompt of prompts) {
   }
 
   for (const record of records) {
-    if (!record[4] || record[4].startsWith('family:')) continue;
+    if (!record[4] || record[4].startsWith('family:') || record[4] === reviewReference) continue;
     const [points, tier] = grade(record[4], record[0]);
     if (record[1] !== points || record[2] !== tier) {
       record[1] = points;
@@ -248,6 +251,15 @@ for (const prompt of prompts) {
     }
   }
   if (families.length && applyFamilies(records, prompt.id, families)) changed = true;
+  if (reviewed.length) {
+    const pointsByName = new Map(reviewed.map(([name, points]) => [name, points]));
+    const additions = reviewed.map(([name, , aliases]) => ({ name, aliases, reference: reviewReference }));
+    const merge = createMerge(records, additions, (_reference, name) => {
+      const points = pointsByName.get(name);
+      return [points, tiersByPoints[points]];
+    });
+    for (const candidate of additions) if (merge(candidate)) changed = true;
+  }
   const importedTiers = {};
   for (const [, , tier, , reference] of records) {
     if (reference) importedTiers[tier] = (importedTiers[tier] ?? 0) + 1;
@@ -271,6 +283,7 @@ for (const prompt of prompts) {
       ...(collection ? [`wikidata:${collection}`] : []),
       ...donors.map(({ id }) => `bank:${id}`),
       ...(families.length ? [`family:${prompt.id}`] : []),
+      ...(reviewed.length ? [reviewReference] : []),
     ],
     status: updated ? 'expanded' : candidates.length ? 'checked-against-source' : 'needs-specific-source',
   });

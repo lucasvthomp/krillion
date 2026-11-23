@@ -30,6 +30,8 @@ Imported Wikidata answers are graded into Plankton, Schooler, Rare, or Deep Cut 
 
 The [coverage report](scripts/answer-coverage.json) lists original and updated counts, alternate names, and the evidence used for every prompt. Prompts marked `needs-specific-source` still need a source that verifies their exact wording.
 
+[Reviewed additions](scripts/answer-additions.mjs) cover gaps found by spot-checking unrelated prompts. Each new answer uses an existing rarity, and an alternate name inherits the existing answer’s score. The console pass uses model names from [Nintendo](https://en-americas-support.nintendo.com/app/answers/detail/a_id/5066), [PlayStation](https://www.playstation.com/en-us/ps5/buy-now/), and [Xbox](https://www.xbox.com/en-us/consoles/xbox-series-x). Tree species include common and scientific names from the [USDA Forest Service](https://www.fs.usda.gov/pnw/pubs/pnw_rb168.pdf).
+
 To rebuild the static answer files after updating the dataset, run the following from the repository root.
 
 ```powershell
