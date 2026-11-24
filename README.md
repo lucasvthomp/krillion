@@ -36,11 +36,20 @@ The [prompt-by-prompt review](ANSWER-REVIEW.md) records the guesses checked, the
 
 The [catalog review](CATALOG-REVIEW.md) records a later expansion from taxonomies, geographic catalogs, and noun senses. The [source credits](docs/bank/SOURCES.txt) identify the editions and licenses. The packaged catalog snapshot makes the build self-contained. To regenerate it from source downloads, place the files listed in the credits in a local folder and pass that folder to `node scripts/build-answer-catalogs.mjs`, then run the enrichment script.
 
+### Alternate names and last names
+
+Answers accept common alternate names, so USA, US and America all count as United States. Two sources supply them. The [alias table](scripts/answer-alias-table.mjs) lists hand-picked groups such as UK, Britain and Great Britain, or Burma and Myanmar. The [Wikidata alias snapshot](scripts/answer-aliases.json.gz) matches each answer name to the Wikidata item with that English label and the most Wikipedia sitelinks, then keeps that item's English aliases. It covers every answer outside the Deep Cut tier and every answer in banks with 3,000 answers or fewer. A Wikidata alias of three letters or fewer must be a capitalised abbreviation. Because a name such as Don or Florentine can belong to several unrelated things, Wikidata names are used only when the matched item is the same kind of thing as other answers to that prompt, using its "instance of" and "subclass of" types. Prompts that judge spelling, such as "starts with S", take no alternate names. An alternate name inherits its answer's score and is skipped when another answer in the same bank already uses it.
+
+The game also accepts St, Mt and Ft for Saint, Mount and Fort, and the reverse. On prompts about people or characters, a last name on its own counts, such as Lincoln for Abraham Lincoln or da Vinci for Leonardo da Vinci. When a last name or alternate name fits several answers, such as Williams on a tennis prompt, the player picks the one they meant. When more than six answers fit, the game asks for more of the name. Run `node scripts/check-answer-matching.mjs --all` to test the examples and confirm that every answer still matches its own name.
+
 To rebuild the static answer files after updating the dataset, run the following from the repository root.
 
 ```powershell
 node scripts/build-bank.mjs 'C:\path\to\krillion-answers.jsonl.gz'
 node scripts/enrich-bank.mjs
+node scripts/apply-answer-aliases.mjs
 ```
+
+To refresh the Wikidata aliases, run `node scripts/fetch-answer-aliases.mjs` before the last step. It only requests names it has not already looked up.
 
 The enrichment uses checked-in source and familiarity snapshots, so rebuilding and playing require no Wikidata requests. After refreshing the sources, run `node scripts/fetch-answer-familiarity.mjs` to retrieve sitelink counts for new entities. Individual additions record a Wikidata entity ID or a donor prompt ID. The original archive is kept separately. GitHub Pages exposes the packaged answer bank as public site files.

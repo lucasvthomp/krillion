@@ -121,8 +121,9 @@ export function createRoomGame({ code, name, loadRounds, publicUpdate, privateUp
       const { lookup } = rounds[index];
       matched = lookup.match(command.guess);
       if (!matched) {
-        const suggestion = lookup.suggest(command.guess);
-        answerPacket(suggestion ? { status: 'suggestion', name: suggestion[0] } : { status: 'miss' });
+        const { choices, crowded } = lookup.suggest(command.guess);
+        if (choices.length) answerPacket({ status: 'suggestion', name: choices[0][0], names: choices.map(([name]) => name) });
+        else answerPacket({ status: crowded ? 'crowded' : 'miss' });
         return;
       }
     }

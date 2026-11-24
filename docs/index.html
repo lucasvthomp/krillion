@@ -6,8 +6,8 @@
   <meta name="description" content="Seven random questions. Find an uncommon answer and see how deep you can go.">
   <meta name="theme-color" content="#023247">
   <title>Krillion | Rare-answer trivia</title>
-  <link rel="stylesheet" href="./style.css?v=16">
-  <script type="module" src="./game.mjs?v=16"></script>
+  <link rel="stylesheet" href="./style.css?v=17">
+  <script type="module" src="./game.mjs?v=17"></script>
 </head>
 <body>
   <canvas id="ocean" aria-hidden="true"></canvas>
@@ -83,9 +83,8 @@
           <button class="primary" type="submit">Dive</button>
         </div>
         <div class="spelling-suggestion" id="spelling-suggestion" hidden>
-          <p id="suggestion-question">Did you mean <strong id="suggested-name"></strong>?</p>
-          <div class="suggestion-actions">
-            <button class="primary" id="use-suggestion" type="button" aria-describedby="suggestion-question">Use answer</button>
+          <p id="suggestion-question"></p>
+          <div class="suggestion-actions" id="suggestion-actions">
             <button class="plain-button" id="edit-suggestion" type="button">Keep typing</button>
           </div>
         </div>
@@ -128,7 +127,8 @@
       <li>Each dive draws seven different prompts from the answer bank.</li>
       <li>Read each prompt for three seconds, then take up to 25 seconds to answer.</li>
       <li>Wrong guesses carry no time penalty. You can guess again or pass.</li>
-      <li>If the game finds a close spelling, you can confirm it while the timer runs.</li>
+      <li>Short forms count, such as USA for United States. For people, a last name is enough.</li>
+      <li>If your answer is close to one or more answers, pick the one you meant while the timer runs.</li>
       <li>Each point takes you 10 metres deeper.</li>
     </ol>
     <ul class="tier-legend" id="tier-legend" aria-label="Rarity tiers"></ul>

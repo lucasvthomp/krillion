@@ -34,6 +34,10 @@ OurAirports
 Public domain | https://ourairports.com/data/
 airports.csv — https://raw.githubusercontent.com/davidmegginson/ourairports-data/main/airports.csv
 
+Wikidata English labels and aliases, used as alternate answer names, retrieved 2026-11-23
+CC0 1.0 | https://www.wikidata.org/wiki/Wikidata:Licensing
+answer-aliases.json.gz — https://query.wikidata.org/sparql
+
 Princeton University, WordNet 3.0, packaged by NLTK
 WordNet license below | https://wordnet.princeton.edu/
 wordnet.zip — https://raw.githubusercontent.com/nltk/nltk_data/gh-pages/packages/corpora/wordnet.zip

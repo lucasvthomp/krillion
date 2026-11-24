@@ -1,4 +1,4 @@
-import { createRoomGame, maxPlayers, roomAlphabet } from './room-game.mjs?v=16';
+import { createRoomGame, maxPlayers, roomAlphabet } from './room-game.mjs?v=17';
 
 const protocol = 'krillion-room-v2';
 const connectionTimeout = 14000;

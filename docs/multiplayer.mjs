@@ -1,6 +1,6 @@
 import { renderDiveLog } from './dive-log.mjs?v=16';
-import { displayName, roomCode, validRoomCode } from './room-game.mjs?v=16';
-import { hostRoom, joinRoom } from './room-network.mjs?v=16';
+import { displayName, roomCode, validRoomCode } from './room-game.mjs?v=17';
+import { hostRoom, joinRoom } from './room-network.mjs?v=17';
 
 export function setupMultiplayer({ loadRounds, loadAnswers, rarity, showSurface, showRound, onAnswer, goHome }) {
   const get = (id) => document.getElementById(id);

@@ -1,7 +1,7 @@
 import { createOcean } from './ocean.mjs?v=5';
-import { buildLookup, exactKey } from './answers.mjs?v=13';
+import { buildLookup, exactKey } from './answers.mjs?v=14';
 import { renderDiveLog } from './dive-log.mjs?v=16';
-import { setupMultiplayer } from './multiplayer.mjs?v=16';
+import { setupMultiplayer } from './multiplayer.mjs?v=17';
 
 const roundsPerGame = 7;
 const readingSeconds = 3;
@@ -40,8 +40,9 @@ const timer = byId('timer');
 const timeBar = byId('time-bar');
 const retryStatus = byId('retry-status');
 const suggestionBox = byId('spelling-suggestion');
-const suggestedName = byId('suggested-name');
-const useSuggestion = byId('use-suggestion');
+const suggestionQuestion = byId('suggestion-question');
+const suggestionActions = byId('suggestion-actions');
+const editSuggestion = byId('edit-suggestion');
 const reveal = byId('reveal');
 const roomWaiting = byId('room-waiting');
 const ocean = createOcean(byId('ocean'));
@@ -58,13 +59,13 @@ let deadline = 0;
 let answerDeadline = 0;
 let ticker;
 let phase = 'idle';
-let pendingAnswer;
+let suggestionChoices = [];
 let roomRoundKey;
 let roomGuess;
 let roomPending = false;
 
 function bankUrl(file) {
-  return new URL(`./bank/${file}?v=16`, import.meta.url);
+  return new URL(`./bank/${file}?v=17`, import.meta.url);
 }
 
 async function loadIndex() {
@@ -245,8 +246,9 @@ function showFeedback(name, points, tier) {
 }
 
 function hideSuggestion() {
-  pendingAnswer = null;
+  suggestionChoices = [];
   suggestionBox.hidden = true;
+  for (const button of suggestionActions.querySelectorAll('.choice')) button.remove();
 }
 
 function updateDepth(visible = !home.hidden) {
@@ -339,18 +341,49 @@ function setRoomPending(pending) {
   submitAnswer.disabled = passButton.disabled = pending;
 }
 
-function offerSuggestion(name, answer) {
-  pendingAnswer = answer;
-  suggestedName.textContent = name;
+// Offer one close spelling, or every answer an ambiguous guess could mean.
+function offerSuggestion(choices) {
+  hideSuggestion();
+  suggestionChoices = choices;
   retryStatus.textContent = '';
+  if (choices.length === 1) {
+    const name = document.createElement('strong');
+    name.textContent = choices[0][0];
+    suggestionQuestion.replaceChildren('Did you mean ', name, '?');
+  } else {
+    suggestionQuestion.textContent = 'More than one answer matches. Which did you mean?';
+  }
+  const buttons = choices.map((choice) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'primary choice';
+    button.textContent = choices.length === 1 ? 'Use answer' : choice[0];
+    if (choices.length === 1) button.setAttribute('aria-describedby', 'suggestion-question');
+    button.addEventListener('click', () => chooseSuggestion(choice));
+    return button;
+  });
+  editSuggestion.before(...buttons);
   suggestionBox.hidden = false;
-  useSuggestion.focus();
+  buttons[0].focus();
+}
+
+function chooseSuggestion(choice) {
+  if (phase !== 'answering' || !suggestionChoices.includes(choice)) return;
+  if (performance.now() >= deadline) expireRound();
+  else if (multiplayer.active) sendRoomAnswer('guess', choice[0]);
+  else finishRound('guess', choice);
 }
 
 function miss(guess) {
   answerInput.value = '';
   retryStatus.textContent = `“${guess}” wasn’t in the answer bank. Try again.`;
   answerInput.focus();
+}
+
+function crowded(guess) {
+  answerInput.focus();
+  answerInput.select();
+  retryStatus.textContent = `Lots of answers match “${guess}”. Add more of the name.`;
 }
 
 function sendRoomAnswer(type, guess) {
@@ -374,7 +407,12 @@ const multiplayer = setupMultiplayer({
     setRoomPending(false);
     if (packet.status === 'accepted') showRoomFeedback(packet.name, packet.points, packet.tier);
     else if (packet.status === 'passed') showRoomFeedback('Round passed', 0, 'none');
-    else if (packet.status === 'suggestion') offerSuggestion(packet.name, [packet.name]);
+    else if (packet.status === 'suggestion') {
+      const names = Array.isArray(packet.names) ? packet.names : [packet.name];
+      const choices = names.filter((name) => typeof name === 'string').slice(0, 6).map((name) => [name]);
+      if (choices.length) offerSuggestion(choices);
+      else miss(roomGuess);
+    } else if (packet.status === 'crowded') crowded(roomGuess);
     else if (packet.status === 'miss') miss(roomGuess);
     else if (packet.status === 'early') retryStatus.textContent = 'Wait for the round timer to start.';
   },
@@ -405,20 +443,12 @@ form.addEventListener('submit', (event) => {
     return;
   }
   const suggestion = lookup.suggest(guess);
-  if (suggestion) {
-    offerSuggestion(suggestion[0], suggestion);
-    return;
-  }
-  miss(guess);
+  if (suggestion.choices.length) offerSuggestion(suggestion.choices);
+  else if (suggestion.crowded) crowded(guess);
+  else miss(guess);
 });
 answerInput.addEventListener('input', hideSuggestion);
-useSuggestion.addEventListener('click', () => {
-  if (phase !== 'answering' || !pendingAnswer) return;
-  if (performance.now() >= deadline) expireRound();
-  else if (multiplayer.active) sendRoomAnswer('guess', pendingAnswer[0]);
-  else finishRound('guess', pendingAnswer);
-});
-byId('edit-suggestion').addEventListener('click', () => {
+editSuggestion.addEventListener('click', () => {
   hideSuggestion();
   answerInput.focus();
   answerInput.select();

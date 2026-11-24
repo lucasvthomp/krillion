@@ -78,11 +78,85 @@ function singularForms(text) {
   return forms;
 }
 
-// Keep a null entry for a spelling that points to several distinct answers.
+// A spelling that several distinct answers share, such as "Congo" or "Williams".
+class Shared {
+  constructor(entries) { this.entries = entries; }
+}
+
 function addUnique(index, key, answer) {
   if (!key) return;
-  if (!index.has(key)) index.set(key, answer);
-  else if (index.get(key) !== answer) index.set(key, null);
+  const current = index.get(key);
+  if (current === undefined) index.set(key, answer);
+  else if (current instanceof Shared) {
+    if (!current.entries.includes(answer)) current.entries.push(answer);
+  } else if (current !== answer) index.set(key, new Shared([current, answer]));
+}
+
+// "St Lucia" for "Saint Lucia", "Mount Everest" for "Mt. Everest", and so on.
+const abbreviations = [[/\bsaint\b/giu, 'St'], [/\bst\.?(?= )/giu, 'Saint'], [/\bmount\b/giu, 'Mt'],
+  [/\bmt\.?(?= )/giu, 'Mount'], [/\bfort\b/giu, 'Ft'], [/\bft\.?(?= )/giu, 'Fort']];
+
+function abbreviationForms(name) {
+  const forms = new Set();
+  for (const [pattern, replacement] of abbreviations) {
+    const form = name.replace(pattern, replacement);
+    if (form !== name) forms.add(form);
+  }
+  return [...forms];
+}
+
+const entriesOf = (value) => value === undefined ? [] : value instanceof Shared ? value.entries : [value];
+
+// Prompts whose answers are people (or characters) accept a surname on its own.
+const personWords = new Set([
+  'person', 'someone', 'somebody', 'anyone', 'human', 'man', 'woman', 'figure', 'personality', 'celebrity', 'icon',
+  'legend', 'star', 'member', 'teammate', 'champion', 'medalist', 'medallist', 'laureate', 'character',
+  'villain', 'hero', 'president', 'emperor', 'empress', 'king', 'queen', 'monarch', 'prince', 'princess', 'duke',
+  'pope', 'saint', 'prophet', 'apostle', 'pharaoh', 'tsar', 'czar', 'general', 'admiral', 'dictator', 'leader',
+  'ruler', 'minister', 'senator', 'governor', 'mayor', 'politician', 'lady', 'ceo', 'founder', 'entrepreneur',
+  'billionaire', 'artist', 'painter', 'sculptor', 'architect', 'designer', 'photographer', 'composer', 'musician',
+  'singer', 'songwriter', 'rapper', 'drummer', 'guitarist', 'pianist', 'violinist', 'conductor', 'dj', 'band member',
+  'actor', 'actress', 'director', 'filmmaker', 'producer', 'comedian', 'host', 'presenter', 'journalist',
+  'youtuber', 'streamer', 'influencer', 'model', 'dancer', 'author', 'writer', 'novelist', 'poet', 'playwright',
+  'philosopher', 'scientist', 'mathematician', 'physicist', 'chemist', 'biologist', 'economist', 'astronomer',
+  'inventor', 'explorer', 'astronaut', 'chef', 'athlete', 'player', 'footballer', 'golfer', 'boxer', 'wrestler',
+  'fighter', 'driver', 'racer', 'skater', 'swimmer', 'cyclist', 'gymnast', 'sprinter', 'runner', 'coach',
+  'manager', 'quarterback', 'pitcher', 'goalkeeper', 'striker', 'batter', 'cricketer', 'jockey', 'olympian',
+]);
+const nameParticles = new Set(['da', 'de', 'del', 'della', 'der', 'di', 'du', 'la', 'le', 'van', 'von', 'den', 'ter', 'st', 'st.', 'bin', 'al', 'el', 'ibn', 'mac']);
+
+export function isPersonPrompt(prompt) {
+  const text = exactKey(prompt).replace(/[‘’]/gu, "'");
+  if (/^(?:name|give|list) (?:someone|somebody|anyone|a person|any person)\b/u.test(text)) return true;
+  const wording = text.match(/^(?:name|give|list) (?:a |an |any |one |the )?(.+)$/u)?.[1];
+  if (!wording) return false;
+  // Read the noun both with and without its "of" phrase: "a member of the Beatles" is about a
+  // member, while "a Lord of the Rings character" is about a character.
+  const stops = 'who|that|which|whose|with|without|in|from|by|for|on|at|named|called|known|born|currently|ever|to|whom|than|where|played|voiced|like';
+  return [`${stops}|of`, stops].some((words) => {
+    const head = wording.split(new RegExp(`\\s+(?:${words})\\b|[()[\\];:,?!.]`, 'u'), 1)[0].trim();
+    const parts = head.split(' ');
+    const last = parts.at(-1).replace(/'s$/u, '');
+    const singular = last.endsWith('s') && personWords.has(last.slice(0, -1)) ? last.slice(0, -1) : last;
+    return personWords.has(singular) || personWords.has(parts.slice(-2).join(' '));
+  });
+}
+
+// "Leonardo da Vinci" -> "Vinci", "da Vinci"; "Gabriel García Márquez" -> "Márquez", "García Márquez".
+function surnameForms(name) {
+  const plain = name.replace(/\s*\([^)]*\)/gu, '').replace(/,?\s+(?:jr|sr|ii|iii|iv)\.?$/iu, '').trim();
+  if (/\d/u.test(plain)) return [];
+  const words = plain.split(/\s+/u);
+  if (words.length < 2 || words.length > 6) return [];
+  if (!words.every((word) => /^\p{Lu}/u.test(word) || nameParticles.has(word.toLowerCase()))) return [];
+  const last = words.at(-1);
+  if (nameParticles.has(last.toLowerCase()) || /^\p{L}\.?$/u.test(last)) return [];
+  const forms = [last];
+  let start = words.length - 1;
+  while (start > 1 && nameParticles.has(words[start - 1].toLowerCase())) start -= 1;
+  if (start < words.length - 1) forms.push(words.slice(start).join(' '));
+  else if (words.length >= 3 && !/^\p{L}\.?$/u.test(words.at(-2))) forms.push(words.slice(-2).join(' '));
+  return forms;
 }
 
 // Bounded edit distance with support for an adjacent transposition.
@@ -112,13 +186,20 @@ function editDistance(guess, candidate, limit, rows) {
   return previous[length];
 }
 
+const maxChoices = 6;
+
+// Prompts that judge the spelling, such as "starts with S" or "exactly four letters".
+export function hasSpellingRule(prompt) {
+  return /\b(?:letters?|syllables?|spelled|spelling|one-word|rhymes?|prefix|suffix|anagram|starts? with|ends? (?:with|in)|in (?:its|the) name)\b/iu.test(prompt);
+}
+
 export function buildLookup(answers, prompt) {
   const exact = new Map();
-  const loose = new Map();
   const unique = new Map();
   const aliases = new Map();
   const contextual = new Map();
   const grammatical = new Map();
+  const surnames = new Map();
   let spelling;
 
   for (const entry of answers) {
@@ -127,17 +208,16 @@ export function buildLookup(answers, prompt) {
     if (!previous || previous[1] < entry[1]) exact.set(key, entry);
   }
   const labels = labelsIn(prompt);
-  const allowInflection = labels.some((label) => inflectedCategories.has(label)) &&
-    !/\b(?:letters?|syllables?|spelled|spelling|one-word|rhymes?|prefix|suffix|anagram|starts? with|ends? (?:with|in)|in (?:its|the) name)\b/iu.test(prompt);
+  const allowInflection = labels.some((label) => inflectedCategories.has(label)) && !hasSpellingRule(prompt);
+  const allowSurnames = isPersonPrompt(prompt);
   for (const [name, entry] of exact) {
     const folded = looseKey(name);
-    if (folded) {
-      const previous = loose.get(folded);
-      if (!loose.has(folded)) loose.set(folded, entry);
-      else if (previous && previous[1] !== entry[1]) loose.set(folded, null);
-      addUnique(unique, folded, entry);
+    // Names that differ only in punctuation or accents are one answer; keep the better score.
+    if (folded && !(unique.get(folded)?.[1] >= entry[1])) unique.set(folded, entry);
+    for (const alternate of [...entry[3] ?? [], ...abbreviationForms(entry[0])]) {
+      addUnique(aliases, looseKey(alternate), entry);
+      if (/^the /iu.test(alternate) && looseKey(alternate.slice(4)).length >= 2) addUnique(aliases, looseKey(alternate.slice(4)), entry);
     }
-    for (const alternate of entry[3] ?? []) addUnique(aliases, looseKey(alternate), entry);
     if (name.startsWith('the ')) {
       const shorter = looseKey(name.slice(4));
       if (shorter.length >= 3) addUnique(aliases, shorter, entry);
@@ -148,67 +228,90 @@ export function buildLookup(answers, prompt) {
         for (const stem of singularForms(spelling)) addUnique(grammatical, looseKey(stem), entry);
       }
     }
+    if (allowSurnames) {
+      for (const form of surnameForms(entry[0])) {
+        const key = looseKey(form);
+        if (key.length >= 3) addUnique(surnames, key, entry);
+      }
+    }
   }
 
+  // Every answer this spelling could mean, from the most to the least direct reading.
   function resolveVariant(key) {
-    if (unique.has(key)) return unique.get(key);
-    if (aliases.has(key)) return aliases.get(key);
-    if (contextual.has(key)) return contextual.get(key);
-    return grammatical.get(key);
+    for (const index of [unique, aliases, contextual, grammatical, surnames]) {
+      if (index.has(key)) return entriesOf(index.get(key));
+    }
+    return [];
+  }
+
+  function candidates(text) {
+    const key = exactKey(text);
+    if (exact.has(key)) return [exact.get(key)];
+    const folded = looseKey(key);
+    const direct = resolveVariant(folded);
+    if (direct.length) return direct;
+    if (key.startsWith('the ')) {
+      const withoutArticle = looseKey(key.slice(4));
+      if (withoutArticle.length >= 2) {
+        const result = resolveVariant(withoutArticle);
+        if (result.length) return result;
+      }
+    }
+    if (allowInflection) {
+      const matches = new Set(singularForms(key.replace(/^the /u, ''))
+        .flatMap((stem) => resolveVariant(looseKey(stem))));
+      if (matches.size) return [...matches];
+    }
+    return [];
   }
 
   return {
     match(text) {
-      const key = exactKey(text);
-      const folded = looseKey(key);
-      if (exact.has(key)) return exact.get(key);
-      if (loose.has(folded)) return loose.get(folded);
-      if (aliases.has(folded)) return aliases.get(folded);
-      if (contextual.has(folded)) return contextual.get(folded);
-      if (grammatical.has(folded)) return grammatical.get(folded);
-      if (key.startsWith('the ')) {
-        const withoutArticle = looseKey(key.slice(4));
-        if (withoutArticle.length >= 3) {
-          const result = resolveVariant(withoutArticle);
-          if (result !== undefined) return result;
-        }
-      }
-      if (allowInflection) {
-        const matches = new Set(singularForms(key.replace(/^the /u, ''))
-          .map((stem) => resolveVariant(looseKey(stem))).filter((match) => match !== undefined));
-        if (matches.size === 1) return [...matches][0];
-      }
-      return undefined;
+      const found = candidates(text);
+      return found.length === 1 ? found[0] : undefined;
     },
 
+    // Answers to offer when a guess is close or could mean several answers.
+    // `crowded` means too many answers share the spelling to list them.
     suggest(text) {
+      const shared = candidates(text);
+      if (shared.length > 1) {
+        const choices = [...shared].sort((first, second) => first[0].localeCompare(second[0]));
+        return shared.length > maxChoices ? { choices: [], crowded: true } : { choices, crowded: false };
+      }
       const guess = looseKey(text);
-      if (guess.length < 4 || guess.length > 48) return null;
+      if (guess.length < 4 || guess.length > 48) return { choices: [], crowded: false };
       if (!spelling) {
         spelling = Array.from({ length: 51 }, () => []);
-        for (const index of [unique, aliases, contextual]) {
-          for (const [key, entry] of index) {
+        for (const index of [unique, aliases, contextual, surnames]) {
+          for (const [key, value] of index) {
             if (index !== unique && unique.has(key)) continue;
-            if (index === contextual && aliases.has(key)) continue;
-            if (key.length >= 3 && key.length <= 50) spelling[key.length].push([key, entry]);
+            if (index !== aliases && index !== unique && aliases.has(key)) continue;
+            if (index === surnames && contextual.has(key)) continue;
+            if (key.length >= 3 && key.length <= 50) {
+              for (const entry of entriesOf(value)) spelling[key.length].push([key, entry]);
+            }
           }
         }
       }
       const limit = guess.length >= 7 ? 2 : 1;
       const rows = Array.from({ length: 3 }, () => new Uint8Array(53));
       let best = limit + 1;
-      let result = null;
+      let closest = new Set();
       for (let length = guess.length - limit; length <= guess.length + limit; length++) {
-        for (const [key, entry] of spelling[length]) {
+        for (const [key, entry] of spelling[length] ?? []) {
           const distance = editDistance(guess, key, Math.min(limit, best), rows);
           if (distance > limit || distance > best) continue;
           if (distance < best) {
             best = distance;
-            result = entry;
-          } else if (result !== entry) result = null;
+            closest = new Set();
+          }
+          closest.add(entry);
         }
       }
-      return result;
+      // A typo that is equally close to several answers is too uncertain to offer.
+      const choices = closest.size >= 1 && closest.size <= 3 ? [...closest] : [];
+      return { choices, crowded: false };
     },
   };
 }
