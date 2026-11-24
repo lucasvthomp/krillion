@@ -7,10 +7,14 @@ import { readFile, writeFile } from 'node:fs/promises';
 import { gunzipSync, gzipSync } from 'node:zlib';
 import { exactKey, hasSpellingRule } from '../docs/answers.mjs';
 import { aliasGroups } from './answer-alias-table.mjs';
+import { missedAdditions } from './answer-missed-additions.mjs';
 
 const bank = new URL('../docs/bank/', import.meta.url);
 const snapshotUrl = new URL('answer-aliases.json.gz', import.meta.url);
-const { prompts } = JSON.parse(await readFile(new URL('index.json', bank), 'utf8'));
+const indexUrl = new URL('index.json', bank);
+const index = JSON.parse(await readFile(indexUrl, 'utf8'));
+const { prompts } = index;
+const tiersByPoints = { 10: 'plankton', 30: 'schooler', 60: 'rare', 85: 'deepcut', 100: 'krillion' };
 
 let wikidata = { names: {}, items: {}, types: {} };
 try {
@@ -79,14 +83,51 @@ function proposals(record, shared) {
   return found;
 }
 
+// Reviewed answers from the missed-answers form: add the answer if the bank lacks it, then its
+// alternate names. Returns whether the bank changed.
+function addReviewed(prompt, records) {
+  const additions = missedAdditions[prompt.prompt];
+  if (!additions) return false;
+  const byKey = new Map();
+  for (const record of records) {
+    for (const spelling of [record[0], ...(record[3] ?? [])]) byKey.set(nameKey(spelling), record);
+  }
+  let changed = false;
+  for (const [name, points, alternates = []] of additions) {
+    if (!tiersByPoints[points]) throw new Error(`Invalid score ${points} for ${name}`);
+    let record = byKey.get(nameKey(name));
+    if (!record) {
+      record = [name, points, tiersByPoints[points], [], `missed:${prompt.id}`];
+      records.push(record);
+      byKey.set(nameKey(name), record);
+      reviewedAnswers += 1;
+      changed = true;
+    }
+    for (const alternate of alternates) {
+      if (byKey.has(nameKey(alternate))) continue;
+      (record[3] ??= []).push(alternate);
+      byKey.set(nameKey(alternate), record);
+      addedAliases += 1;
+      changed = true;
+    }
+  }
+  return changed;
+}
+
 let changedBanks = 0;
 let addedAliases = 0;
 let answersWithNewNames = 0;
+let reviewedAnswers = 0;
 for (const prompt of prompts) {
+  const records = JSON.parse(gunzipSync(await readFile(new URL(`${prompt.id}.bank`, bank))));
+  const reviewed = addReviewed(prompt, records);
+  prompt.count = records.length;
   // A prompt that judges spelling ("starts with S") cannot take alternate names, which may not
   // follow the rule.
-  if (hasSpellingRule(prompt.prompt)) continue;
-  const records = JSON.parse(gunzipSync(await readFile(new URL(`${prompt.id}.bank`, bank))));
+  if (hasSpellingRule(prompt.prompt)) {
+    if (reviewed) await writeFile(new URL(`${prompt.id}.bank`, bank), gzipSync(JSON.stringify(records)));
+    continue;
+  }
   const shared = sharedTypes(records);
   const owners = new Map();
   for (const record of records) {
@@ -115,10 +156,16 @@ for (const prompt of prompts) {
       addedAliases += 1;
     }
   }
-  if (touched.size) {
+  if (touched.size || reviewed) {
     answersWithNewNames += touched.size;
     changedBanks += 1;
     await writeFile(new URL(`${prompt.id}.bank`, bank), gzipSync(JSON.stringify(records)));
   }
 }
-console.log(`Added ${addedAliases.toLocaleString()} alternate names to ${answersWithNewNames.toLocaleString()} answers in ${changedBanks} banks.`);
+const answerCount = prompts.reduce((total, { count }) => total + count, 0);
+if (answerCount !== index.answerCount) {
+  index.answerCount = answerCount;
+  await writeFile(indexUrl, JSON.stringify(index));
+}
+console.log(`Added ${reviewedAnswers} reviewed answers and ${addedAliases.toLocaleString()} alternate names ` +
+  `(${answersWithNewNames.toLocaleString()} answers) in ${changedBanks} banks.`);

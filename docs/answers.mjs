@@ -28,7 +28,7 @@ function looseKey(text) {
 function labelsIn(prompt) {
   const wording = exactKey(prompt).match(/^(?:name|give|list|identify) (?:a |an |one |any |the )?(.+)$/u)?.[1];
   if (!wording) return [];
-  const subject = wording.replace(/^(?:\p{L}+ )?(?:type|kind|variety|style|form|species|breed) of /u, '')
+  const subject = wording.replace(/^(?:\p{L}+ )?(?:type|kind|variety|style|form|species|breed|shade|colou?r|flavou?r|brand|genre) of /u, '')
     .split(/\s+(?:that|which|whose|with|without|in|from|by|of|for|about|found|used|anywhere|before|after|during|where|when|containing|people|you|made|served|played|known|starring|featuring)\b|[()[\];:?!]/u, 1)[0]
     .trim().replace(/\.$/u, '');
   const labels = new Set();
@@ -42,6 +42,9 @@ function labelsIn(prompt) {
     if (genericHeads.has(head) || head.length < 3) continue;
     labels.add(head);
     labels.add(category);
+    // "a penguin species" is about penguins: "Emperor penguin" can be called "Emperor".
+    const kind = category.match(/^(?:.+ )?(\p{L}{3,}) (?:species|breeds?|variety|varieties|types?|kinds?)$/u)?.[1];
+    if (kind && !genericHeads.has(kind)) labels.add(kind);
   }
   if (labels.has('mountain')) labels.add('mount');
   return [...labels];
@@ -187,6 +190,34 @@ function editDistance(guess, candidate, limit, rows) {
 }
 
 const maxChoices = 6;
+const maxWordChoices = 4;
+const stopWords = new Set(['the', 'a', 'an', 'of', 'and']);
+// Words that only say what kind of thing an answer is, as in "pistachio nut" or "Fox (animal)".
+const kindWords = new Set([
+  'nut', 'fruit', 'berry', 'dish', 'food', 'sauce', 'soup', 'cake', 'bread', 'cheese', 'drink', 'cocktail', 'wine',
+  'beer', 'candy', 'snack', 'game', 'team', 'song', 'album', 'movie', 'film', 'show', 'series', 'book', 'novel',
+  'breed', 'dog', 'cat', 'bird', 'fish', 'tree', 'flower', 'plant', 'animal', 'doll', 'toy', 'brand', 'company',
+  'car', 'city', 'country', 'river', 'lake', 'mountain', 'island', 'sport', 'dance', 'language', 'instrument',
+  'knot', 'beetle', 'turtle', 'tortoise', 'penguin', 'spider', 'snake', 'lizard', 'shark', 'whale', 'mushroom',
+  'pepper', 'app', 'website', 'character', 'band', 'franchise', 'console', 'exercise', 'setting', 'product',
+].map((word) => stemWord(word)));
+
+// A rough word stem so "whip" meets "whipped", "bake" meets "baked" and "empanadas" meets "empanada".
+function stemWord(word) {
+  let stem = word;
+  if (stem.length > 4 && stem.endsWith('ies')) return `${stem.slice(0, -3)}y`;
+  if (stem.length > 4) stem = stem.replace(/(?:ing|ed|es)$/u, '');
+  if (stem.length > 3) stem = stem.replace(/s$/u, '');
+  if (stem.length > 3) stem = stem.replace(/e$/u, '');
+  return stem.length > 2 ? stem.replace(/([^aeiou])\1$/u, '$1') : stem;
+}
+
+// The words of a name, ignoring parentheses, "the", "of" and the like.
+function wordsOf(text) {
+  return [...new Set(exactKey(text).replace(/\([^)]*\)/gu, ' ').normalize('NFKD').replace(/\p{M}/gu, '')
+    .replace(/['’]s\b/gu, '').replace(/['’]/gu, '').split(/[^\p{L}\p{N}]+/u)
+    .filter((word) => word && !stopWords.has(word)).map(stemWord))];
+}
 
 // Prompts that judge the spelling, such as "starts with S" or "exactly four letters".
 export function hasSpellingRule(prompt) {
@@ -265,10 +296,90 @@ export function buildLookup(answers, prompt) {
     return [];
   }
 
+  // Word-level matching for guesses that are part of a name or a little longer than it:
+  // "IWC" for IWC Schaffhausen, "Tony Stark" for Iron Man, "red fox" for Fox.
+  // Prompts that judge spelling skip it, since a partial name may not follow the rule.
+  const allowWords = !hasSpellingRule(prompt);
+  let wordIndex;
+  let spellingWords;
+  function buildWordIndex() {
+    wordIndex = new Map();
+    spellingWords = new Map();
+    for (const entry of exact.values()) {
+      for (const spelling of [entry[0], ...(entry[3] ?? [])]) {
+        const words = wordsOf(spelling);
+        if (!words.length) continue;
+        const key = words.slice().sort().join(' ');
+        if (!spellingWords.has(key)) spellingWords.set(key, new Set());
+        spellingWords.get(key).add(entry);
+        for (const word of words) {
+          if (!wordIndex.has(word)) wordIndex.set(word, []);
+          wordIndex.get(word).push([entry, words.length]);
+        }
+      }
+    }
+  }
+
+  function wordCandidates(text) {
+    if (!allowWords) return { entries: [], kind: 'none' };
+    const words = wordsOf(text);
+    if (!words.length || words.every((word) => word.length < 3)) return { entries: [], kind: 'none' };
+    if (!wordIndex) buildWordIndex();
+    // The same words in another order or form: "Wayne, Bruce" for "Bruce Wayne".
+    const same = spellingWords.get(words.slice().sort().join(' '));
+    if (same) return { entries: [...same], kind: 'same' };
+    // The guess is part of a longer name. One word alone is too loose ("red" for Red Rose, or a
+    // first name for any character), so it must be an abbreviation such as IWC, or a word of five
+    // or more letters from a two-word name, and on prompts about people it must be the last name.
+    const [rarest] = words.slice().sort((first, second) => (wordIndex.get(first)?.length ?? 0) - (wordIndex.get(second)?.length ?? 0));
+    const longer = new Set();
+    const [single] = words.length === 1 ? words : [];
+    for (const [entry] of wordIndex.get(rarest) ?? []) {
+      if (longer.has(entry)) continue;
+      const spellings = [entry[0], ...(entry[3] ?? [])];
+      const fits = spellings.some((spelling) => {
+        const name = wordsOf(spelling);
+        if (!words.every((word) => name.includes(word))) return false;
+        if (!single) return true;
+        const abbreviation = spelling.split(/[^\p{L}\p{N}]+/u).some((part) => /^\p{Lu}{2,5}$/u.test(part) && part.toLowerCase() === single);
+        return abbreviation || (name.length === 2 && single.length >= 5 && !kindWords.has(single) &&
+          (!allowSurnames || name[1] === single));
+      });
+      if (fits) longer.add(entry);
+    }
+    // A single word that fits several names gives no choice list, which would reveal answers.
+    if (single && longer.size > 1) return { entries: [], kind: 'none' };
+    if (longer.size) return { entries: [...longer], kind: 'longer' };
+    // A name inside a longer guess: "chicken empanadas" for Empanada. The name must cover at
+    // least half of the guess, so a list of several answers in one guess does not count. When
+    // it covers exactly half, the name must end the guess ("red fox") or the other words must
+    // only say what kind of thing it is ("pistachio nut").
+    let best = 0;
+    let inside = new Set();
+    for (const word of words) {
+      for (const [entry, size] of wordIndex.get(word) ?? []) {
+        if (size * 2 < words.length || size < best) continue;
+        const names = [entry[0], ...(entry[3] ?? [])].map(wordsOf);
+        const fits = (name) => name.length === size && name.every((part) => words.includes(part)) &&
+          (size * 2 > words.length || name.every((part, index) => part === words[words.length - size + index]) ||
+            words.every((part) => name.includes(part) || kindWords.has(part)));
+        if (!names.some(fits)) continue;
+        if (size > best) {
+          best = size;
+          inside = new Set();
+        }
+        inside.add(entry);
+      }
+    }
+    return { entries: [...inside], kind: inside.size ? 'inside' : 'none' };
+  }
+
   return {
     match(text) {
       const found = candidates(text);
-      return found.length === 1 ? found[0] : undefined;
+      if (found.length) return found.length === 1 ? found[0] : undefined;
+      const { entries } = wordCandidates(text);
+      return entries.length === 1 ? entries[0] : undefined;
     },
 
     // Answers to offer when a guess is close or could mean several answers.
@@ -279,39 +390,53 @@ export function buildLookup(answers, prompt) {
         const choices = [...shared].sort((first, second) => first[0].localeCompare(second[0]));
         return shared.length > maxChoices ? { choices: [], crowded: true } : { choices, crowded: false };
       }
-      const guess = looseKey(text);
-      if (guess.length < 4 || guess.length > 48) return { choices: [], crowded: false };
-      if (!spelling) {
-        spelling = Array.from({ length: 51 }, () => []);
-        for (const index of [unique, aliases, contextual, surnames]) {
-          for (const [key, value] of index) {
-            if (index !== unique && unique.has(key)) continue;
-            if (index !== aliases && index !== unique && aliases.has(key)) continue;
-            if (index === surnames && contextual.has(key)) continue;
-            if (key.length >= 3 && key.length <= 50) {
-              for (const entry of entriesOf(value)) spelling[key.length].push([key, entry]);
-            }
-          }
+      // A close spelling of a whole name is a stronger sign than shared words, so check it first.
+      const typos = closeSpellings(text);
+      if (typos.length) return { choices: typos, crowded: false };
+      if (!shared.length) {
+        const { entries, kind } = wordCandidates(text);
+        if (entries.length > 1) {
+          const limit = kind === 'same' ? maxChoices : maxWordChoices;
+          const choices = entries.sort((first, second) => first[0].localeCompare(second[0]));
+          return entries.length > limit ? { choices: [], crowded: true } : { choices, crowded: false };
         }
       }
-      const limit = guess.length >= 7 ? 2 : 1;
-      const rows = Array.from({ length: 3 }, () => new Uint8Array(53));
-      let best = limit + 1;
-      let closest = new Set();
-      for (let length = guess.length - limit; length <= guess.length + limit; length++) {
-        for (const [key, entry] of spelling[length] ?? []) {
-          const distance = editDistance(guess, key, Math.min(limit, best), rows);
-          if (distance > limit || distance > best) continue;
-          if (distance < best) {
-            best = distance;
-            closest = new Set();
-          }
-          closest.add(entry);
-        }
-      }
-      // A typo that is equally close to several answers is too uncertain to offer.
-      const choices = closest.size >= 1 && closest.size <= 3 ? [...closest] : [];
-      return { choices, crowded: false };
+      return { choices: [], crowded: false };
     },
   };
+
+  function closeSpellings(text) {
+    const guess = looseKey(text);
+    if (guess.length < 4 || guess.length > 48) return [];
+    if (!spelling) {
+      spelling = Array.from({ length: 51 }, () => []);
+      for (const index of [unique, aliases, contextual, surnames]) {
+        for (const [key, value] of index) {
+          if (index !== unique && unique.has(key)) continue;
+          if (index !== aliases && index !== unique && aliases.has(key)) continue;
+          if (index === surnames && contextual.has(key)) continue;
+          if (key.length >= 3 && key.length <= 50) {
+            for (const entry of entriesOf(value)) spelling[key.length].push([key, entry]);
+          }
+        }
+      }
+    }
+    const limit = guess.length >= 7 ? 2 : 1;
+    const rows = Array.from({ length: 3 }, () => new Uint8Array(53));
+    let best = limit + 1;
+    let closest = new Set();
+    for (let length = guess.length - limit; length <= guess.length + limit; length++) {
+      for (const [key, entry] of spelling[length] ?? []) {
+        const distance = editDistance(guess, key, Math.min(limit, best), rows);
+        if (distance > limit || distance > best) continue;
+        if (distance < best) {
+          best = distance;
+          closest = new Set();
+        }
+        closest.add(entry);
+      }
+    }
+    // A typo that is equally close to several answers is too uncertain to offer.
+    return closest.size >= 1 && closest.size <= 3 ? [...closest] : [];
+  }
 }

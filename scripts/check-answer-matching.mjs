@@ -36,8 +36,30 @@ const cases = [
   ['Name a country with a coastline', 'St. Kitts', 'Saint Kitts and Nevis'],
   ['Name a US national park', 'Mt Rainier', 'Mount Rainier'],
   ['Name a city in Asia with over 1 million people within city limits', 'Bombay', 'Mumbai'],
-  // Not a people prompt, so the last word of a title must not be accepted on its own.
-  ['Name a Queen song', 'Rhapsody', undefined],
+  // A distinctive word of a two-word title counts on its own.
+  ['Name a Queen song', 'Rhapsody', 'Bohemian Rhapsody'],
+  // Real answers from the 2026-11-24 missed-answers review.
+  ['Name a luxury watch brand', 'IWC', 'IWC Schaffhausen'],
+  ['Name a member of the Avengers', 'Tony Stark', 'Iron Man'],
+  ['Name a member of the Justice League', 'Bruce Wayne', 'Batman'],
+  ['Name a Walt Disney Animation Studios feature film', 'snow white', 'Snow White and the Seven Dwarfs'],
+  ['Name a company in the S&P 500', 'General Electric', 'GE Aerospace'],
+  ['Name something sprayed out of a can (pump bottles don\'t count)', 'whip cream', 'Whipped cream'],
+  ['Name a Latin American dish', 'chicken empanadas', 'Empanada'],
+  ['Name a food you have to shell or crack open before eating', 'pistachio nut', 'Pistachio'],
+  ['Name a toy brand', 'american girl doll', 'American Girl'],
+  ['Name a shade of green', 'olive', 'Olive green'],
+  ['Name a penguin species', 'emporor', ['Emperor penguin']],
+  ['Name a movie starring Timothée Chalamet', 'Dune II', 'Dune: Part Two'],
+  ['Name a carnivorous mammal', 'red fox', 'Red fox'],
+  ['Name a rap song with over 100 million Spotify streams.', 'gansters paradise', ["Gangsta's Paradise"]],
+  // Guesses from the same review that must stay rejected: first names, loose single words.
+  ['Name a Disney villain', 'bill', undefined],
+  ['Name a member of the Justice League', 'lucas', undefined],
+  ['Name a variety of wine', 'red', undefined],
+  ['Name a carnivorous mammal', 'kangaroo', undefined],
+  ['Name a German dish', 'bread', undefined],
+  ['Name a carnivorous mammal', 'elephant', undefined],
 ];
 
 let failures = 0;
