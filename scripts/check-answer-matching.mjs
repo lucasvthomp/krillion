@@ -53,6 +53,10 @@ const cases = [
   ['Name a movie starring Timothée Chalamet', 'Dune II', 'Dune: Part Two'],
   ['Name a carnivorous mammal', 'red fox', 'Red fox'],
   ['Name a rap song with over 100 million Spotify streams.', 'gansters paradise', ["Gangsta's Paradise"]],
+  // A variety of an answer counts as that answer when the bank does not list the variety.
+  ['Name an animal that lives in groups', 'south american gray wolf', 'Wolf'],
+  ['Name a dog breed', 'miniature poodle', 'Poodle'],
+  ['Name a fruit', 'granny smith apple', 'Apple'],
   // Guesses from the same review that must stay rejected: first names, loose single words.
   ['Name a Disney villain', 'bill', undefined],
   ['Name a member of the Justice League', 'lucas', undefined],

@@ -350,18 +350,21 @@ export function buildLookup(answers, prompt) {
     // A single word that fits several names gives no choice list, which would reveal answers.
     if (single && longer.size > 1) return { entries: [], kind: 'none' };
     if (longer.size) return { entries: [...longer], kind: 'longer' };
-    // A name inside a longer guess: "chicken empanadas" for Empanada. The name must cover at
-    // least half of the guess, so a list of several answers in one guess does not count. When
-    // it covers exactly half, the name must end the guess ("red fox") or the other words must
-    // only say what kind of thing it is ("pistachio nut").
+    // A name inside a longer guess. A variety of an answer always counts: up to three describing
+    // words before it ("south american gray fox" for Fox) score as the answer itself, while a
+    // variety that is its own answer (Arctic fox) is matched earlier with its own score.
+    // Otherwise the name must cover more than half of the guess, so a list of several answers
+    // in one guess does not count, or the other words must only say what kind of thing it is
+    // ("pistachio nut").
     let best = 0;
     let inside = new Set();
     for (const word of words) {
       for (const [entry, size] of wordIndex.get(word) ?? []) {
-        if (size * 2 < words.length || size < best) continue;
+        if (size < best) continue;
         const names = [entry[0], ...(entry[3] ?? [])].map(wordsOf);
+        const atEnd = (name) => name.every((part, index) => part === words[words.length - size + index]);
         const fits = (name) => name.length === size && name.every((part) => words.includes(part)) &&
-          (size * 2 > words.length || name.every((part, index) => part === words[words.length - size + index]) ||
+          ((atEnd(name) && words.length - size <= 3) || size * 2 > words.length ||
             words.every((part) => name.includes(part) || kindWords.has(part)));
         if (!names.some(fits)) continue;
         if (size > best) {
