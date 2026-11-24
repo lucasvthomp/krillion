@@ -53,6 +53,21 @@ for (const group of aliasGroups) {
 }
 
 const itemOf = (record) => wikidata.names[record[0].trim()] || null;
+const isVariety = (record) => String(record[4] ?? '').startsWith('variety:');
+
+// Varieties of answers saved by fetch-answer-varieties.mjs.
+const varietiesUrl = new URL('answer-varieties.json.gz', import.meta.url);
+const maxVarieties = 150;
+// Matches fetch-answer-varieties.mjs: an item with more varieties than this is too broad a class
+// (protein, a plant genus with thousands of species) to expand.
+const maxChildren = 1000;
+let varieties = { children: {}, details: {} };
+try {
+  varieties = JSON.parse(gunzipSync(await readFile(varietiesUrl)));
+} catch (error) {
+  if (error.code !== 'ENOENT') throw error;
+  console.log('No variety snapshot found. Run scripts/fetch-answer-varieties.mjs to add varieties.');
+}
 
 // The kinds of thing (Wikidata types) that several answers in this bank share. An answer whose
 // Wikidata item is none of these kinds was probably matched to the wrong item, such as the river
@@ -61,6 +76,7 @@ function sharedTypes(records) {
   const counts = new Map();
   let matched = 0;
   for (const record of records) {
+    if (isVariety(record)) continue;
     const kinds = wikidata.types[itemOf(record)];
     if (!kinds?.length) continue;
     matched += 1;
@@ -75,12 +91,99 @@ function proposals(record, shared) {
   // Match groups on the answer's own name only, so that a name added earlier cannot pull in a
   // second group (and the script gives the same result however often it runs).
   for (const group of groupsByKey.get(nameKey(record[0])) ?? []) found.push(...group.map(clean));
-  const id = itemOf(record);
+  const id = isVariety(record) ? null : itemOf(record);
   const item = wikidata.items[id];
   if (item && shared && wikidata.types[id]?.some((kind) => shared.has(kind))) {
     found.push(...item.filter(Boolean).map(clean).filter(usableWikidataAlias));
   }
   return found;
+}
+
+// A variety scores by how well known it is, judged by its Wikipedia coverage, and never below the
+// answer it is a variety of: a famous variety is Schooler, a lesser-known one Rare, and an obscure
+// one Deep Cut. A variety of a jackpot answer is at most Deep Cut.
+function varietyPoints(links, base) {
+  const graded = links >= 40 ? 30 : links >= 15 ? 60 : 85;
+  return Math.max(Math.min(base, 85), graded);
+}
+
+// Wikidata also lists subclasses that are not kinds a player would name: taxa known only by their
+// scientific name ("Physalis angulata"), a thing in one place ("health insurance in France"), ship
+// classes, named events and championships, and long descriptive labels. Those are skipped.
+const notAKind = /\b(?:in|at|during|for the)\b|class\b|\b(?:[Ww]omen's|[Mm]en's|Olympics?|Paralympics?|Championships?|Trophy|Cup|Grand Prix|League|Marathon|Tour|Rally|Open)\b|\b(?:subg|subsp|var|sect|cv)\.|×| x |\d{3}|[()]/u;
+
+function usableVarietyName(name, child) {
+  if (!usableWikidataAlias(name) || notAKind.test(name) || name.split(' ').length > 4) return false;
+  const scientific = varieties.taxa?.[child];
+  return !scientific || nameKey(scientific) !== nameKey(name);
+}
+
+// A variety must name the answer it belongs to, as Bengal tiger names Tiger, unless it is well
+// known in its own right, like Granny Smith or kukri. Otherwise an obscure cultivar called Laura or
+// Bombay would count as a fruit.
+const ownNameLinks = 10;
+function namesItsAnswer(name, answer) {
+  const head = answer.toLowerCase().split(/[\s-]+/u).pop().replace(/(?:es|s)$/u, '');
+  return head.length >= 3 && name.toLowerCase().includes(head);
+}
+
+// Varieties are added only where answers are physical kinds of thing: animals and plants, food and
+// drink, and objects. In other categories Wikidata's subclasses drift into unrelated topics (a
+// vaccine as a college major, real swords as Minecraft items). Prompts that rule varieties out,
+// such as "kinds of animal, not breeds", are skipped too.
+const varietyCategories = new Set(['Animals & Nature', 'Food & Drink', 'Objects, Tools & Materials']);
+const taxonType = 'Q16521';
+const noVarieties =/\b(?:not|no) (?:breeds?|species|varieties|cultivars|subspecies)\b|\bgrouped\b|\bgeneral types\b/iu;
+
+// Adds the Wikidata varieties of each answer (subclasses, breeds, cultivars and child taxa) as
+// answers of their own, such as Bengal tiger for Tiger. Only answers whose Wikidata item is the same
+// kind of thing as other answers in the bank are expanded. Returns whether the bank changed.
+function addVarieties(prompt, records, shared) {
+  if (!shared.size || !varietyCategories.has(prompt.category) || noVarieties.test(prompt.prompt)) return false;
+  const byKey = new Map();
+  for (const record of records) {
+    for (const spelling of [record[0], ...(record[3] ?? [])]) byKey.set(nameKey(spelling), record);
+  }
+  const found = new Map();
+  for (const record of records) {
+    if (isVariety(record)) continue;
+    const id = itemOf(record);
+    if (!id || !wikidata.types[id]?.some((kind) => shared.has(kind))) continue;
+    // On a food prompt, Chicken is the meat, but its Wikidata item is the bird, whose varieties are
+    // chicken breeds. Living species are not expanded on food prompts.
+    if (prompt.category === 'Food & Drink' && wikidata.types[id].includes(taxonType)) continue;
+    const listed = varieties.children[id] ?? [];
+    if (listed.length > maxChildren) continue;
+    const kids = listed
+      .map((child) => [child, varieties.details[child]])
+      .filter(([, detail]) => detail?.[0] >= 2 && detail[1])
+      .sort((a, b) => b[1][0] - a[1][0])
+      .slice(0, maxVarieties);
+    for (const [child, [links, label, ...aliases]] of kids) {
+      const name = clean(label);
+      if (!usableVarietyName(name, child)) continue;
+      if (links < ownNameLinks && !namesItsAnswer(name, record[0])) continue;
+      const key = nameKey(name);
+      if (byKey.has(key)) continue;
+      const points = varietyPoints(links, record[1]);
+      if (found.has(key) && found.get(key)[1] >= points) continue;
+      const alternates = aliases.map(clean).filter(usableWikidataAlias)
+        .filter((alias) => !byKey.has(nameKey(alias)) && nameKey(alias) !== key);
+      found.set(key, [name, points, tiersByPoints[points], [...new Set(alternates)], `variety:${child}`]);
+    }
+  }
+  const taken = new Set();
+  for (const variety of found.values()) {
+    variety[3] = variety[3].filter((alias) => {
+      const key = nameKey(alias);
+      if (taken.has(key) || found.has(key)) return false;
+      taken.add(key);
+      return true;
+    });
+    records.push(variety);
+    addedVarieties += 1;
+  }
+  return found.size > 0;
 }
 
 // Reviewed answers from the missed-answers form: add the answer if the bank lacks it, then its
@@ -118,17 +221,20 @@ let changedBanks = 0;
 let addedAliases = 0;
 let answersWithNewNames = 0;
 let reviewedAnswers = 0;
+let addedVarieties = 0;
 for (const prompt of prompts) {
   const records = JSON.parse(gunzipSync(await readFile(new URL(`${prompt.id}.bank`, bank))));
   const reviewed = addReviewed(prompt, records);
-  prompt.count = records.length;
   // A prompt that judges spelling ("starts with S") cannot take alternate names, which may not
   // follow the rule.
   if (hasSpellingRule(prompt.prompt)) {
+    prompt.count = records.length;
     if (reviewed) await writeFile(new URL(`${prompt.id}.bank`, bank), gzipSync(JSON.stringify(records)));
     continue;
   }
   const shared = sharedTypes(records);
+  const varied = addVarieties(prompt, records, shared);
+  prompt.count = records.length;
   const owners = new Map();
   for (const record of records) {
     for (const spelling of [record[0], ...(record[3] ?? [])]) {
@@ -156,7 +262,7 @@ for (const prompt of prompts) {
       addedAliases += 1;
     }
   }
-  if (touched.size || reviewed) {
+  if (touched.size || reviewed || varied) {
     answersWithNewNames += touched.size;
     changedBanks += 1;
     await writeFile(new URL(`${prompt.id}.bank`, bank), gzipSync(JSON.stringify(records)));
@@ -167,5 +273,5 @@ if (answerCount !== index.answerCount) {
   index.answerCount = answerCount;
   await writeFile(indexUrl, JSON.stringify(index));
 }
-console.log(`Added ${reviewedAnswers} reviewed answers and ${addedAliases.toLocaleString()} alternate names ` +
+console.log(`Added ${reviewedAnswers} reviewed answers, ${addedVarieties.toLocaleString()} varieties and ${addedAliases.toLocaleString()} alternate names ` +
   `(${answersWithNewNames.toLocaleString()} answers) in ${changedBanks} banks.`);

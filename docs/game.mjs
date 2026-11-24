@@ -66,7 +66,7 @@ let roomGuess;
 let roomPending = false;
 
 function bankUrl(file) {
-  return new URL(`./bank/${file}?v=18`, import.meta.url);
+  return new URL(`./bank/${file}?v=19`, import.meta.url);
 }
 
 async function loadIndex() {

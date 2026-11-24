@@ -55,7 +55,12 @@ const cases = [
   ['Name a rap song with over 100 million Spotify streams.', 'gansters paradise', ["Gangsta's Paradise"]],
   // A variety of an answer counts as that answer when the bank does not list the variety.
   ['Name an animal that lives in groups', 'south american gray wolf', 'Wolf'],
-  ['Name a dog breed', 'miniature poodle', 'Poodle'],
+  ['Name a dog breed', 'teacup poodle', 'Poodle'],
+  // A variety Wikidata lists is an answer of its own and can score more than its answer.
+  ['Name a dog breed', 'miniature poodle', 'Miniature Poodle'],
+  ['Name a carnivorous mammal', 'javan tiger', 'Javan tiger'],
+  ['Name a carnivorous mammal', 'white tiger', 'white tiger'],
+  ['Name a fruit', 'honeycrisp', 'Honeycrisp'],
   ['Name a fruit', 'granny smith apple', 'Apple'],
   // Guesses from the same review that must stay rejected: first names, loose single words.
   ['Name a Disney villain', 'bill', undefined],

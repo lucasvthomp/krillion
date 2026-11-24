@@ -44,6 +44,24 @@ The game also accepts St, Mt and Ft for Saint, Mount and Fort, and the reverse. 
 
 Guesses are also compared word by word, ignoring word order, "the", "of" and endings such as -s and -ed. "Bruce Wayne" matches the alternate name "Wayne, Bruce", and "whip cream" matches Whipped cream. Part of a longer name counts when only one answer contains it, so IWC matches IWC Schaffhausen and Tony Stark matches Iron Man. A single word is accepted only when it is an abbreviation in the name or a word of five or more letters from a two-word name, and on prompts about people only when it is the last name. A variety of an answer always counts: up to three describing words before an answer, such as "south american gray fox" or "miniature poodle", score as that answer when the bank does not list the variety itself. Otherwise a guess that contains an answer must be mostly that answer, so a list of several answers in one guess does not count, unless the other words only name its kind, as in "pistachio nut". Prompts that judge spelling skip word matching. Words in prompts such as "a shade of green" or "a penguin species" are treated like category names, so Olive counts for Olive green. Run `node scripts/check-answer-matching.mjs --all` to test the examples and confirm that every answer still matches its own name.
 
+### Varieties
+
+A variety of an answer counts on every prompt. The word matching described above scores it as its answer, so "teacup poodle" counts as Poodle. On prompts about animals and nature, food and drink, or objects, varieties that Wikidata lists are also answers of their own and can score more. Toy Poodle is Deep Cut where Poodle is Plankton, and Bengal tiger is Schooler where Tiger is Plankton.
+
+The [variety snapshot](scripts/answer-varieties.json.gz) lists the Wikidata subclasses ("subclass of") and child taxa ("parent taxon") of each answer's Wikidata item. Up to the 150 best known per answer are added, each with English alternate names from Wikidata. A variety scores by its coverage across Wikimedia sites and never below its answer: 40 or more sites make it Schooler, 15 or more Rare, and fewer Deep Cut. A variety of a jackpot answer is at most Deep Cut.
+
+These rules keep out entries that are not real varieties of the answer.
+
+- A variety needs pages on at least two Wikimedia sites.
+- A variety must include its answer's name, as Bengal tiger includes Tiger, unless it has pages on ten or more sites, like Honeycrisp. Otherwise obscure cultivars named Laura or Bombay would count as fruits.
+- Taxa known only by their scientific name are skipped, as are entries tied to one place ("health insurance in France"), ship classes, named events and championships, and labels longer than four words.
+- Classes with more than 1,000 varieties, such as protein or a plant genus with thousands of species, are too broad and are not expanded.
+- On food prompts, answers whose Wikidata item is a living species are not expanded, because the breeds of the bird are not cuts of chicken.
+- Prompts that rule varieties out, such as "kinds of animal, not breeds", are skipped, as are prompts that judge spelling.
+- As with alternate names, only answers whose Wikidata item is the same kind of thing as other answers to the prompt are expanded.
+
+Other categories are left out because there Wikidata subclasses drift into unrelated topics, such as a vaccine listed under a college major or real swords under Minecraft items.
+
 ### Missed answers
 
 Every guess the game rejects is sent to the "Missed answers" Google Form, whose responses fill the "Missed answers (Responses)" sheet, so real answers missing from a bank can be found and added. In multiplayer the host's browser sends every player's misses; in solo each browser sends its own. The [miss log](docs/miss-log.mjs) sends the prompt, the guess, the display name ("Solo" in solo play) and the time. Unsent misses wait in browser storage until the connection returns. A guess that offers a choice of answers is not reported.
@@ -58,6 +76,6 @@ node scripts/enrich-bank.mjs
 node scripts/apply-answer-aliases.mjs
 ```
 
-To refresh the Wikidata aliases, run `node scripts/fetch-answer-aliases.mjs` before the last step. It only requests names it has not already looked up.
+To refresh the Wikidata aliases, run `node scripts/fetch-answer-aliases.mjs` and then `node scripts/fetch-answer-varieties.mjs` before the last step. Both only request what they have not already looked up.
 
 The enrichment uses checked-in source and familiarity snapshots, so rebuilding and playing require no Wikidata requests. After refreshing the sources, run `node scripts/fetch-answer-familiarity.mjs` to retrieve sitelink counts for new entities. Individual additions record a Wikidata entity ID or a donor prompt ID. The original archive is kept separately. GitHub Pages exposes the packaged answer bank as public site files.
