@@ -18,7 +18,7 @@ export function validRoomCode(code) {
   return code.length === 6 && [...code].every((letter) => roomAlphabet.includes(letter));
 }
 
-export function createRoomGame({ code, name, loadRounds, publicUpdate, privateUpdate, now = Date.now, schedule = setTimeout, cancel = clearTimeout }) {
+export function createRoomGame({ code, name, loadRounds, publicUpdate, privateUpdate, onMiss = () => {}, now = Date.now, schedule = setTimeout, cancel = clearTimeout }) {
   const players = new Map([[hostId, { name, score: 0, ready: true, turn: null, history: [] }]]);
   let phase = 'lobby';
   let rounds = [];
@@ -123,7 +123,10 @@ export function createRoomGame({ code, name, loadRounds, publicUpdate, privateUp
       if (!matched) {
         const { choices, crowded } = lookup.suggest(command.guess);
         if (choices.length) answerPacket({ status: 'suggestion', name: choices[0][0], names: choices.map(([name]) => name) });
-        else answerPacket({ status: crowded ? 'crowded' : 'miss' });
+        else {
+          if (!crowded) onMiss({ prompt: rounds[index].prompt, guess: command.guess, player: player.name });
+          answerPacket({ status: crowded ? 'crowded' : 'miss' });
+        }
         return;
       }
     }

@@ -42,6 +42,10 @@ Answers accept common alternate names, so USA, US and America all count as Unite
 
 The game also accepts St, Mt and Ft for Saint, Mount and Fort, and the reverse. On prompts about people or characters, a last name on its own counts, such as Lincoln for Abraham Lincoln or da Vinci for Leonardo da Vinci. When a last name or alternate name fits several answers, such as Williams on a tennis prompt, the player picks the one they meant. When more than six answers fit, the game asks for more of the name. Run `node scripts/check-answer-matching.mjs --all` to test the examples and confirm that every answer still matches its own name.
 
+### Missed answers
+
+Every guess the game rejects is sent to the "Missed answers" Google Form, whose responses fill the "Missed answers (Responses)" sheet, so real answers missing from a bank can be found and added. In multiplayer the host's browser sends every player's misses; in solo each browser sends its own. The [miss log](docs/miss-log.mjs) sends the prompt, the guess, the display name ("Solo" in solo play) and the time. Unsent misses wait in browser storage until the connection returns. A guess that offers a choice of answers is not reported.
+
 To rebuild the static answer files after updating the dataset, run the following from the repository root.
 
 ```powershell

@@ -1,4 +1,5 @@
-import { createRoomGame, maxPlayers, roomAlphabet } from './room-game.mjs?v=17';
+import { createRoomGame, maxPlayers, roomAlphabet } from './room-game.mjs?v=18';
+import { reportMiss } from './miss-log.mjs?v=1';
 
 const protocol = 'krillion-room-v2';
 const connectionTimeout = 14000;
@@ -75,7 +76,7 @@ export async function hostRoom(name, loadRounds, onPacket, onClose) {
   let closed = false;
   let waiting = 0;
   const engine = createRoomGame({
-    code, name, loadRounds,
+    code, name, loadRounds, onMiss: reportMiss,
     publicUpdate(packet) {
       for (const connection of connections.values()) if (connection.open) connection.send(packet);
       onPacket(packet);

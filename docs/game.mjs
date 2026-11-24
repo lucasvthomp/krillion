@@ -1,7 +1,8 @@
 import { createOcean } from './ocean.mjs?v=5';
 import { buildLookup, exactKey } from './answers.mjs?v=14';
 import { renderDiveLog } from './dive-log.mjs?v=16';
-import { setupMultiplayer } from './multiplayer.mjs?v=17';
+import { setupMultiplayer } from './multiplayer.mjs?v=18';
+import { reportMiss } from './miss-log.mjs?v=1';
 
 const roundsPerGame = 7;
 const readingSeconds = 3;
@@ -445,7 +446,10 @@ form.addEventListener('submit', (event) => {
   const suggestion = lookup.suggest(guess);
   if (suggestion.choices.length) offerSuggestion(suggestion.choices);
   else if (suggestion.crowded) crowded(guess);
-  else miss(guess);
+  else {
+    reportMiss({ prompt: rounds[row].prompt, guess, player: 'Solo' });
+    miss(guess);
+  }
 });
 answerInput.addEventListener('input', hideSuggestion);
 editSuggestion.addEventListener('click', () => {
