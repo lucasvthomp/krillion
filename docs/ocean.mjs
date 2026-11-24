@@ -104,6 +104,164 @@ const fanCoral = [
   '.......21.....',
   '......0110....',
 ];
+// Landmark sprites. 0 is the outline, 1 the body, 2 and 3 details.
+const landmarkArt = {
+  liner: [
+    '..........22...22...22.......',
+    '..........11...11...11.......',
+    '...00000000000000000000000...',
+    '...01111111111111111111110...',
+    '..0133333333333333333333310..',
+    '.011111111111111111111111110.',
+    '..0111111111111111111111110..',
+    '...01111111111111111111110...',
+    '.....0000000000000000000.....',
+  ],
+  warship: [
+    '...........1............',
+    '..........111...........',
+    '......2..11111..2.......',
+    '....00000000000000000...',
+    '...0111111111111111110..',
+    '..011111111111111111110.',
+    '...01111111111111111110.',
+    '.....000000000000000....',
+  ],
+  freighter: [
+    '...................2....',
+    '...................1....',
+    '..0.......33.33...111...',
+    '..00000000000000000000..',
+    '.0111111111111111111110.',
+    '.0111111111111111111110.',
+    '..01111111111111111110..',
+    '...000000000000000000...',
+  ],
+  galleon: [
+    '.....1.......1.....',
+    '....111.....111....',
+    '.....1.......1.....',
+    '.....1...1...1.....',
+    '000000000000000000.',
+    '.01111111111111110.',
+    '..013131313131310..',
+    '...0111111111110...',
+    '....00000000000....',
+  ],
+  submarine: [
+    '.........11.........',
+    '........1111........',
+    '...000000000000000..',
+    '..01111111111111110.',
+    '.0111111111111111110',
+    '..0111111111111111..',
+    '...00000000000000...',
+  ],
+  submersible: [
+    '.....11.....',
+    '...000000...',
+    '..01111110..',
+    '.0111233110.',
+    '.0111233110.',
+    '..01111110..',
+    '...0.00.0...',
+  ],
+  diver: [
+    '..00..',
+    '.0110.',
+    '..11..',
+    '.1221.',
+    '1.22.1',
+    '..22..',
+    '..1.1.',
+    '.33.33',
+  ],
+  penguin: [
+    '.000.',
+    '00200',
+    '01110',
+    '01310',
+    '01310',
+    '.111.',
+    '.3.3.',
+  ],
+  turtle: [
+    '....000.....',
+    '..0011100...',
+    '.0121212100.',
+    '012121212103',
+    '.011111110..',
+    '.3.......3..',
+  ],
+  whale: [
+    '.000000000000..........',
+    '011111111111100000.....',
+    '0112111111111111110..00',
+    '01111111111111111110011',
+    '.011111111111111111111.',
+    '..0000000000000000000.0',
+  ],
+  seal: [
+    '........00..',
+    '..00000.110.',
+    '.01111111120',
+    '0111111111..',
+    '.0000000.00.',
+  ],
+  // A tall stepped spire for the Burj Khalifa.
+  tower: [
+    '...1...', '...1...', '...1...', '...1...', '..011..', '..012..', '..012..', '..012..',
+    '..0112.', '.00112.', '.01112.', '.01112.', '.01212.', '.01112.', '001112.', '0111122',
+    '0112122', '0111122', '0111122', '0112122', '0111122', '0000000',
+  ],
+  octopus: [
+    '.2.000.2.',
+    '221111122',
+    '.0111110.',
+    '.0131310.',
+    '.0111110.',
+    '.1.1.1.1.',
+    '1..1.1..1',
+  ],
+};
+const landmarkColors = {
+  liner: ['#1b2333', '#4a5468', '#6f5a45', '#93a2b3'],
+  warship: ['#1b2333', '#566175', '#7d6a55', '#93a2b3'],
+  freighter: ['#1b2333', '#5d5262', '#8a6a52', '#a58e74'],
+  galleon: ['#2a1c17', '#6e4b33', '#8d6a4b', '#c79b62'],
+  submarine: ['#141b27', '#3e4b5c', '#5d6b7d', '#7f8fa2'],
+  submersible: ['#2b2d38', '#e6e6e6', '#ff7a3d', '#7fd9ff'],
+  diver: ['#0f1f2a', '#1f3d4d', '#e8b04a', '#f2c14e'],
+  penguin: ['#10161f', '#1d2430', '#f4b33f', '#eef3f5'],
+  turtle: ['#1c2a24', '#3f5a47', '#6b8c6c', '#3f5a47'],
+  whale: ['#18202e', '#47566e', '#cfd7e3', '#47566e'],
+  seal: ['#1c2027', '#5b5f68', '#222', '#5b5f68'],
+  octopus: ['#5b2b3e', '#d9809b', '#f0a8bd', '#2b1620'],
+  tower: ['#1d2a3a', '#8fa6bd', '#c9dbe8', '#8fa6bd'],
+};
+const playerSub = [
+  [
+    '.....00......',
+    '.....01......',
+    '...0000000...',
+    '..011111110..',
+    '.01133111110.',
+    '0111331111102',
+    '.01111111110.',
+    '..000000000..',
+  ],
+  [
+    '.....00......',
+    '.....01......',
+    '...0000000...',
+    '..011111110..',
+    '.01133111110.',
+    '011133111110.',
+    '.011111111102',
+    '..000000000..',
+  ],
+];
+
 const reefDecor = [
   [.046, 'coral', 1], [.100, 'kelp', 1], [.147, 'fan', -1], [.174, 'coral', -1],
   [.234, 'kelp', -1], [.298, 'coral', -1], [.390, 'fan', 1], [.459, 'coral', 1],
@@ -139,7 +297,9 @@ function makeSprite(rows, colors) {
   return sheet;
 }
 
-export function createOcean(canvas) {
+// onDepth(metres) reports the depth the camera is passing; onLandmark(landmark) fires when a dive
+// passes one of the landmarks.
+export function createOcean(canvas, { landmarks = [], onDepth = () => {}, onLandmark = () => {} } = {}) {
   const ctx = canvas.getContext('2d', { alpha: false });
   if (!ctx) return { descend() {} };
 
@@ -175,6 +335,9 @@ export function createOcean(canvas) {
       makeSprite(fanCoral, ['#775368', '#bc7064', '#e59671', '#f9c597']),
     ],
   };
+  const landmarkSprites = Object.fromEntries(Object.entries(landmarkArt)
+    .map(([kind, rows]) => [kind, makeSprite(rows, landmarkColors[kind])]));
+  const playerSprites = playerSub.map((rows) => makeSprite(rows, ['#3a2a10', '#f2c14e', '#d9d2c0', '#7fd9ff']));
   const dither = document.createElement('canvas');
   dither.width = dither.height = 4;
   const dots = dither.getContext('2d');
@@ -191,11 +354,13 @@ export function createOcean(canvas) {
   let travelFrom = 0;
   let travelStarted = 0;
   let travelDuration = 0;
+  // In a game the camera sits this far below the depth so the surface stays in view at 0 m.
+  const surfaceGap = 70;
 
-  function sprite(image, x, y, direction = 1) {
+  function sprite(image, x, y, direction = 1, size = 1) {
     ctx.save();
     ctx.translate(Math.round(x), Math.round(y));
-    ctx.scale(direction, 1);
+    ctx.scale(direction * size, size);
     ctx.drawImage(image, -Math.floor(image.width / 2), 0);
     ctx.restore();
   }
@@ -372,6 +537,62 @@ export function createOcean(canvas) {
     ctx.globalAlpha = 1;
   }
 
+  // The player's submarine sits on this line, and landmarks pass it at their real depths.
+  const anchor = () => height * .5;
+  const metresToPixels = () => height * .9 / 1000;
+  const depthNow = () => camera - surfaceGap;
+
+  // Landmarks are drawn larger on wide screens, where the pixel grid is finer.
+  const spriteSize = () => (width >= 200 ? 2 : 1);
+
+  function wrecksAndWildlife(time) {
+    const scale = metresToPixels();
+    const size = spriteSize();
+    for (const [index, [depth, kind]] of landmarks.entries()) {
+      const image = landmarkSprites[kind];
+      if (!image) continue;
+      const tall = image.height * size;
+      const y = anchor() + (depth - depthNow()) * scale - tall / 2;
+      if (y < -tall - 4 || y > height + 4) continue;
+      const animal = ['penguin', 'turtle', 'whale', 'seal', 'octopus', 'diver'].includes(kind);
+      const sway = animal ? Math.sin(time * .7 + index) * 3 : 0;
+      const x = width * [.1, .25, .4][index % 3] + sway;
+      // Deep landmarks are dim until the submarine's light reaches them.
+      const lit = clamp(1 - Math.abs(depth - depthNow()) / 260);
+      ctx.globalAlpha = depth > 900 ? .35 + .65 * lit : 1;
+      sprite(image, x, y + (animal ? Math.sin(time * 1.2 + index) * 1.5 : 0), index % 3 === 0 ? -1 : 1, size);
+    }
+    ctx.globalAlpha = 1;
+  }
+
+  function submarine(time, travelling) {
+    if (target <= 0 && camera < 5) return;
+    const image = playerSprites[Math.floor(time * 8) % 2];
+    const size = spriteSize();
+    const x = width * .84;
+    const y = anchor() - image.height * size / 2 + Math.sin(time * 1.4) * 1.5;
+    const depth = depthNow();
+    if (depth > 500) {
+      // Headlight: a widening beam ahead of the nose.
+      const reach = width * .5;
+      for (let step = 0; step < reach; step += 2) {
+        const spread = 1 + step * .18;
+        ctx.fillStyle = `rgba(255, 236, 170, ${clamp((depth - 500) / 900) * .13 * (1 - step / reach)})`;
+        ctx.fillRect(Math.round(x - 7 * size - step), Math.round(y + 5 * size - spread / 2), 2, Math.round(spread));
+      }
+    }
+    if (travelling) {
+      ctx.fillStyle = '#cdeff2';
+      for (let bubble = 0; bubble < 7; bubble++) {
+        const rise = (time * 18 + bubble * 9) % 40;
+        ctx.globalAlpha = .7 * (1 - rise / 40);
+        ctx.fillRect(Math.round(x + 4 + Math.sin(time * 3 + bubble) * 2), Math.round(y - rise), 1, 1);
+      }
+      ctx.globalAlpha = 1;
+    }
+    sprite(image, x, y, 1, size);
+  }
+
   function draw(now) {
     const time = motion.matches ? 0 : now / 1000;
     const offset = camera / 1000 * height * .9;
@@ -381,6 +602,8 @@ export function createOcean(canvas) {
     swimmingFish(time, offset);
     deepLife(time, offset);
     terrain(time, offset, true);
+    wrecksAndWildlife(time);
+    submarine(time, camera !== target);
     suspendedMatter(time, offset);
     ctx.fillStyle = texture;
     ctx.globalAlpha = .12;
@@ -392,18 +615,32 @@ export function createOcean(canvas) {
     frame = 0;
     if (now - renderedAt >= 29) {
       const progress = travelDuration ? smooth(clamp((now - travelStarted) / travelDuration)) : 1;
-      camera = mix(travelFrom, target, progress);
+      moveCamera(mix(travelFrom, target, progress));
       draw(now);
       renderedAt = now;
     }
     if (!motion.matches && !document.hidden) frame = requestAnimationFrame(animate);
   }
 
+  // Moves the camera, reports the depth it reaches, and announces the deepest landmark a descent
+  // passed in this step.
+  function moveCamera(value) {
+    const before = depthNow();
+    camera = value;
+    const after = depthNow();
+    if (after === before) return;
+    onDepth(Math.max(0, Math.round(after)));
+    if (after < before || target <= 0) return;
+    let passed;
+    for (const landmark of landmarks) if (landmark[0] > before && landmark[0] <= after) passed = landmark;
+    if (passed) onLandmark(passed);
+  }
+
   function refresh() {
     if (frame) cancelAnimationFrame(frame);
     frame = 0;
     if (motion.matches) {
-      camera = target;
+      moveCamera(target);
       draw(0);
     } else if (!document.hidden) {
       renderedAt = -Infinity;
@@ -428,12 +665,14 @@ export function createOcean(canvas) {
 
   return {
     descend(metres, inGame) {
-      const destination = inGame ? metres + 70 : 0;
+      const destination = inGame ? metres + surfaceGap : 0;
       if (destination === target) return;
       travelFrom = camera;
       target = destination;
       travelStarted = performance.now();
-      travelDuration = clamp(520 + Math.abs(target - camera) * 1.25, 520, 2300);
+      // A dive is slow enough to watch the depth climb and the landmarks pass; surfacing is quick.
+      const distance = Math.abs(target - camera);
+      travelDuration = target > camera ? clamp(900 + distance * 2.4, 900, 5200) : clamp(520 + distance * .5, 520, 2300);
       if (motion.matches) refresh();
     },
   };

@@ -318,3 +318,25 @@ dialog .tier-legend li { color: var(--tier-color); margin: 0; font: 650 .85rem/1
 @media (prefers-reduced-motion: reduce) {
   .feedback, #reveal .primary { animation: none; }
 }
+
+/* Landmark passed on a dive, named under the depth readout. */
+.landmark {
+  max-width: min(260px, 46vw);
+  margin: 10px 0 0 auto;
+  font-size: .78rem;
+  line-height: 1.35;
+  color: var(--muted);
+  text-align: right;
+}
+.landmark-label { display: block; font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+.landmark strong { display: block; font-family: var(--display-font); font-size: 1.05rem; color: var(--text); }
+.landmark #landmark-detail { display: block; }
+.landmark.passing { animation: landmark-pass 3.8s ease-out both; }
+@keyframes landmark-pass {
+  0% { opacity: 0; transform: translateY(-6px); }
+  8%, 80% { opacity: 1; transform: none; }
+  100% { opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .landmark.passing { animation: none; }
+}

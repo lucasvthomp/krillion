@@ -1,5 +1,6 @@
-import { createOcean } from './ocean.mjs?v=5';
-import { buildLookup, exactKey } from './answers.mjs?v=16';
+import { createOcean } from './ocean.mjs?v=6';
+import { landmarks } from './landmarks.mjs?v=1';
+import { buildLookup, exactKey } from './answers.mjs?v=17';
 import { renderDiveLog } from './dive-log.mjs?v=16';
 import { setupMultiplayer } from './multiplayer.mjs?v=18';
 import { reportMiss } from './miss-log.mjs?v=1';
@@ -46,7 +47,26 @@ const suggestionActions = byId('suggestion-actions');
 const editSuggestion = byId('edit-suggestion');
 const reveal = byId('reveal');
 const roomWaiting = byId('room-waiting');
-const ocean = createOcean(byId('ocean'));
+const landmarkNote = byId('landmark');
+let landmarkTimer;
+// The depth readout counts up as the ocean dives, and each landmark passed is named under it.
+const ocean = createOcean(byId('ocean'), {
+  landmarks,
+  onDepth(depth) {
+    byId('depth').value = depth.toLocaleString();
+    byId('zone').textContent = oceanZones.find(([start]) => depth >= start)[1];
+  },
+  onLandmark([depth, , name, detail]) {
+    byId('landmark-name').textContent = name;
+    byId('landmark-detail').textContent = `${depth.toLocaleString()} m · ${detail}`;
+    landmarkNote.hidden = false;
+    landmarkNote.classList.remove('passing');
+    void landmarkNote.offsetWidth;
+    landmarkNote.classList.add('passing');
+    clearTimeout(landmarkTimer);
+    landmarkTimer = setTimeout(() => { landmarkNote.hidden = true; }, 3800);
+  },
+});
 const help = byId('help');
 const quitDialog = byId('quit-dialog');
 
@@ -66,7 +86,7 @@ let roomGuess;
 let roomPending = false;
 
 function bankUrl(file) {
-  return new URL(`./bank/${file}?v=19`, import.meta.url);
+  return new URL(`./bank/${file}?v=20`, import.meta.url);
 }
 
 async function loadIndex() {
@@ -252,12 +272,12 @@ function hideSuggestion() {
   for (const button of suggestionActions.querySelectorAll('.choice')) button.remove();
 }
 
-function updateDepth(visible = !home.hidden) {
-  const depth = score * 10;
+// The readout shows during a game (the home screen is hidden then). The ocean updates the number
+// as it dives.
+function updateDepth(visible = home.hidden) {
   byId('depth-readout').hidden = !visible;
-  byId('depth').value = depth.toLocaleString();
-  byId('zone').textContent = oceanZones.find(([start]) => depth >= start)[1];
-  ocean.descend(depth, visible);
+  if (!visible) landmarkNote.hidden = true;
+  ocean.descend(score * 10, visible);
 }
 
 function readBest() {

@@ -105,7 +105,23 @@ function abbreviationForms(name) {
     const form = name.replace(pattern, replacement);
     if (form !== name) forms.add(form);
   }
+  for (const form of distanceForms(name)) if (form !== name) forms.add(form);
   return [...forms];
+}
+
+// "200m" and "200 meters" for "200 metres"; "5k" and "5 kilometers" for "5000 metres".
+function distanceForms(name) {
+  const found = name.match(/^(.*?)(?<![\p{L}\p{N}])(\d{1,3}(?:,\d{3})*|\d+) ?(metres?|meters?|m|km|kilomet(?:re|er)s?)(?![\p{L}\p{N}])(.*)$/iu);
+  if (!found) return [];
+  const [, before, digits, unit, after] = found;
+  const metres = Number(digits.replaceAll(',', '')) * (/^k/iu.test(unit) ? 1000 : 1);
+  const lengths = [`${metres}m`, `${metres} m`, `${metres} meters`, `${metres} metres`];
+  if (metres % 1000 === 0) {
+    const kilometres = metres / 1000;
+    lengths.push(`${kilometres}k`, `${kilometres}km`, `${kilometres} km`, `${kilometres} kilometers`,
+      `${kilometres} kilometres`, `${kilometres} kilometer`, `${kilometres} kilometre`);
+  }
+  return lengths.map((length) => `${before}${length}${after}`.trim());
 }
 
 const entriesOf = (value) => value === undefined ? [] : value instanceof Shared ? value.entries : [value];
@@ -296,6 +312,13 @@ export function buildLookup(answers, prompt) {
     return [];
   }
 
+  // When a shared spelling fits one well-known answer and otherwise only Deep Cuts, the player means
+  // the well-known one: Federer is Roger Federer, not his wife Mirka.
+  function standout(entries) {
+    const known = entries.filter((entry) => entry[1] <= 30);
+    return known.length === 1 && entries.every((entry) => entry === known[0] || entry[1] >= 85) ? known[0] : undefined;
+  }
+
   // Word-level matching for guesses that are part of a name or a little longer than it:
   // "IWC" for IWC Schaffhausen, "Tony Stark" for Iron Man, "red fox" for Fox.
   // Prompts that judge spelling skip it, since a partial name may not follow the rule.
@@ -380,7 +403,7 @@ export function buildLookup(answers, prompt) {
   return {
     match(text) {
       const found = candidates(text);
-      if (found.length) return found.length === 1 ? found[0] : undefined;
+      if (found.length) return found.length === 1 ? found[0] : standout(found);
       const { entries } = wordCandidates(text);
       return entries.length === 1 ? entries[0] : undefined;
     },
@@ -424,12 +447,15 @@ export function buildLookup(answers, prompt) {
         }
       }
     }
-    const limit = guess.length >= 7 ? 2 : 1;
+    // Guesses of six letters or more may have two slips ("picoli" for piccolo). A two-slip match must
+    // start with the same letter, which keeps unrelated words such as "flower" and Closer apart.
+    const limit = guess.length >= 6 ? 2 : 1;
     const rows = Array.from({ length: 3 }, () => new Uint8Array(53));
     let best = limit + 1;
     let closest = new Set();
     for (let length = guess.length - limit; length <= guess.length + limit; length++) {
       for (const [key, entry] of spelling[length] ?? []) {
+        if (limit > 1 && key[0] !== guess[0] && best > 1 && editDistance(guess, key, 1, rows) > 1) continue;
         const distance = editDistance(guess, key, Math.min(limit, best), rows);
         if (distance > limit || distance > best) continue;
         if (distance < best) {

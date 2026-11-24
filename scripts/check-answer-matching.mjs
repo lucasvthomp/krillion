@@ -53,6 +53,15 @@ const cases = [
   ['Name a movie starring Timothée Chalamet', 'Dune II', 'Dune: Part Two'],
   ['Name a carnivorous mammal', 'red fox', 'Red fox'],
   ['Name a rap song with over 100 million Spotify streams.', 'gansters paradise', ["Gangsta's Paradise"]],
+  // Real answers from the 2026-11-25 missed-answers review.
+  ['Name an Olympic track and field event', 'steeplechase', '3000 metres steeplechase'],
+  ['Name an Olympic track and field event', '200m', '200 metres'],
+  ['Name an Olympic track and field event', '5k', '5000 metres'],
+  ['Name an Olympic track and field event', '10 kilometer', '10000 metres'],
+  ['Name a country that no longer exists', 'golden horde', 'Golden Horde'],
+  ['Name a country that no longer exists', 'selucid empire', ['Seleucid Empire']],
+  ['Name a musical instrument', 'picoli', ['Piccolo']],
+  ['Name a rice dish', 'arroz e feijao', 'rice and beans'],
   // A variety of an answer counts as that answer when the bank does not list the variety.
   ['Name an animal that lives in groups', 'south american gray wolf', 'Wolf'],
   ['Name a dog breed', 'teacup poodle', 'Poodle'],
