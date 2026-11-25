@@ -118,6 +118,25 @@ const blend = (from, to, ratio) => from.map((value, index) => mix(value, to[inde
 const color = (rgb) => `rgb(${rgb.map(Math.round).join(', ')})`;
 const smooth = (ratio) => ratio * ratio * (3 - 2 * ratio);
 
+// The cubic Bézier easing curve through (0, 0), (x1, y1), (x2, y2) and (1, 1), as in CSS.
+function bezier(x1, y1, x2, y2) {
+  const curve = (a, b, t) => 3 * a * (1 - t) * (1 - t) * t + 3 * b * (1 - t) * t * t + t * t * t;
+  const slope = (a, b, t) => 3 * a * (1 - t) * (1 - t) + 6 * (b - a) * (1 - t) * t + 3 * (1 - b) * t * t;
+  return (x) => {
+    if (x <= 0 || x >= 1) return clamp(x);
+    let t = x;
+    for (let round = 0; round < 8; round++) {
+      const gradient = slope(x1, x2, t);
+      if (Math.abs(gradient) < 1e-6) break;
+      t = clamp(t - (curve(x1, x2, t) - x) / gradient);
+    }
+    return curve(y1, y2, t);
+  };
+}
+// A gentle start and a long, slow arrival.
+const settleInto = bezier(.3, 0, .1, 1);
+const holdMs = 500;
+
 function seededRandom(seed) {
   return () => {
     seed = (Math.imul(1664525, seed) + 1013904223) >>> 0;
@@ -442,15 +461,19 @@ export function createOcean(canvas, { onDepth = () => {}, onFrame = () => {} } =
     done?.(finished);
   }
 
+  // A dive eases in, then slows gradually into its depth and rests there for holdMs before it
+  // reports that it has finished. Other moves ease in and out evenly.
   function step(now) {
     const progress = travelDuration ? clamp((now - travelStarted) / travelDuration) : 1;
-    setDepth(mix(travelFrom, target, smooth(progress)));
-    if (progress >= 1 && finishDive) settle(true);
+    setDepth(mix(travelFrom, target, (diving ? settleInto : smooth)(progress)));
+    if (finishDive && now >= travelStarted + travelDuration + holdMs) settle(true);
   }
 
+  // Moving frames draw at the display's full rate; the idle ocean redraws about 30 times a second.
   function animate(now) {
     frame = 0;
-    if (now - renderedAt >= 29) {
+    const moving = depth !== target || diving;
+    if (moving || now - renderedAt >= 29) {
       step(now);
       draw(now);
       renderedAt = now;
@@ -507,7 +530,7 @@ export function createOcean(canvas, { onDepth = () => {}, onFrame = () => {} } =
     // true when it arrives, or false when another move interrupts it.
     dive(metres) {
       const finished = new Promise((resolve) => {
-        travel(metres, clamp(1300 + Math.abs(metres - depth) * 3.2, 1300, 5200));
+        travel(metres, clamp(1600 + Math.abs(metres - depth) * 3.4, 1600, 5800));
         diving = true;
         finishDive = resolve;
       });

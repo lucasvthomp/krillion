@@ -1,6 +1,6 @@
-import { createOcean } from './ocean.mjs?v=7';
-import { facts } from './landmarks.mjs?v=2';
-import { createDiveOverlay } from './dive-overlay.mjs?v=1';
+import { createOcean } from './ocean.mjs?v=8';
+import { facts } from './landmarks.mjs?v=3';
+import { createDiveOverlay } from './dive-overlay.mjs?v=2';
 import { buildLookup, exactKey } from './answers.mjs?v=17';
 import { renderDiveLog } from './dive-log.mjs?v=16';
 import { setupMultiplayer } from './multiplayer.mjs?v=18';

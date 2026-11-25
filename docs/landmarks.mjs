@@ -3,12 +3,8 @@
 // label]. Sides are chosen so that labels at close depths do not overlap. A label that starts with
 // "zone:" names an ocean zone.
 const rows = [
-  [11, 'left', 'galleon', 'Mary Rose · Henry VIII’s ship, sank 1545'],
   [12, 'right', 'warship', 'USS Arizona · Pearl Harbor, 1941'],
-  [75, 'left', 'liner', 'Andrea Doria · sank off Nantucket, 1956'],
-  [93, 'right', 'liner', 'Lusitania · torpedoed in 1915'],
-  [120, 'left', 'liner', 'Britannic · Titanic’s sister ship'],
-  [162, 'right', 'freighter', 'Edmund Fitzgerald · Lake Superior, 1975'],
+  [93, 'left', 'liner', 'Lusitania · torpedoed in 1915'],
   [200, 'left', null, 'zone:The twilight zone'],
   [214, 'right', null, 'deepest freedive ever, on one breath'],
   [332, 'left', null, 'deepest scuba dive ever'],

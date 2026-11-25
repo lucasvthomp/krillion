@@ -121,7 +121,6 @@ export function createDiveOverlay(layer, facts, rarity) {
   const pill = tag.appendChild(element('dive-pill'));
   tag.hidden = true;
   let lines = [];
-  let answerTier = 'none';
   let view = null;
 
   function draw() {
@@ -151,18 +150,11 @@ export function createDiveOverlay(layer, facts, rarity) {
     you.hidden = depth < 1;
     place(you, at(depth));
 
-    // The tag takes the colour of the deepest tier line it has passed.
-    let reached = 'none';
     for (const line of lines) {
-      const passed = depth >= line.metres - .5;
-      line.item.classList.toggle('lit', passed);
-      if (passed) reached = line.tier;
+      line.item.classList.toggle('lit', depth >= line.metres - .5);
       place(line.item, at(line.metres));
     }
-    if (!tag.hidden) {
-      tag.dataset.tier = view.travelling ? reached : answerTier;
-      place(tag, at(depth));
-    }
+    if (!tag.hidden) place(tag, at(depth));
   }
 
   function clearLines() {
@@ -186,9 +178,9 @@ export function createDiveOverlay(layer, facts, rarity) {
         layer.insertBefore(item, ruler);
         return { tier: key, metres: from + points * 10, item };
       });
-      answerTier = tier;
+      // The answer keeps its own tier's colour for the whole dive.
       pill.textContent = `“${name}”`;
-      tag.dataset.tier = 'none';
+      tag.dataset.tier = tier;
       tag.hidden = false;
       layer.append(tag);
       draw();
