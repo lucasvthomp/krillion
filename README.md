@@ -2,7 +2,7 @@
 
 Krillion is a browser trivia game that draws seven distinct prompts for each game. Players get three seconds to read each prompt and 25 seconds to answer. A wrong guess leaves the clock running at its normal pace. The answer bank supplies the names, rarity tiers and scores, and every point adds ten metres to the dive.
 
-The animated ocean fills the screen and descends as the score increases. Each accepted answer plays a dive as deep as the answer is worth: a submarine sinks while the depth readout counts up, and real things found at those depths pass by, from the Mary Rose at 11 m to the Titanic at 3,800 m and the deepest shipwreck ever found at 6,865 m. The readout names each one as the dive passes it. The [landmark list](docs/landmarks.mjs) gives approximate depths. The scene respects the browser's reduced-motion preference.
+The animated ocean fills the screen and descends as the score increases. Each accepted answer sinks as deep as it is worth, so a Rare answer sinks 600 m. The answer's name drops from the current depth while the depth readout counts up. Dashed lines mark the depth each rarity tier would reach from that start, and each lights up in its tier's color as the answer passes it. The result shows once the answer stops. Labels at the screen edges mark real things found at each depth, from the Mary Rose at 11 m to the Titanic at 3,800 m and the deepest shipwreck ever found at 6,865 m, and wrecks and animals appear as faint shapes beside their labels. A ruler on the right edge shows the depth. The [fact list](docs/landmarks.mjs) gives approximate depths. In multiplayer, the leaderboard waits until the player's dive finishes. The scene respects the browser's reduced-motion preference.
 
 ## Multiplayer
 

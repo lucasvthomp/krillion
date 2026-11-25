@@ -1,5 +1,6 @@
-import { createOcean } from './ocean.mjs?v=6';
-import { landmarks } from './landmarks.mjs?v=1';
+import { createOcean } from './ocean.mjs?v=7';
+import { facts } from './landmarks.mjs?v=2';
+import { createDiveOverlay } from './dive-overlay.mjs?v=1';
 import { buildLookup, exactKey } from './answers.mjs?v=17';
 import { renderDiveLog } from './dive-log.mjs?v=16';
 import { setupMultiplayer } from './multiplayer.mjs?v=18';
@@ -47,26 +48,17 @@ const suggestionActions = byId('suggestion-actions');
 const editSuggestion = byId('edit-suggestion');
 const reveal = byId('reveal');
 const roomWaiting = byId('room-waiting');
-const landmarkNote = byId('landmark');
-let landmarkTimer;
-// The depth readout counts up as the ocean dives, and each landmark passed is named under it.
+const diveLayer = byId('dive-layer');
+const overlay = createDiveOverlay(diveLayer, facts, rarity);
+// The depth readout counts up as the ocean dives, and the overlay labels what is at each depth.
 const ocean = createOcean(byId('ocean'), {
-  landmarks,
   onDepth(depth) {
     byId('depth').value = depth.toLocaleString();
     byId('zone').textContent = oceanZones.find(([start]) => depth >= start)[1];
   },
-  onLandmark([depth, , name, detail]) {
-    byId('landmark-name').textContent = name;
-    byId('landmark-detail').textContent = `${depth.toLocaleString()} m · ${detail}`;
-    landmarkNote.hidden = false;
-    landmarkNote.classList.remove('passing');
-    void landmarkNote.offsetWidth;
-    landmarkNote.classList.add('passing');
-    clearTimeout(landmarkTimer);
-    landmarkTimer = setTimeout(() => { landmarkNote.hidden = true; }, 3800);
-  },
+  onFrame: overlay.update,
 });
+let diveRun = 0;
 const help = byId('help');
 const quitDialog = byId('quit-dialog');
 
@@ -191,6 +183,7 @@ function showRound() {
 
 function showPrompt(current, index, total, readEnd, endAt) {
   clearInterval(ticker);
+  stopDive();
   byId('round-position').textContent = `Round ${index + 1} of ${total}`;
   byId('category').textContent = current.category;
   byId('prompt').textContent = current.prompt;
@@ -248,12 +241,42 @@ function finishRound(reason, matched) {
   const current = rounds[row];
   const points = matched ? matched[1] : 0;
   const tier = matched ? matched[2] : 'none';
+  const from = score * 10;
   score += points;
   log.push({ prompt: current.prompt, answer: matched?.[0], points, tier });
-  updateDepth();
-  showFeedback(matched?.[0] ?? (reason === 'timeout' ? 'Time is up' : 'Round passed'), points, tier);
-  nextButton.textContent = row + 1 === roundsPerGame ? 'See dive log' : 'Next round';
-  if (!quitDialog.open && !help.open) nextButton.focus();
+  dive(matched?.[0], points, tier, from, () => {
+    showFeedback(matched?.[0] ?? (reason === 'timeout' ? 'Time is up' : 'Round passed'), points, tier);
+    nextButton.textContent = row + 1 === roundsPerGame ? 'See dive log' : 'Next round';
+    if (!quitDialog.open && !help.open) nextButton.focus();
+  });
+}
+
+// An accepted answer sinks from the depth before it to the depth after it, past a line at the
+// depth each rarity tier would reach, and the round's result shows once it arrives. A round with
+// no points shows its result at once. The prompt and room screens are hidden while it sinks.
+function dive(name, points, tier, from, then) {
+  const run = ++diveRun;
+  form.hidden = true;
+  if (!points) {
+    updateDepth();
+    then();
+    return;
+  }
+  document.body.classList.add('diving');
+  overlay.startDive(name, tier, from);
+  ocean.dive(from + points * 10).then(() => {
+    if (run !== diveRun) return;
+    document.body.classList.remove('diving');
+    overlay.endDive();
+    then();
+  });
+}
+
+function stopDive() {
+  diveRun += 1;
+  document.body.classList.remove('diving');
+  overlay.endDive();
+  overlay.clearLines();
 }
 
 function showFeedback(name, points, tier) {
@@ -272,11 +295,10 @@ function hideSuggestion() {
   for (const button of suggestionActions.querySelectorAll('.choice')) button.remove();
 }
 
-// The readout shows during a game (the home screen is hidden then). The ocean updates the number
-// as it dives.
+// The readout and the depth labels show during a game (the home screen is hidden then). The ocean
+// updates the number as it moves.
 function updateDepth(visible = home.hidden) {
-  byId('depth-readout').hidden = !visible;
-  if (!visible) landmarkNote.hidden = true;
+  byId('depth-readout').hidden = diveLayer.hidden = !visible;
   ocean.descend(score * 10, visible);
 }
 
@@ -295,6 +317,7 @@ function showBest() {
 function showResults() {
   roundPanel.hidden = true;
   resultsPanel.hidden = false;
+  overlay.clearLines();
   resultStatus.textContent = '';
   byId('share-text').hidden = true;
   const record = score > best;
@@ -311,6 +334,7 @@ function showResults() {
 
 function returnToMenu() {
   clearInterval(ticker);
+  stopDive();
   hideSuggestion();
   phase = 'idle';
   roomRoundKey = null;
@@ -331,6 +355,8 @@ function showRoomSurface(points) {
   phase = 'idle';
   roomRoundKey = null;
   home.hidden = roundPanel.hidden = resultsPanel.hidden = true;
+  // A dive still under way clears its own lines when it ends.
+  if (!document.body.classList.contains('diving')) overlay.clearLines();
   score = points ?? 0;
   updateDepth(points !== undefined);
 }
@@ -351,10 +377,17 @@ function showRoomFeedback(name, points, tier) {
   hideSuggestion();
   setRoomPending(false);
   phase = 'idle';
-  showFeedback(name, points, tier);
-  nextButton.hidden = true;
-  roomWaiting.textContent = 'Waiting for the round to finish.';
-  roomWaiting.hidden = false;
+  // The room's next update brings the same new score, so the dive is not repeated.
+  const from = score * 10;
+  score += points;
+  dive(name, points, tier, from, () => {
+    // If the round ended during the dive, the leaderboard shows instead of the round.
+    if (roundPanel.hidden) overlay.clearLines();
+    showFeedback(name, points, tier);
+    nextButton.hidden = true;
+    roomWaiting.textContent = 'Waiting for the round to finish.';
+    roomWaiting.hidden = false;
+  });
 }
 
 function setRoomPending(pending) {

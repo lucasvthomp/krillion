@@ -319,24 +319,91 @@ dialog .tier-legend li { color: var(--tier-color); margin: 0; font: 650 .85rem/1
   .feedback, #reveal .primary { animation: none; }
 }
 
-/* Landmark passed on a dive, named under the depth readout. */
-.landmark {
-  max-width: min(260px, 46vw);
-  margin: 10px 0 0 auto;
-  font-size: .78rem;
-  line-height: 1.35;
-  color: var(--muted);
-  text-align: right;
+/* Labels drawn over the ocean at real depths (dive-overlay.mjs). Each item is centred on its depth. */
+#dive-layer {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  font-family: var(--mono);
 }
-.landmark-label { display: block; font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
-.landmark strong { display: block; font-family: var(--display-font); font-size: 1.05rem; color: var(--text); }
-.landmark #landmark-detail { display: block; }
-.landmark.passing { animation: landmark-pass 3.8s ease-out both; }
-@keyframes landmark-pass {
-  0% { opacity: 0; transform: translateY(-6px); }
-  8%, 80% { opacity: 1; transform: none; }
-  100% { opacity: 0; }
+#dive-layer > *, .ruler > * { position: absolute; top: 0; will-change: transform; }
+body.diving main > .screen { visibility: hidden; }
+
+.fact {
+  left: 4vw;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: min(48ch, 44vw);
+  color: #c4e2e8a6;
+  font-size: .72rem;
+  line-height: 1.3;
+  text-shadow: 0 1px 3px #00121d, 0 0 10px #00121d;
 }
-@media (prefers-reduced-motion: reduce) {
-  .landmark.passing { animation: none; }
+.fact::before { content: ""; flex: none; width: 22px; border-top: 1px solid currentColor; opacity: .55; }
+.fact.right { left: auto; right: calc(4vw + 44px); flex-direction: row-reverse; text-align: right; }
+.fact.zone-name { color: #a6ece8d0; font-size: .82rem; letter-spacing: .28em; text-transform: uppercase; }
+/* Wrecks and animals are faint shapes in the water, three screen pixels per art pixel. */
+.silhouette {
+  flex: none;
+  width: calc(var(--art-width) * 3px);
+  image-rendering: pixelated;
+  opacity: .5;
+}
+.fact.right .silhouette { transform: scaleX(-1); }
+
+.ruler { top: 0; bottom: 0; right: 0; width: 44px; border-left: 1px solid #cfe9ee1f; }
+.tick {
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #cfe9ee80;
+  font-size: .6rem;
+  white-space: nowrap;
+}
+.tick::after { content: ""; width: 5px; border-top: 1px solid #cfe9ee40; }
+.tick.major::after { width: 10px; border-color: #cfe9ee80; }
+.you { right: 16px; color: var(--accent); font-size: .6rem; letter-spacing: .1em; text-transform: uppercase; }
+.you::after { content: " ▶"; }
+
+.tier-line { left: 0; right: 44px; height: 0; border-top: 1px dashed #cfe9ee38; transition: border-color .3s, box-shadow .3s; }
+.line-label {
+  position: absolute;
+  right: 4vw;
+  bottom: 5px;
+  color: #cfe9ee70;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 3px #00121d;
+  transition: color .3s;
+}
+.tier-line.lit { border-top: 2px dashed var(--tier-color); box-shadow: 0 0 12px color-mix(in srgb, var(--tier-color) 55%, transparent); }
+.tier-line.lit .line-label { color: var(--tier-color); }
+
+/* The answer sinking on a dive: a full-width row centred on the depth, holding the label. */
+.dive-tag { left: 0; right: 44px; display: flex; justify-content: center; padding-inline: 12px; }
+.dive-pill {
+  max-width: min(100%, 560px);
+  overflow: hidden;
+  padding: 7px 16px 8px;
+  border: 2px solid var(--tier-color);
+  border-radius: 2px;
+  background: #051827e0;
+  box-shadow: 3px 3px #02101b, 0 0 26px color-mix(in srgb, var(--tier-color) 40%, transparent);
+  color: var(--tier-color);
+  font: 700 clamp(1.05rem, 3.2vw, 1.6rem)/1.2 var(--display-font);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition: color .3s, border-color .3s, box-shadow .3s;
+}
+.dive-pill::after { content: " ▼"; font-size: .7em; }
+@media (max-width: 550px) {
+  .fact { max-width: 46vw; font-size: .66rem; }
+  .fact::before { width: 10px; }
+  .fact.zone-name { font-size: .7rem; letter-spacing: .18em; }
+  .silhouette { width: calc(var(--art-width) * 2px); }
 }
