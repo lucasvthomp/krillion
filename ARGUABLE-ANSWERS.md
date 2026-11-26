@@ -6,7 +6,7 @@ These are the ones it accepted leniently. To veto one, delete it from
 `node scripts/report-arguable-answers.mjs`. A veto removes it from the next full rebuild; to drop it from the
 current banks straight away, remove the answer from its bank file as well.
 
-994 answers.
+972 answers.
 
 | Prompt | Answer | Points | Why it is arguable |
 | --- | --- | ---: | --- |
@@ -702,9 +702,7 @@ current banks straight away, remove the answer from its bank file as well.
 | Name a mammal smaller than a house cat | Chihuahua | 15 | a dog breed often smaller than a cat |
 | Name something that has a saddle (like a bicycle) | Jet ski | 15 | has a seat rather than a saddle |
 | Name something that has a saddle (like a bicycle) | Mountain pass | 15 | a saddle in geography |
-| Name a TV show that's rated 8.5+ on IMDb (1,000+ votes) | Westworld | 15 | rated about 8.5; check the current rating |
-| Name a TV show that's rated 8.5+ on IMDb (1,000+ votes) | The Last of Us | 15 | rated about 8.5; check the current rating |
-| Name a TV show that's rated 8.5+ on IMDb (1,000+ votes) | Spartacus | 15 | rated about 8.5; check the current rating |
+| Name a TV show that's rated 8.5+ on IMDb (1,000+ votes) | Spartacus | 15 | rated 8.4 to 8.5 depending on the snapshot |
 | Name a vehicle that doesn't travel on wheels | Snowboard | 15 | a board rather than a vehicle |
 | Name a vehicle that doesn't travel on wheels | Elevator | 10 | moves on rails and cables, not wheels |
 | Name a vehicle that doesn't travel on wheels | Magic carpet | 10 | fictional |
@@ -747,8 +745,8 @@ current banks straight away, remove the answer from its bank file as well.
 | Name a machine traditionally operated by inserting coins. | Foosball table | 15 | coin-operated in bars |
 | Name a machine traditionally operated by inserting coins. | Player piano | 15 | coin-operated in old saloons |
 | Name a machine traditionally operated by inserting coins. | Breathalyzer | 10 | some bar breathalyzers take coins |
-| Name a movie first released in theaters in 2026 | Avengers: Doomsday | 30 | scheduled for December 2026; check it came out |
-| Name a movie first released in theaters in 2026 | Dune: Part Three | 30 | scheduled for December 2026; check it came out |
+| Name a movie first released in theaters in 2026 | Avengers: Doomsday | 30 | scheduled for 18 December 2026 |
+| Name a movie first released in theaters in 2026 | Dune: Part Three | 30 | scheduled for 18 December 2026 |
 | Name an app or program that comes built into Windows or macOS (older versions count). | Outlook | 15 | the new Outlook ships with Windows 11 |
 | Name something with a legal minimum age | Buying cold medicine | 15 | only some places set an age |
 | Name something with a legal minimum age | Social media | 15 | the age is usually a site rule |
@@ -763,17 +761,7 @@ current banks straight away, remove the answer from its bank file as well.
 | Name a national park anywhere in the world | Ngorongoro | 15 | a conservation area rather than a park |
 | Name a national park anywhere in the world | Great Barrier Reef | 15 | a marine park |
 | Name a national park anywhere in the world | Zhangjiajie | 15 | a national forest park |
-| Name a player currently on an English Premier League or NFL team | Mohamed Salah | 30 | at Liverpool in 2025-26; check he has not moved |
-| Name a player currently on an English Premier League or NFL team | Rodri | 30 | at Manchester City in 2025-26; check he has not moved |
-| Name a player currently on an English Premier League or NFL team | Ollie Watkins | 30 | at Aston Villa in 2025-26; check he has not moved |
-| Name a player currently on an English Premier League or NFL team | Gabriel Martinelli | 30 | at Arsenal in 2025-26; check he has not moved |
-| Name a player currently on an English Premier League or NFL team | Leandro Trossard | 30 | at Arsenal in 2025-26; check he has not moved |
-| Name a player currently on an English Premier League or NFL team | Marc Cucurella | 30 | at Chelsea in 2025-26; check he has not moved |
-| Name a player currently on an English Premier League or NFL team | Jarrod Bowen | 30 | at West Ham in 2025-26; check he has not moved |
-| Name a player currently on an English Premier League or NFL team | Cristian Romero | 30 | at Tottenham in 2025-26; check he has not moved |
-| Name a player currently on an English Premier League or NFL team | Anthony Gordon | 30 | at Newcastle in 2025-26; check he has not moved |
-| Name a currency worth less than the US dollar | Bulgarian lev | 15 | replaced by the euro in 2026 |
-| Name a currency worth less than the US dollar | Croatian kuna | 15 | replaced by the euro in 2023 |
+| Name a player currently on an English Premier League or NFL team | Leandro Trossard | 30 | still at Arsenal in November 2026 after a reported move fell through |
 | Name a currency worth less than the US dollar | Dogecoin | 10 | a cryptocurrency rather than a national currency |
 | Name something traditionally expressed as a percentage (like body fat) | Zoom level | 15 | shown as a percentage on screens |
 | Name something traditionally expressed as a percentage (like body fat) | Percentile | 10 | a rank out of 100 rather than a percentage |
@@ -846,13 +834,9 @@ current banks straight away, remove the answer from its bank file as well.
 | Name a clear, colourless drink | Lemonade | 15 | British lemonade is clear; American lemonade is cloudy |
 | Name a country with the letter H in its name (ignore the word "the") | Hong Kong | 15 | a Chinese special region rather than a country |
 | Name a music genre (listed as a genre on Spotify) | Regional Mexican | 15 | a radio and chart category |
-| Name a TV show that released or had a new season this year or last year | Frieren: Beyond Journey's End | 30 | season 2 aired in early 2026 |
 | Name a superhero that can fly | Stormfront | 15 | a villain in The Boys |
 | Name a superhero that can fly | Buzz Lightyear | 15 | falls with style rather than flies |
 | Name a superhero that can fly | Syndrome | 10 | a villain who flies with rocket boots |
-| Name someone currently serving in a national government or parliament. | Viktor Orbán | 30 | check he still holds his seat after the 2026 election |
-| Name someone currently serving in a national government or parliament. | Kristi Noem | 30 | check she is still in the cabinet |
-| Name someone currently serving in a national government or parliament. | Tulsi Gabbard | 30 | check she is still in the cabinet |
 | Name something that's mined from the ground | Stone | 15 | quarried rather than mined |
 | Name an item used for eating or serving food (like a plate or spoon) | Placemat | 15 | protects the table rather than holding food |
 | Name an item used for eating or serving food (like a plate or spoon) | Tablecloth | 15 | protects the table rather than holding food |
@@ -918,16 +902,10 @@ current banks straight away, remove the answer from its bank file as well.
 | Name a chocolate that has caramel in it | Wispa Gold | 30 | the original Wispa has no caramel |
 | Name a country that has been colonized by Spain or Portugal. | Macau | 15 | a Chinese special region rather than a country |
 | Name a book that has been adapted into a movie. | One Shot | 30 | filmed as Jack Reacher |
-| Name a billionaire. | Kanye West | 15 | lost billionaire status in 2022 |
-| Name a billionaire. | Dietrich Mateschitz | 15 | a billionaire who died in 2022 |
-| Name a billionaire. | Ingvar Kamprad | 15 | a billionaire who died in 2018 |
-| Name a billionaire. | Mohamed Al Fayed | 15 | a billionaire who died in 2023 |
 | Name a ball sport where you don't score by getting the ball into or through an object. | Curling | 15 | aims at a target rather than into one |
 | Name a fictional way to travel. | Tractor beam | 15 | pulls things in rather than taking you places |
 | Name any national government agency. | Department of Government Efficiency | 15 | a temporary advisory body |
 | Name a movie involving time travel. | Napoleon Dynamite | 10 | only a joke time machine |
-| Name a country where French is an official language | Mali | 15 | dropped French as an official language in 2023 |
-| Name a country where French is an official language | Burkina Faso | 15 | dropped French as an official language in 2023 |
 | Name a brand with an animal in its logo. | Dodge | 15 | the ram logo moved to Ram trucks |
 | Name a brand with an animal in its logo. | Geico | 15 | the gecko is a mascot rather than the logo |
 | Name a brand with an animal in its logo. | Haribo | 15 | the gold bear is a mascot rather than the logo |
