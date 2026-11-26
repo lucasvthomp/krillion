@@ -20,11 +20,58 @@ export const missedAdditions = {
   ],
   // Review of 2026-11-25. Former countries come from the generated catalog in
   // answer-missed-catalogs.json (see fetch-missed-catalogs.mjs).
-  'Name an Olympic track and field event': [['3000 metres steeplechase', 60, ['Steeplechase']]],
-  'Name a rice dish': [['rice and beans', 60, ['Arroz e feijão', 'Arroz con frijoles', 'Arroz con habichuelas']]],
+  'Name an Olympic track and field event': [
+    ['3000 metres steeplechase', 60, ['Steeplechase']],
+    // Review of 2026-11-26: race walking is often called speed walking.
+    ['20km race walk', 15, ['Race walk', 'Race walking', 'Racewalking', 'Speed walk', 'Speed walking']],
+    ['10km race walk', 85, ['10k walk', '10 km walk', '10k race walk', '10k speed walk', '10 kilometer speed walk']],
+  ],
+  'Name a rice dish': [
+    ['rice and beans', 60, ['Arroz e feijão', 'Arroz con frijoles', 'Arroz con habichuelas']],
+    ['Mango sticky rice', 60, ['Khao niao mamuang', 'Mango with sticky rice', 'Rice and mango', 'Mango rice']],
+  ],
   // The Republic of China fought from 1937 and governs Taiwan today.
   'Name a country that fought in World War II': [['China', 10, ['Republic of China', 'Taiwan']]],
   'Name an app or website where you book things (like Expedia for travel).': [['Selective Asia', 85]],
+  // Review of 2026-11-26: real answers and everyday names for answers already in the bank.
+  'Name a country with an official state religion': [['United Kingdom', 30, ['England']]],
+  'Name a vitamin or dietary mineral': [
+    ['Vitamin B1', 60, ['Thiamine', 'Thiamin']], ['Vitamin B2', 60, ['Riboflavin']],
+    ['Vitamin B6', 30, ['Pyridoxine']], ['Vitamin B12', 30, ['Cobalamin', 'Cyanocobalamin']],
+    ['Folate', 30, ['Folic acid', 'Vitamin B9']], ['Pantothenic acid', 85, ['Vitamin B5']],
+  ],
+  'Name a muscle in the human body': [['Iliopsoas', 60, ['Hip flexor', 'Hip flexors']]],
+  'Name a computer operating system': [['MS-DOS', 30, ['DOS']]],
+  'Name a hot drink': [['Yerba mate', 30, ['Mate', 'Maté', 'Chimarrão', 'Chimarrao']]],
+  'Name a holiday celebrated around the world': [
+    ['Day of the Dead', 60, ['Día de los Muertos', 'Dia de los Muertos', 'Día de Muertos']],
+    ['Midsummer', 85, ['San Juan', 'Noche de San Juan', 'John the Baptist Day', 'Saint John the Baptist Day']],
+  ],
+  'Name a superpower Superman has in the comics or movies': [
+    ['Heat vision', 10, ['Laser eyes', 'Laser vision']],
+    ['Super speed', 10, ['Speed', 'Faster than a speeding bullet', 'Faster than a bullet']],
+  ],
+  'Name something you can measure about the human body': [['Body temperature', 10, ['Temperature']]],
+  'Name a symptom of a cold or flu': [['Mucus', 30, ['Phlegm']], ['Runny nose', 10, ['Snot']]],
+  'Name a font': [['Lobster', 60]],
+  // Brazilian cakes: bolo de brigadeiro and bolo formigueiro ("anthill cake").
+  'Name a type of cake': [
+    ['Brigadeiro cake', 85, ['Brigadeiro', 'Bolo de brigadeiro']],
+    ['Formigueiro cake', 85, ['Formigueiro', 'Bolo formigueiro', 'Anthill cake']],
+  ],
+  'Name a sauce': [['Worcestershire sauce', 60, ['Worchestershire', 'Worchestershire sauce', 'Worchestire', 'Worchestire sauce', 'Worcester']]],
+  'Name a type of bag': [['Backpack', 10, ['Hiking bag', 'Hiking backpack']]],
+  'Name a style of hat': [['Cowboy hat', 10, ['Western hat', 'Western']]],
+  'Name a Korean dish': [['Gyeran-mari', 60, ['Egg roll', 'Rolled egg', 'Rolled omelette']]],
+  // Chess is recognised as a sport by the International Olympic Committee.
+  'Name a sport played without a ball': [['Chess', 60]],
+  'Name a Seinfeld character': [['Jerry', 10, ['Jerry Seinfeld']]],
+  'Name a type of skincare product': [['Petroleum jelly', 30, ['Vaseline']]],
+  'Name a Bible character': [["Balaam's donkey", 85, ['Talking donkey']]],
+  'Name a type of sausage': [['Italian sausage', 10, ['Mild Italian', 'Italian mild', 'Hot Italian', 'Sweet Italian']]],
+  'Name a famous physicist': [['Friedrich Paschen', 85]],
+  'Name an extreme sport': [['Bog snorkelling', 85, ['Bog snorkeling', 'Bog diving']]],
+  'Name a protagonist from an anime or animated TV show (1,000+ votes on IMDb or listed on MAL)': [['Mark Grayson', 60, ['Invincible']]],
   // Gaps found by auditing small banks on open-ended prompts.
   'Name an organ of the human body': [
     ['Colon', 30, ['Large intestine']], ['Small intestine', 30, ['Small bowel']], ['Mouth', 30], ['Teeth', 30, ['Tooth']],

@@ -71,6 +71,24 @@ const cases = [
   ['Name a carnivorous mammal', 'white tiger', 'white tiger'],
   ['Name a fruit', 'honeycrisp', 'Honeycrisp'],
   ['Name a fruit', 'granny smith apple', 'Apple'],
+  // A base answer counts when the bank lists two or more of its varieties but not the base itself,
+  // scoring one tier below its best-known variety. Real misses from the 2026-11-25 review.
+  ['Name a living animal that moves on 2 feet and can\'t fly.', 'Turkey', 'Turkey'],
+  ['Name a living animal that moves on 2 feet and can\'t fly.', 'turkeys', 'Turkey'],
+  ['Name a living animal that moves on 2 feet and can\'t fly.', 'domestic turkey', 'Turkey'],
+  ['Name a living animal that moves on 2 feet and can\'t fly.', 'turky', ['Turkey']],
+  // A first word on its own only counts when the other word just names the kind of thing.
+  ['Name an area in a school', 'soccer', undefined],
+  ['Name a type of turtle or tortoise', 'turtle', undefined],
+  // A single word must point at one answer, and an abbreviation must be typed as it is.
+  ['Name a video game you can play on PS5, Xbox Series X, Nintendo Switch 1 or 2.', 'Japan', undefined],
+  ['Name a programming language', 'Paris', undefined],
+  ['Name an Apple device', 'apple', undefined],
+  // First names count for well-known fictional characters.
+  ['Name a character from Stranger Things', 'lucas', 'Lucas Sinclair'],
+  ['Name a character from The Office (US)', 'michael', 'Michael Scott'],
+  ['Name a Scooby-Doo character', 'scrappy', 'Scrappy-Doo'],
+  ['Name a Disney villain', 'bill', undefined],
   // Guesses from the same review that must stay rejected: first names, loose single words.
   ['Name a Disney villain', 'bill', undefined],
   ['Name a member of the Justice League', 'lucas', undefined],
@@ -88,7 +106,7 @@ for (const [promptText, guess, expected] of cases) {
     console.log(`SKIP  "${promptText}" is not in the bank`);
     continue;
   }
-  if (!banks.has(prompt.id)) banks.set(prompt.id, buildLookup(await readBank(prompt.id), prompt.prompt));
+  if (!banks.has(prompt.id)) banks.set(prompt.id, buildLookup(await readBank(prompt.id), prompt.prompt, prompt));
   const lookup = banks.get(prompt.id);
   const matched = lookup.match(guess)?.[0];
   const offered = lookup.suggest(guess).choices.map(([name]) => name);
@@ -106,7 +124,7 @@ if (process.argv.includes('--all')) {
   let shared = 0;
   for (const prompt of prompts) {
     const records = await readBank(prompt.id);
-    const lookup = buildLookup(records, prompt.prompt);
+    const lookup = buildLookup(records, prompt.prompt, prompt);
     for (const record of records) {
       names += 1;
       const found = lookup.match(record[0]);

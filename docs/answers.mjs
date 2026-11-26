@@ -178,6 +178,21 @@ function surnameForms(name) {
   return forms;
 }
 
+// Fictional characters often go by their first name: "Lucas" for Lucas Sinclair, "Michael" for
+// Michael Scott. Real people do not, so this is limited to character prompts.
+const characterPrompt = /\b(?:characters?|villains?|protagonists?)\b/iu;
+const titles = new Set(['captain', 'doctor', 'dr', 'mr', 'mrs', 'ms', 'miss', 'lord', 'lady', 'king', 'queen', 'prince',
+  'princess', 'sir', 'dame', 'uncle', 'aunt', 'auntie', 'professor', 'general', 'agent', 'officer', 'saint', 'st',
+  'father', 'mother', 'sister', 'brother', 'count', 'baron', 'chief', 'commander', 'admiral', 'major', 'colonel', 'little',
+  'big', 'old', 'young', 'the', 'el', 'la', 'le', 'mister', 'madame', 'master', 'lieutenant', 'sergeant', 'detective']);
+
+function firstNameForms(name) {
+  const words = name.replace(/\s*\([^)]*\)/gu, '').trim().split(/[\s-]+/u);
+  if (words.length < 2 || !words.every((word) => /^\p{Lu}/u.test(word) || nameParticles.has(word.toLowerCase()))) return [];
+  const first = words[0].replace(/[.,]$/u, '');
+  return first.length >= 3 && !titles.has(first.toLowerCase()) && !/\d/u.test(first) ? [first] : [];
+}
+
 // Bounded edit distance with support for an adjacent transposition.
 function editDistance(guess, candidate, limit, rows) {
   let [earlier, previous, current] = rows;
@@ -222,7 +237,8 @@ const kindWords = new Set([
 function stemWord(word) {
   let stem = word;
   if (stem.length > 4 && stem.endsWith('ies')) return `${stem.slice(0, -3)}y`;
-  if (stem.length > 4) stem = stem.replace(/(?:ing|ed|es)$/u, '');
+  // "-es" is only an ending after a hissing sound ("boxes"), so "tortoises" meets "tortoise".
+  if (stem.length > 4) stem = stem.replace(/(?:ing|ed|(?<=ch|sh|x|z|ss)es)$/u, '');
   if (stem.length > 3) stem = stem.replace(/s$/u, '');
   if (stem.length > 3) stem = stem.replace(/e$/u, '');
   return stem.length > 2 ? stem.replace(/([^aeiou])\1$/u, '$1') : stem;
@@ -240,13 +256,25 @@ export function hasSpellingRule(prompt) {
   return /\b(?:letters?|syllables?|spelled|spelling|one-word|rhymes?|prefix|suffix|anagram|starts? with|ends? (?:with|in)|in (?:its|the) name)\b/iu.test(prompt);
 }
 
-export function buildLookup(answers, prompt) {
+// Prompts about things with varieties, where a base answer such as Turkey can stand for the
+// varieties the bank lists ("Broad-breasted White turkey").
+const baseCategories = new Set(['Animals & Nature', 'Food & Drink', 'Objects, Tools & Materials']);
+// A base answer scores one tier below its best-known variety, and at most Schooler, since the
+// plain name is the obvious way to say it.
+const tierBelow = new Map([[100, [30, 'schooler']], [85, [30, 'schooler']], [60, [30, 'schooler']],
+  [30, [10, 'plankton']], [15, [10, 'plankton']], [10, [10, 'plankton']]]);
+
+// A "word" with no letters or digits, such as the "///" in "Apple ///".
+const symbolWord = /(?:^|\s)[^\p{L}\p{N}\s]+(?:\s|$)/u;
+
+export function buildLookup(answers, prompt, { category } = {}) {
   const exact = new Map();
   const unique = new Map();
   const aliases = new Map();
   const contextual = new Map();
   const grammatical = new Map();
   const surnames = new Map();
+  const firstNames = new Map();
   let spelling;
 
   for (const entry of answers) {
@@ -255,13 +283,20 @@ export function buildLookup(answers, prompt) {
     if (!previous || previous[1] < entry[1]) exact.set(key, entry);
   }
   const labels = labelsIn(prompt);
+  const typedExactly = [];
   const allowInflection = labels.some((label) => inflectedCategories.has(label)) && !hasSpellingRule(prompt);
   const allowSurnames = isPersonPrompt(prompt);
+  const allowFirstNames = allowSurnames && characterPrompt.test(prompt);
   for (const [name, entry] of exact) {
     const folded = looseKey(name);
     // Names that differ only in punctuation or accents are one answer; keep the better score.
     if (folded && !(unique.get(folded)?.[1] >= entry[1])) unique.set(folded, entry);
     for (const alternate of [...entry[3] ?? [], ...abbreviationForms(entry[0])]) {
+      // "Apple ///" folds to "apple", so it only counts when typed as it is.
+      if (symbolWord.test(alternate)) {
+        typedExactly.push([exactKey(alternate), entry]);
+        continue;
+      }
       addUnique(aliases, looseKey(alternate), entry);
       if (/^the /iu.test(alternate) && looseKey(alternate.slice(4)).length >= 2) addUnique(aliases, looseKey(alternate.slice(4)), entry);
     }
@@ -281,11 +316,18 @@ export function buildLookup(answers, prompt) {
         if (key.length >= 3) addUnique(surnames, key, entry);
       }
     }
+    // Only well-known characters go by a first name alone; otherwise any common first name would
+    // find some Deep Cut.
+    if (allowFirstNames && entry[1] <= 30) {
+      for (const form of firstNameForms(entry[0])) addUnique(firstNames, looseKey(form), entry);
+    }
   }
+
+  for (const [key, entry] of typedExactly) if (!exact.has(key)) exact.set(key, entry);
 
   // Every answer this spelling could mean, from the most to the least direct reading.
   function resolveVariant(key) {
-    for (const index of [unique, aliases, contextual, grammatical, surnames]) {
+    for (const index of [unique, aliases, contextual, grammatical, surnames, firstNames]) {
       if (index.has(key)) return entriesOf(index.get(key));
     }
     return [];
@@ -323,15 +365,23 @@ export function buildLookup(answers, prompt) {
   // "IWC" for IWC Schaffhausen, "Tony Stark" for Iron Man, "red fox" for Fox.
   // Prompts that judge spelling skip it, since a partial name may not follow the rule.
   const allowWords = !hasSpellingRule(prompt);
+  // Branded items are named things, not varieties: "Mac" is not a menu item.
+  const allowBases = allowWords && !allowSurnames && baseCategories.has(category) && !/\bbrand/iu.test(prompt);
+  // Words that name the prompt's subject, such as "turtle" in "a type of turtle or tortoise".
+  const subjectWords = new Set(labels.flatMap(wordsOf));
   let wordIndex;
   let spellingWords;
+  let bases;
   function buildWordIndex() {
     wordIndex = new Map();
     spellingWords = new Map();
+    bases = new Map();
     for (const entry of exact.values()) {
+      if (allowBases) addBases(entry);
       for (const spelling of [entry[0], ...(entry[3] ?? [])]) {
         const words = wordsOf(spelling);
-        if (!words.length) continue;
+        // "Apple ///" would read as just "apple", which says nothing about Apple III.
+        if (!words.length || symbolWord.test(spelling)) continue;
         const key = words.slice().sort().join(' ');
         if (!spellingWords.has(key)) spellingWords.set(key, new Set());
         spellingWords.get(key).add(entry);
@@ -341,6 +391,45 @@ export function buildLookup(answers, prompt) {
         }
       }
     }
+    for (const [key, base] of bases) {
+      // A base needs two varieties, and the bank must not already have it under its own name.
+      if (base.entries.size < 2 || candidates(base.name).length) {
+        bases.delete(key);
+        continue;
+      }
+      const best = Math.min(...[...base.entries].map((entry) => entry[1]));
+      const [score, tier] = tierBelow.get(best) ?? [10, 'plankton'];
+      base.entry = [base.name, score, tier];
+    }
+  }
+
+  // The last one or two words of a longer name: "turkey" in "Broad-breasted White turkey".
+  function addBases(entry) {
+    const written = entry[0].replace(/\([^)]*\)/gu, ' ').trim().split(/[\s\-–—]+/u);
+    const words = wordsOf(entry[0]);
+    for (let size = 1; size <= 2 && size < words.length; size++) {
+      const tail = words.slice(-size);
+      if (tail.some((word) => word.length < 3 || /\d/u.test(word)) || tail.every((word) => kindWords.has(word) || subjectWords.has(word))) break;
+      const key = tail.join(' ');
+      if (!bases.has(key)) {
+        const name = written.slice(-size).join(' ');
+        bases.set(key, { name: name[0].toUpperCase() + name.slice(1), entries: new Set() });
+      }
+      bases.get(key).entries.add(entry);
+    }
+  }
+
+  // A base answer, or a variety of one the bank does not list: "wild turkey" for Turkey.
+  function baseCandidate(text) {
+    if (!allowBases) return undefined;
+    if (!wordIndex) buildWordIndex();
+    const words = wordsOf(text);
+    for (let size = Math.min(2, words.length); size >= 1; size--) {
+      if (words.length - size > 3) continue;
+      const base = bases.get(words.slice(-size).join(' '));
+      if (base) return base.entry;
+    }
+    return undefined;
   }
 
   function wordCandidates(text) {
@@ -357,6 +446,9 @@ export function buildLookup(answers, prompt) {
     const [rarest] = words.slice().sort((first, second) => (wordIndex.get(first)?.length ?? 0) - (wordIndex.get(second)?.length ?? 0));
     const longer = new Set();
     const [single] = words.length === 1 ? words : [];
+    const typed = exactKey(text).replace(/[^\p{L}\p{N}]/gu, '');
+    // A word that turns up in several answers ("Japan" in 62 video game titles) names none of them.
+    const distinctive = single && new Set((wordIndex.get(single) ?? []).map(([entry]) => entry)).size === 1;
     for (const [entry] of wordIndex.get(rarest) ?? []) {
       if (longer.has(entry)) continue;
       const spellings = [entry[0], ...(entry[3] ?? [])];
@@ -364,9 +456,14 @@ export function buildLookup(answers, prompt) {
         const name = wordsOf(spelling);
         if (!words.every((word) => name.includes(word))) return false;
         if (!single) return true;
-        const abbreviation = spelling.split(/[^\p{L}\p{N}]+/u).some((part) => /^\p{Lu}{2,5}$/u.test(part) && part.toLowerCase() === single);
-        return abbreviation || (name.length === 2 && single.length >= 5 && !kindWords.has(single) &&
-          (!allowSurnames || name[1] === single));
+        const abbreviation = spelling.split(/[^\p{L}\p{N}]+/u).some((part) => /^\p{Lu}{2,5}$/u.test(part) && part.toLowerCase() === typed);
+        if (abbreviation) return true;
+        if (!distinctive || name.length !== 2 || single.length < 5 || kindWords.has(single)) return false;
+        // The last word names the thing ("Rhapsody"); the first word only describes it ("soccer" is
+        // not Soccer field) unless the last word just says what kind of thing it is ("Galapagos"
+        // for Galapagos tortoise). On prompts about people the word must be the last name.
+        const other = name[0] === single ? name[1] : name[0];
+        return name[1] === single || (!allowSurnames && (kindWords.has(other) || subjectWords.has(other)));
       });
       if (fits) longer.add(entry);
     }
@@ -405,7 +502,7 @@ export function buildLookup(answers, prompt) {
       const found = candidates(text);
       if (found.length) return found.length === 1 ? found[0] : standout(found);
       const { entries } = wordCandidates(text);
-      return entries.length === 1 ? entries[0] : undefined;
+      return entries.length === 1 ? entries[0] : baseCandidate(text);
     },
 
     // Answers to offer when a guess is close or could mean several answers.
@@ -436,6 +533,14 @@ export function buildLookup(answers, prompt) {
     if (guess.length < 4 || guess.length > 48) return [];
     if (!spelling) {
       spelling = Array.from({ length: 51 }, () => []);
+      if (allowBases) {
+        if (!wordIndex) buildWordIndex();
+        for (const base of bases.values()) {
+          const key = looseKey(base.name);
+          if (key.length >= 3 && key.length <= 50) spelling[key.length].push([key, base.entry]);
+        }
+      }
+      // First names are left out: short and common, a slip in one too often lands on another name.
       for (const index of [unique, aliases, contextual, surnames]) {
         for (const [key, value] of index) {
           if (index !== unique && unique.has(key)) continue;

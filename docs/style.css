@@ -85,6 +85,9 @@ main {
   line-height: 1.08;
   color: var(--text);
 }
+.depth-readout { transition: opacity .2s; }
+/* A tier label passing under the readout takes priority over it. */
+.depth-readout.yielding { opacity: .12; }
 .depth-readout .unit { font-size: .65em; }
 .zone { display: block; margin-top: 6px; font-size: .75rem; color: var(--muted); }
 .category, .count-in, .timer, .notice, .tier-label, .depth-gain { font-family: var(--mono); }
@@ -229,7 +232,15 @@ progress::-moz-progress-bar { background: var(--accent); border-radius: 3px; }
 #results { max-width: 680px; }
 #summary { font-size: 1.15rem; color: var(--muted); }
 .result-actions { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 16px; }
-.dive-log { list-style: none; margin: 24px 0 0; padding: 0; text-align: left; }
+.dive-log {
+  list-style: none;
+  margin: 24px 0 0;
+  padding: 0;
+  text-align: left;
+  /* Keeps the list readable over the reef and seafloor. */
+  background: #031a29b8;
+  backdrop-filter: blur(3px);
+}
 .log-item { border-bottom: 1px solid #d1f3f750; }
 .log-item:first-child { border-top: 1px solid #d1f3f750; }
 .log-question {
@@ -341,6 +352,9 @@ body.diving main > .screen { visibility: hidden; }
   line-height: 1.3;
   text-shadow: 0 1px 3px #00121d, 0 0 10px #00121d;
 }
+.fact { transition: opacity .25s; }
+/* A fact that would run into the text on screen steps aside. */
+.fact.blocked { opacity: 0; }
 .fact::before { content: ""; flex: none; width: 22px; border-top: 1px solid currentColor; opacity: .55; }
 .fact.right { left: auto; right: calc(4vw + 44px); flex-direction: row-reverse; text-align: right; }
 .fact.zone-name { color: #a6ece8d0; font-size: .82rem; letter-spacing: .28em; text-transform: uppercase; }
@@ -403,7 +417,10 @@ body.diving main > .screen { visibility: hidden; }
 .dive-pill::after { content: " ▼"; font-size: .7em; }
 @media (max-width: 550px) {
   .fact { max-width: 46vw; font-size: .66rem; }
-  .fact::before { width: 10px; }
+  .fact { transition: opacity .25s; }
+/* A fact that would run into the text on screen steps aside. */
+.fact.blocked { opacity: 0; }
+.fact::before { width: 10px; }
   .fact.zone-name { font-size: .7rem; letter-spacing: .18em; }
   .silhouette { width: calc(var(--art-width) * 2px); }
 }

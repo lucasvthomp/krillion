@@ -1,7 +1,7 @@
 import { createOcean } from './ocean.mjs?v=8';
 import { facts } from './landmarks.mjs?v=3';
-import { createDiveOverlay } from './dive-overlay.mjs?v=2';
-import { buildLookup, exactKey } from './answers.mjs?v=17';
+import { createDiveOverlay } from './dive-overlay.mjs?v=3';
+import { buildLookup, exactKey } from './answers.mjs?v=18';
 import { renderDiveLog } from './dive-log.mjs?v=16';
 import { setupMultiplayer } from './multiplayer.mjs?v=18';
 import { reportMiss } from './miss-log.mjs?v=1';
@@ -11,6 +11,7 @@ const readingSeconds = 3;
 const roundSeconds = 25;
 const maxScore = roundsPerGame * 100;
 const bestKey = 'krillion.best.v1';
+const seenKey = 'krillion.seen.v1';
 const rarity = {
   plankton: ['Plankton', 10],
   tooclever: ['Too Clever', 15],
@@ -49,7 +50,7 @@ const editSuggestion = byId('edit-suggestion');
 const reveal = byId('reveal');
 const roomWaiting = byId('room-waiting');
 const diveLayer = byId('dive-layer');
-const overlay = createDiveOverlay(diveLayer, facts, rarity);
+const overlay = createDiveOverlay(diveLayer, facts, rarity, { readout: byId('depth-readout') });
 // The depth readout counts up as the ocean dives, and the overlay labels what is at each depth.
 const ocean = createOcean(byId('ocean'), {
   onDepth(depth) {
@@ -78,7 +79,7 @@ let roomGuess;
 let roomPending = false;
 
 function bankUrl(file) {
-  return new URL(`./bank/${file}?v=20`, import.meta.url);
+  return new URL(`./bank/${file}?v=21`, import.meta.url);
 }
 
 async function loadIndex() {
@@ -87,21 +88,47 @@ async function loadIndex() {
   const { prompts } = await response.json();
   const groups = new Map();
   for (const prompt of prompts) {
-    const key = exactKey(prompt.prompt).replace(/[‘’]/gu, "'");
+    // The same wording with different quote marks is the same prompt.
+    const key = exactKey(prompt.prompt).replace(/[‘’]/gu, "'").replace(/["“”]/gu, '');
     if (!groups.has(key)) groups.set(key, []);
     groups.get(key).push(prompt);
   }
   if (groups.size < roundsPerGame) throw new Error('The prompt bank has too few distinct prompts.');
-  promptGroups = [...groups.values()];
+  promptGroups = [...groups];
 }
 
-function drawPrompts() {
-  const pool = [...promptGroups];
-  for (let index = 0; index < roundsPerGame; index++) {
-    const selected = index + Math.floor(Math.random() * (pool.length - index));
-    [pool[index], pool[selected]] = [pool[selected], pool[index]];
+function readSeen() {
+  try {
+    const seen = JSON.parse(localStorage.getItem(seenKey) ?? '[]');
+    return Array.isArray(seen) ? seen : [];
+  } catch {
+    return [];
   }
-  return pool.slice(0, roundsPerGame).map((group) => group[Math.floor(Math.random() * group.length)]);
+}
+
+function takeRandom(pool, count) {
+  const items = [...pool];
+  for (let index = 0; index < count; index++) {
+    const selected = index + Math.floor(Math.random() * (items.length - index));
+    [items[index], items[selected]] = [items[selected], items[index]];
+  }
+  return items.slice(0, count);
+}
+
+// Prompts work like a shuffled deck: one already played comes back only after every other prompt
+// has had a turn. The deck lives in this browser, and in a room the host's deck deals.
+function drawPrompts() {
+  let seen = new Set(readSeen());
+  let picks = takeRandom(promptGroups.filter(([key]) => !seen.has(key)), roundsPerGame);
+  if (picks.length < roundsPerGame) {
+    // The deck ran out: finish it, then deal the rest of this game from a fresh shuffle.
+    const dealt = new Set(picks.map(([key]) => key));
+    picks = [...picks, ...takeRandom(promptGroups.filter(([key]) => !dealt.has(key)), roundsPerGame - picks.length)];
+    seen = new Set();
+  }
+  for (const [key] of picks) seen.add(key);
+  try { localStorage.setItem(seenKey, JSON.stringify([...seen])); } catch { /* Browser storage is optional. */ }
+  return picks.map(([, group]) => group[Math.floor(Math.random() * group.length)]);
 }
 
 async function loadBankAnswers({ id, count }) {
@@ -121,7 +148,7 @@ async function loadRound(prompt) {
   return {
     ...prompt,
     answers,
-    lookup: buildLookup(answers, prompt.prompt),
+    lookup: buildLookup(answers, prompt.prompt, { category: prompt.category }),
   };
 }
 

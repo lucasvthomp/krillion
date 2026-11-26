@@ -103,7 +103,23 @@ function place(item, top) {
   item.style.transform = `translate3d(0, ${top.toFixed(1)}px, 0) translateY(-50%)`;
 }
 
-export function createDiveOverlay(layer, facts, rarity) {
+const gap = 10;
+const overlaps = (box, others) => others.some((other) => box.left < other.right + gap &&
+  box.right > other.left - gap && box.top < other.bottom + gap && box.bottom > other.top - gap);
+const boxesOf = (items) => items.map((item) => item.getBoundingClientRect())
+  .filter((box) => box.width > 0 && box.height > 0);
+
+// What a fact label must not cover: the text of the screen being shown, and the depth readout.
+// During a dive the screens are invisible, so only the readout counts.
+function screenText(readout) {
+  const shown = document.body.classList.contains('diving') ? [] : [...document.querySelectorAll(
+    'main > .screen:not([hidden]) > :not([hidden]), main > .screen:not([hidden]) > div:not([hidden]) > :not([hidden])')]
+    // A wrapper div spans the whole column, so its children stand in for it.
+    .filter((item) => !(item.tagName === 'DIV' && item.parentElement.matches('.screen')));
+  return boxesOf(readout && !readout.hidden ? [...shown, readout] : shown);
+}
+
+export function createDiveOverlay(layer, facts, rarity, { readout } = {}) {
   const factItems = facts.map(({ depth, side, sprite, text, zone }) => {
     const item = element(`fact ${side}${zone ? ' zone-name' : ''}`);
     // Shapes are dark in sunlit water and pale in the dark, so they read as part of the water.
@@ -129,11 +145,14 @@ export function createDiveOverlay(layer, facts, rarity) {
     const height = layer.clientHeight;
     const at = (metres) => surfaceY + (metres - camera) * pxPerMetre;
     const visible = (top) => top > -80 && top < height + 80;
+    const blockers = screenText(readout);
 
     for (const [metres, item] of factItems) {
       const top = at(metres);
       item.hidden = !visible(top);
-      if (!item.hidden) place(item, top);
+      if (item.hidden) continue;
+      place(item, top);
+      item.classList.toggle('blocked', overlaps(item.getBoundingClientRect(), blockers));
     }
 
     const first = Math.max(0, Math.ceil((camera - surfaceY / pxPerMetre) / 50) * 50);
@@ -153,6 +172,11 @@ export function createDiveOverlay(layer, facts, rarity) {
     for (const line of lines) {
       line.item.classList.toggle('lit', depth >= line.metres - .5);
       place(line.item, at(line.metres));
+    }
+    // Tier labels take priority: the depth readout fades while one passes beneath it.
+    if (readout) {
+      const labels = lines.length ? boxesOf(lines.map((line) => line.label)) : [];
+      readout.classList.toggle('yielding', !readout.hidden && overlaps(readout.getBoundingClientRect(), labels));
     }
     if (!tag.hidden) place(tag, at(depth));
   }
@@ -174,9 +198,9 @@ export function createDiveOverlay(layer, facts, rarity) {
       lines = Object.entries(rarity).map(([key, [label, points]]) => {
         const item = element('tier-line');
         item.dataset.tier = key;
-        item.append(element('line-label', `${label} · ${points}`));
+        const tierLabel = item.appendChild(element('line-label', `${label} · ${points}`));
         layer.insertBefore(item, ruler);
-        return { tier: key, metres: from + points * 10, item };
+        return { tier: key, metres: from + points * 10, item, label: tierLabel };
       });
       // The answer keeps its own tier's colour for the whole dive.
       pill.textContent = `“${name}”`;
@@ -188,6 +212,9 @@ export function createDiveOverlay(layer, facts, rarity) {
     endDive() {
       tag.hidden = true;
     },
-    clearLines,
+    clearLines() {
+      clearLines();
+      readout?.classList.remove('yielding');
+    },
   };
 }

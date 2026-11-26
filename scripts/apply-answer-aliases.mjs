@@ -17,7 +17,7 @@ const snapshotUrl = new URL('answer-aliases.json.gz', import.meta.url);
 const indexUrl = new URL('index.json', bank);
 const index = JSON.parse(await readFile(indexUrl, 'utf8'));
 const { prompts } = index;
-const tiersByPoints = { 10: 'plankton', 30: 'schooler', 60: 'rare', 85: 'deepcut', 100: 'krillion' };
+const tiersByPoints = { 10: 'plankton', 15: 'tooclever', 30: 'schooler', 60: 'rare', 85: 'deepcut', 100: 'krillion' };
 
 let wikidata = { names: {}, items: {}, types: {} };
 try {
