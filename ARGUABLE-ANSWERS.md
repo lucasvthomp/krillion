@@ -6,7 +6,7 @@ These are the ones it accepted leniently. To veto one, delete it from
 `node scripts/report-arguable-answers.mjs`. A veto removes it from the next full rebuild; to drop it from the
 current banks straight away, remove the answer from its bank file as well.
 
-282 answers.
+409 answers.
 
 | Prompt | Answer | Points | Why it is arguable |
 | --- | --- | ---: | --- |
@@ -292,3 +292,130 @@ current banks straight away, remove the answer from its bank file as well.
 | Name a Sesame Street character | Kermit the Frog | 60 | A Muppet who appeared on Sesame Street |
 | Name an Apple device | Apple Card | 60 | A credit card |
 | Name an Apple device | Beats headphones | 30 | Beats is a brand Apple owns |
+| Name a capital city in the Americas | Plymouth | 60 | Montserrat's official capital, abandoned after an eruption |
+| Name a capital city in the Americas | Montgomery | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Juneau | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Phoenix | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Little Rock | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Sacramento | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Denver | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Hartford | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Dover | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Tallahassee | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Atlanta | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Honolulu | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Boise | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Springfield | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Indianapolis | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Des Moines | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Topeka | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Frankfort | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Baton Rouge | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Augusta | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Annapolis | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Boston | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Lansing | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Saint Paul | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Jackson | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Jefferson City | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Helena | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Lincoln | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Carson City | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Concord | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Trenton | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Santa Fe | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Albany | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Raleigh | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Bismarck | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Columbus | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Oklahoma City | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Salem | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Harrisburg | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Providence | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Columbia | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Pierre | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Nashville | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Austin | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Salt Lake City | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Montpelier | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Richmond | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Olympia | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Charleston | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Madison | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Cheyenne | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Toronto | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Quebec City | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Victoria | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Edmonton | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Winnipeg | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Regina | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Halifax | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Fredericton | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Charlottetown | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Whitehorse | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Yellowknife | 30 | A state or provincial capital, not a national one |
+| Name a capital city in the Americas | Iqaluit | 30 | A state or provincial capital, not a national one |
+| Name a fictional robot | Evangelion | 30 | A biological mecha rather than a robot |
+| Name an ancient Greek philosopher | Marcus Aurelius | 30 | A Roman emperor who wrote Stoic philosophy in Greek |
+| Name an ancient Greek philosopher | Seneca | 30 | A Roman Stoic |
+| Name an ancient Greek philosopher | Euclid | 30 | A mathematician |
+| Name a sport played over a net | Netball | 30 | Players shoot into a netted hoop rather than over a net |
+| Name a country with an official state religion | Argentina | 30 | Its constitution supports the Catholic Church without making it official |
+| Name a country with an official state religion | Armenia | 60 | The Armenian Apostolic Church is the national church |
+| Name a deep fried food | Pierogi | 30 | Usually boiled, then pan-fried |
+| Name a member of the Beatles | Billy Preston | 60 | Called the "fifth Beatle" for his work with them |
+| Name a country that has territories or dependencies | South Africa | 60 | The Prince Edward Islands are part of its territory |
+| Name a country that has territories or dependencies | Fiji | 60 | Rotuma is a dependency |
+| Name a type of gun (types and models both count) | Flamethrower | 30 | A weapon, not strictly a gun |
+| Name a type of gun (types and models both count) | Rocket launcher | 30 | A launcher rather than a gun |
+| Name a type of gun (types and models both count) | Howitzer | 30 | Artillery |
+| Name a type of gun (types and models both count) | Hot glue gun | 30 | A tool |
+| Name a type of gun (types and models both count) | Crossbow | 30 | A bow rather than a gun |
+| Name a country that was an ally of the Soviet Union during the Cold War | Finland | 30 | Neutral, but bound to the USSR by a friendship treaty |
+| Name a language that is an official language of a European country | Flemish | 60 | A variety of Dutch rather than a separate language |
+| Name an astronaut or cosmonaut | Laika | 30 | A dog sent into orbit |
+| Name an astronaut or cosmonaut | Ham the Chimp | 30 | A chimpanzee sent into space |
+| Name a country smaller than Belgium (by area) | Hong Kong | 60 | A region of China, not a country |
+| Name a country smaller than Belgium (by area) | Macau | 60 | A region of China, not a country |
+| Name a country smaller than Belgium (by area) | Puerto Rico | 60 | A US territory, not a country |
+| Name a country smaller than Belgium (by area) | Bermuda | 60 | A British territory, not a country |
+| Name a country smaller than Belgium (by area) | Gibraltar | 60 | A British territory, not a country |
+| Name a European country | Czechoslovakia | 30 | No longer exists |
+| Name a European country | Yugoslavia | 30 | No longer exists |
+| Name an American fast food chain | Denny's | 30 | A sit-down diner chain |
+| Name an American fast food chain | Applebee's | 30 | A sit-down restaurant chain |
+| Name a palindrome that's a real English dictionary word | A | 30 | A one-letter word |
+| Name a palindrome that's a real English dictionary word | I | 30 | A one-letter word |
+| Name a type of cookie (brands don't count) | Graham cracker | 30 | A cracker |
+| Name a type of cookie (brands don't count) | Blondie | 30 | A bar rather than a cookie |
+| Name a type of engineering | Nanotechnology | 30 | A field rather than an engineering discipline |
+| Name a unit of distance | Football field | 30 | An informal measure |
+| Name a unit of distance | Marathon | 30 | A race distance |
+| Name a medical instrument | Bandage | 30 | A supply rather than an instrument |
+| Name a medical instrument | Gauze | 30 | A supply rather than an instrument |
+| Name a medical instrument | Cast | 30 | A supply rather than an instrument |
+| Name a medical instrument | Crutches | 30 | A mobility aid |
+| Name a mammal with stripes | Piglet | 60 | Wild boar piglets are striped |
+| Name a style or cut of jeans | Overalls | 30 | A garment rather than a cut |
+| Name a style or cut of jeans | Levi's 501 | 60 | A model rather than a style |
+| Name a style or cut of jeans | Jorts | 30 | Shorts rather than jeans |
+| Name a type of home or dwelling | Hostel | 30 | Lodging rather than a home |
+| Name a type of home or dwelling | Hotel | 30 | Lodging rather than a home |
+| Name a type of home or dwelling | Motel | 30 | Lodging rather than a home |
+| Name a type of home or dwelling | Bivouac | 60 | A temporary camp |
+| Name a country whose name starts with T | Transnistria | 60 | A breakaway state, not recognised |
+| Name a country where English is an official language | Hong Kong | 60 | A region of China, not a country |
+| Name a country where English is an official language | Puerto Rico | 30 | A US territory, not a country |
+| Name a country where English is an official language | Gibraltar | 60 | A British territory, not a country |
+| Name a country where English is an official language | Bermuda | 60 | A British territory, not a country |
+| Name an animal that lives in the Arctic or Antarctica | Sea otter | 60 | Lives in subarctic waters |
+| Name a Mario character | Super Mushroom | 30 | An item rather than a character |
+| Name a sport played with a stick, bat, or club | Badminton | 30 | Played with a racket |
+| Name a sport played with a stick, bat, or club | Squash | 30 | Played with a racket |
+| Name a sport played with a stick, bat, or club | Racquetball | 30 | Played with a racket |
+| Name a sport played with a stick, bat, or club | Pickleball | 30 | Played with a paddle |
+| Name a sport played with a stick, bat, or club | Padel | 30 | Played with a racket |
+| Name a sport played with a stick, bat, or club | Quidditch | 30 | Played on broomsticks |
+| Name a type of bicycle | Peloton | 30 | A brand of exercise bike |
+| Name a country that borders Brazil | French Guiana | 60 | Part of France |
+| Name a city in California | Discovery Bay | 85 | A census-designated place rather than an incorporated city |

@@ -28,7 +28,8 @@ function looseKey(text) {
 function labelsIn(prompt) {
   const wording = exactKey(prompt).match(/^(?:name|give|list|identify) (?:a |an |one |any |the )?(.+)$/u)?.[1];
   if (!wording) return [];
-  const subject = wording.replace(/^(?:\p{L}+ )?(?:type|kind|variety|style|form|species|breed|shade|colou?r|flavou?r|brand|genre) of /u, '')
+  // "a style or cut of jeans" is about jeans, like "a type of jeans".
+  const subject = wording.replace(/^(?:\p{L}+ )?(?:type|kind|variety|style|form|species|breed|shade|colou?r|flavou?r|brand|genre|cut)(?: or (?:type|kind|variety|style|form|cut|brand|shade))? of /u, '')
     .split(/\s+(?:that|which|whose|with|without|in|from|by|of|for|about|found|used|anywhere|before|after|during|where|when|containing|people|you|made|served|played|known|starring|featuring)\b|[()[\];:?!]/u, 1)[0]
     .trim().replace(/\.$/u, '');
   const labels = new Set();
