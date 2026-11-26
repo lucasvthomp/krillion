@@ -72,6 +72,14 @@ Real answers found in the sheet go in [the reviewed additions](scripts/answer-mi
 
 Some misses showed that a whole bank was far from complete. "Name a country that no longer exists" had 74 answers, for example. An audit of open-ended prompts with small banks found more, such as famous paintings, scientists, poets, arcade games, western movies, gulfs and bays, Caribbean islands and cryptids. [The catalog script](scripts/fetch-missed-catalogs.mjs) fills each of these from a Wikidata query, keeping items covered on enough Wikimedia sites. It saves them to [the missed catalogs](scripts/answer-missed-catalogs.json), which the apply script adds like reviewed additions. A new answer is Rare when it is well covered and Deep Cut otherwise. Run `node scripts/fetch-missed-catalogs.mjs` to refresh them, or pass prompt texts to refresh only those. A catalog whose query fails keeps its previous answers.
 
+### Guess sweep
+
+The form only catches misses that someone has already typed, so every prompt was also tested with guesses a player would realistically try. [The guess list](scripts/answer-guess-sweep.txt) has one line per prompt: the prompt ID, then the guesses, separated by `|`. They include common answers, nicknames, abbreviations, plurals and typical misspellings. Run `node scripts/check-guess-sweep.mjs FIRST LAST`, for example `0646 0710`, to list the guesses each prompt rejects.
+
+Real answers among the rejected guesses go in [the guess additions](scripts/answer-guess-additions.txt), one line per prompt in the form `ID|Name@points=alternate=alternate|...`. The points (10, 15, 30, 60, 85 or 100) apply only when the name is new to the bank and default to 30; otherwise the alternate names are added to the existing answer. A line applies to every prompt with the same wording. The apply script reads this file along with the reviewed additions.
+
+Answers that are defensible but debatable end with `!reason` and usually score 10 or 15, such as Turkey for "birds that can't fly" or Western Sahara where a country is asked for. Run `node scripts/report-arguable-answers.mjs` to list them all in [ARGUABLE-ANSWERS.md](ARGUABLE-ANSWERS.md) for review. To veto one, delete it from the additions file and run `node scripts/remove-answers.mjs ID "Name"` for each prompt that has it.
+
 To rebuild the static answer files after updating the dataset, run the following from the repository root.
 
 ```powershell

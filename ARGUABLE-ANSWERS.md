@@ -6,7 +6,7 @@ These are the ones it accepted leniently. To veto one, delete it from
 `node scripts/report-arguable-answers.mjs`. A veto removes it from the next full rebuild; to drop it from the
 current banks straight away, remove the answer from its bank file as well.
 
-1072 answers.
+1127 answers.
 
 | Prompt | Answer | Points | Why it is arguable |
 | --- | --- | ---: | --- |
@@ -1082,3 +1082,58 @@ current banks straight away, remove the answer from its bank file as well.
 | Name a fruit or vegetable that starts with a vowel | Amaranth | 15 | grown for grain and greens |
 | Name a fruit or vegetable that starts with a vowel | Almond | 15 | a nut rather than a fruit |
 | Name a fruit or vegetable that starts with a vowel | Acorn | 15 | a nut rather than a fruit |
+| Name a location from Star Wars, Lord of the Rings, Fortnite, SpongeBob, or a Disney/Pixar movie (real places don't count) | Wakanda | 15 | a Marvel location rather than a Disney or Pixar one |
+| Name a country where soccer isn't the most watched sport | Puerto Rico | 15 | a US territory rather than a country |
+| Name a protagonist from an anime or animated TV show (1,000+ votes on IMDb or listed on MAL) | Satoru Gojo | 15 | a main character but not the protagonist |
+| Name an awards show | Cannes Film Festival | 15 | a film festival that gives awards |
+| Name an awards show | Venice Film Festival | 15 | a film festival that gives awards |
+| Name an awards show | Berlin International Film Festival | 15 | a film festival that gives awards |
+| Name a country whose flag includes at least one star | Puerto Rico | 15 | a US territory rather than a country |
+| Name a country whose flag includes at least one star | European Union | 10 | a union rather than a country |
+| Name a country whose English name contains J, K, or V | Yugoslavia | 15 | no longer exists |
+| Name a country whose English name contains J, K, or V | Hong Kong | 15 | a Chinese special region rather than a country |
+| Name a movie starring Samuel L. Jackson | Sea of Love | 15 | a small role |
+| Name a character from Aladdin | Cassim | 15 | from the sequel Aladdin and the King of Thieves |
+| Name a character from Aladdin | Abis Mal | 15 | from the sequel The Return of Jafar |
+| Name a character from Aladdin | Mozenrath | 15 | from the TV series |
+| Name a character from Aladdin | Dalia | 15 | from the 2019 remake |
+| Name a character from Aladdin | Prince Anders | 15 | from the 2019 remake |
+| Name a famous movie monster | Zombie | 15 | a kind of monster rather than one monster |
+| Name a famous movie monster | Vampire | 10 | a kind of monster rather than one monster |
+| Name a famous movie monster | Bigfoot | 15 | a legend more than a movie monster |
+| Name a famous movie monster | Loch Ness Monster | 15 | a legend more than a movie monster |
+| Name a famous movie monster | Medusa | 15 | from myth, though in many films |
+| Name a famous movie monster | Cyclops | 15 | from myth, though in many films |
+| Name a famous movie monster | Demogorgon | 15 | from a TV series |
+| Name a famous movie monster | Kaiju | 15 | a kind of monster rather than one monster |
+| Name a western movie | Brokeback Mountain | 15 | a romance set in the West |
+| Name a western movie | Killers of the Flower Moon | 15 | a crime drama set in the West |
+| Name a western movie | Back to the Future Part III | 15 | a sci-fi film set in the Old West |
+| Name a western movie | Once Upon a Time in Mexico | 15 | a modern action western |
+| Name a western movie | El Mariachi | 15 | a modern action western |
+| Name a western movie | Lonesome Dove | 15 | a miniseries rather than a movie |
+| Name a pitch a baseball pitcher can throw | Breaking ball | 15 | a family of pitches rather than one pitch |
+| Name a pitch a baseball pitcher can throw | Sidearm | 10 | an arm angle rather than a pitch |
+| Name a sport contested at the Winter Olympics | Ski ballet | 15 | a demonstration event in 1988 and 1992 |
+| Name a country that has won the men's soccer World Cup | United Kingdom | 10 | England won it; the UK does not field a team |
+| Name a hot drink | Broth | 15 | a hot liquid more often eaten than drunk |
+| Name a variety of wine | Bordeaux | 15 | a region rather than a variety |
+| Name a variety of wine | Burgundy | 15 | a region rather than a variety |
+| Name a variety of wine | Rioja | 15 | a region rather than a variety |
+| Name a variety of wine | Chablis | 15 | a region rather than a variety |
+| Name a variety of wine | Sancerre | 15 | a region rather than a variety |
+| Name a variety of wine | Beaujolais | 15 | a region rather than a variety |
+| Name a variety of wine | Valpolicella | 15 | a region rather than a variety |
+| Name a variety of wine | Amarone | 15 | a style rather than a variety |
+| Name a variety of wine | Soave | 15 | a region rather than a variety |
+| Name a variety of wine | Vinho Verde | 15 | a region rather than a variety |
+| Name a variety of wine | Tokaji | 15 | a region rather than a variety |
+| Name an interjection or exclamation | Lol | 15 | internet slang |
+| Name an interjection or exclamation | Sorry | 15 | an apology more than an exclamation |
+| Name an interjection or exclamation | Excuse me | 15 | a phrase more than an exclamation |
+| Name an interjection or exclamation | Bro | 15 | a form of address |
+| Name an interjection or exclamation | Whatever | 15 | a dismissive phrase |
+| Name an interjection or exclamation | Please | 10 | a polite word rather than an exclamation |
+| Name an interjection or exclamation | Wait | 10 | a verb more than an exclamation |
+| Name a country with a coastline | Scotland | 15 | a country within the UK |
+| Name a country with a coastline | Wales | 15 | a country within the UK |
