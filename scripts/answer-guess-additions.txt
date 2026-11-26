@@ -109,3 +109,61 @@
 0088|The Mandalorian=Din Djarin=Mando
 0109|Hippopotomonstrosesquippedaliophobia=Sesquipedalophobia
 0111|Merrimack=CSS Virginia
+0127|Pumpkinseed@60|Arapaima=Pirarucu|Danio@60|Shiner@60|Lungfish@60|Arowana@60|Mahseer@85|Shad@60!Lives at sea and spawns in rivers
+0128|Dim sum@30!A style of meal that includes dumplings|Pierogi=Perogies=Perogy|Coxinha@60!A croquette shaped like a dumpling|Tamale@30!Steamed corn dough rather than a dumpling|Kibbeh@60!A croquette rather than a dumpling|Gnudi@60|Chicken and dumplings@30
+0129|Super Smash Bros=Smash=Smash Brothers|Xenoblade=Xenoblade Chronicles|EarthBound=Mother|Bayonetta@60!Made by PlatinumGames; Nintendo publishes the later games
+0130|Thunder@10|Black ice@30|Microburst=Downburst|Aurora=Northern lights=Aurora borealis=Southern lights=Aurora australis|Mirage@60!An optical effect rather than weather|Fata Morgana@85!An optical effect rather than weather|Storm surge@30|Temperature inversion@60=Inversion|Humidity@30
+0132|How the Grinch Stole Christmas=The Grinch=Grinch|My Many Colored Days@85|Gerald McBoing-Boing@85
+0133|United Arab Emirates=Dubai|Afghanistan@60!Sometimes counted in the Greater Middle East|Libya@60!Usually counted as North Africa|Sudan@60!Usually counted as North Africa
+0135|Dijon mustard=Dijon|Olive oil@30!An oil rather than a condiment|Jam@30|Marmalade@30|Nutella@30!A spread rather than a condiment|Sour cream@30|Applesauce@30=Apple sauce|Marmite@60|Vegemite@60|Sauerkraut@30|Kimchi@30|Furikake@60|Za'atar@60|Steak sauce=A1=A.1.
+0136|Scarface@60|Red Hood=Jason Todd|Azrael@60!Often an antihero|Victor Zsasz=Mr. Zsasz
+0137|Vitreous humor=Vitreous|Blind spot=Optic disc|Lacrimal gland=Tear gland
+0138|Max Verstappen=Max|Lewis Hamilton=Lewis
+0139|Pet Sematary=Pet Cemetery|The Body@60=Stand by Me!A novella|Rita Hayworth and Shawshank Redemption@60=Shawshank=The Shawshank Redemption!A novella|The Mist@60!A novella|Different Seasons@60!A collection of novellas|Night Shift@60!A short-story collection|Four Past Midnight@60!A collection of novellas
+0140|Somaliland@60!Self-declared state, not recognised by the UN
+0141|Crawfish=Crayfish=Crawdad|Woodlouse@60=Roly-poly=Sowbug|Sand flea@60|Yabby@60|Water flea=Daphnia
+0142|Braising=Braise|Barbecuing=BBQ|Coddling@60|Planking@85|Charring@60|Tandoor@60!An oven rather than a method
+0143|Abe Simpson@10=Grampa=Grampa Simpson=Abraham Simpson|Krusty the Clown=Krusty|Milhouse=Milhouse Van Houten|Lunchlady Doris@60|Rainier Wolfcastle@60|Lurleen Lumpkin@85=Lurleen
+0144|Bose-Einstein condensate=BEC|Glass@60!An amorphous solid, sometimes called a state of its own|Gas=Vapor=Vapour
+0145|Running back=Halfback|Offensive tackle=Tackle|Left tackle@60|Kicker=K=Placekicker|Punter=P|Punt returner@60|Defensive back=DB|Offensive lineman=Lineman
+0146|E.T. the Extra-Terrestrial=E.T.=ET|A.I. Artificial Intelligence=AI|Poltergeist@60!Spielberg wrote and produced it; Tobe Hooper directed|Gremlins@60!Spielberg produced it|Back to the Future@60!Spielberg produced it|The Goonies@60=Goonies!Spielberg wrote the story and produced it
+0147|Lagos@30!Nigeria's capital until 1991|Dar es Salaam@60!Tanzania's former capital and seat of government
+0149|Mole=Mole poblano|Sopa de lima@60|Pescado a la talla@85|Arroz con pollo@30|Frijoles@30=Frijoles refritos|Mexican rice@30=Arroz rojo|Champurrado@60|Atole@60|Horchata@30|Concha@60!A sweet bread|Tamale=Tamalitos
+0150|Lady Tremaine=Stepmother=Wicked Stepmother|Dr. Facilier=Doctor Facilier|King Candy=Turbo|Darth Vader@30!From a franchise Disney bought|Thanos@30!From a franchise Disney bought|Beagle Boys@60
+0151|Arc@30|Hyperbola@60|Parabola@60|Lune@85|Kite=Deltoid|Trefoil@60
+0153|W. B. Yeats|Countee Cullen@85|Paul Laurence Dunbar@85
+0154|New Providence=Nassau|Saint Martin=Sint Maarten|Saint Barthelemy=St. Barts=St. Barths=St Barts|United States Virgin Islands@60=US Virgin Islands=USVI|Les Saintes@85
+0155|Diving beetle@60|Mealworm@60!The larva of a darkling beetle|Dermestid beetle@85|Cockchafer=Maybug|Furniture beetle=Woodworm|Eleodes@85
+0156|Herring under a fur coat@85|Insalata mista@85
+0157|Janeane Garofalo@60|Molly Kearney@60|Devon Walker@60
+0158|Vitamin B@10!A group of vitamins|Boron@60!Probably essential, not officially|Sulfur@60|Vitamin A=Retinol|Vitamin C=Ascorbic acid|Vitamin D=Cholecalciferol|Sodium=Salt!Salt is sodium chloride
+0159|Jacksonville Jaguars=Jags|San Francisco 49ers=Niners|Indianapolis Colts=Baltimore Colts
+0160|Goldilocks and the Three Bears=Goldilocks|Ali Baba and the Forty Thieves@60|Peter Pan@30!A novel rather than a fairy tale|Alice in Wonderland@30!A novel rather than a fairy tale|The Tortoise and the Hare@30!A fable rather than a fairy tale|Chicken Little=Henny Penny|The Little Red Hen@60!A folk tale|The Frog Prince=Princess and the Frog
+0161|Ottoman Empire=Ottoman|Confederacy=Confederate States of America|Macedon=Macedonia|Songhai Empire=Songhai|Kingdom of Zimbabwe=Great Zimbabwe|Kingdom of Navarre=Navarre|Livonia@60|Courland@85|Moldavia@60|Wallachia@60
+0162|Shetland pony=Shetland|Miniature horse=Mini horse
+0163|Miso soup=Miso|Katsu curry@30|Japanese curry@10=Kare raisu=Curry rice|Nikujaga@60|Korokke@60|Wagashi@60|Matcha@30!A drink|Wagyu@30=Kobe beef!A beef rather than a dish|Temaki@60|Okowa@85|Tofu@30!An ingredient rather than a dish
+0164|Puss in Boots=Puss|Gingerbread Man=Gingy|Arthur=Artie|Cyclops@60|Robin Hood@60|Peter Pan@60|Felicia@60|Farkle@60|Fergus@60
+0165|Space Shuttle@60=Discovery|Space Shuttle@60=Atlantis|Space Shuttle@60=Endeavour|International Space Station=ISS|Lunokhod@60|Cassini=Cassini–Huygens=Cassini-Huygens|Huygens@60|Philae@60|Hubble=Hubble Space Telescope|James Webb=James Webb Space Telescope=JWST|Sojourner@60|Phoenix@60|Mars Reconnaissance Orbiter@60=MRO|Gaganyaan@60|Planck@60
+0167|Lamb to the Slaughter@60!A short story|Charlie and the Chocolate Factory=Willy Wonka
+0168|Lobamba@60|Dar es Salaam@60!Tanzania's former capital and seat of government|Yaren@85|Lima=Lima Peru
+0169|Horned lizard=Horned toad|Glass lizard=Legless lizard|Tuatara@60!A reptile that looks like a lizard but is not one|Night lizard@60|Savannah monitor@60|Ackie monitor@85|Viviparous lizard@60=Common lizard|Shingleback@60|Goanna@30
+0170|Muffin@30!A quick bread|Kolaczki@85|Bismarck@60|Funnel cake@30|Youtiao@60|Turnover=Chausson aux pommes|Spanakopita@60!A savoury pie
+0171|Speakerboxxx/The Love Below=Speakerboxxx|The Miseducation of Lauryn Hill=The Miseducation
+0172|Adrenaline=Epinephrine|Thyroxine=T4|Growth hormone=HGH|Vasopressin=Antidiuretic hormone=ADH|Erythropoietin=EPO|Luteinizing hormone=LH|Follicle-stimulating hormone=FSH|Adrenocorticotropic hormone=ACTH|Human chorionic gonadotropin=hCG|Thymosin@60|Gonadotropin-releasing hormone@60=GnRH|Calcitriol@60|Incretin@60|Androgen@30!A class of hormones|Estradiol@60
+0173|Moguls@30|Aerials@60|Bobsled=Bobsleigh=Bobsledding
+0175|Turkey@60!Shares a maritime boundary in the Black Sea|Abkhazia@60!Partially recognised state|South Ossetia@60!Partially recognised state
+0176|Lamb@30|Chicken=Hen|Bee=Honeybee|Mink@60!Farmed for fur|Fish@30!Farmed in aquaculture|Catfish@30!Farmed in aquaculture|Tilapia@30!Farmed in aquaculture|Deer@60!Farmed for venison|Sheep=Ram=Ewe|Pig=Hog|Cow=Cattle
+0177|Congee=Jook|Arroz chaufa@60|Stuffed peppers@30!Often stuffed with rice|Maqluba@60|Chelow@60|Donburi@30|Oyakodon@60|Arroz negro@60|Spam musubi@60|Gimbap=Kimbap
+0178|Conan O'Brien=Conan|Jonathan Ross@60|Maury Povich=Maury|Dr. Phil=Phil McGraw|Samantha Bee@60|Carson Daly@60|Joy Behar@60|Dinah Shore@85|Martha Stewart@60|Hoda Kotb@60|Taylor Tomlinson@60|Chelsea Handler=Chelsea Lately
+0179|Internet Explorer=IE|Netscape=Netscape Navigator|GNOME Web=Epiphany|SRWare Iron@85=Iron
+0180|Leonardo DiCaprio=Leo DiCaprio
+0181|Terminator 2: Judgment Day=T2|Xenogenesis@85!A short film
+0182|Greenland@60!Part of the Kingdom of Denmark, not sovereign|Hong Kong@60!Part of China, not sovereign|England@30!Part of the United Kingdom, not sovereign
+0183|Platypus@60!Near threatened|Bluefin tuna@60|Chinese giant salamander@60|Hellbender@60|Honeybee@30!Wild bees are declining; honeybees are not threatened|Elkhorn coral@60
+0184|New York strip=NY strip=Kansas City strip|Skirt steak=Skirt|Hanger steak=Hanger|Chuck=Chuck roast|Prime rib=Rib roast|Rump=Rump roast|Picanha=Coulotte|Shank=Shin|Plate=Navel|Ground beef@30=Mince!A preparation rather than a cut|Brisket=Brisket point=Brisket flat|Delmonico@60|Stew meat@30!A preparation rather than a cut
+0185|Stooshe@85|Neon Jungle@85|Shakespears Sister@85
+0187|Kung-Fu Master@60|Popeye@60
+0189|Mandarin=Chinese!Chinese covers several languages|Bengali=Bangla|Cantonese=Yue|Wu Chinese@60=Wu=Shanghainese|Tagalog=Filipino|Hokkien@85=Min Nan!Close to the 50 million mark
+0190|Bushbaby=Galago|Owl monkey@60=Night monkey|Gerbil@60!Mostly crepuscular|Aardwolf@60|Whip-poor-will@60|Frogmouth@60|Earthworm@30!Surfaces mostly at night|Mosquito@30!Many species bite at dusk and night|Katydid@60|Octopus@30!Many species hunt at night
+0177|Spanish rice=Arroz rojo
+0142|Fermenting=Fermentation

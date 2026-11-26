@@ -6,7 +6,7 @@ These are the ones it accepted leniently. To veto one, delete it from
 `node scripts/report-arguable-answers.mjs`. A veto removes it from the next full rebuild; to drop it from the
 current banks straight away, remove the answer from its bank file as well.
 
-73 answers.
+145 answers.
 
 | Prompt | Answer | Points | Why it is arguable |
 | --- | --- | ---: | --- |
@@ -83,3 +83,75 @@ current banks straight away, remove the answer from its bank file as well.
 | Name a type of pie | Galette | 30 | A free-form tart |
 | Name a species of tree | Bamboo | 30 | A grass rather than a tree |
 | Name a species of tree | Christmas tree | 10 | A use rather than a species |
+| Name a freshwater fish | Shad | 60 | Lives at sea and spawns in rivers |
+| Name a type of dumpling | Dim sum | 30 | A style of meal that includes dumplings |
+| Name a type of dumpling | Coxinha | 60 | A croquette shaped like a dumpling |
+| Name a type of dumpling | Tamale | 30 | Steamed corn dough rather than a dumpling |
+| Name a type of dumpling | Kibbeh | 60 | A croquette rather than a dumpling |
+| Name a Nintendo video game franchise | Bayonetta | 60 | Made by PlatinumGames; Nintendo publishes the later games |
+| Name a weather phenomenon | Mirage | 60 | An optical effect rather than weather |
+| Name a weather phenomenon | Fata Morgana | 85 | An optical effect rather than weather |
+| Name a country in the Middle East | Afghanistan | 60 | Sometimes counted in the Greater Middle East |
+| Name a country in the Middle East | Libya | 60 | Usually counted as North Africa |
+| Name a country in the Middle East | Sudan | 60 | Usually counted as North Africa |
+| Name a condiment | Olive oil | 30 | An oil rather than a condiment |
+| Name a condiment | Nutella | 30 | A spread rather than a condiment |
+| Name a Batman villain | Azrael | 60 | Often an antihero |
+| Name a Stephen King novel | The Body | 60 | A novella |
+| Name a Stephen King novel | Rita Hayworth and Shawshank Redemption | 60 | A novella |
+| Name a Stephen King novel | The Mist | 60 | A novella |
+| Name a Stephen King novel | Different Seasons | 60 | A collection of novellas |
+| Name a Stephen King novel | Night Shift | 60 | A short-story collection |
+| Name a Stephen King novel | Four Past Midnight | 60 | A collection of novellas |
+| Name a country whose name starts with S | Somaliland | 60 | Self-declared state, not recognised by the UN |
+| Name a cooking method | Tandoor | 60 | An oven rather than a method |
+| Name a state of matter | Glass | 60 | An amorphous solid, sometimes called a state of its own |
+| Name a Steven Spielberg movie | Poltergeist | 60 | Spielberg wrote and produced it; Tobe Hooper directed |
+| Name a Steven Spielberg movie | Gremlins | 60 | Spielberg produced it |
+| Name a Steven Spielberg movie | Back to the Future | 60 | Spielberg produced it |
+| Name a Steven Spielberg movie | The Goonies | 60 | Spielberg wrote the story and produced it |
+| Name an African capital city | Lagos | 30 | Nigeria's capital until 1991 |
+| Name an African capital city | Dar es Salaam | 60 | Tanzania's former capital and seat of government |
+| Name a Mexican dish | Concha | 60 | A sweet bread |
+| Name a Disney villain | Darth Vader | 30 | From a franchise Disney bought |
+| Name a Disney villain | Thanos | 30 | From a franchise Disney bought |
+| Name a beetle | Mealworm | 60 | The larva of a darkling beetle |
+| Name a vitamin or dietary mineral | Vitamin B | 10 | A group of vitamins |
+| Name a vitamin or dietary mineral | Boron | 60 | Probably essential, not officially |
+| Name a vitamin or dietary mineral | Sodium | 30 | Salt is sodium chloride |
+| Name a fairy tale | Peter Pan | 30 | A novel rather than a fairy tale |
+| Name a fairy tale | Alice in Wonderland | 30 | A novel rather than a fairy tale |
+| Name a fairy tale | The Tortoise and the Hare | 30 | A fable rather than a fairy tale |
+| Name a fairy tale | The Little Red Hen | 60 | A folk tale |
+| Name a Japanese dish | Matcha | 30 | A drink |
+| Name a Japanese dish | Wagyu | 30 | A beef rather than a dish |
+| Name a Japanese dish | Tofu | 30 | An ingredient rather than a dish |
+| Name a Roald Dahl book | Lamb to the Slaughter | 60 | A short story |
+| Name a world capital city south of the equator | Dar es Salaam | 60 | Tanzania's former capital and seat of government |
+| Name a lizard species | Tuatara | 60 | A reptile that looks like a lizard but is not one |
+| Name a type of pastry or doughnut | Muffin | 30 | A quick bread |
+| Name a type of pastry or doughnut | Spanakopita | 60 | A savoury pie |
+| Name a human hormone | Androgen | 30 | A class of hormones |
+| Name a country that shares a land or maritime border with Russia | Turkey | 60 | Shares a maritime boundary in the Black Sea |
+| Name a country that shares a land or maritime border with Russia | Abkhazia | 60 | Partially recognised state |
+| Name a country that shares a land or maritime border with Russia | South Ossetia | 60 | Partially recognised state |
+| Name a farm animal | Mink | 60 | Farmed for fur |
+| Name a farm animal | Fish | 30 | Farmed in aquaculture |
+| Name a farm animal | Catfish | 30 | Farmed in aquaculture |
+| Name a farm animal | Tilapia | 30 | Farmed in aquaculture |
+| Name a farm animal | Deer | 60 | Farmed for venison |
+| Name a rice dish | Stuffed peppers | 30 | Often stuffed with rice |
+| Name a movie James Cameron directed, wrote, or produced | Xenogenesis | 85 | A short film |
+| Name a sovereign country whose flag contains both red and white | Greenland | 60 | Part of the Kingdom of Denmark, not sovereign |
+| Name a sovereign country whose flag contains both red and white | Hong Kong | 60 | Part of China, not sovereign |
+| Name a sovereign country whose flag contains both red and white | England | 30 | Part of the United Kingdom, not sovereign |
+| Name an animal threatened with extinction | Platypus | 60 | Near threatened |
+| Name an animal threatened with extinction | Honeybee | 30 | Wild bees are declining; honeybees are not threatened |
+| Name a cut of beef | Ground beef | 30 | A preparation rather than a cut |
+| Name a cut of beef | Stew meat | 30 | A preparation rather than a cut |
+| Name a language with more than 50 million total speakers | Mandarin | 30 | Chinese covers several languages |
+| Name a language with more than 50 million total speakers | Hokkien | 85 | Close to the 50 million mark |
+| Name a nocturnal animal | Gerbil | 60 | Mostly crepuscular |
+| Name a nocturnal animal | Earthworm | 30 | Surfaces mostly at night |
+| Name a nocturnal animal | Mosquito | 30 | Many species bite at dusk and night |
+| Name a nocturnal animal | Octopus | 30 | Many species hunt at night |

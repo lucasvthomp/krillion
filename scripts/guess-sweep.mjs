@@ -6,7 +6,7 @@
 // answer-guess-additions.txt   id|Name@points=alternate=alternate!reason|...
 //   Answers and alternate names added after reviewing those rejections. Points (after the name or
 //   the last alternate) default to 30 and
-//   apply to new answers only. A "!reason" marks an arguable answer, accepted leniently and listed
+//   apply to new answers only. A name may not contain "!". A "!reason" marks an arguable answer, accepted leniently and listed
 //   in ARGUABLE-ANSWERS.md for review. A prompt's additions also apply to other banks with the same
 //   wording.
 import { readFile } from 'node:fs/promises';
@@ -32,7 +32,9 @@ export async function readGuessAdditions() {
     const [id, ...items] = line.split('|').map((part) => part.trim());
     if (!/^\d{4}$/u.test(id) || !items.length) throw new Error(`Invalid addition line: ${line}`);
     const rows = items.filter(Boolean).map((item) => {
-      const [body, reason] = item.split('!');
+      const [body, reason, extra] = item.split('!');
+      // A "!" inside a name would start a reason, so a reason that looks like names is an error.
+      if (extra !== undefined || /[=@]/u.test(reason ?? '')) throw new Error(`Names may not contain "!": ${item}`);
       // The score may follow the name or the last alternate: Name@60=Other or Name=Other@60.
       let score = '30';
       const [name, ...alternates] = body.split('=').map((part) => part.trim().replace(/@(\d+)$/u, (_, points) => {
