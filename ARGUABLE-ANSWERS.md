@@ -6,15 +6,11 @@ These are the ones it accepted leniently. To veto one, delete it from
 `node scripts/report-arguable-answers.mjs`. A veto removes it from the next full rebuild; to drop it from the
 current banks straight away, remove the answer from its bank file as well.
 
-1127 answers.
+994 answers.
 
 | Prompt | Answer | Points | Why it is arguable |
 | --- | --- | ---: | --- |
-| Name a country in Africa | Somaliland | 60 | Self-declared state, not recognised by the UN |
 | Name a sport that has ever been part of the Summer Olympics | Marathon | 10 | An event within athletics rather than a sport of its own |
-| Name a country in the Americas (North, Central, or South) | Greenland | 60 | Part of the Kingdom of Denmark, not an independent country |
-| Name a country in the Americas (North, Central, or South) | Puerto Rico | 30 | US territory, not an independent country |
-| Name a country in the Americas (North, Central, or South) | French Guiana | 60 | Part of France, not an independent country |
 | Name a bird of prey | Shrike | 60 | A songbird that hunts like a raptor |
 | Name a type of cheese | Velveeta | 30 | A processed cheese product brand |
 | Name a type of cheese | Babybel | 30 | A brand of snack cheese |
@@ -35,7 +31,6 @@ current banks straight away, remove the answer from its bank file as well.
 | Name a mythical creature | Angel | 30 | A spirit rather than a creature |
 | Name a board game | Dungeons & Dragons | 30 | A role-playing game rather than a board game |
 | Name a board game | Monopoly Deal | 30 | A card game |
-| Name a country with a Mediterranean coastline | Gibraltar | 60 | A British territory, not a country |
 | Name a tropical fruit | Persimmon | 30 | Mostly grown in temperate and subtropical climates |
 | Name a tropical fruit | Pomegranate | 30 | Mostly grown in subtropical climates |
 | Name a tropical fruit | Fig | 30 | Mostly grown in subtropical climates |
@@ -44,8 +39,8 @@ current banks straight away, remove the answer from its bank file as well.
 | Name a style of dance | Macarena | 30 | A dance move rather than a style |
 | Name a style of dance | Floss | 60 | A dance move rather than a style |
 | Name a Roman emperor | Julius Caesar | 30 | Ruled as dictator; Augustus was the first emperor |
-| Name a style of hat | Wizard hat | 30 | A costume hat from fiction |
-| Name a dinosaur | Indominus rex | 30 | Fictional, from Jurassic World |
+| Name a style of hat | Wizard hat | 10 | A costume hat from fiction |
+| Name a dinosaur | Indominus rex | 10 | Fictional, from Jurassic World |
 | Name a programming language | CSS | 30 | A style-sheet language rather than a programming language |
 | Name a mountain range | Mid-Atlantic Ridge | 85 | An underwater ridge rather than a mountain range on land |
 | Name a soup | Bone broth | 30 | A broth rather than a soup |
@@ -57,7 +52,6 @@ current banks straight away, remove the answer from its bank file as well.
 | Name a Norse god or goddess | Jörmungandr | 60 | A serpent rather than a god |
 | Name a Norse god or goddess | Ymir | 60 | A primordial giant rather than a god |
 | Name a Norse god or goddess | Valkyrie | 30 | Valkyries serve Odin rather than being gods |
-| Name a country where Spanish is an official language | Puerto Rico | 30 | A US territory, not a country |
 | Name a boy band | The Beatles | 30 | A rock band rather than a boy band |
 | Name a yoga pose | Sun salutation | 30 | A sequence of poses |
 | Name a Star Wars character | Ewok | 30 | A species rather than a character |
@@ -68,7 +62,6 @@ current banks straight away, remove the answer from its bank file as well.
 | Name a type of sandwich | Arepa | 30 | A corn cake often stuffed rather than a sandwich |
 | Name a cryptid (a creature like Bigfoot whose existence is claimed but unproven) | Megalodon | 30 | An extinct shark known from fossils |
 | Name a sport played with a racquet or paddle | Jai alai | 30 | Played with a wicker basket, the cesta |
-| Name a country whose flag uses all three of red, white, and blue, and no other colors | Puerto Rico | 30 | A US territory, not a country |
 | Name a rodent | Rabbit | 10 | Rabbits are lagomorphs, not rodents |
 | Name a Broadway musical | Heathers | 60 | Ran off-Broadway |
 | Name a variety of chili pepper | Paprika | 30 | A powder usually made from bell or mild peppers |
@@ -103,7 +96,6 @@ current banks straight away, remove the answer from its bank file as well.
 | Name a Stephen King novel | Different Seasons | 60 | A collection of novellas |
 | Name a Stephen King novel | Night Shift | 60 | A short-story collection |
 | Name a Stephen King novel | Four Past Midnight | 60 | A collection of novellas |
-| Name a country whose name starts with S | Somaliland | 60 | Self-declared state, not recognised by the UN |
 | Name a cooking method | Tandoor | 60 | An oven rather than a method |
 | Name a state of matter | Glass | 60 | An amorphous solid, sometimes called a state of its own |
 | Name a Steven Spielberg movie | Poltergeist | 60 | Spielberg wrote and produced it; Tobe Hooper directed |
@@ -133,8 +125,6 @@ current banks straight away, remove the answer from its bank file as well.
 | Name a type of pastry or doughnut | Spanakopita | 60 | A savoury pie |
 | Name a human hormone | Androgen | 30 | A class of hormones |
 | Name a country that shares a land or maritime border with Russia | Turkey | 60 | Shares a maritime boundary in the Black Sea |
-| Name a country that shares a land or maritime border with Russia | Abkhazia | 60 | Partially recognised state |
-| Name a country that shares a land or maritime border with Russia | South Ossetia | 60 | Partially recognised state |
 | Name a farm animal | Mink | 60 | Farmed for fur |
 | Name a farm animal | Fish | 30 | Farmed in aquaculture |
 | Name a farm animal | Catfish | 30 | Farmed in aquaculture |
@@ -142,7 +132,6 @@ current banks straight away, remove the answer from its bank file as well.
 | Name a farm animal | Deer | 60 | Farmed for venison |
 | Name a rice dish | Stuffed peppers | 30 | Often stuffed with rice |
 | Name a movie James Cameron directed, wrote, or produced | Xenogenesis | 85 | A short film |
-| Name a sovereign country whose flag contains both red and white | Greenland | 60 | Part of the Kingdom of Denmark, not sovereign |
 | Name a sovereign country whose flag contains both red and white | Hong Kong | 60 | Part of China, not sovereign |
 | Name a sovereign country whose flag contains both red and white | England | 30 | Part of the United Kingdom, not sovereign |
 | Name an animal threatened with extinction | Platypus | 60 | Near threatened |
@@ -191,7 +180,6 @@ current banks straight away, remove the answer from its bank file as well.
 | Name a medical specialty | Optometry | 30 | Practised by optometrists rather than doctors |
 | Name a medical specialty | Psychology | 30 | Practised by psychologists rather than doctors |
 | Name a medical specialty | Pharmacy | 30 | Practised by pharmacists rather than doctors |
-| Name a country bigger than Mexico (by area) | Greenland | 60 | Part of the Kingdom of Denmark, not a country |
 | Name a Looney Tunes character | Buster Bunny | 60 | From Tiny Toon Adventures, a Looney Tunes spin-off |
 | Name a Looney Tunes character | Plucky Duck | 60 | From Tiny Toon Adventures, a Looney Tunes spin-off |
 | Name a Looney Tunes character | Hamton J. Pig | 60 | From Tiny Toon Adventures, a Looney Tunes spin-off |
@@ -226,12 +214,9 @@ current banks straight away, remove the answer from its bank file as well.
 | Name a lake | Lake Bonneville | 60 | A prehistoric lake |
 | Name a casino game | Lottery | 30 | A game of chance sold outside casinos too |
 | Name a casino game | Scratch cards | 30 | A game of chance sold outside casinos too |
-| Name a country with a coastline on the Indian Ocean | Réunion | 60 | A French overseas region, not a country |
-| Name a country with a coastline on the Indian Ocean | Mayotte | 60 | A French overseas region, not a country |
 | Name a punctuation mark or typographic symbol | Plus sign | 30 | A maths symbol rather than punctuation |
 | Name a punctuation mark or typographic symbol | Equals sign | 30 | A maths symbol rather than punctuation |
 | Name a punctuation mark or typographic symbol | Minus sign | 30 | A maths symbol rather than punctuation |
-| Name a country that was once part of the British Empire | Somaliland | 60 | British Somaliland, now a self-declared state |
 | Name a country that was once part of the British Empire | Israel | 30 | Part of the British Mandate of Palestine, not formally the Empire |
 | Name a chocolate brand | Mondelez | 30 | A company that owns chocolate brands |
 | Name a PlayStation-exclusive franchise | Crash Bandicoot | 30 | Began on PlayStation, now on other platforms |
@@ -250,7 +235,6 @@ current banks straight away, remove the answer from its bank file as well.
 | Name a country where Christianity is the majority religion | France | 30 | Christians are close to half the population |
 | Name a country where Christianity is the majority religion | United Kingdom | 30 | Christians were 46% at the 2021 census |
 | Name a country where Christianity is the majority religion | Belgium | 30 | Christians are close to half the population |
-| Name a country where Christianity is the majority religion | Puerto Rico | 30 | A US territory, not a country |
 | Name a prehistoric mammal | Thylacine | 30 | Died out in 1936, so recent rather than prehistoric |
 | Name a candy | Mochi | 30 | A rice cake |
 | Name a holiday celebrated around the world | Black Friday | 30 | A shopping event |
@@ -292,69 +276,7 @@ current banks straight away, remove the answer from its bank file as well.
 | Name a Sesame Street character | Kermit the Frog | 60 | A Muppet who appeared on Sesame Street |
 | Name an Apple device | Apple Card | 60 | A credit card |
 | Name an Apple device | Beats headphones | 30 | Beats is a brand Apple owns |
-| Name a capital city in the Americas | Plymouth | 60 | Montserrat's official capital, abandoned after an eruption |
-| Name a capital city in the Americas | Montgomery | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Juneau | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Phoenix | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Little Rock | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Sacramento | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Denver | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Hartford | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Dover | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Tallahassee | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Atlanta | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Honolulu | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Boise | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Springfield | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Indianapolis | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Des Moines | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Topeka | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Frankfort | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Baton Rouge | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Augusta | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Annapolis | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Boston | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Lansing | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Saint Paul | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Jackson | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Jefferson City | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Helena | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Lincoln | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Carson City | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Concord | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Trenton | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Santa Fe | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Albany | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Raleigh | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Bismarck | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Columbus | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Oklahoma City | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Salem | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Harrisburg | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Providence | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Columbia | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Pierre | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Nashville | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Austin | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Salt Lake City | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Montpelier | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Richmond | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Olympia | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Charleston | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Madison | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Cheyenne | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Toronto | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Quebec City | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Victoria | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Edmonton | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Winnipeg | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Regina | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Halifax | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Fredericton | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Charlottetown | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Whitehorse | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Yellowknife | 30 | A state or provincial capital, not a national one |
-| Name a capital city in the Americas | Iqaluit | 30 | A state or provincial capital, not a national one |
+| Name a national capital city in the Americas | Plymouth | 60 | Montserrat's official capital, abandoned after an eruption |
 | Name a fictional robot | Evangelion | 30 | A biological mecha rather than a robot |
 | Name an ancient Greek philosopher | Marcus Aurelius | 30 | A Roman emperor who wrote Stoic philosophy in Greek |
 | Name an ancient Greek philosopher | Seneca | 30 | A Roman Stoic |
@@ -377,11 +299,6 @@ current banks straight away, remove the answer from its bank file as well.
 | Name an astronaut or cosmonaut | Ham the Chimp | 30 | A chimpanzee sent into space |
 | Name a country smaller than Belgium (by area) | Hong Kong | 60 | A region of China, not a country |
 | Name a country smaller than Belgium (by area) | Macau | 60 | A region of China, not a country |
-| Name a country smaller than Belgium (by area) | Puerto Rico | 60 | A US territory, not a country |
-| Name a country smaller than Belgium (by area) | Bermuda | 60 | A British territory, not a country |
-| Name a country smaller than Belgium (by area) | Gibraltar | 60 | A British territory, not a country |
-| Name a European country | Czechoslovakia | 30 | No longer exists |
-| Name a European country | Yugoslavia | 30 | No longer exists |
 | Name an American fast food chain | Denny's | 30 | A sit-down diner chain |
 | Name an American fast food chain | Applebee's | 30 | A sit-down restaurant chain |
 | Name a palindrome that's a real English dictionary word | A | 30 | A one-letter word |
@@ -403,11 +320,7 @@ current banks straight away, remove the answer from its bank file as well.
 | Name a type of home or dwelling | Hotel | 30 | Lodging rather than a home |
 | Name a type of home or dwelling | Motel | 30 | Lodging rather than a home |
 | Name a type of home or dwelling | Bivouac | 60 | A temporary camp |
-| Name a country whose name starts with T | Transnistria | 60 | A breakaway state, not recognised |
 | Name a country where English is an official language | Hong Kong | 60 | A region of China, not a country |
-| Name a country where English is an official language | Puerto Rico | 30 | A US territory, not a country |
-| Name a country where English is an official language | Gibraltar | 60 | A British territory, not a country |
-| Name a country where English is an official language | Bermuda | 60 | A British territory, not a country |
 | Name an animal that lives in the Arctic or Antarctica | Sea otter | 60 | Lives in subarctic waters |
 | Name a Mario character | Super Mushroom | 30 | An item rather than a character |
 | Name a sport played with a stick, bat, or club | Badminton | 30 | Played with a racket |
@@ -417,9 +330,8 @@ current banks straight away, remove the answer from its bank file as well.
 | Name a sport played with a stick, bat, or club | Padel | 30 | Played with a racket |
 | Name a sport played with a stick, bat, or club | Quidditch | 30 | Played on broomsticks |
 | Name a type of bicycle | Peloton | 30 | A brand of exercise bike |
-| Name a country that borders Brazil | French Guiana | 60 | Part of France |
 | Name a city in California | Discovery Bay | 85 | A census-designated place rather than an incorporated city |
-| Name an animal with horns or antlers | Unicorn | 30 | A mythical animal |
+| Name an animal with horns or antlers | Unicorn | 10 | A mythical animal |
 | Name a Spanish or Portuguese dish | Tapas | 30 | A style of small dishes |
 | Name a Spanish or Portuguese dish | Sangria | 30 | A drink |
 | Name a carnivorous mammal | Dog | 30 | In the order Carnivora, but eats a mixed diet |
@@ -439,7 +351,6 @@ current banks straight away, remove the answer from its bank file as well.
 | Name a sacred text of Christianity, Islam, Judaism, Hinduism, or Buddhism | Catechism | 30 | A summary of doctrine rather than scripture |
 | Name a protagonist of a Marvel Cinematic Universe movie | Scarlet Witch | 60 | A lead in Doctor Strange in the Multiverse of Madness |
 | Name a protagonist of a Marvel Cinematic Universe movie | Thanos | 60 | Often called the protagonist of Infinity War |
-| Name a country whose name starts with P | Puerto Rico | 60 | A US territory, not a country |
 | Name a country in Eastern Europe | Georgia | 30 | Usually counted as Western Asia |
 | Name a country in Eastern Europe | Armenia | 30 | Usually counted as Western Asia |
 | Name a country in Eastern Europe | Azerbaijan | 30 | Usually counted as Western Asia |
@@ -475,12 +386,6 @@ current banks straight away, remove the answer from its bank file as well.
 | Name a leafy green | Cilantro | 30 | A herb |
 | Name a leafy green | Mint | 30 | A herb |
 | Name a country with an animal on its flag | Wales | 60 | A constituent country of the UK |
-| Name a country with an animal on its flag | Bermuda | 60 | A British territory, not a country |
-| Name a country with an animal on its flag | Cayman Islands | 60 | A British territory, not a country |
-| Name a country with an animal on its flag | Montserrat | 60 | A British territory, not a country |
-| Name a country with an animal on its flag | Anguilla | 60 | A British territory, not a country |
-| Name a country with an animal on its flag | British Virgin Islands | 60 | A British territory, not a country |
-| Name a country with an animal on its flag | American Samoa | 60 | A US territory, not a country |
 | Name a domesticated animal (kinds of animal, not breeds) | Silver fox | 60 | Domesticated only in a long-running breeding experiment |
 | Name a domesticated animal (kinds of animal, not breeds) | Elephant | 30 | Tamed rather than truly domesticated |
 | Name a word for a baby animal | Gilt | 60 | A young female pig |
@@ -508,8 +413,6 @@ current banks straight away, remove the answer from its bank file as well.
 | Name a rank in the military | Commander-in-chief | 30 | A role rather than a rank |
 | Name something you can sweeten coffee with | Cinnamon | 30 | A flavouring rather than a sweetener |
 | Name something you can sweeten coffee with | Nutmeg | 30 | A flavouring rather than a sweetener |
-| Name a country with stripes on its flag | Puerto Rico | 60 | A US territory, not a country |
-| Name a country with stripes on its flag | Yugoslavia | 30 | No longer exists |
 | Name a disease that has a vaccine | Cowpox | 60 | Used as the first vaccine rather than vaccinated against |
 | Name a disease that has a vaccine | Parvovirus | 60 | A dog disease |
 | Name the most widely spoken language of an Asian country | Punjabi | 60 | The most common first language in Pakistan, where Urdu is the lingua franca |
@@ -521,7 +424,6 @@ current banks straight away, remove the answer from its bank file as well.
 | Name a salad dressing | Tzatziki | 30 | A dip |
 | Name a language named after a country (constituent countries count; for example England → English) | Dutch | 30 | Named after the Germanic people rather than a country |
 | Name a language named after a country (constituent countries count; for example England → English) | Hindi | 30 | Named after Hind, an old name for India |
-| Name a language named after a country (constituent countries count; for example England → English) | Manx | 60 | The Isle of Man is a Crown Dependency |
 | Name a language named after a country (constituent countries count; for example England → English) | Arabic | 30 | Named after Arabia, a region |
 | Name a language named after a country (constituent countries count; for example England → English) | Hawaiian | 60 | Named after the former Kingdom of Hawaii |
 | Name a language named after a country (constituent countries count; for example England → English) | Catalan | 60 | Named after Catalonia, an autonomous community |
@@ -548,7 +450,6 @@ current banks straight away, remove the answer from its bank file as well.
 | Name a villain from a Marvel Cinematic Universe movie | Talos | 30 | Revealed to be an ally |
 | Name a villain from a Marvel Cinematic Universe movie | Hydra | 30 | An organisation rather than a character |
 | Name a platform people use to listen to music (apps and services, not devices) | Shazam | 30 | Identifies songs rather than playing them |
-| Name a country without the letter A in its name | Puerto Rico | 60 | A US territory, not a country |
 | Name the most widely spoken language of any African country | Oromo | 60 | The largest first language in Ethiopia, where Amharic is the lingua franca |
 | Name the most widely spoken language of any African country | Lingala | 60 | Shares the role with Swahili in the DR Congo |
 | Name a garden tool | Twine | 30 | A supply rather than a tool |
@@ -615,7 +516,6 @@ current banks straight away, remove the answer from its bank file as well.
 | Name an app where you can video call | Marco Polo | 30 | Sends video messages rather than live calls |
 | Name an animal with a color in its name | Cardinal | 30 | Named after cardinals' red robes |
 | Name a place in the Harry Potter universe | Hogwarts Express | 30 | A train rather than a place |
-| Name a country with glaciers | Greenland | 60 | Part of the Kingdom of Denmark, not a country |
 | Name a country with glaciers | Venezuela | 30 | Its last glacier melted away in 2024 |
 | Name a country with glaciers | Antarctica | 60 | A continent rather than a country |
 | Name a standard type of tax (currently levied in at least one country) | TV licence | 60 | A licence fee rather than a tax |
@@ -627,20 +527,13 @@ current banks straight away, remove the answer from its bank file as well.
 | Name a body part an animal has for fighting or protection | Slime | 30 | A secretion rather than a body part |
 | Name a type of sausage | Head cheese | 30 | A jellied meat rather than a sausage |
 | Name a type of sausage | Currywurst | 30 | A dish made with sausage |
-| Name a country in the Americas where Spanish is not the most widely spoken language | French Guiana | 60 | Part of France, not a country |
-| Name a country in the Americas where Spanish is not the most widely spoken language | Greenland | 60 | Part of the Kingdom of Denmark, not a country |
 | Name a country in the Americas where Spanish is not the most widely spoken language | Aruba | 60 | A Dutch constituent country |
 | Name a country in the Americas where Spanish is not the most widely spoken language | Curaçao | 60 | A Dutch constituent country |
-| Name a country in the Americas where Spanish is not the most widely spoken language | Bermuda | 60 | A British territory, not a country |
-| Name a country in the Americas where Spanish is not the most widely spoken language | Martinique | 60 | Part of France, not a country |
-| Name a country in the Americas where Spanish is not the most widely spoken language | Guadeloupe | 60 | Part of France, not a country |
 | Name a country with both an O and an R in its name | Korea | 30 | Two countries share the name |
 | Name something listed on a nutrition facts label | Ingredients | 30 | Listed near the label rather than on it |
 | Name something listed on a nutrition facts label | Allergens | 30 | Listed near the label rather than on it |
 | Name something listed on a nutrition facts label | Net carbs | 30 | Not on US labels |
 | Name something listed on a nutrition facts label | Caffeine | 30 | Only on some labels |
-| Name a country larger than the UK by area | Western Sahara | 60 | A disputed territory, not a country |
-| Name a country larger than the UK by area | Greenland | 60 | Part of the Kingdom of Denmark, not a country |
 | Name a religious role or title in Christianity, Islam, Buddhism, Hinduism or Judaism | Buddha | 30 | A title for an awakened one rather than a role |
 | Name something you can do with a keyboard shortcut (like copy with Ctrl+C) | Home | 30 | A navigation key rather than a shortcut |
 | Name something you can do with a keyboard shortcut (like copy with Ctrl+C) | End | 30 | A navigation key rather than a shortcut |
@@ -667,7 +560,6 @@ current banks straight away, remove the answer from its bank file as well.
 | Name a country with both an A and an M in its name | Burma | 30 | Myanmar's former name |
 | Name a country with both an A and an M in its name | Macedonia | 30 | North Macedonia's former name |
 | Name a country with both an A and an M in its name | Macau | 60 | A region of China, not a country |
-| Name a country with both an A and an M in its name | Martinique | 60 | Part of France, not a country |
 | Name a country whose name ends in N | Britain | 30 | Usually called the United Kingdom |
 | Name a dating app | Bumble BFF | 30 | For making friends rather than dating |
 | Name a food you'd grate (kinds of cheese count once) | Soap | 30 | Not a food |
@@ -693,9 +585,9 @@ current banks straight away, remove the answer from its bank file as well.
 | Name an email service (like Gmail) | Constant Contact | 30 | For sending newsletters |
 | Name an email service (like Gmail) | SendGrid | 30 | For sending email from apps |
 | Name a vegetable that's botanically a fruit | Pickle | 30 | A pickled cucumber |
-| Name a city with the word "City" in its name (like Mexico City) | Gotham City | 30 | Fictional |
-| Name a city with the word "City" in its name (like Mexico City) | Emerald City | 30 | Fictional |
-| Name a city with the word "City" in its name (like Mexico City) | Vice City | 30 | Fictional |
+| Name a city with the word "City" in its name (like Mexico City) | Gotham City | 10 | Fictional |
+| Name a city with the word "City" in its name (like Mexico City) | Emerald City | 10 | Fictional |
+| Name a city with the word "City" in its name (like Mexico City) | Vice City | 10 | Fictional |
 | Name a city with the word "City" in its name (like Mexico City) | Twin Cities | 30 | A nickname for Minneapolis and Saint Paul |
 | Name an animal whose name ends in Y | Grey | 30 | A seal or squirrel rather than a full name |
 | Name a metal (pure elements only; alloys like steel don't count) | Antimony | 60 | A metalloid |
@@ -727,7 +619,6 @@ current banks straight away, remove the answer from its bank file as well.
 | Name an app or website for writing documents or taking notes | ChatGPT | 30 | An AI assistant |
 | Name the most widely spoken language of a country in the Americas | French | 30 | Most spoken only in Haiti, Martinique and Guadeloupe |
 | Name the most widely spoken language of a country in the Americas | Papiamento | 60 | Most spoken in Aruba and Curaçao, which are not countries |
-| Name the most widely spoken language of a country in the Americas | Greenlandic | 60 | Greenland is not a country |
 | Name the current capital of a state or province anywhere in the world (must be officially called a state or province) | Seoul | 30 | A special city rather than a provincial capital |
 | Name the current capital of a state or province anywhere in the world (must be officially called a state or province) | Kuala Lumpur | 30 | A federal territory |
 | Name something you shake before using it | Insulin | 30 | Only some types are mixed |
@@ -766,7 +657,6 @@ current banks straight away, remove the answer from its bank file as well.
 | Name a feature a modern car can have (like cruise control) | Radio | 10 | basic equipment every car has |
 | Name a feature a modern car can have (like cruise control) | Sun visor | 10 | basic equipment every car has |
 | Name a feature a modern car can have (like cruise control) | Horn | 10 | basic equipment every car has |
-| Name a country in East Africa | Somaliland | 15 | self-declared state, not internationally recognised |
 | Name a country in East Africa | Democratic Republic of the Congo | 15 | usually counted as Central Africa, but it is in the East African Community |
 | Name a white sauce, dip, or condiment | Coconut milk | 15 | thin and pale; arguably a sauce base rather than a sauce |
 | Name a superhero team | S.H.I.E.L.D. | 15 | a spy agency more than a superhero team |
@@ -793,7 +683,6 @@ current banks straight away, remove the answer from its bank file as well.
 | Name a foul or rule violation in soccer, basketball, American football, cricket, rugby or ice hockey | Red card | 10 | a punishment for a foul rather than a foul |
 | Name a language that’s the most spoken in at least two countries | Serbo-Croatian | 30 | one language or several, depending on who you ask |
 | Name a language that’s the most spoken in at least two countries | Hausa | 30 | most spoken in Niger; in Nigeria it vies with English |
-| Name a language that’s the most spoken in at least two countries | Turkish | 15 | Northern Cyprus is not widely recognised |
 | Name a language that’s the most spoken in at least two countries | Kinyarwanda | 30 | Kinyarwanda and Kirundi are usually counted as separate languages |
 | Name something sold as a stick, not on one (like deodorant) | Eyeliner | 15 | usually sold as a pencil |
 | Name something sold as a stick, not on one (like deodorant) | Twix | 15 | sold as bars rather than sticks |
@@ -808,8 +697,6 @@ current banks straight away, remove the answer from its bank file as well.
 | Name a food made by mashing or puréeing (like guacamole) | Soup | 10 | only blended soups count |
 | Name a country with the letter D in its name (like Canada) | Scotland | 15 | a country within the UK |
 | Name a country with the letter D in its name (like Canada) | England | 15 | a country within the UK |
-| Name a country with the letter D in its name (like Canada) | Greenland | 15 | a territory of Denmark |
-| Name a country with the letter D in its name (like Canada) | Bermuda | 15 | a British territory |
 | Name a device made to blow air | HVAC | 15 | a whole system that includes blowers |
 | Name a mammal smaller than a house cat | Kitten | 10 | a young house cat |
 | Name a mammal smaller than a house cat | Chihuahua | 15 | a dog breed often smaller than a cat |
@@ -876,7 +763,6 @@ current banks straight away, remove the answer from its bank file as well.
 | Name a national park anywhere in the world | Ngorongoro | 15 | a conservation area rather than a park |
 | Name a national park anywhere in the world | Great Barrier Reef | 15 | a marine park |
 | Name a national park anywhere in the world | Zhangjiajie | 15 | a national forest park |
-| Name a country with a desert climate (in any part of it) | Western Sahara | 15 | a disputed territory rather than a country |
 | Name a player currently on an English Premier League or NFL team | Mohamed Salah | 30 | at Liverpool in 2025-26; check he has not moved |
 | Name a player currently on an English Premier League or NFL team | Rodri | 30 | at Manchester City in 2025-26; check he has not moved |
 | Name a player currently on an English Premier League or NFL team | Ollie Watkins | 30 | at Aston Villa in 2025-26; check he has not moved |
@@ -926,7 +812,6 @@ current banks straight away, remove the answer from its bank file as well.
 | Name a strategy board game | Sorry | 10 | mostly luck rather than strategy |
 | Name a country where another religion has more followers than Christianity | Hong Kong | 15 | a Chinese special region rather than a country |
 | Name a country where another religion has more followers than Christianity | Macau | 15 | a Chinese special region rather than a country |
-| Name a country where another religion has more followers than Christianity | Western Sahara | 15 | a disputed territory rather than a country |
 | Name a hair type, texture, or natural color | Bald | 10 | no hair rather than a hair type |
 | Name a sport where athletes do flips or somersaults | Professional wrestling | 15 | scripted entertainment rather than sport |
 | Name something used to grip or pick things up | Velcro | 15 | fastens rather than grips |
@@ -987,12 +872,6 @@ current banks straight away, remove the answer from its bank file as well.
 | Name a fruit or vegetable that is red on the inside. | Mulberry | 15 | dark purple rather than red |
 | Name a fruit or vegetable that is red on the inside. | Red onion | 15 | red layers but white flesh |
 | Name a country with "and" in its name | United Kingdom of Great Britain and Northern Ireland | 30 | the full official name |
-| Name a country with "and" in its name | Turks and Caicos Islands | 15 | a British territory |
-| Name a country with "and" in its name | Wallis and Futuna | 15 | a French territory |
-| Name a country with "and" in its name | Svalbard and Jan Mayen | 15 | a Norwegian territory |
-| Name a country with "and" in its name | Heard Island and McDonald Islands | 15 | an Australian territory |
-| Name a country with "and" in its name | Greenland | 15 | a territory of Denmark |
-| Name a country with "and" in its name | Falkland Islands | 15 | a British territory |
 | Name a high-protein food ingredient—at least 8g of protein per 100g. | Fish | 15 | most fish qualify, but not all |
 | Name a high-protein food ingredient—at least 8g of protein per 100g. | Buckwheat | 15 | only when weighed dry |
 | Name a high-protein food ingredient—at least 8g of protein per 100g. | Hummus | 15 | right around 8 g per 100 g |
@@ -1019,9 +898,6 @@ current banks straight away, remove the answer from its bank file as well.
 | Name an animal that eats bugs (documented regular part of diet) | Fish | 15 | many fish eat insects, but not all |
 | Name an animal that eats bugs (documented regular part of diet) | Turtle | 15 | many turtles eat insects, but not all |
 | Name a toy brand | Kinder Surprise | 10 | a candy egg with a toy inside |
-| Name a country with "in" in its name | Saint Martin | 15 | a French territory |
-| Name a country with "in" in its name | Sint Maarten | 15 | a Dutch territory |
-| Name a country with "in" in its name | Virgin Islands | 15 | a territory rather than a country |
 | Name a country whose second letter is O | Kosovo | 15 | only partly recognised |
 | Name a country whose second letter is O | Congo | 15 | both Congos have longer official names |
 | Name a country whose second letter is O | Hong Kong | 15 | a Chinese special region rather than a country |
@@ -1040,11 +916,7 @@ current banks straight away, remove the answer from its bank file as well.
 | Name a type of injury (like a sprain, not a sprained ankle) | Heatstroke | 15 | a condition rather than an injury |
 | Name a type of injury (like a sprain, not a sprained ankle) | Nosebleed | 15 | a symptom rather than a type of injury |
 | Name a chocolate that has caramel in it | Wispa Gold | 30 | the original Wispa has no caramel |
-| Name a country that has been colonized by Spain or Portugal. | Puerto Rico | 15 | a US territory rather than a country |
-| Name a country that has been colonized by Spain or Portugal. | Western Sahara | 15 | a disputed territory rather than a country |
 | Name a country that has been colonized by Spain or Portugal. | Macau | 15 | a Chinese special region rather than a country |
-| Name a country that has been colonized by Spain or Portugal. | Guam | 15 | a US territory rather than a country |
-| Name a country that has been colonized by Spain or Portugal. | Northern Mariana Islands | 15 | a US territory rather than a country |
 | Name a book that has been adapted into a movie. | One Shot | 30 | filmed as Jack Reacher |
 | Name a billionaire. | Kanye West | 15 | lost billionaire status in 2022 |
 | Name a billionaire. | Dietrich Mateschitz | 15 | a billionaire who died in 2022 |
@@ -1054,7 +926,6 @@ current banks straight away, remove the answer from its bank file as well.
 | Name a fictional way to travel. | Tractor beam | 15 | pulls things in rather than taking you places |
 | Name any national government agency. | Department of Government Efficiency | 15 | a temporary advisory body |
 | Name a movie involving time travel. | Napoleon Dynamite | 10 | only a joke time machine |
-| Name a country where French is an official language | Jersey | 15 | a Crown Dependency rather than a country |
 | Name a country where French is an official language | Mali | 15 | dropped French as an official language in 2023 |
 | Name a country where French is an official language | Burkina Faso | 15 | dropped French as an official language in 2023 |
 | Name a brand with an animal in its logo. | Dodge | 15 | the ram logo moved to Ram trucks |
@@ -1083,14 +954,10 @@ current banks straight away, remove the answer from its bank file as well.
 | Name a fruit or vegetable that starts with a vowel | Almond | 15 | a nut rather than a fruit |
 | Name a fruit or vegetable that starts with a vowel | Acorn | 15 | a nut rather than a fruit |
 | Name a location from Star Wars, Lord of the Rings, Fortnite, SpongeBob, or a Disney/Pixar movie (real places don't count) | Wakanda | 15 | a Marvel location rather than a Disney or Pixar one |
-| Name a country where soccer isn't the most watched sport | Puerto Rico | 15 | a US territory rather than a country |
 | Name a protagonist from an anime or animated TV show (1,000+ votes on IMDb or listed on MAL) | Satoru Gojo | 15 | a main character but not the protagonist |
 | Name an awards show | Cannes Film Festival | 15 | a film festival that gives awards |
 | Name an awards show | Venice Film Festival | 15 | a film festival that gives awards |
 | Name an awards show | Berlin International Film Festival | 15 | a film festival that gives awards |
-| Name a country whose flag includes at least one star | Puerto Rico | 15 | a US territory rather than a country |
-| Name a country whose flag includes at least one star | European Union | 10 | a union rather than a country |
-| Name a country whose English name contains J, K, or V | Yugoslavia | 15 | no longer exists |
 | Name a country whose English name contains J, K, or V | Hong Kong | 15 | a Chinese special region rather than a country |
 | Name a movie starring Samuel L. Jackson | Sea of Love | 15 | a small role |
 | Name a character from Aladdin | Cassim | 15 | from the sequel Aladdin and the King of Thieves |

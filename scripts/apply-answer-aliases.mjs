@@ -18,6 +18,15 @@ const snapshotUrl = new URL('answer-aliases.json.gz', import.meta.url);
 const indexUrl = new URL('index.json', bank);
 const index = JSON.parse(await readFile(indexUrl, 'utf8'));
 const { prompts } = index;
+// Prompt wordings changed after review. The dataset keeps the old wording, so this runs on every rebuild.
+const rewordedPrompts = new Map([
+  ['Name a capital city in the Americas', 'Name a national capital city in the Americas'],
+]);
+let reworded = false;
+for (const prompt of prompts) {
+  const wording = rewordedPrompts.get(prompt.prompt);
+  if (wording) { prompt.prompt = wording; reworded = true; }
+}
 // Answers found by the guess sweep (answer-guess-additions.txt), shared by banks with the same wording.
 const guessAdditions = new Map();
 for (const [id, rows] of await readGuessAdditions()) {
@@ -282,7 +291,7 @@ for (const prompt of prompts) {
   }
 }
 const answerCount = prompts.reduce((total, { count }) => total + count, 0);
-if (answerCount !== index.answerCount) {
+if (answerCount !== index.answerCount || reworded) {
   index.answerCount = answerCount;
   await writeFile(indexUrl, JSON.stringify(index));
 }

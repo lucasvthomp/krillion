@@ -1,11 +1,10 @@
 # Answers and alternate names added after testing the guess sweep. Format: id|Name@points=alternate!reason
 # Points apply to new answers only (default 30). "!reason" marks an arguable answer for ARGUABLE-ANSWERS.md.
 0001|Kiwi=Kiwi bird|Komodo dragon=Komodo
-0002|Democratic Republic of the Congo=Zaire|Somaliland@60!Self-declared state, not recognised by the UN
+0002|Democratic Republic of the Congo=Zaire
 0003|Farfalle=Bowtie=Bow-tie=Bowties|Macaroni=Elbow=Elbows=Elbow macaroni|Conchiglie=Shells=Pasta shells|Fusilli=Spirals=Corkscrew
 0006|Soccer=Football|Rugby=Rugby sevens|Canoeing=Kayaking|Breaking=Breakdancing|Marathon@10!An event within athletics rather than a sport of its own|BMX racing@30=BMX|Motorboating@85=Powerboating=Motor boating
 0007|French horn=Horn|Tubular bells=Chimes|Gong=Tam-tam
-0008|Greenland@60!Part of the Kingdom of Denmark, not an independent country|Puerto Rico@30!US territory, not an independent country|French Guiana@60!Part of France, not an independent country
 0009|Shrike@60!A songbird that hunts like a raptor
 0010|Pecorino Romano PDO=Romano|Velveeta@30!A processed cheese product brand|Babybel@30!A brand of snack cheese
 0012|Omega=Ω|Pi=π
@@ -36,7 +35,7 @@
 0047|Lapis lazuli=Lapis|Moissanite@60
 0048|Othello=Reversi|Dixit@60|Kingdomino@60|Dungeons & Dragons@30=D&D=Dungeons and Dragons!A role-playing game rather than a board game|Monopoly Deal@30!A card game
 0049|Slovenian=Slovene|Flemish@60|Galician=Gallego
-0050|Gibraltar@60!A British territory, not a country|Palestine=Gaza
+0050|Palestine=Gaza
 0051|Orca=Killer whale
 0052|Lychee=Litchi=Lichi|Star fruit=Carambola|Persimmon@30!Mostly grown in temperate and subtropical climates|Pomegranate@30!Mostly grown in subtropical climates|Fig@30!Mostly grown in subtropical climates|Salak=Snake fruit|Kiwano=Horned melon|Lucuma@60
 0054|Cirrocumulus=Mackerel sky
@@ -47,9 +46,9 @@
 0059|Cuban coffee=Cafecito|Cortado=Gibraltar|Vienna coffee@60|Espresso=Short black
 0060|Nintendo DS=DS|Atari 2600=Atari
 0061|Deltoid=Delts|Trapezius=Traps|Rectus abdominis@30=Six pack=Six-pack|Infraspinatus@60|Supraspinatus@60|Gluteus maximus=Buttocks=Butt
-0062|Ushanka=Trapper hat|Bucket hat=Fisherman hat=Fisherman's hat|Kufi@60|Kippah=Yarmulke|Wizard hat@30!A costume hat from fiction|Conical hat=Rice hat=Asian conical hat
+0062|Ushanka=Trapper hat|Bucket hat=Fisherman hat=Fisherman's hat|Kufi@60|Kippah=Yarmulke|Wizard hat@10!A costume hat from fiction|Conical hat=Rice hat=Asian conical hat
 0064|Russia=Russian SFSR=Russian SSR|Ukraine=Ukrainian SSR|Kyrgyzstan=Kirghizia=Kirghiz SSR
-0065|Euoplocephalus@85|Yutyrannus@85|Pachyrhinosaurus@60|Chasmosaurus@60|Indominus rex@30!Fictional, from Jurassic World
+0065|Euoplocephalus@85|Yutyrannus@85|Pachyrhinosaurus@60|Chasmosaurus@60|Indominus rex@10!Fictional, from Jurassic World
 0066|Bell peppers=Green peppers=Peppers=Green pepper|Mozzarella@10|Artichokes=Artichoke hearts|Arugula=Rocket|Corn=Sweetcorn|Ranch@60|Hot dogs@85|Steak@60|Barbecue sauce@30=BBQ sauce|Oregano@60
 0067|Mom@30|Kim's Convenience@60|Workaholics@60
 0068|C++=CPP=Cplusplus|Delphi@60|CSS@30!A style-sheet language rather than a programming language|Visual Basic .NET@60=VB.NET
@@ -60,7 +59,6 @@
 0075|Yale blue@60|Delft blue@85|Capri@85|Pacific blue@60|Admiral blue@60|Duck egg blue@60|Lapis lazuli@60=Lapis
 0076|Kitchen shears=Scissors|Mixing bowl@30!A container rather than a utensil|Timer@30!A gadget rather than a utensil|Oven mitt@30!Protective wear rather than a utensil|Pot holder@30!Protective wear rather than a utensil|Cleaver@30|Juicer=Citrus press
 0077|Hodr=Hod=Höðr|Fenrir@30!A giant wolf rather than a god|Jörmungandr@60=Jormungandr!A serpent rather than a god|Ymir@60!A primordial giant rather than a god|Valkyrie@30!Valkyries serve Odin rather than being gods|Gerðr@85=Gerd|Thor=Thor Odinson
-0078|Puerto Rico@30!A US territory, not a country
 0080|3 Musketeers=Three Musketeers|Crunch bar=Nestle Crunch|Twirl@60|Cadbury Dairy Milk=Cadbury=Cadbury Dairy Milk|Fifth Avenue@85|Mallo Cup@85|Goldenberg's Peanut Chews@85|Galaxy@60|Topic@85|Fry's Chocolate Cream@85|Bar One@85|Kinder Bueno@30=Kinder|Ritter Sport@60|Milka@60
 0081|Union J@85|Dream Street@85|Immature@85=IMx|911@85|The Beatles@30=Beatles!A rock band rather than a boy band
 0082|Thyroid=Thyroid gland|Testes=Testicles|Trachea=Windpipe
@@ -80,7 +78,6 @@
 0096|Bigfoot=Sasquatch|Megalodon@30!An extinct shark known from fossils|Momo@85=Missouri Monster|Globster@85|Montauk Monster@85|Spring-heeled Jack@60|Black Shuck@60|Dingonek@85|Cadborosaurus=Caddy|Champ=Lake Champlain Monster
 0097|Jai alai@30!Played with a wicker basket, the cesta|Basque pelota=Pelota|Stand-up paddleboarding=SUP
 0098|Leonardo da Vinci=Leonardo|Lorenzo Lotto@85
-0099|Puerto Rico@30!A US territory, not a country
 0100|Rabbit@10!Rabbits are lagomorphs, not rodents
 0101|Les Misérables=Les Mis=Les Miz|Wicked=Wicked the Musical|Heathers@60!Ran off-Broadway|Hell's Kitchen@60|The Great Gatsby@60|Back to the Future@60|Some Like It Hot@60
 0102|Kilo=k|Mega=M|Giga=G
@@ -120,7 +117,6 @@
 0137|Vitreous humor=Vitreous|Blind spot=Optic disc|Lacrimal gland=Tear gland
 0138|Max Verstappen=Max|Lewis Hamilton=Lewis
 0139|Pet Sematary=Pet Cemetery|The Body@60=Stand by Me!A novella|Rita Hayworth and Shawshank Redemption@60=Shawshank=The Shawshank Redemption!A novella|The Mist@60!A novella|Different Seasons@60!A collection of novellas|Night Shift@60!A short-story collection|Four Past Midnight@60!A collection of novellas
-0140|Somaliland@60!Self-declared state, not recognised by the UN
 0141|Crawfish=Crayfish=Crawdad|Woodlouse@60=Roly-poly=Sowbug|Sand flea@60|Yabby@60|Water flea=Daphnia
 0142|Braising=Braise|Barbecuing=BBQ|Coddling@60|Planking@85|Charring@60|Tandoor@60!An oven rather than a method
 0143|Abe Simpson@10=Grampa=Grampa Simpson=Abraham Simpson|Krusty the Clown=Krusty|Milhouse=Milhouse Van Houten|Lunchlady Doris@60|Rainier Wolfcastle@60|Lurleen Lumpkin@85=Lurleen
@@ -151,14 +147,14 @@
 0171|Speakerboxxx/The Love Below=Speakerboxxx|The Miseducation of Lauryn Hill=The Miseducation
 0172|Adrenaline=Epinephrine|Thyroxine=T4|Growth hormone=HGH|Vasopressin=Antidiuretic hormone=ADH|Erythropoietin=EPO|Luteinizing hormone=LH|Follicle-stimulating hormone=FSH|Adrenocorticotropic hormone=ACTH|Human chorionic gonadotropin=hCG|Thymosin@60|Gonadotropin-releasing hormone@60=GnRH|Calcitriol@60|Incretin@60|Androgen@30!A class of hormones|Estradiol@60
 0173|Moguls@30|Aerials@60|Bobsled=Bobsleigh=Bobsledding
-0175|Turkey@60!Shares a maritime boundary in the Black Sea|Abkhazia@60!Partially recognised state|South Ossetia@60!Partially recognised state
+0175|Turkey@60!Shares a maritime boundary in the Black Sea
 0176|Lamb@30|Chicken=Hen|Bee=Honeybee|Mink@60!Farmed for fur|Fish@30!Farmed in aquaculture|Catfish@30!Farmed in aquaculture|Tilapia@30!Farmed in aquaculture|Deer@60!Farmed for venison|Sheep=Ram=Ewe|Pig=Hog|Cow=Cattle
 0177|Congee=Jook|Arroz chaufa@60|Stuffed peppers@30!Often stuffed with rice|Maqluba@60|Chelow@60|Donburi@30|Oyakodon@60|Arroz negro@60|Spam musubi@60|Gimbap=Kimbap
 0178|Conan O'Brien=Conan|Jonathan Ross@60|Maury Povich=Maury|Dr. Phil=Phil McGraw|Samantha Bee@60|Carson Daly@60|Joy Behar@60|Dinah Shore@85|Martha Stewart@60|Hoda Kotb@60|Taylor Tomlinson@60|Chelsea Handler=Chelsea Lately
 0179|Internet Explorer=IE|Netscape=Netscape Navigator|GNOME Web=Epiphany|SRWare Iron@85=Iron
 0180|Leonardo DiCaprio=Leo DiCaprio
 0181|Terminator 2: Judgment Day=T2|Xenogenesis@85!A short film
-0182|Greenland@60!Part of the Kingdom of Denmark, not sovereign|Hong Kong@60!Part of China, not sovereign|England@30!Part of the United Kingdom, not sovereign
+0182|Hong Kong@60!Part of China, not sovereign|England@30!Part of the United Kingdom, not sovereign
 0183|Platypus@60!Near threatened|Bluefin tuna@60|Chinese giant salamander@60|Hellbender@60|Honeybee@30!Wild bees are declining; honeybees are not threatened|Elkhorn coral@60
 0184|New York strip=NY strip=Kansas City strip|Skirt steak=Skirt|Hanger steak=Hanger|Chuck=Chuck roast|Prime rib=Rib roast|Rump=Rump roast|Picanha=Coulotte|Shank=Shin|Plate=Navel|Ground beef@30=Mince!A preparation rather than a cut|Brisket=Brisket point=Brisket flat|Delmonico@60|Stew meat@30!A preparation rather than a cut
 0185|Stooshe@85|Neon Jungle@85|Shakespears Sister@85
@@ -195,7 +191,6 @@
 0221|Captain Kirk=James T. Kirk=Kirk James|Scotty=Montgomery Scott|Captain Picard=Jean-Luc Picard=Picard Jean-Luc|Wesley Crusher=Wesley|Captain Janeway=Kathryn Janeway|Christopher Pike=Captain Pike|Una Chin-Riley@60=Number One|Khan=Khan Noonien Singh|Tribble@30=Tribbles!A species rather than a character
 0222|Allergy and immunology@30=Allergy|Orthodontics@60!A dental specialty|Optometry@30!Practised by optometrists rather than doctors|Osteopathy@60|Psychology@30!Practised by psychologists rather than doctors|Pharmacy@30!Practised by pharmacists rather than doctors|Cardiology=Cardiologist|Dermatology=Dermatologist|Pediatrics=Pediatrician|Neurology=Neurologist|Oncology=Oncologist
 0223|Courier New=Courier|Noto Sans@60|Ubuntu@60|San Francisco=SF Pro|Book Antiqua@60|Century@60|Playfair Display@60|Merriweather@60|PT Sans@60|Nunito@60|Quicksand@60|Pacifico@60|Jenson@85|Trajan@60|Blackletter@60=Old English=Fraktur|Chiller@60|Helvetica=Helvetica Neue
-0224|Greenland@60!Part of the Kingdom of Denmark, not a country
 0225|San Joaquin@60|Nelson@60|Negro River=Rio Negro|Japurá@85=Japura|Araguaia@60|Juruá@85=Jurua|Napo@85|Grijalva@85|Pánuco@85=Panuco|St. Johns@60=St. Johns River|Yellowstone@60|Kootenay@85|Klondike@85
 0226|Chana masala=Chole|Onion bhaji@30=Bhaji|Dhansak@60|Ladoo@30=Laddu
 0227|Tasmanian Devil=Taz|Lola Bunny=Lola|Buster Bunny@60!From Tiny Toon Adventures, a Looney Tunes spin-off|Plucky Duck@60!From Tiny Toon Adventures, a Looney Tunes spin-off|Hamton J. Pig@60=Hamton!From Tiny Toon Adventures, a Looney Tunes spin-off|Montana Max@60!From Tiny Toon Adventures, a Looney Tunes spin-off|Elmyra Duff@60=Elmyra!From Tiny Toon Adventures, a Looney Tunes spin-off
@@ -224,14 +219,13 @@
 0256|Michael Stevens@60|Michael Reeves@60|Michael Saylor@60|Michael Ondaatje@85
 0257|Slots=Slot machine=Slot machines|Big Six wheel@60=Big Six=Money wheel|Blackjack=21=Twenty-one|Lottery@30!A game of chance sold outside casinos too|Scratch cards@30!A game of chance sold outside casinos too
 0258|Canzone@85|Epyllion@85
-0259|Réunion@60=Reunion!A French overseas region, not a country|Mayotte@60!A French overseas region, not a country
 0260|Macaw@30|Anaconda@30|Python@30|Boa constrictor@30|Pygmy hippo@60=Pygmy hippopotamus|Goliath birdeater@60|Blue morpho@60|Stick insect@30|Flying fox@30
 0261|Lady apple@60
 0262|Emma=Emma Geller-Green|Frank Buffay@60=Frank Jr.|Dr. Ramoray=Drake Ramoray|The Chick and the Duck@60=Chick=The Chick
 0263|Brett Eldredge@60|Chris Lane@60
 0265|Period=Full stop=Fullstop|Quotation marks=Quotes|At sign=@|Hashtag=Hash=Octothorpe=Pound sign|Bullet point=Bullet|Registered trademark@60=®|Backtick=Grave accent|Umlaut=Diaeresis|Plus sign@30!A maths symbol rather than punctuation|Equals sign@30!A maths symbol rather than punctuation|Minus sign@30!A maths symbol rather than punctuation
 0266|Fiji Water=Fiji|Core Hydration=Core=Core Water|Smartwater=Glaceau|Saratoga@60|Kirkland@60|Ice River Springs@60=Ice River|Eternal@60|Path@85|Hawaiian Springs@85|Proud Source@85|Solé@85=Sole|Hépar@85=Hepar|Bru@85
-0267|Somaliland@60!British Somaliland, now a self-declared state|Israel@30!Part of the British Mandate of Palestine, not formally the Empire|Yemen=Aden
+0267|Israel@30!Part of the British Mandate of Palestine, not formally the Empire|Yemen=Aden
 0268|Ferrero Rocher=Ferrero|Thorntons@60|Tony's Chocolonely=Tony's|Hachez@85|Feodora@85|Schogetten@85|Villars@85|Lacta@85|Arcor@60|Rowntree's@60|Mondelez@30!A company that owns chocolate brands
 0269|Horizon=Horizon Zero Dawn|Crash Bandicoot@30!Began on PlayStation, now on other platforms|Spyro@30=Spyro the Dragon!Began on PlayStation, now on other platforms|Sackboy@60|Astro Bot=Astro|MLB The Show@30!On other consoles since 2021|PaRappa the Rapper=PaRappa|Patapon@60|Helldivers@30=Helldivers 2!Helldivers 2 came to Xbox in 2025|Concord@85|Ghost of Tsushima=Ghost of Yotei=Ghost of Yōtei
 0270|Organizational chart=Org chart|Doughnut chart=Donut chart|Choropleth@60=Choropleth map|Column chart@30|Run chart@60|Hexbin@85=Hexbin plot|Kaplan-Meier@85=Kaplan-Meier plot
@@ -250,7 +244,7 @@
 0283|Dahmer=Monster
 0284|Alejandro G. Iñárritu=Alejandro González Iñárritu=Iñárritu=Inarritu|Coen brothers=Joel Coen=Ethan Coen|Russo brothers=Anthony Russo=Joe Russo
 0286|Woodcarving@30=Wood carving|Sketching@30!A drawing rather than a craft|Leatherworking=Leather craft|Basket weaving=Basketry|Dyeing@60|Block printing@60|Linocut@60|Lego@30!Building with bricks rather than making from scratch|Diorama@60|Furniture making@60|Sculpture@30|Bobbin lace@85|Latch hook@60|Loom bands@60
-0287|France@30!Christians are close to half the population|United Kingdom@30=UK!Christians were 46% at the 2021 census|Belgium@30!Christians are close to half the population|Puerto Rico@30!A US territory, not a country
+0287|France@30!Christians are close to half the population|United Kingdom@30=UK!Christians were 46% at the 2021 census|Belgium@30!Christians are close to half the population
 0288|Saber-toothed tiger=Smilodon=Saber-toothed cat=Sabertooth=Smilodon fatalis|Woolly rhino=Woolly rhinoceros|Giant ground sloth=Megatherium|Megaloceros=Irish elk|Gomphothere@60|Procoptodon=Giant kangaroo|Thylacine@30!Died out in 1936, so recent rather than prehistoric|Chalicothere@60|Entelodon=Entelodont=Hell pig=Daeodon|Brontotherium=Megacerops|Eohippus=Hyracotherium|Giant beaver=Castoroides|Megalonyx@60|Amphicyon=Bear dog
 0289|Reese's Pieces@30|Nerds Rope@60|Mochi@30!A rice cake
 0290|False dilemma=False dichotomy=Either-or|Bandwagon=Appeal to popularity=Ad populum|Begging the question=Circular reasoning|False cause@30|Tu quoque=Whataboutism=Appeal to hypocrisy|Middle ground fallacy=Golden mean|Guilt by association@60|Reductio ad Hitlerum@60|Kafkatrapping@85|Strawman=Strawman argument
@@ -283,7 +277,7 @@
 0318|Oscar the Grouch=Oscar|Snuffleupagus=Snuffy|Murray Monster=Murray|Kermit the Frog@60=Kermit!A Muppet who appeared on Sesame Street|Gabi@60|Lefty the Salesman@85=Lefty
 0319|MacBook Air@30|AirPods Pro@30|HomePod mini@60|iPod Touch@30|iPod Nano@30|iPod Shuffle@30|iPod Classic@30|iPad Pro@30|iPad Air@30|iPad mini@30|iPhone Air@60|Siri Remote@60|Apple Card@60!A credit card|Beats headphones@30!Beats is a brand Apple owns
 0320|Fullback=Left back=Right back|Sweeper=Libero|False nine=False 9|Defensive midfielder=Anchor=Defensive mid|Winger=Wing
-0343|Plymouth@60!Montserrat's official capital, abandoned after an eruption|Montgomery@30!A state or provincial capital, not a national one|Juneau@30!A state or provincial capital, not a national one|Phoenix@30!A state or provincial capital, not a national one|Little Rock@30!A state or provincial capital, not a national one|Sacramento@30!A state or provincial capital, not a national one|Denver@30!A state or provincial capital, not a national one|Hartford@30!A state or provincial capital, not a national one|Dover@30!A state or provincial capital, not a national one|Tallahassee@30!A state or provincial capital, not a national one|Atlanta@30!A state or provincial capital, not a national one|Honolulu@30!A state or provincial capital, not a national one|Boise@30!A state or provincial capital, not a national one|Springfield@30!A state or provincial capital, not a national one|Indianapolis@30!A state or provincial capital, not a national one|Des Moines@30!A state or provincial capital, not a national one|Topeka@30!A state or provincial capital, not a national one|Frankfort@30!A state or provincial capital, not a national one|Baton Rouge@30!A state or provincial capital, not a national one|Augusta@30!A state or provincial capital, not a national one|Annapolis@30!A state or provincial capital, not a national one|Boston@30!A state or provincial capital, not a national one|Lansing@30!A state or provincial capital, not a national one|Saint Paul@30!A state or provincial capital, not a national one|Jackson@30!A state or provincial capital, not a national one|Jefferson City@30!A state or provincial capital, not a national one|Helena@30!A state or provincial capital, not a national one|Lincoln@30!A state or provincial capital, not a national one|Carson City@30!A state or provincial capital, not a national one|Concord@30!A state or provincial capital, not a national one|Trenton@30!A state or provincial capital, not a national one|Santa Fe@30!A state or provincial capital, not a national one|Albany@30!A state or provincial capital, not a national one|Raleigh@30!A state or provincial capital, not a national one|Bismarck@30!A state or provincial capital, not a national one|Columbus@30!A state or provincial capital, not a national one|Oklahoma City@30!A state or provincial capital, not a national one|Salem@30!A state or provincial capital, not a national one|Harrisburg@30!A state or provincial capital, not a national one|Providence@30!A state or provincial capital, not a national one|Columbia@30!A state or provincial capital, not a national one|Pierre@30!A state or provincial capital, not a national one|Nashville@30!A state or provincial capital, not a national one|Austin@30!A state or provincial capital, not a national one|Salt Lake City@30!A state or provincial capital, not a national one|Montpelier@30!A state or provincial capital, not a national one|Richmond@30!A state or provincial capital, not a national one|Olympia@30!A state or provincial capital, not a national one|Charleston@30!A state or provincial capital, not a national one|Madison@30!A state or provincial capital, not a national one|Cheyenne@30!A state or provincial capital, not a national one|Toronto@30!A state or provincial capital, not a national one|Quebec City@30!A state or provincial capital, not a national one|Victoria@30!A state or provincial capital, not a national one|Edmonton@30!A state or provincial capital, not a national one|Winnipeg@30!A state or provincial capital, not a national one|Regina@30!A state or provincial capital, not a national one|Halifax@30!A state or provincial capital, not a national one|Fredericton@30!A state or provincial capital, not a national one|Charlottetown@30!A state or provincial capital, not a national one|Whitehorse@30!A state or provincial capital, not a national one|Yellowknife@30!A state or provincial capital, not a national one|Iqaluit@30!A state or provincial capital, not a national one
+0343|Plymouth@60!Montserrat's official capital, abandoned after an eruption
 0321|Rebekah=Rebecca|Satan=Lucifer=The Devil=Devil=Serpent
 0324|Candy apple=Caramel apple|Frozen banana@30|S'mores@30=Smores|Elote@30|Fruit kabob=Fruit skewer|Shrimp skewer@30|Spiedini@60|Oden@60|Turon@60|Magnum@30|Cotton candy=Candy floss|Kebab=Shish
 0325|Terminator=T-800|The Maschinenmensch=Maria|Evangelion@30!A biological mecha rather than a robot|Teddy@60|Mega Man@60=X|Mecha Sonic@60|Atlas@60|P-Body@60|Johnny 5=Number 5|Gigolo Joe@60|Andrew Martin@60=Bicentennial Man|Muffit@85|Dewey@85|Louie@85|Jenny Wakeman@60=XJ-9=Jenny|Rodney Copperbottom@60|Bigweld@60
@@ -308,8 +302,7 @@
 0346|Slovenian=Slovene|Flemish@60!A variety of Dutch rather than a separate language
 0347|John Glenn=Glenn|Alan Shepard=Shepard|Michael Collins=Collins|Bill Anders@60|Laika@30!A dog sent into orbit|Ham the Chimp@30=Ham!A chimpanzee sent into space
 0348|Mushroom block@30|Daylight sensor@60|Block of Diamond=Diamond
-0349|Hong Kong@60!A region of China, not a country|Macau@60!A region of China, not a country|Puerto Rico@60!A US territory, not a country|Bermuda@60!A British territory, not a country|Gibraltar@60!A British territory, not a country
-0350|Czechoslovakia@30!No longer exists|Yugoslavia@30!No longer exists
+0349|Hong Kong@60!A region of China, not a country|Macau@60!A region of China, not a country
 0351|Camel=Dromedary
 0352|Potbelly@60|Checkers=Rally's|Rax@85|Jamba Juice=Jamba|Nathan's Famous@60=Nathan's|Denny's@30!A sit-down diner chain|Applebee's@30!A sit-down restaurant chain
 0355|Swordplay=Sword fighting=Duel
@@ -326,8 +319,7 @@
 0367|Beauty and the Beast=Tale as Old as Time
 0368|Rollerblades@30=Inline skates|Horse=Horseback
 0369|Triplex@30|Ranch house=Ranch|Tipi=Teepee|Shack=Shanty|Mobile home=Trailer|Motorhome=RV|Studio apartment@30=Studio|Hostel@30!Lodging rather than a home|Hotel@30!Lodging rather than a home|Motel@30!Lodging rather than a home|Pueblo@30|Adobe@30|Wigwam@30|A-frame@30|Colonial@30|Victorian@30|Craftsman@30|Co-op@30|Bedsit@60|Hovel@30|Lean-to@30|Bivouac@60!A temporary camp|Bunker@30|Yurt=Ger|Bahay kubo@85
-0370|Transnistria@60!A breakaway state, not recognised
-0371|Hong Kong@60!A region of China, not a country|Puerto Rico@30!A US territory, not a country|Gibraltar@60!A British territory, not a country|Bermuda@60!A British territory, not a country
+0371|Hong Kong@60!A region of China, not a country
 0372|Reindeer=Caribou|Ermine=Stoat|Guillemot=Murre|Sea otter@60!Lives in subarctic waters
 0373|Ancient Egyptian=Egyptian|Old Saxon@85|Anglo-Norman@85|Mycenaean Greek@60|Nabataean@85|Palmyrene@85
 0374|Super Mushroom@30=Mushroom!An item rather than a character
@@ -336,10 +328,9 @@
 0380|Tabbouleh=Tabouli|Baba ganoush=Mutabbal|Dolma=Stuffed grape leaves=Warak enab|Manakish=Za'atar bread|Knafeh=Kunafa|Doner kebab=Döner|Abgoosht=Dizi|Lentil soup@30=Mercimek=Mercimek çorbası
 0381|Walter White=Walt|Walter White Jr.=Flynn|Hector Salamanca=Tio|Leonel Salamanca@60=Leonel|Marco Salamanca@60=Marco|Todd Alquist=Todd|Lydia Rodarte-Quayle=Lydia|Jane Margolis=Jane|Gale Boetticher=Gale|Ted Beneke=Ted|Huell Babineaux=Huell|Emilio Koyama@60=Emilio|Brock Cantillo@60=Brock|Holly White=Holly|Krazy-8=Domingo|Tyrus Kitt@60=Tyrus|Francesca Liddy@60=Francesca
 0382|World War I=WWI=WW1=WW I=World war one|Gulf War=Desert Storm=Operation Desert Storm|Soviet-Afghan War=Afghan War
-0383|French Guiana@60!Part of France
 0384|Minecraft=Minecraft Pocket Edition|Call of Duty: Mobile=COD Mobile|My Talking Tom=Talking Tom|Honor of Kings=Arena of Valor|Wild Rift=League of Legends: Wild Rift|Stack@60|Gacha Club@60|eFootball=PES|EA Sports FC Mobile=FIFA Mobile|Archero@60
 0385|Discovery Bay@85!A census-designated place rather than an incorporated city
-0386|Wildebeest=Gnu|Ox@30|Unicorn@30!A mythical animal|Axis deer=Chital|Barbary sheep=Aoudad
+0386|Wildebeest=Gnu|Ox@30|Unicorn@10!A mythical animal|Axis deer=Chital|Barbary sheep=Aoudad
 0387|Tapas@30!A style of small dishes|Tortilla española=Spanish omelette=Spanish tortilla|Jamón=Jamón ibérico=Jamon iberico=Jamón serrano=Serrano ham|Fabada=Fabada asturiana|Cocido=Cocido madrileño|Pan con tomate=Pan tumaca|Empanada gallega@60|Pimientos de Padrón=Padrón peppers=Padron peppers|Sardinhas assadas=Grilled sardines|Piri piri chicken=Frango piri-piri|Sangria@30!A drink
 0389|Cat@10=Domestic cat|Dog@30=Domestic dog!In the order Carnivora, but eats a mixed diet|Skunk@30!In the order Carnivora, but omnivorous|Raccoon@30!In the order Carnivora, but omnivorous|Coati@30!In the order Carnivora, but omnivorous|Kinkajou@30!In the order Carnivora, but eats mostly fruit|Binturong@30!In the order Carnivora, but eats mostly fruit|Red panda@30!In the order Carnivora, but eats mostly bamboo|Giant panda@30=Panda!In the order Carnivora, but eats mostly bamboo
 0390|Role-playing game=RPG=Role-playing|Rhythm=Music=Music game|Party game@30=Party|Idle=Idle game|Management@30|Farming sim=Farming|Cozy game@60=Cozy
@@ -354,7 +345,6 @@
 0399|Bangalore=Bengaluru
 0400|Tripitaka=Pali Canon|Sutras@30|Tibetan Book of the Dead=Bardo Thodol|Apocrypha=Deuterocanon|Vulgate@60!A Latin translation of the Bible|Bible=KJV|Sunnah@30|Tafsir@60!A commentary on the Quran|Catechism@30!A summary of doctrine rather than scripture|Quran=Quran Sharif
 0401|Wasp=Hope van Dyne|Thena@60|Ikaris@60|Ms. Marvel=Kamala Khan|Mister Fantastic=Reed Richards|Human Torch=Johnny Storm|The Thing=Ben Grimm|Scarlet Witch@60=Wanda!A lead in Doctor Strange in the Multiverse of Madness|Thanos@60!Often called the protagonist of Infinity War
-0402|Puerto Rico@60!A US territory, not a country
 0403|Pituitary gland=Pituitary|Cerebral cortex=Cortex|Somatosensory cortex=Sensory cortex|Septum@60|Gyrus@30|Sulcus@30|Fissure@30|Cerebral hemispheres@30=Hemisphere=Left hemisphere=Right hemisphere
 0404|Catty=Jin|Pound=Lb=Lbs|Ounce=Oz|Kilogram=Kg|Gram=G|Milligram=Mg
 0405|Titus Andronicus=Titus|Katherina=Kate|Romeo=Romeo Montague|Juliet=Juliet Capulet|Shylock=Shylock the Jew
@@ -380,7 +370,7 @@
 0430|Fantastic Mr. Fox=Fantastic Mister Fox
 0431|Bandage=Band-Aids=Bandaids|Rubbing alcohol@30|Antibiotic ointment=Neosporin=Polysporin=Neosporine|Burn cream=Burn gel|Painkillers=Pain relievers=Ibuprofen=Advil=Acetaminophen=Tylenol=Paracetamol=Aspirin|Antihistamine=Benadryl|EpiPen@60=Epinephrine|Emergency blanket=Space blanket|Cotton swabs=Q-tips|Butterfly closures=Steri-Strips|Petroleum jelly=Vaseline
 0432|Keto=Ketogenic=Ketogenic diet|Weight Watchers=WW|Juice cleanse=Juicing|Low-FODMAP=FODMAP|Whole foods@30|IIFYM=Counting macros|5:2 diet=5:2|Intermittent fasting=16:8
-0433|Wales@60!A constituent country of the UK|Bermuda@60!A British territory, not a country|Cayman Islands@60!A British territory, not a country|Montserrat@60!A British territory, not a country|Anguilla@60!A British territory, not a country|British Virgin Islands@60!A British territory, not a country|American Samoa@60!A US territory, not a country
+0433|Wales@60!A constituent country of the UK
 0434|Camel=Dromedary|Silver fox@60=Fox!Domesticated only in a long-running breeding experiment|Gayal=Mithun|Bali cattle=Banteng|Cattle=Ox|Elephant@30=Asian elephant!Tamed rather than truly domesticated|Cochineal@85
 0435|Minuet=Napoleon|Cyprus cat@85
 0437|Men in Black=MIB
@@ -406,7 +396,6 @@
 0462|Hidden door=Secret door=Bookcase door|Portal@30|Exterior door@30|Hobbit door@60|Mirrored door@30|Dutch door=Split door
 0463|Turbinado@30|Demerara@30|Agave=Agave nectar|Splenda=Sucralose|Equal=Aspartame|Sweet'N Low=Saccharin|Dates@30|Flavored creamer=Coffee creamer=Sweetened creamer|Cocoa@30|Cinnamon@30!A flavouring rather than a sweetener|Vanilla=Vanilla extract|Nutmeg@30!A flavouring rather than a sweetener|Sugar cube=Sugar cubes|Panela@60=Piloncillo|Muscovado@60|Stevia=Stevia leaf
 0464|Behind a painting@30|Backyard=Garden|Car@30|Pillow=Pillowcase|Fake rock@60|Purse lining@60|Shoe=Shoe insole|Stuffed animal=Teddy bear|Flowerpot=Plant pot|Lamp@60
-0465|Puerto Rico@60!A US territory, not a country|Yugoslavia@30!No longer exists
 0466|Whooping cough=Pertussis|Influenza=Flu|COVID-19=Coronavirus|HPV=Human papillomavirus|Meningitis=Meningococcal disease|Pneumonia=Pneumococcal disease|Hib=Haemophilus influenzae type b|Dengue=Dengue fever|Mpox=Monkeypox|Hand, foot and mouth disease@85=Enterovirus 71|Cowpox@60!Used as the first vaccine rather than vaccinated against|Parvovirus@60=Parvo!A dog disease|Swine flu=H1N1|Smallpox=Smallpox virus|Polio=Polio virus
 0468|Checkered=Checks|Camouflage=Camo|Polka dot=Polka|Herringbone=Herringbone tweed|Glen plaid=Glen check=Prince of Wales check|Trellis@30|Hawaiian print=Aloha print|Palm leaf@30|Novelty print=Conversational print|Tessellation@30|Zigzag@30
 0469|Mandarin=Chinese|Bengali=Bangla|Punjabi@60!The most common first language in Pakistan, where Urdu is the lingua franca|Kazakh@30|Pashto@60!The largest first language in Afghanistan|Filipino=Tagalog|Cantonese@60!Most spoken in Hong Kong, which is not a country
@@ -416,7 +405,7 @@
 0474|Screen=Touchscreen=Display|Microphone=Mic|Camera Control@60|Mute switch=Ring/silent switch|SIM card@30!Sits inside the tray|Back@30=Back glass=Back panel|Fingerprint sensor=Touch ID|Face ID@30|Notification LED=Notification light|Battery@30!Sealed inside most phones|S Pen@60
 0475|USA@30
 0476|Sesame ginger=Asian sesame|Lemon juice@30!A single ingredient|Tzatziki@30!A dip|Louis dressing=Crab Louie|Cobb dressing@60|Raspberry vinaigrette=Raspberry|Vinaigrette=Vinegarette
-0477|English@10|Dutch@30!Named after the Germanic people rather than a country|Hindi@30!Named after Hind, an old name for India|Manx@60!The Isle of Man is a Crown Dependency|Arabic@30!Named after Arabia, a region|Hawaiian@60!Named after the former Kingdom of Hawaii|Catalan@60!Named after Catalonia, an autonomous community|Basque@60!Named after the Basque Country|Galician@60!Named after Galicia, an autonomous community|Breton@60!Named after Brittany, a region|Flemish@60!Named after Flanders, a region|Kurdish@60!Named after Kurdistan, a region|Punjabi@60!Named after Punjab, a region|Gujarati@60!Named after Gujarat, an Indian state|Sindhi@60!Named after Sindh, a Pakistani province|Balochi@60!Named after Balochistan, a region|Zulu@60!Named after the Zulu Kingdom
+0477|English@10|Dutch@30!Named after the Germanic people rather than a country|Hindi@30!Named after Hind, an old name for India|Arabic@30!Named after Arabia, a region|Hawaiian@60!Named after the former Kingdom of Hawaii|Catalan@60!Named after Catalonia, an autonomous community|Basque@60!Named after the Basque Country|Galician@60!Named after Galicia, an autonomous community|Breton@60!Named after Brittany, a region|Flemish@60!Named after Flanders, a region|Kurdish@60!Named after Kurdistan, a region|Punjabi@60!Named after Punjab, a region|Gujarati@60!Named after Gujarat, an Indian state|Sindhi@60!Named after Sindh, a Pakistani province|Balochi@60!Named after Balochistan, a region|Zulu@60!Named after the Zulu Kingdom
 0479|Ask Jeeves=Ask.com=Ask|360 Search=So.com|Yippy@60|Copilot@30=Bing Chat!An AI assistant that searches|Gemini@30!An AI assistant that searches|Overture@85
 0480|Discrete mathematics=Discrete math|Precalculus@30|Partial differential equations=PDEs|Data science@30!An applied field rather than mathematics|Computer science@30!A separate science|Statistics=Stats|Calculus=Calc
 0481|Costa Del Mar=Costa|Dolce & Gabbana=D&G|Saint Laurent=YSL|Giorgio Armani=Armani|Ralph Lauren=Polo|Smith=Smith Optics|Quay Australia=Quay|Randolph Engineering@60|Zeal Optics@60=Zeal|Native Eyewear@60=Native
@@ -432,7 +421,7 @@
 0493|Obadiah Stane=Iron Monger|Whiplash=Ivan Vanko|Darren Cross=Yellowjacket|Ego=Ego the Living Planet|Vulture=Adrian Toomes|Ghost=Ava Starr|Mysterio=Quentin Beck|Deviants@60|He Who Remains@60|Talos@30!Revealed to be an ally|Green Goblin=Norman Osborn|Black Order@30|Baron Zemo=Helmut Zemo|Hydra@30!An organisation rather than a character|Sentry@30
 0495|Samsung=Galaxy=Samsung Galaxy|Google=Pixel|Sony=Xperia|Asus=ROG Phone|Microsoft@60=Lumia=Microsoft Lumia=Windows Phone|Cat=CAT phones|Jitterbug=Lively
 0496|iHeartRadio=iHeart|Napster=Rhapsody|Shazam@30!Identifies songs rather than playing them|Wynk Music@60=Wynk|Slacker Radio@60=Slacker|iTunes@30|BandLab@60=Bandlab
-0498|Congo@30|Puerto Rico@60!A US territory, not a country
+0498|Congo@30
 0499|Oromo@60!The largest first language in Ethiopia, where Amharic is the lingua franca|Lingala@60!Shares the role with Swahili in the DR Congo|Setswana=Tswana|Chichewa=Nyanja|Akan@30=Twi|Fon@60|Arabic=Darija|Kituba@60
 0500|Super Smash Bros=Smash Bros
 0501|Paris Orly Airport@60=Orly|Chicago O'Hare International Airport=O'Hare=Ohare|Tokyo Haneda Airport=Haneda=Tokyo Haneda|Adolfo Suárez Madrid–Barajas Airport=Barajas|Rome Fiumicino Airport=Fiumicino|Milan Malpensa@60=Malpensa|São Paulo–Guarulhos International Airport=Guarulhos|Harry Reid International Airport=McCarran=Las Vegas Harry Reid|Detroit Metropolitan Airport@60=Detroit Metro|Washington Dulles International Airport=Dulles|Taiwan Taoyuan International Airport@60=Taoyuan|O. R. Tambo International Airport=Johannesburg OR Tambo|Addis Ababa Bole International Airport=Bole|Oslo Gardermoen Airport=Gardermoen=Oslo Gardermoen|Vienna International Airport=Schwechat|Humberto Delgado=Lisbon Airport
@@ -479,7 +468,7 @@
 0546|Gryffindor Tower=Gryffindor common room|Platform 9¾=Platform Nine and Three-Quarters|Hogwarts Express@30!A train rather than a place|Hogwarts kitchens@60=Kitchens
 0547|Hail Mary pass@30=Hail Mary|Floater=Teardrop|Hook shot=Hook punch|Mid-range jumper@30=Mid-range shot
 0548|Laces=Shoelaces=Shoelace|Heel counter=Counter|Arch support=Arch|Insole=Footbed=Sockliner|Tread@30|Logo=Swoosh|Stitching=Seam|Cushioning@30|Last@60|Speed hooks=Hook|Toe spring@60
-0550|Greenland@60!Part of the Kingdom of Denmark, not a country|Venezuela@30!Its last glacier melted away in 2024|Antarctica@60!A continent rather than a country
+0550|Venezuela@30!Its last glacier melted away in 2024|Antarctica@60!A continent rather than a country
 0551|Payroll tax=FICA|Excise tax=Excise duty|Tariff=Import duty|Sugar tax=Soda tax|Poll tax=Head tax|Vehicle tax=Road tax|Hotel tax=Occupancy tax|Alternative minimum tax=AMT|TV licence@60=Television licence=TV license!A licence fee rather than a tax
 0552|Parakeet=Budgie|Seagull=Gull|Peacock=Peafowl|Duck=Mallard
 0553|Animation=Animated|Children's=Kids|Cooking show=Cooking|Competition show@30|Miniseries=Limited series|Web series@30|Survival@30|Prestige TV@30!A label for quality rather than a genre
@@ -488,13 +477,12 @@
 0556|Shell=Carapace|Armor=Plates|Venom@30!A substance rather than a body part|Pincers=Nippers|Barbs@30|Ink sac=Ink|Slime@30=Mucus!A secretion rather than a body part|Scent glands@30=Spray|Tail club@60=Thagomizer
 0557|Liverwurst=Braunschweiger|Head cheese@30!A jellied meat rather than a sausage|Cocktail sausage=Little smokies=Lit'l Smokies|Kransky@60|Currywurst@30!A dish made with sausage|Snag@30
 0558|Othello=Reversi|Tic-tac-toe=Noughts and crosses|Santorini@60|Mancala=Kalah|Foosball@30|Red hands=Hand slap|Cat's cradle@30|Thumb war=Thumb wrestling
-0559|French Guiana@60!Part of France, not a country|Greenland@60!Part of the Kingdom of Denmark, not a country|Aruba@60!A Dutch constituent country|Curaçao@60=Curacao!A Dutch constituent country|Bermuda@60!A British territory, not a country|Martinique@60!Part of France, not a country|Guadeloupe@60!Part of France, not a country
+0559|Aruba@60!A Dutch constituent country|Curaçao@60=Curacao!A Dutch constituent country
 0560|Good Mythical Morning@30|IShowSpeed=Speed|Beast Philanthropy@30
 0561|Exxon=ExxonMobil|Pilot=Pilot Flying J|Costco=Costco Gas|TotalEnergies=Total|Eni@60|Shell=Shell gas
 0562|Korea@30!Two countries share the name
 0563|Sent=Sent Items=Sent Mail|Spam=Junk=Junk Mail=Junk Email|Trash=Deleted Items=Bin=Recycle Bin|Flagged@30|Important=Priority
 0564|Total fat=Fat|Total carbohydrate=Carbohydrates=Carbs=Carbohydrate|Dietary fiber=Fiber=Fibre|Ingredients@30!Listed near the label rather than on it|Allergens@30!Listed near the label rather than on it|Calories=Energy=Kilojoules=kJ=kcal|Net carbs@30!Not on US labels|Caffeine@30!Only on some labels
-0565|Western Sahara@60!A disputed territory, not a country|Greenland@60!Part of the Kingdom of Denmark, not a country
 0566|Hazzan=Chazzan|Buddha@30!A title for an awakened one rather than a role|Abbot=Abbot of a monastery|Altar server=Altar boy|Prophetess@30
 0567|Kanye West=Ye=Kanye|2Pac=Tupac
 0568|Skin=Peel|Flesh=Pulp|Pit=Stone|Stem=Stalk|Leaf@30|Calyx=Sepals|Juice sac=Vesicles|Seed=Pip|Pith=Albedo|Zest=Flavedo|Ovary@60|Strings@30|Bloom@30=Wax|Fuzz=Hair|Cap@30
@@ -508,7 +496,7 @@
 0578|Flip=Mirror|Warmth=Temperature|Sharpness=Sharpen|Definition=Clarity|Auto-enhance=Auto=Enhance|Retouch=Heal=Spot fix|Magic eraser=Object eraser=Clean Up=Erase|Blur=Bokeh=Depth|Markup=Draw=Annotate|Stickers=Emoji|Frame=Border|Perspective=Skew|Trim@30|Live photo effects@30|Portrait lighting=Lighting|Remove background=Background removal=Cutout=Lift subject|Revert=Restore|Undo@30|Black and white=Grayscale=Monochrome|Straighten=Straighten horizon|Crop=Crop photo
 0579|Restricted stock units=RSUs|Holiday pay=Vacation pay|Paid time off@30=PTO|Pension=Retirement=401(k)=401k|Health insurance@30!A benefit rather than pay|Allowance@30|Piece rate=Piecework|Hazard pay=Danger pay|Thirteenth salary=13th month pay|Commission=Commission pay|Company car@30!A benefit in kind|Expense reimbursement@30=Expense account|Mileage@30|Tuition reimbursement@30|Parental leave pay@30|On-call pay=Standby pay|Draw@60|Barter@30!Payment in goods|Cryptocurrency@30=Crypto=Bitcoin!Rare as wages
 0574|Legalese@30!A style of language rather than a language|Journalese@30!A style of language rather than a language|Viennese@60!A dialect of German|Bolognese@60!A dialect of Emilian
-0580|Burma@30!Myanmar's former name|Macedonia@30!North Macedonia's former name|Macau@60!A region of China, not a country|Martinique@60!Part of France, not a country
+0580|Burma@30!Myanmar's former name|Macedonia@30!North Macedonia's former name|Macau@60!A region of China, not a country
 0549|Britain@30!Usually called the United Kingdom
 0581|Match=Match.com|Plenty of Fish=POF|Shaadi@60=Shaadi.com|Bumble BFF@30!For making friends rather than dating
 0582|Cheese=Parmesan=Cheddar=Mozzarella=Pecorino=Gruyère=Gruyere=Romano=Cotija=Asiago=Parmasan|Zest=Lemon zest=Orange zest|Broccoli stem@60|Soap@30!Not a food|Hash browns@30!Made by grating potatoes|Coleslaw@30!Made by grating cabbage|Cauliflower rice@30!Made by grating cauliflower
@@ -531,7 +519,7 @@
 0601|Action camera=GoPro=Gopro|Twin-lens reflex=TLR|Lomography@60|Lytro@60=Lightfield camera
 0603|Eggplant=Aubergine|Pea pod@30=Pod|Pickle@30=Cornichon!A pickled cucumber|Pattypan@60|Delicata@60|Kabocha@60|Serrano@30
 0604|Feet=Foot|Eyelids@30|Calves=Calf|Shins=Tibias|Testicles=Testes|Brain hemispheres=Hemispheres|Irises=Iris|Hamstrings@30|Glutes@30|Achilles tendons=Achilles|Salivary glands@30
-0605|New York City=NYC|Long Island City@60|Studio City@60|Kowloon City@60|Gotham City@30!Fictional|Emerald City@30!Fictional|Vice City@30!Fictional|Twin Cities@30!A nickname for Minneapolis and Saint Paul
+0605|New York City=NYC|Long Island City@60|Studio City@60|Kowloon City@60|Gotham City@10!Fictional|Emerald City@10!Fictional|Vice City@10!Fictional|Twin Cities@30!A nickname for Minneapolis and Saint Paul
 0606|Simply=Simply Orange=Simply juice|Naked=Naked Juice|Tang@30|Mamma Chia@60|Tropicana=Tropicana Pure Premium=Tropicana juice
 0607|Casserole dish@30|Silicone mat=Silpat|Pot holder@30|Pizza stone=Baking stone|Banneton=Proofing basket|Skewer@30|Bread machine@30|Waffle iron@30
 0608|Grey@30!A seal or squirrel rather than a full name|Yorkie@30|Chickadee@30
@@ -555,7 +543,7 @@
 0627|Myanmar@30!The Himalayan foothills reach its north|Afghanistan@30!The Hindu Kush rather than the Himalayas|Tajikistan@30!The Pamirs rather than the Himalayas
 0628|Chittagong@30|Kathmandu@30!Just over one million in the metro area|Cebu@30!Under one million within city limits
 0630|Microsoft Word=Word|Google Keep=Keep|Apple Pages=Pages|LibreOffice=LibreOffice Writer|WPS Office=WPS Writer|Hemingway Editor=Hemingway|Microsoft 365@30=Office 365|Lucidspark@30|Asana@30!A project-management app|Airtable@30!A database app|ChatGPT@30!An AI assistant
-0631|French@30!Most spoken only in Haiti, Martinique and Guadeloupe|Haitian Creole=Creole|Papiamento@60!Most spoken in Aruba and Curaçao, which are not countries|Greenlandic@60=Kalaallisut!Greenland is not a country
+0631|French@30!Most spoken only in Haiti, Martinique and Guadeloupe|Haitian Creole=Creole|Papiamento@60!Most spoken in Aruba and Curaçao, which are not countries
 0632|Seoul@30!A special city rather than a provincial capital|Kuala Lumpur@30!A federal territory
 0633|Manchester United=Man United|Manchester City=Man City|New York Giants=Giants NFL|Carolina Panthers=Panthers|Detroit Lions=Lions|Arizona Cardinals=Cardinals NFL|Los Angeles Clippers=Clippers|Utah Jazz=Jazz|Sacramento Kings=Kings|Memphis Grizzlies=Grizzlies|Atlanta Hawks=Hawks|Charlotte Hornets=Hornets|Detroit Pistons=Pistons|San Antonio Spurs=Spurs NBA|Brighton & Hove Albion=Brighton|West Bromwich Albion=West Brom|Birmingham City=Birmingham|Queens Park Rangers=QPR
 0634|Strip Weathers=The King|Professor Z@60=Professor Zündapp|Tractors@30|Delinquent Road Hazards@60|Darrell Cartrip=Darrell|Lightning McQueen=McQueen car
@@ -570,7 +558,7 @@
 0644|Sauce@30|Dish soap=Dishwashing liquid|Glass cleaner=Windex|Personal lubricant=Lube|Hand sanitizer=Sanitiser|Cheese sauce=Nacho cheese|Coffee syrup@30
 0645|Haircut=Cut|Trim@10|Blowout=Blow-dry=Blow dry|Hair color=Color=Colour=Hair dye=Dye|Toner=Toning|Gloss=Glaze|Perm=Permanent wave|Hair straightening=Straightening|Hair extensions=Extensions=Sew-in|Wig installation@30=Wig|Deep conditioning=Conditioning treatment|Wash=Shampoo=Wash and blow dry|Line-up=Edge up|Bang trim=Fringe trim|Layers@30|Thinning@30=Texturizing|Manicure=Nails|Brow tint@30|Makeup@30|Olaplex treatment@30|Hair mask@30|Kids' cut@30|Locs=Dreadlocks
 0646|Backup camera=Reverse camera=Reversing camera|Navigation system@30=GPS=Navigation=Sat nav=GPS navigation|Sunroof=Moonroof|Panoramic roof@30=Panoramic sunroof|Blind-spot monitoring=Blind spot detection|Automatic parking@60=Self-parking=Park assist=Parking assist|Self-driving@60=Autopilot=Autonomous driving|Air conditioning=AC=A/C|Infotainment system@30|Head-up display=HUD|Rain-sensing wipers=Automatic wipers|Tire pressure monitoring=TPMS|Anti-lock brakes (ABS)=ABS|Airbags@10=Airbag!standard safety equipment rather than an optional feature|All-wheel drive=AWD|Four-wheel drive=4WD|Hybrid powertrain@15=Hybrid engine=Electric motor!a drivetrain rather than a feature|Seat belts@10=Seat belt=Seatbelts=Seatbelt!basic equipment every car has|Radio@10=Car radio!basic equipment every car has|Sun visor@10=Sun visors!basic equipment every car has|Horn@10=Car horn!basic equipment every car has
-0647|Somaliland@15!self-declared state, not internationally recognised|Democratic Republic of the Congo@15=DR Congo=DRC=Congo!usually counted as Central Africa, but it is in the East African Community
+0647|Democratic Republic of the Congo@15=DR Congo=DRC=Congo!usually counted as Central Africa, but it is in the East African Community
 0648|Caesar dressing=Caesar|Queso blanco@30=White queso|Mayonnaise=Kewpie|Coconut milk@15!thin and pale; arguably a sauce base rather than a sauce
 0649|Formula 1=F1|Sledge hockey=Para ice hockey|Para bobsleigh=Bobsledding=Bobsled racing|Indoor rowing=Rowing machine|Cycling=Cycling race
 0650|Steam locomotive=Train|Steam wand=Milk frother|Steam radiator=Radiator|Steam humidifier=Vaporizer|Calliope=Steam organ|Sauna=Sauna room
@@ -590,12 +578,12 @@
 0666|Diving=Simulation=Embellishment|Dangerous play=High foot|Carrying=Palming|Three-second violation@30=3 seconds=Three-second rule|Illegal screen=Moving screen|Too many players=Too many men=Too many men on the field|Wide=Wide ball|Collapsing=Collapsing the scrum=Collapsing a scrum|Leg before wicket@15=LBW!a way to be out rather than a foul|Hit wicket@10!a way to be out rather than a foul|Yellow card@10!a punishment for a foul rather than a foul|Red card@10!a punishment for a foul rather than a foul
 0667|Marks & Spencer=M&S|Abercrombie & Fitch=Abercrombie|Hugo Boss=Boss
 0668|Massachusetts Institute of Technology=MIT|University of California, Berkeley=Berkeley|University of Virginia=UVA|University of North Carolina at Chapel Hill=UNC=University of North Carolina|Morehouse College@30=Morehouse|London School of Economics=LSE|University of Edinburgh=Edinburgh|University of Glasgow=Glasgow|University of Leeds=Leeds|University of Birmingham=Birmingham|University of Nottingham=Nottingham|University of Sheffield=Sheffield|University of York=York|University of Bath=Bath|University of Liverpool=Liverpool
-0669|Serbo-Croatian@30=Serbo-Croat=BCMS!one language or several, depending on who you ask|Hausa@30!most spoken in Niger; in Nigeria it vies with English|Turkish@15!Northern Cyprus is not widely recognised|Kinyarwanda@30=Kirundi=Rwanda-Rundi!Kinyarwanda and Kirundi are usually counted as separate languages
+0669|Serbo-Croatian@30=Serbo-Croat=BCMS!one language or several, depending on who you ask|Hausa@30!most spoken in Niger; in Nigeria it vies with English|Kinyarwanda@30=Kirundi=Rwanda-Rundi!Kinyarwanda and Kirundi are usually counted as separate languages
 0670|Olimar=Alph|Mr. Game & Watch=Game & Watch=Mr Game and Watch|Rosalina & Luma=Rosalina|Banjo & Kazooie=Banjo|Mii Fighter=Mii|Ganondorf=Ganon
 0671|Kiwi=Kiwifruit
 0672|Deodorant=Antiperspirant|String cheese=Cheese sticks|Meat stick=Slim Jim=Beef jerky stick=Jerky stick=Salami stick|Sunscreen stick=Sun stick|Hair wax stick=Pomade stick|Concert light stick=Lightstick|USB stick=Memory stick|Streaming stick@30=Fire stick=Fire TV Stick=Roku stick|Matches=Matchstick|Crab sticks=Imitation crab=Surimi|Eyeliner@15=Eyeliner pencil!usually sold as a pencil|Twix@15!sold as bars rather than sticks|Kit Kat@15=KitKat!sold as fingers rather than sticks|Twizzlers@15!sold as twists rather than sticks
 0673|Mashed turnip=Neeps|Pumpkin pie@15!the filling is puréed pumpkin|Sweet potato pie@15!the filling is mashed sweet potato|Banana bread@15!made with mashed bananas|Milkshake@15!blended rather than mashed|Sofrito@15!blended or finely chopped|Avocado toast@15!topped with mashed avocado|Soup@10!only blended soups count
-0674|Netherlands=Holland|Democratic Republic of the Congo=DR Congo|Scotland@15!a country within the UK|England@15!a country within the UK|Greenland@15!a territory of Denmark|Bermuda@15!a British territory
+0674|Netherlands=Holland|Democratic Republic of the Congo=DR Congo|Scotland@15!a country within the UK|England@15!a country within the UK
 0675|Electric air duster=Compressed air|HVAC@15!a whole system that includes blowers
 0676|Kitten@10!a young house cat|Chihuahua@15!a dog breed often smaller than a cat
 0677|Comcast=Xfinity=Comcast Xfinity|Verizon=Verizon Fios=Fios=Verizon 5G Home|CenturyLink=Lumen|Quantum Fiber@30|T-Mobile=T-Mobile Home Internet|Ziply Fiber=Ziply|Astound=RCN|Consolidated Communications@30=Consolidated|Bouygues Telecom@30=Bouygues|Unifi=TM=Telekom Malaysia|Spectrum=Spectrum internet
@@ -630,7 +618,6 @@
 0708|Bluefin tuna=Otoro|Jamón ibérico=Iberico ham|Bird's nest=Swiftlet nest=Swallow's nest|Saffron=Saffron threads|Yubari King melon@60|Densuke watermelon@60|Pule=Donkey cheese|Uni=Sea urchin|Kobe beef=Kobe|Wagyu beef=Wagyu steak|Goose barnacles@60=Percebes|Fugu@15=Pufferfish!expensive as a dish, not always by weight|Ayam Cemani@15!sold as live birds rather than by weight
 0710|Uluru-Kata Tjuta=Uluru|Eryri (Snowdonia)=Snowdonia|Bannau Brycheiniog (Brecon Beacons) National Park=Brecon Beacons|Ordesa y Monte Perdido National Park=Ordesa|Þingvellir=Thingvellir|Bwindi Impenetrable National Park=Bwindi|Tsavo East@30=Tsavo|Jim Corbett=Corbett|Torres del Paine=Torres|Arenal Volcano National Park=Arenal|Masai Mara@15=Maasai Mara!a national reserve rather than a park|Ngorongoro@15!a conservation area rather than a park|Great Barrier Reef@15!a marine park|Zhangjiajie@15!a national forest park
 0711|Brooklyn Nine-Nine=B99
-0712|Western Sahara@15!a disputed territory rather than a country
 0713|Virgil van Dijk=VVD|William Saliba=Saliba|Mohamed Salah@30=Salah=Mo Salah!at Liverpool in 2025-26; check he has not moved|Rodri@30=Rodrigo Hernández!at Manchester City in 2025-26; check he has not moved|Ollie Watkins@30!at Aston Villa in 2025-26; check he has not moved|Gabriel Martinelli@30=Martinelli!at Arsenal in 2025-26; check he has not moved|Leandro Trossard@30=Trossard!at Arsenal in 2025-26; check he has not moved|Marc Cucurella@30=Cucurella!at Chelsea in 2025-26; check he has not moved|Jarrod Bowen@30!at West Ham in 2025-26; check he has not moved|Cristian Romero@30!at Tottenham in 2025-26; check he has not moved|Anthony Gordon@30!at Newcastle in 2025-26; check he has not moved
 0714|Japanese yen=Yen|Chinese yuan=Renminbi=RMB|South Korean won=Won|Turkish lira=Lira|Malaysian ringgit=Ringgit|Israeli shekel=New shekel=Israeli new shekel|Polish złoty=Zloty=Złoty=Polish zloty|Peruvian sol@30=Sol|Uzbek som@60=Som|Lao kip=Kip|Myanmar kyat@60=Kyat|Romanian leu@30=Leu|Bulgarian lev@15=Lev!replaced by the euro in 2026|Croatian kuna@15=Kuna!replaced by the euro in 2023|Dogecoin@10!a cryptocurrency rather than a national currency
 0716|Battery=Battery life=Battery percentage=Charge|Interest rate=Interest=Interest on savings|Tax rate=Taxes|Unemployment rate=Unemployment|Grade=Test score=Exam score=Score|Tip=Gratuity|Probability=Chance|Alcohol by volume (ABV)=ABV=Alcohol content|Blood alcohol content=BAC|Vote share=Polls=Poll results|Profit margin=Margin|GDP growth=Growth|Ownership stake@30=Ownership=Stake|Stock price change@30=Stock change|Progress=Loading=Completion|Oxygen saturation=Blood oxygen=SpO2|Cocoa content=Cacao|Fabric content=Cotton content|Mortality rate=Death rate|Voter turnout=Turnout|Rotten Tomatoes score=Tomatometer|Netflix match=Match percentage|A1C=HbA1c|Zoom level@15=Zoom!shown as a percentage on screens|Percentile@10!a rank out of 100 rather than a percentage
@@ -654,7 +641,7 @@
 0735|Bacon sandwich=Bacon butty|French onion soup=Soupe à l'oignon|Choucroute garnie@30=Choucroute
 0736|Heart rate=Pulse=Heart beat|BMI=Body mass index|Waist circumference@30=Waist=Waist size|Hip circumference@30=Hips=Hip size|Chest circumference@30=Chest=Bust=Chest size|Shoe size=Foot size|Neck circumference@30=Neck size|Blood sugar=Glucose=Blood glucose|Oxygen saturation=Blood oxygen=SpO2|Brain activity=Brain waves=EEG|Heart rhythm=ECG=EKG|Basal metabolic rate=BMR|Heart rate variability=HRV|Arm circumference@30=Bicep size=Biceps|Thigh circumference@30|Calf circumference@30|Body temperature=Fever|Blood type@15!identified rather than measured|Stress level@15=Stress!measured indirectly
 0737|Othello=Reversi|Hnefatafl=Tafl|Stratego=Stratego Original|Checkers=Checkers board|Dots and Boxes@15!a pencil-and-paper game rather than a board game|Ludo@10=Parcheesi!mostly luck rather than strategy|Sorry@10=Trouble!mostly luck rather than strategy
-0739|Hong Kong@15!a Chinese special region rather than a country|Macau@15=Macao!a Chinese special region rather than a country|Western Sahara@15!a disputed territory rather than a country
+0739|Hong Kong@15!a Chinese special region rather than a country|Macau@15=Macao!a Chinese special region rather than a country
 0740|Zlatan Ibrahimović=Zlatan|Kyrie Irving=Kyrie|Anthony Davis=AD
 0741|Brown=Brunette|Platinum blonde=Platinum|Jet black=Raven|Sandy blonde@30=Sandy|Mousy brown@30=Mousy|Thick=Dense|Straight=Straight hair|Curly=Curly hair|Coily=Coily hair|Wavy=Wavy hair|Kinky=Kinky hair|Blonde=Blonde hair=Blond hair|Black=Black hair|Red=Red hair|Grey=Grey hair=Gray hair|Afro=Afro hair|Bald@10!no hair rather than a hair type
 0742|Parkour=Free running|Breaking=Breakdancing|Diving=Diving board|Kiteboarding=Kitesurfing|Professional wrestling@15=Pro wrestling=Wrestling=Lucha libre!scripted entertainment rather than sport
@@ -704,7 +691,7 @@
 0790|Water balloon=Water bomb|Speech balloon=Speech bubble|Sky lantern=Chinese lantern|Balloon arch@15=Balloon garland!a decoration made of balloons|Balloon bouquet@15!a bunch of balloons|Zeppelin@15!an airship rather than a balloon
 0791|Red-fleshed dragon fruit=Red pitaya|Mulberry@15!dark purple rather than red|Red onion@15!red layers but white flesh
 0792|V-Sync=Vertical sync|Display mode=Fullscreen=Windowed=Borderless|Key bindings=Keybinds|Vibration=Rumble|Screen shake=Camera shake|Audio output=Speaker setup|Hints=Tips|Brightness=Brightness slider|Render distance=View distance|Adaptive triggers=Trigger effects|Graphics mode@30=Performance mode=Quality mode=Fidelity mode|Frame rate cap@30=FPS cap=Frame rate limit
-0793|United Kingdom of Great Britain and Northern Ireland@30!the full official name|Turks and Caicos Islands@15=Turks and Caicos!a British territory|Wallis and Futuna@15!a French territory|Svalbard and Jan Mayen@15!a Norwegian territory|Heard Island and McDonald Islands@15!an Australian territory|Greenland@15!a territory of Denmark|Falkland Islands@15!a British territory|Netherlands=Holland
+0793|United Kingdom of Great Britain and Northern Ireland@30!the full official name|Netherlands=Holland
 0794|Basketball hoop=Basket=Bucket|Goal=Net=Hockey net=Goal net|Goalposts=Uprights=Posts=Hurling posts|In-goal area=Try line|Golf hole=Cup=Flag|Cricket wicket@30=Wicket=Stumps=Bails=Stump|Dartboard=Board|Pins=Skittles|Jack=Kitty=Pallino|Pocket=Pocket pool|Target=Target face|Clay target=Clay pigeon=Clay=Skeet=Trap
 0795|Chicken=Chicken breast|Beef=Steak|Turkey=Turkey breast|Eggs=Egg|Soybeans=Soy|Fish@15!most fish qualify, but not all|Buckwheat@15!only when weighed dry|Hummus@15!right around 8 g per 100 g
 0796|Angry=Mad=Anger|Scared=Afraid=Fear|Grateful=Thankful|Sick=Ill|Okay=OK|Joyful=Joy|Sad=Sadness|Happy=Happiness|Numb=Numbness
@@ -727,7 +714,6 @@
 0815|Cantonese=Yue|Wu=Shanghainese|Tagalog=Filipino|Min Nan=Hokkien|Akan=Twi|Mandarin=Mandarin Chinese|Quechua@15!about 8 to 10 million speakers
 0816|Fish@15!many fish eat insects, but not all|Turtle@15!many turtles eat insects, but not all
 0817|Sylvanian Families=Calico Critters|Kinder Surprise@10!a candy egg with a toy inside
-0818|Saint Martin@15!a French territory|Sint Maarten@15!a Dutch territory|Virgin Islands@15=British Virgin Islands=US Virgin Islands!a territory rather than a country
 0820|Catholic Church=Catholic=Catholicism=Roman Catholic=Roman Catholicism=Catholics|Eastern Orthodox Church=Orthodox=Eastern Orthodoxy|Coptic Orthodox Church=Coptic|Anglicanism=Anglican|Episcopal Church=Episcopal|Presbyterianism=Presbyterian|Pentecostalism=Pentecostal|The Church of Jesus Christ of Latter-day Saints=Mormon=Latter-day Saints|Nondenominational Christianity=Nondenominational|Moravian Church=Moravian|Sunni Islam=Sunni=Sunnis|Shia Islam=Shia=Shi'a=Shiite=Shias|Sufism=Sufi|Ibadi Islam=Ibadi|Druze@30|Twelver Shi'ism=Twelver|Zaidi Shi'ism=Zaidi|ISKCON=Hare Krishna|Haredi Judaism=Haredi|Zen=Zen Buddhism|Nichiren Buddhism=Nichiren|Chan Buddhism=Chan|Conservative Judaism=Conservative
 0821|Bayern Munich=FC Bayern|Paris Saint-Germain=PSG|Royal Challengers Bengaluru=Royal Challengers Bangalore|Manchester United=Man United=Man Utd|Mainz 05=Mainz|Benfica@30=SL Benfica|SC Freiburg@30=Freiburg|RCD Mallorca@30=Mallorca|Girona FC@30=Girona|Stade Rennais@30=Rennes
 0822|Frieren: Beyond Journey's End=Frieren|Clannad: After Story@30|Parasyte: The Maxim=Parasyte|Hajime no Ippo@30|Nichijou@30|Aria the Animation=Aria|Attack on Titan=AOT|Hunter x Hunter=HxH|Sword Art Online=SAO
@@ -745,7 +731,7 @@
 0838|Fracture=Broken bone=Break|Cut=Laceration=Gash|Scrape=Graze|Tear=Torn ligament=Torn muscle|Strain=Pulled muscle|Shin splints@30|Puncture wound=Puncture|Black eye@30|Electric shock=Electrocution|Slipped disc=Herniated disc|Rupture=Ruptured tendon|Tear=Torn ACL|Tennis elbow@30|Golfer's elbow@60|Runner's knee@30|Turf toe@60|Strain=Pulled hamstring|Repetitive strain injury=Carpal tunnel=RSI|Torn meniscus@30=Meniscus tear|Separation=Separated shoulder|Jammed finger@30|Stubbed toe@30|Hypothermia@15!a condition rather than an injury|Heatstroke@15!a condition rather than an injury|Nosebleed@15!a symptom rather than a type of injury
 0839|Mars bar=Mars|Lion bar=Lion|Werther's Original Chocolate Covered Caramels=Werther's|Caramel Nibbles@60|Wispa Gold@30!the original Wispa has no caramel
 0840|EA Sports FC 26=FC 26|Fortnite=Fortnite Battle Royale|Marvel's Spider-Man 2=Spiderman 2
-0841|Puerto Rico@15!a US territory rather than a country|Western Sahara@15!a disputed territory rather than a country|Macau@15=Macao!a Chinese special region rather than a country|Guam@15!a US territory rather than a country|Northern Mariana Islands@15!a US territory rather than a country
+0841|Macau@15=Macao!a Chinese special region rather than a country
 0843|Eyeglasses=Spectacles|Seismoscope@30=Seismograph=Zhang Heng's seismoscope
 0844|Robert Downey Jr.=RDJ|Don Lee=Ma Dong-seok
 0845|The Body=Stand by Me|The Lion, the Witch, and the Wardrobe=The Chronicles of Narnia|The Lightning Thief=Percy Jackson|Q & A=Slumdog Millionaire|Nineteen Eighty-Four=1984|Madame Doubtfire@30=Madame Doubtfire=Mrs. Doubtfire|A Bear Called Paddington=Paddington|The Hundred and One Dalmatians=101 Dalmatians|One Shot@30=Jack Reacher!filmed as Jack Reacher|The Accidental Billionaires=The Social Network|Wild: From Lost to Found on the Pacific Crest Trail@30=Wild|Where Rainbows End@30=Love, Rosie
@@ -758,7 +744,7 @@
 0852|Hyperspace=Hyperdrive=Hyperjump|Floo powder=Floo Network|Apparition=Apparate=Apparating|Flying carpet=Magic carpet|Transporter=Beam me up|Great Glass Elevator=Wonka elevator=Wonkavator|Pixie dust=Fairy dust|Flying saucer=UFO|Warp drive=Warp speed|Faster-than-light travel=FTL|DeLorean@30=DeLorean time machine|Iron Man suit@30|Pumpkin carriage@30|Time-traveling phone booth@30=Phone booth=Telephone booth|Tractor beam@15!pulls things in rather than taking you places
 0853|Federal Bureau of Investigation=FBI|Environmental Protection Agency=EPA|Food and Drug Administration=FDA|Bureau of Alcohol, Tobacco, Firearms and Explosives=ATF|Department of Homeland Security=DHS|U.S. Customs and Border Protection=CBP|National Institutes of Health=NIH|Federal Aviation Administration=FAA|Federal Reserve=Fed|Department of the Treasury=Treasury|Department of Defense=DOD=Pentagon|Department of Justice=DOJ|Department of Transportation=DOT|Department of Veterans Affairs=VA|United States Citizenship and Immigration Services=USCIS|United States Marshals Service=US Marshals=U.S. Marshals Service|National Health Service=NHS|HM Revenue & Customs=HMRC|National Crime Agency=NCA|Canada Revenue Agency=CRA|Australian Taxation Office=ATO|Commonwealth Scientific and Industrial Research Organisation=CSIRO|Federal Security Service=FSB|Indian Space Research Organisation=ISRO|Reserve Bank@30=RBI|Central Bureau of Investigation=CBI|Research and Analysis Wing=RAW|Inter-Services Intelligence=ISI|Japan Aerospace Exploration Agency=JAXA|Department of Government Efficiency@15=DOGE!a temporary advisory body
 0854|12 Monkeys=Twelve Monkeys=Twelve monkeys|Napoleon Dynamite@10!only a joke time machine
-0855|Jersey@15!a Crown Dependency rather than a country|Mali@15!dropped French as an official language in 2023|Burkina Faso@15!dropped French as an official language in 2023
+0855|Mali@15!dropped French as an official language in 2023|Burkina Faso@15!dropped French as an official language in 2023
 0856|Linux=Tux|WWF=World Wildlife Fund|Abercrombie & Fitch=Abercrombie|Ralph Lauren=Polo|Merrill Lynch=Merrill|Ferrari=Ferrari horse|Puma=Puma logo|Camel=Camel cigarettes|Frosted Flakes@30|Froot Loops@30|Trix@30|Cocoa Puffs@30|Honey Nut Cheerios@30|Hamm's@60|Frontier Airlines@30|Dodge@15!the ram logo moved to Ram trucks|Geico@15=GEICO!the gecko is a mascot rather than the logo|Haribo@15!the gold bear is a mascot rather than the logo|Teddy Grahams@15!bear-shaped crackers
 0857|Theater=Theatre=Drama|Hospitality management=Hospitality|Philosophy, politics and economics=PPE|Biology=Bio|Chemistry=Chem|Economics=Econ|Psychology=Psych
 0858|Hookah=Shisha|Smudge stick=Sage bundle|Votive candle@30=Votive
@@ -788,14 +774,13 @@
 0884|Nipple covers=Pasties|Continuous glucose monitor=Freestyle Libre=Dexcom|Face gems=Body jewels|Heat patch=ThermaCare|Wound closure strip=Butterfly stitches|Blister plaster=Compeed
 0885|Alejandro G. Iñárritu=Alejandro González Iñárritu|Joel Coen=Coen brothers|Anthony Russo=Russo brothers
 0886|Microphone=Mic=Microphone access=Mic access|Location=GPS=Location services|Photos=Photo library=Gallery=Camera roll=Photos library|Files and media=Storage=Files|Local network=Wi-Fi|Motion & Fitness=Motion|Health data=Health=Fitness data|Phone calls=Phone|Text messages=SMS=Messages|Nearby devices=Sensors|Face ID=Touch ID=Biometrics=Fingerprint=Face data|Media & Apple Music=Media=Music=Apple Music=Media library|HomeKit=Home|Cellular data=Mobile data|Motion and fitness activity=Physical activity=Activity recognition|Accounts on device=Accounts=Account|Contacts=Contacts list|Camera=Camera access|Usage data@30=Usage access|Background activity=Background app refresh
-0887|Puerto Rico@15!a US territory rather than a country
 0888|Grey's Anatomy=Grey's|Downton Abbey=Downton|Saturday Night Live=SNL|EastEnders@30|Coronation Street@30|Neighbours@30|Home and Away@30|Emmerdale@30|Hollyoaks@30|The Young and the Restless@30|The Bold and the Beautiful@30
 0890|Star Wars: Episode VI - Return of the Jedi=Return of the Jedi|E.T. the Extra-Terrestrial=E.T.|The Shawshank Redemption=Shawshank
 0893|Labrador Retriever=Lab|Catahoula Leopard Dog@30=Catahoula
 0894|Eren Yeager=Eren|Gon Freecss=Gon|Tanjiro Kamado=Tanjiro|Shigeo Kageyama=Mob|Lelouch Lamperouge=Lelouch|Rintarou Okabe=Okabe=Rintaro Okabe|Usagi Tsukino@30=Usagi|Taichi Yagami@30=Tai|Vash the Stampede@30=Vash|Mabel Pines=Mabel|Philip J. Fry=Fry|Courage the Cowardly Dog@30=Courage|Gumball Watterson=Gumball|Satoru Gojo@15!a main character but not the protagonist
 0895|BRIT Awards=Brits|Pulitzer Prize=Pulitzer|Juno Awards=Juno|Cannes Film Festival@15=Palme d'Or!a film festival that gives awards|Venice Film Festival@15=Golden Lion!a film festival that gives awards|Berlin International Film Festival@15=Berlinale=Golden Bear!a film festival that gives awards
-0899|Kosovo=Kosovo flag|Puerto Rico@15!a US territory rather than a country|European Union@10=EU!a union rather than a country
-0900|Yugoslavia@15!no longer exists|Hong Kong@15!a Chinese special region rather than a country
+0899|Kosovo=Kosovo flag
+0900|Hong Kong@15!a Chinese special region rather than a country
 0902|Czech Republic=Czech
 0904|Star Wars: Episode I - The Phantom Menace=The Phantom Menace|Star Wars: Episode II - Attack of the Clones=Attack of the Clones|Star Wars: Episode III - Revenge of the Sith=Revenge of the Sith|Die Hard with a Vengeance=Die Hard 3|Django Unchained=Django|National Lampoon's Loaded Weapon 1@30=Loaded Weapon 1|The Man@30|Mother and Child@30|Life Itself@30|Sea of Love@15!a small role
 0905|Aladdin=Prince Ali|Cassim@15!from the sequel Aladdin and the King of Thieves|Abis Mal@15!from the sequel The Return of Jafar|Mozenrath@15!from the TV series|Dalia@15!from the 2019 remake|Prince Anders@15!from the 2019 remake
