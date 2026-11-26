@@ -687,3 +687,61 @@
 0773|Pikachu=Pikachu Libre
 0774|Ultimate frisbee=Ultimate|Relay race=Relay|Artistic swimming=Synchronized swimming
 0775|Keir Starmer@30=Starmer=Keir starmer|Alexandria Ocasio-Cortez@30=AOC|Lindsey Graham@30|Lula da Silva@30=Lula|Viktor Orbán@30=Viktor Orban=Orbán!check he still holds his seat after the 2026 election|Kristi Noem@30!check she is still in the cabinet|Tulsi Gabbard@30!check she is still in the cabinet
+0776|Cooler=Esky
+0777|Crude oil=Oil|Gemstones=Gems|Stone@15!quarried rather than mined
+0778|Sea turtle=Turtle
+0779|Blue dragon=Blue glaucus
+0780|Charger plate=Charger|Placemat@15!protects the table rather than holding food|Tablecloth@15!protects the table rather than holding food
+0781|Star Wars: Episode V - The Empire Strikes Back=The Empire Strikes Back|E.T. the Extra-Terrestrial=E.T.
+0782|Sydney@15!Greater Sydney has about 5 million people; the City of Sydney council is small|Melbourne@15!Greater Melbourne has about 5 million people; the City of Melbourne council is small
+0783|Berliner@30=Berliner doughnut|Brioche@15!a sweet bread rather than a dessert
+0784|Elephant@15!about as fast as a sprinting human|Wild turkey@15=Turkey!wild turkeys can run about 25 mph|Roadrunner@15!about as fast as a sprinting human|Mule@15!about as fast as a horse at a trot
+0785|Spirit: Stallion of the Cimarron=Spirit|Nimona@15!started at Blue Sky but was finished elsewhere
+0786|Milk@10=Warm milk!plain milk rather than a drink made from milk
+0787|Mauritania@15!four only if Western Sahara counts
+0788|Ra=Re|Iðunn=Idun=Idunn
+0789|Sweater dress=Jumper dress
+0790|Water balloon=Water bomb|Speech balloon=Speech bubble|Sky lantern=Chinese lantern|Balloon arch@15=Balloon garland!a decoration made of balloons|Balloon bouquet@15!a bunch of balloons|Zeppelin@15!an airship rather than a balloon
+0791|Red-fleshed dragon fruit=Red pitaya|Mulberry@15!dark purple rather than red|Red onion@15!red layers but white flesh
+0792|V-Sync=Vertical sync|Display mode=Fullscreen=Windowed=Borderless|Key bindings=Keybinds|Vibration=Rumble|Screen shake=Camera shake|Audio output=Speaker setup|Hints=Tips|Brightness=Brightness slider|Render distance=View distance|Adaptive triggers=Trigger effects|Graphics mode@30=Performance mode=Quality mode=Fidelity mode|Frame rate cap@30=FPS cap=Frame rate limit
+0793|United Kingdom of Great Britain and Northern Ireland@30!the full official name|Turks and Caicos Islands@15=Turks and Caicos!a British territory|Wallis and Futuna@15!a French territory|Svalbard and Jan Mayen@15!a Norwegian territory|Heard Island and McDonald Islands@15!an Australian territory|Greenland@15!a territory of Denmark|Falkland Islands@15!a British territory|Netherlands=Holland
+0794|Basketball hoop=Basket=Bucket|Goal=Net=Hockey net=Goal net|Goalposts=Uprights=Posts=Hurling posts|In-goal area=Try line|Golf hole=Cup=Flag|Cricket wicket@30=Wicket=Stumps=Bails=Stump|Dartboard=Board|Pins=Skittles|Jack=Kitty=Pallino|Pocket=Pocket pool|Target=Target face|Clay target=Clay pigeon=Clay=Skeet=Trap
+0795|Chicken=Chicken breast|Beef=Steak|Turkey=Turkey breast|Eggs=Egg|Soybeans=Soy|Fish@15!most fish qualify, but not all|Buckwheat@15!only when weighed dry|Hummus@15!right around 8 g per 100 g
+0796|Angry=Mad=Anger|Scared=Afraid=Fear|Grateful=Thankful|Sick=Ill|Okay=OK|Joyful=Joy|Sad=Sadness|Happy=Happiness|Numb=Numbness
+0797|Athletic cup=Cup|Raincoat@15=Rain coat!protects from rain rather than injury|Scrubs@10!work clothing rather than protective gear
+0798|Dolma=Dolmades|Pączki=Krapfen=Bismarck|Cadbury Creme Egg=Cream egg|Deviled eggs@15!the yolk is mixed and piped back in
+0799|Duckman@60
+0801|Stair climbing=Stairmaster=StairMaster=Stair climber=Stepper|Spinning=Spin class|Sprinting=Sprint intervals
+0802|Golden=Golden KPop|Anxiety=Anxiety Doechii
+0803|BBQ sauce=Barbecue sauce|Red pesto=Pesto rosso|Peri-peri=Nando's sauce|Buffalo sauce=Wing sauce|French dressing=Catalina|Tomato paste=Tomato purée|Salsa roja=Salsa picante|Thousand Island@15!pink rather than red|Vodka sauce@15!pinkish orange rather than red|Red wine sauce@15=Red wine reduction!dark red-brown
+0804|Google Flights=Google Travel|Angi=Angie's List|Despegar=Decolar|Acuity Scheduling@30=Acuity|Doodle@15!schedules meetings rather than booking services
+0805|Electricity=Electric bill=Power bill=Electric=Hydro=Hydro bill=Energy=Energy bill=Gas and electric|Internet=Wi-Fi=Wifi=Broadband|Cable TV=Cable=TV|Cell phone=Phone=Phone bill=Mobile phone|Trash collection=Trash=Garbage=Garbage collection|Sewer=Sewage|Streaming subscription@30=Streaming services=Streaming=Netflix=Spotify=Disney+=Hulu=Amazon Prime|Gym membership=Gym|Heating oil=Oil|Satellite TV=DirecTV=Dish|Groceries=Food|Home security@30=Security system=Alarm|Loan payment@15=Loan!depends on the loan|Cleaning service@15!only some households pay for one
+0807|Kakapo@15!heavier than many chickens
+0808|Great Pyramid of Giza=Great Pyramid=Great Pyramids|Great Sphinx of Giza=Great Sphinx|Grand Central Terminal@30=Grand Central Station=Grand Central|Grand Canal=Grand Canal Venice|Great Smoky Mountains=Great Smokies|Grand Staircase–Escalante National Monument@30=Grand Staircase-Escalante|Grand Duchy of Luxembourg@15!the official name of Luxembourg
+0809|Netherite Ingot=Netherite|Redstone Dust=Redstone|Bed@30=Red Bed|Steak=Cooked beef|Raw Porkchop=Porkchop|Raw Chicken=Chicken|Raw Mutton=Mutton|Oak Boat=Boat|Stone Button=Button|Daylight Detector=Daylight sensor|Chainmail Chestplate=Chainmail armor|Oak Log=Wood|Oak Planks=Planks|White Wool=Wool|Pickaxe@15!one of several pickaxes|Sword@15!one of several swords|Axe@15!one of several axes|Shovel@15!one of several shovels|Hoe@15!one of several hoes
+0810|Trash can=Trash=Garbage=Rubbish|Recycling bin=Recycling|Compost bin=Compost|Robot vacuum=Roomba|Wastebasket@30|Water filter pitcher=Brita|Coffee maker=Keurig
+0811|TV commercial=Television|Radio ad=Radio|Print ad@30=Print advertising|Flyer=Leaflets|Influencer marketing=Influencers|Email marketing=Email|Direct mail=Junk mail=Mailers|Search ads=Search engine marketing=SEM=PPC=Paid search|Banner advertising@30=Banner ads=Display ads|Word of mouth=Referral=Referrals|Transit advertising@30=Bus ads=Transit ads=Bus stop ads|Vehicle wrap=Car wrap|Aerial advertising=Banner plane|Free sample=Samples|Branded merchandise@30=Merchandise=Swag|Public relations=PR|Infomercial=Shopping channels|SMS marketing=Text message marketing|In-game ads@30=In-game advertising|Native advertising=Sponsored posts|Billboard=Outdoor advertising|SEO@15!improves search ranking rather than paying for ads|Jingles@15!part of an ad rather than a method|Mascots@15!part of a brand rather than a method
+0812|Freakonomics Radio=Freakonomics|Conan O’Brien Needs A Friend=Conan|H3 Podcast=H3|The Indicator from Planet Money=The Indicator|MrBallen Podcast: Strange, Dark & Mysterious Stories=MrBallen Podcast=Mr. Ballen=MrBallen
+0813|Emperor Palpatine=Darth Sidious=Sidious|Gollum=Smeagol=Sméagol|Reva@30=Third Sister
+0814|Calf=Calves|Butt=Bum|Gluteus maximus=Glutes|Kneecap=Patella|Quadriceps=Quads|Knee=Kneepit|MCL@30=Medial collateral ligament
+0815|Cantonese=Yue|Wu=Shanghainese|Tagalog=Filipino|Min Nan=Hokkien|Akan=Twi|Mandarin=Mandarin Chinese|Quechua@15!about 8 to 10 million speakers
+0816|Fish@15!many fish eat insects, but not all|Turtle@15!many turtles eat insects, but not all
+0817|Sylvanian Families=Calico Critters|Kinder Surprise@10!a candy egg with a toy inside
+0818|Saint Martin@15!a French territory|Sint Maarten@15!a Dutch territory|Virgin Islands@15=British Virgin Islands=US Virgin Islands!a territory rather than a country
+0820|Catholic Church=Catholic=Catholicism=Roman Catholic=Roman Catholicism=Catholics|Eastern Orthodox Church=Orthodox=Eastern Orthodoxy|Coptic Orthodox Church=Coptic|Anglicanism=Anglican|Episcopal Church=Episcopal|Presbyterianism=Presbyterian|Pentecostalism=Pentecostal|The Church of Jesus Christ of Latter-day Saints=Mormon=Latter-day Saints|Nondenominational Christianity=Nondenominational|Moravian Church=Moravian|Sunni Islam=Sunni=Sunnis|Shia Islam=Shia=Shi'a=Shiite=Shias|Sufism=Sufi|Ibadi Islam=Ibadi|Druze@30|Twelver Shi'ism=Twelver|Zaidi Shi'ism=Zaidi|ISKCON=Hare Krishna|Haredi Judaism=Haredi|Zen=Zen Buddhism|Nichiren Buddhism=Nichiren|Chan Buddhism=Chan|Conservative Judaism=Conservative
+0821|Bayern Munich=FC Bayern|Paris Saint-Germain=PSG|Royal Challengers Bengaluru=Royal Challengers Bangalore|Manchester United=Man United=Man Utd|Mainz 05=Mainz|Benfica@30=SL Benfica|SC Freiburg@30=Freiburg|RCD Mallorca@30=Mallorca|Girona FC@30=Girona|Stade Rennais@30=Rennes
+0822|Frieren: Beyond Journey's End=Frieren|Clannad: After Story@30|Parasyte: The Maxim=Parasyte|Hajime no Ippo@30|Nichijou@30|Aria the Animation=Aria|Attack on Titan=AOT|Hunter x Hunter=HxH|Sword Art Online=SAO
+0824|Catmint=Nepeta|Bee balm=Monarda|Agapanthus=Lily of the Nile|Periwinkle=Vinca
+0825|Bosnia and Herzegovina=Bosnia|Kosovo@15!only partly recognised|Congo@15!both Congos have longer official names|Hong Kong@15!a Chinese special region rather than a country
+0827|Sweating=Perspiration|Peeing=Urination|Pooping=Defecation|Childbirth=Birth|Lactation=Breastfeeding|Blood clotting=Clotting=Coagulation|Crying=Tears|Burping=Belching|Farting=Flatulence|Vomiting@30|Photosynthesis@30!a biological process, though not in the body|Fermentation@15!a biological process done by microbes|Secretion=Hormone production|Heartbeat=Pulse
+0829|Record player=Vinyl player=Gramophone=Phonograph|IV=IV drip=Drip|Syringe=Hypodermic
+0830|Dahmer – Monster: The Jeffrey Dahmer Story=Dahmer|Only Murders in the Building@15!a Hulu show, on Disney+ outside the US|Shōgun@15=Shogun!an FX show, on Disney+ outside the US
+0831|Pleiades=Seven Sisters|Sun=Sol|Earth=Earth planet|Great Red Spot@15!a storm on Jupiter rather than a separate object|Orion's Belt@15!a pattern of stars rather than one object|Big Dipper@15!a pattern of stars rather than one object
+0832|Ganondorf@30|Donkey Kong=DK|Dr. Eggman=Doctor Robotnik
+0833|Space station=ISS|Northern lights=Aurora borealis|Contrail=Chemtrails|Insect=Bugs=Butterflies|Sky lantern=Paper lanterns|Lightning=Lightning bolt|Crepuscular rays@30=Sunbeams|Virga@60|Constellation=Big Dipper=Orion
+0834|Eggs=Egg|Merino wool=Merino|Shellac=Lac|Mother-of-pearl=Nacre|Fish oil=Omega-3|Snail mucin=Snail slime|Bone china@15!porcelain made with bone ash
+0835|Baby potato=Small potato|Cucamelon=Mouse melon|Cornichon=Gherkin=Pickle|Jerusalem artichoke=Sunchoke|Parsley@10=Cilantro=Basil=Mint=Herbs!herbs rather than vegetables
+0836|American Gladiators=Gladiators|Are You Smarter Than a 5th Grader?=Are You Smarter Than a Fifth Grader|Survivor@15!a reality competition rather than a game show|The Amazing Race@15!a reality competition rather than a game show
+0838|Fracture=Broken bone=Break|Cut=Laceration=Gash|Scrape=Graze|Tear=Torn ligament=Torn muscle|Strain=Pulled muscle|Shin splints@30|Puncture wound=Puncture|Black eye@30|Electric shock=Electrocution|Slipped disc=Herniated disc|Rupture=Ruptured tendon|Tear=Torn ACL|Tennis elbow@30|Golfer's elbow@60|Runner's knee@30|Turf toe@60|Strain=Pulled hamstring|Repetitive strain injury=Carpal tunnel=RSI|Torn meniscus@30=Meniscus tear|Separation=Separated shoulder|Jammed finger@30|Stubbed toe@30|Hypothermia@15!a condition rather than an injury|Heatstroke@15!a condition rather than an injury|Nosebleed@15!a symptom rather than a type of injury
+0839|Mars bar=Mars|Lion bar=Lion|Werther's Original Chocolate Covered Caramels=Werther's|Caramel Nibbles@60|Wispa Gold@30!the original Wispa has no caramel
+0840|EA Sports FC 26=FC 26|Fortnite=Fortnite Battle Royale|Marvel's Spider-Man 2=Spiderman 2

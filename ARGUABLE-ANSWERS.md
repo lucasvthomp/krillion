@@ -6,7 +6,7 @@ These are the ones it accepted leniently. To veto one, delete it from
 `node scripts/report-arguable-answers.mjs`. A veto removes it from the next full rebuild; to drop it from the
 current banks straight away, remove the answer from its bank file as well.
 
-958 answers.
+1030 answers.
 
 | Prompt | Answer | Points | Why it is arguable |
 | --- | --- | ---: | --- |
@@ -968,3 +968,75 @@ current banks straight away, remove the answer from its bank file as well.
 | Name someone currently serving in a national government or parliament. | Viktor Orbán | 30 | check he still holds his seat after the 2026 election |
 | Name someone currently serving in a national government or parliament. | Kristi Noem | 30 | check she is still in the cabinet |
 | Name someone currently serving in a national government or parliament. | Tulsi Gabbard | 30 | check she is still in the cabinet |
+| Name something that's mined from the ground | Stone | 15 | quarried rather than mined |
+| Name an item used for eating or serving food (like a plate or spoon) | Placemat | 15 | protects the table rather than holding food |
+| Name an item used for eating or serving food (like a plate or spoon) | Tablecloth | 15 | protects the table rather than holding food |
+| Name a city with 1–10 million people (within city limits) | Sydney | 15 | Greater Sydney has about 5 million people; the City of Sydney council is small |
+| Name a city with 1–10 million people (within city limits) | Melbourne | 15 | Greater Melbourne has about 5 million people; the City of Melbourne council is small |
+| Name a dessert that's made out of dough | Brioche | 15 | a sweet bread rather than a dessert |
+| Name an animal that can run faster than a human | Elephant | 15 | about as fast as a sprinting human |
+| Name an animal that can run faster than a human | Wild turkey | 15 | wild turkeys can run about 25 mph |
+| Name an animal that can run faster than a human | Roadrunner | 15 | about as fast as a sprinting human |
+| Name an animal that can run faster than a human | Mule | 15 | about as fast as a horse at a trot |
+| Name a movie from Pixar, DreamWorks Animation, Illumination, Disney Animation (including Disneytoon and Disney TV Animation), Sony Pictures Animation or Blue Sky Studios | Nimona | 15 | started at Blue Sky but was finished elsewhere |
+| Name a milk-based drink | Milk | 10 | plain milk rather than a drink made from milk |
+| Name a country that shares a land border with at least four other countries | Mauritania | 15 | four only if Western Sahara counts |
+| Name a type of balloon (it's my birthday) | Balloon arch | 15 | a decoration made of balloons |
+| Name a type of balloon (it's my birthday) | Balloon bouquet | 15 | a bunch of balloons |
+| Name a type of balloon (it's my birthday) | Zeppelin | 15 | an airship rather than a balloon |
+| Name a fruit or vegetable that is red on the inside. | Mulberry | 15 | dark purple rather than red |
+| Name a fruit or vegetable that is red on the inside. | Red onion | 15 | red layers but white flesh |
+| Name a country with "and" in its name | United Kingdom of Great Britain and Northern Ireland | 30 | the full official name |
+| Name a country with "and" in its name | Turks and Caicos Islands | 15 | a British territory |
+| Name a country with "and" in its name | Wallis and Futuna | 15 | a French territory |
+| Name a country with "and" in its name | Svalbard and Jan Mayen | 15 | a Norwegian territory |
+| Name a country with "and" in its name | Heard Island and McDonald Islands | 15 | an Australian territory |
+| Name a country with "and" in its name | Greenland | 15 | a territory of Denmark |
+| Name a country with "and" in its name | Falkland Islands | 15 | a British territory |
+| Name a high-protein food ingredient—at least 8g of protein per 100g. | Fish | 15 | most fish qualify, but not all |
+| Name a high-protein food ingredient—at least 8g of protein per 100g. | Buckwheat | 15 | only when weighed dry |
+| Name a high-protein food ingredient—at least 8g of protein per 100g. | Hummus | 15 | right around 8 g per 100 g |
+| Name something people wear that is designed for protection (everyday clothing doesn’t count) | Raincoat | 15 | protects from rain rather than injury |
+| Name something people wear that is designed for protection (everyday clothing doesn’t count) | Scrubs | 10 | work clothing rather than protective gear |
+| Name a food with a filling inside. | Deviled eggs | 15 | the yolk is mixed and piped back in |
+| Name a red sauce, dip or condiment. | Thousand Island | 15 | pink rather than red |
+| Name a red sauce, dip or condiment. | Vodka sauce | 15 | pinkish orange rather than red |
+| Name a red sauce, dip or condiment. | Red wine sauce | 15 | dark red-brown |
+| Name an app or website where you book things (like Expedia for travel). | Doodle | 15 | schedules meetings rather than booking services |
+| Name a recurring household bill | Loan payment | 15 | depends on the loan |
+| Name a recurring household bill | Cleaning service | 15 | only some households pay for one |
+| Name a living bird bigger than a chicken | Kakapo | 15 | heavier than many chickens |
+| Name a place or landmark with Great or Grand in its name (like the Grand Canyon) | Grand Duchy of Luxembourg | 15 | the official name of Luxembourg |
+| Name any item in Minecraft (older versions count too) | Pickaxe | 15 | one of several pickaxes |
+| Name any item in Minecraft (older versions count too) | Sword | 15 | one of several swords |
+| Name any item in Minecraft (older versions count too) | Axe | 15 | one of several axes |
+| Name any item in Minecraft (older versions count too) | Shovel | 15 | one of several shovels |
+| Name any item in Minecraft (older versions count too) | Hoe | 15 | one of several hoes |
+| Name a method of advertising | SEO | 15 | improves search ranking rather than paying for ads |
+| Name a method of advertising | Jingles | 15 | part of an ad rather than a method |
+| Name a method of advertising | Mascots | 15 | part of a brand rather than a method |
+| Name a language with more than 10 million total speakers | Quechua | 15 | about 8 to 10 million speakers |
+| Name an animal that eats bugs (documented regular part of diet) | Fish | 15 | many fish eat insects, but not all |
+| Name an animal that eats bugs (documented regular part of diet) | Turtle | 15 | many turtles eat insects, but not all |
+| Name a toy brand | Kinder Surprise | 10 | a candy egg with a toy inside |
+| Name a country with "in" in its name | Saint Martin | 15 | a French territory |
+| Name a country with "in" in its name | Sint Maarten | 15 | a Dutch territory |
+| Name a country with "in" in its name | Virgin Islands | 15 | a territory rather than a country |
+| Name a country whose second letter is O | Kosovo | 15 | only partly recognised |
+| Name a country whose second letter is O | Congo | 15 | both Congos have longer official names |
+| Name a country whose second letter is O | Hong Kong | 15 | a Chinese special region rather than a country |
+| Name a bodily function or biological process (like breathing) | Photosynthesis | 30 | a biological process, though not in the body |
+| Name a bodily function or biological process (like breathing) | Fermentation | 15 | a biological process done by microbes |
+| Name an original movie or show from Netflix, Prime Video, Apple TV, or Disney+ | Only Murders in the Building | 15 | a Hulu show, on Disney+ outside the US |
+| Name an original movie or show from Netflix, Prime Video, Apple TV, or Disney+ | Shōgun | 15 | an FX show, on Disney+ outside the US |
+| Name a named object in space that's bigger than Earth's Moon (like Jupiter) | Great Red Spot | 15 | a storm on Jupiter rather than a separate object |
+| Name a named object in space that's bigger than Earth's Moon (like Jupiter) | Orion's Belt | 15 | a pattern of stars rather than one object |
+| Name a named object in space that's bigger than Earth's Moon (like Jupiter) | Big Dipper | 15 | a pattern of stars rather than one object |
+| Name a material or product that comes from animals (excluding meat and dairy) | Bone china | 15 | porcelain made with bone ash |
+| Name a vegetable smaller than an onion | Parsley | 10 | herbs rather than vegetables |
+| Name a TV game show | Survivor | 15 | a reality competition rather than a game show |
+| Name a TV game show | The Amazing Race | 15 | a reality competition rather than a game show |
+| Name a type of injury (like a sprain, not a sprained ankle) | Hypothermia | 15 | a condition rather than an injury |
+| Name a type of injury (like a sprain, not a sprained ankle) | Heatstroke | 15 | a condition rather than an injury |
+| Name a type of injury (like a sprain, not a sprained ankle) | Nosebleed | 15 | a symptom rather than a type of injury |
+| Name a chocolate that has caramel in it | Wispa Gold | 30 | the original Wispa has no caramel |
