@@ -84,6 +84,17 @@ const cases = [
   ['Name a video game you can play on PS5, Xbox Series X, Nintendo Switch 1 or 2.', 'Japan', undefined],
   ['Name a programming language', 'Paris', undefined],
   ['Name an Apple device', 'apple', undefined],
+  // Rules added during the guess sweep.
+  ['Name an NBA team', 'Spurs', 'San Antonio Spurs'],
+  ['Name a Premier League club', 'Leeds', 'Leeds United'],
+  ['Name a Scooby-Doo character', 'Fred Jones', 'Fred'],
+  ['Name a US national park', 'Yellowstone National Park', 'Yellowstone'],
+  ['Name a yoga pose', 'Cobra pose', 'Cobra'],
+  ['Name a collective noun for a group of animals (like \'murder\' for crows)', 'murder of crows', 'Murder'],
+  ['Name a style or cut of jeans', 'Skinny', 'Skinny jeans'],
+  ['Name a US city with over 100,000 people', 'Aurora', ['Aurora, Colorado', 'Aurora, Illinois']],
+  ['Name a whale species', 'killer whale', 'Orca'],
+  ['Name a type of turtle or tortoise', 'tortoises', undefined],
   // First names count for well-known fictional characters.
   ['Name a character from Stranger Things', 'lucas', 'Lucas Sinclair'],
   ['Name a character from The Office (US)', 'michael', 'Michael Scott'],

@@ -281,6 +281,8 @@ export function buildLookup(answers, prompt, { category } = {}) {
   const grammatical = new Map();
   const surnames = new Map();
   const firstNames = new Map();
+  // "Aurora" for Aurora, Colorado and Aurora, Illinois: a place without its region.
+  const places = new Map();
   let spelling;
 
   for (const entry of answers) {
@@ -325,6 +327,8 @@ export function buildLookup(answers, prompt, { category } = {}) {
     }
     // Only well-known characters go by a first name alone; otherwise any common first name would
     // find some Deep Cut.
+    const place = entry[0].match(/^([^,()]+), [^,]+$/u)?.[1];
+    if (place && looseKey(place).length >= 3) addUnique(places, looseKey(place), entry);
     if (allowFirstNames && entry[1] <= 30) {
       for (const form of firstNameForms(entry[0])) addUnique(firstNames, looseKey(form), entry);
     }
@@ -334,7 +338,7 @@ export function buildLookup(answers, prompt, { category } = {}) {
 
   // Every answer this spelling could mean, from the most to the least direct reading.
   function resolveVariant(key) {
-    for (const index of [unique, aliases, contextual, grammatical, surnames, firstNames]) {
+    for (const index of [unique, aliases, contextual, grammatical, surnames, firstNames, places]) {
       if (index.has(key)) return entriesOf(index.get(key));
     }
     return [];

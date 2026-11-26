@@ -6,7 +6,7 @@ These are the ones it accepted leniently. To veto one, delete it from
 `node scripts/report-arguable-answers.mjs`. A veto removes it from the next full rebuild; to drop it from the
 current banks straight away, remove the answer from its bank file as well.
 
-479 answers.
+573 answers.
 
 | Prompt | Answer | Points | Why it is arguable |
 | --- | --- | ---: | --- |
@@ -489,3 +489,97 @@ current banks straight away, remove the answer from its bank file as well.
 | Name an occupation that involves working with children (the job itself must focus on kids) | Toy designer | 30 | Designs for children rather than working with them |
 | Name an animal that produces its own light | Dinoflagellates | 60 | Single-celled organisms rather than animals |
 | Name an animal that produces its own light | Plankton | 30 | Some plankton glow |
+| Name a Pixar protagonist (co-leads count) | Anxiety | 60 | Takes the lead for much of Inside Out 2 |
+| Name a type of building used for prayer | Pantheon | 60 | A temple to all the gods |
+| Name a type of building used for prayer | Sukkah | 60 | A temporary booth for a festival |
+| Name a national capital city that starts with A or C | Avarua | 60 | Capital of the Cook Islands, in free association with New Zealand |
+| Name a national capital city that starts with A or C | Cardiff | 60 | Capital of Wales, which is not a sovereign state |
+| Name a type of milk | Half-and-half | 30 | A milk and cream mix |
+| Name a type of milk | Cream | 30 | The fat skimmed from milk |
+| Name a type of milk | Heavy cream | 30 | The fat skimmed from milk |
+| Name a type of milk | Horchata | 30 | A plant-based drink |
+| Name a type of milk | Milkshake | 30 | A milk drink |
+| Name a type of milk | Eggnog | 30 | A milk drink |
+| Name a type of milk | Fairlife | 60 | A brand |
+| Name a sport that involves catching a ball | Ultimate frisbee | 30 | Played with a disc |
+| Name a sport that involves catching a ball | Juggling | 30 | Not a competitive sport |
+| Name a sport that involves catching a ball | Hot potato | 30 | A party game |
+| Name a rank in the military | Marine | 30 | A branch member rather than a rank |
+| Name a rank in the military | Commander-in-chief | 30 | A role rather than a rank |
+| Name something you can sweeten coffee with | Cinnamon | 30 | A flavouring rather than a sweetener |
+| Name something you can sweeten coffee with | Nutmeg | 30 | A flavouring rather than a sweetener |
+| Name a country with stripes on its flag | Puerto Rico | 60 | A US territory, not a country |
+| Name a country with stripes on its flag | Yugoslavia | 30 | No longer exists |
+| Name a disease that has a vaccine | Cowpox | 60 | Used as the first vaccine rather than vaccinated against |
+| Name a disease that has a vaccine | Parvovirus | 60 | A dog disease |
+| Name the most widely spoken language of an Asian country | Punjabi | 60 | The most common first language in Pakistan, where Urdu is the lingua franca |
+| Name the most widely spoken language of an Asian country | Pashto | 60 | The largest first language in Afghanistan |
+| Name the most widely spoken language of an Asian country | Cantonese | 60 | Most spoken in Hong Kong, which is not a country |
+| Name a part of a smartphone you can see or touch (accessories don't count) | SIM card | 30 | Sits inside the tray |
+| Name a part of a smartphone you can see or touch (accessories don't count) | Battery | 30 | Sealed inside most phones |
+| Name a salad dressing | Lemon juice | 30 | A single ingredient |
+| Name a salad dressing | Tzatziki | 30 | A dip |
+| Name a language named after a country (constituent countries count; for example England → English) | Dutch | 30 | Named after the Germanic people rather than a country |
+| Name a language named after a country (constituent countries count; for example England → English) | Hindi | 30 | Named after Hind, an old name for India |
+| Name a language named after a country (constituent countries count; for example England → English) | Manx | 60 | The Isle of Man is a Crown Dependency |
+| Name a language named after a country (constituent countries count; for example England → English) | Arabic | 30 | Named after Arabia, a region |
+| Name a language named after a country (constituent countries count; for example England → English) | Hawaiian | 60 | Named after the former Kingdom of Hawaii |
+| Name a language named after a country (constituent countries count; for example England → English) | Catalan | 60 | Named after Catalonia, an autonomous community |
+| Name a language named after a country (constituent countries count; for example England → English) | Basque | 60 | Named after the Basque Country |
+| Name a language named after a country (constituent countries count; for example England → English) | Galician | 60 | Named after Galicia, an autonomous community |
+| Name a language named after a country (constituent countries count; for example England → English) | Breton | 60 | Named after Brittany, a region |
+| Name a language named after a country (constituent countries count; for example England → English) | Flemish | 60 | Named after Flanders, a region |
+| Name a language named after a country (constituent countries count; for example England → English) | Kurdish | 60 | Named after Kurdistan, a region |
+| Name a language named after a country (constituent countries count; for example England → English) | Punjabi | 60 | Named after Punjab, a region |
+| Name a language named after a country (constituent countries count; for example England → English) | Gujarati | 60 | Named after Gujarat, an Indian state |
+| Name a language named after a country (constituent countries count; for example England → English) | Sindhi | 60 | Named after Sindh, a Pakistani province |
+| Name a language named after a country (constituent countries count; for example England → English) | Balochi | 60 | Named after Balochistan, a region |
+| Name a language named after a country (constituent countries count; for example England → English) | Zulu | 60 | Named after the Zulu Kingdom |
+| Name a search engine | Copilot | 30 | An AI assistant that searches |
+| Name a search engine | Gemini | 30 | An AI assistant that searches |
+| Name a field of math | Data science | 30 | An applied field rather than mathematics |
+| Name a field of math | Computer science | 30 | A separate science |
+| Name a facial hair style | Clean shaven | 30 | No facial hair at all |
+| Name a celebrity chef | Uncle Roger | 30 | A comedian who reviews cooking |
+| Name a building material | Fabric | 30 | Used for tents and awnings |
+| Name a building material | Snow | 30 | Used for igloos |
+| Name something sprayed out of a can (pump bottles don't count) | Cologne | 30 | Usually in pump bottles |
+| Name something sprayed out of a can (pump bottles don't count) | Nasal spray | 30 | Usually in pump bottles |
+| Name a villain from a Marvel Cinematic Universe movie | Talos | 30 | Revealed to be an ally |
+| Name a villain from a Marvel Cinematic Universe movie | Hydra | 30 | An organisation rather than a character |
+| Name a platform people use to listen to music (apps and services, not devices) | Shazam | 30 | Identifies songs rather than playing them |
+| Name a country without the letter A in its name | Puerto Rico | 60 | A US territory, not a country |
+| Name the most widely spoken language of any African country | Oromo | 60 | The largest first language in Ethiopia, where Amharic is the lingua franca |
+| Name the most widely spoken language of any African country | Lingala | 60 | Shares the role with Swahili in the DR Congo |
+| Name a garden tool | Twine | 30 | A supply rather than a tool |
+| Name a garden tool | Plant labels | 30 | A supply rather than a tool |
+| Name a garden tool | Stakes | 30 | A supply rather than a tool |
+| Name a garden tool | Trellis | 30 | A structure rather than a tool |
+| Name a stock trading term | Recession | 30 | An economic term |
+| Name something with wheels that isn't a vehicle | Paint roller | 30 | A roller rather than wheels |
+| Name something with wheels that isn't a vehicle | Clock | 30 | Has gear wheels inside |
+| Name a shade of red (pinks don't count) | Blood orange | 30 | More orange than red |
+| Name a real-life melee weapon | Shuriken | 30 | Usually thrown |
+| Name a real-life melee weapon | Harpoon | 30 | Usually thrown |
+| Name a city with a metro system | Pittsburgh | 30 | Has light rail rather than a full metro |
+| Name a city with a metro system | Seattle | 30 | Has light rail rather than a full metro |
+| Name a city with a metro system | Detroit | 30 | Has a people mover rather than a full metro |
+| Name a city with a metro system | Manchester | 30 | Has a tram network rather than a full metro |
+| Name a city with a metro system | Liverpool | 30 | Has commuter rail rather than a full metro |
+| Name a city with a metro system | Melbourne | 30 | Has suburban rail with a new tunnel rather than a full metro |
+| Name a city with a metro system | Addis Ababa | 30 | Has light rail rather than a full metro |
+| Name a fruit or vegetable that starts with S | Sage | 30 | A herb |
+| Name a fruit or vegetable that starts with S | Sunflower seeds | 30 | Seeds |
+| Name a fruit or vegetable that starts with S | Sesame | 30 | Seeds |
+| Name a fruit or vegetable that starts with S | Sorghum | 30 | A grain |
+| Name a territory, constituent country or autonomous region | Washington, D.C. | 30 | A federal district |
+| Name a territory, constituent country or autonomous region | Kosovo | 60 | A partially recognised state |
+| Name a territory, constituent country or autonomous region | South Ossetia | 60 | A partially recognised state |
+| Name a territory, constituent country or autonomous region | Transnistria | 60 | An unrecognised state |
+| Name a territory, constituent country or autonomous region | Nagorno-Karabakh | 60 | Dissolved in 2024 |
+| Name a territory, constituent country or autonomous region | Northern Cyprus | 60 | An unrecognised state |
+| Name a territory, constituent country or autonomous region | Palestine | 60 | A partially recognised state |
+| Name a territory, constituent country or autonomous region | Somaliland | 60 | An unrecognised state |
+| Name a career in finance | Cashier | 30 | A retail role |
+| Name a career in finance | Financial journalist | 30 | Writes about finance |
+| Name a career in finance | Finance professor | 30 | Teaches finance |
