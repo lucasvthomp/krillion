@@ -339,3 +339,56 @@
 0383|French Guiana@60!Part of France
 0384|Minecraft=Minecraft Pocket Edition|Call of Duty: Mobile=COD Mobile|My Talking Tom=Talking Tom|Honor of Kings=Arena of Valor|Wild Rift=League of Legends: Wild Rift|Stack@60|Gacha Club@60|eFootball=PES|EA Sports FC Mobile=FIFA Mobile|Archero@60
 0385|Discovery Bay@85!A census-designated place rather than an incorporated city
+0386|Wildebeest=Gnu|Ox@30|Unicorn@30!A mythical animal|Axis deer=Chital|Barbary sheep=Aoudad
+0387|Tapas@30!A style of small dishes|Tortilla española=Spanish omelette=Spanish tortilla|Jamón=Jamón ibérico=Jamon iberico=Jamón serrano=Serrano ham|Fabada=Fabada asturiana|Cocido=Cocido madrileño|Pan con tomate=Pan tumaca|Empanada gallega@60|Pimientos de Padrón=Padrón peppers=Padron peppers|Sardinhas assadas=Grilled sardines|Piri piri chicken=Frango piri-piri|Sangria@30!A drink
+0389|Cat@10=Domestic cat|Dog@30=Domestic dog!In the order Carnivora, but eats a mixed diet|Skunk@30!In the order Carnivora, but omnivorous|Raccoon@30!In the order Carnivora, but omnivorous|Coati@30!In the order Carnivora, but omnivorous|Kinkajou@30!In the order Carnivora, but eats mostly fruit|Binturong@30!In the order Carnivora, but eats mostly fruit|Red panda@30!In the order Carnivora, but eats mostly bamboo|Giant panda@30=Panda!In the order Carnivora, but eats mostly bamboo
+0390|Role-playing game=RPG=Role-playing|Rhythm=Music=Music game|Party game@30=Party|Idle=Idle game|Management@30|Farming sim=Farming|Cozy game@60=Cozy
+0391|Street=St|Avenue=Ave|Road=Rd|Boulevard=Blvd|Lane=Ln|Drive=Dr|Court=Ct|Place=Pl|Highway=Hwy|Parkway=Pkwy|Circle=Cir|Terrace=Ter|Square=Sq|Pier@60
+0392|Nicki Minaj@30|Dwayne Johnson=The Rock|Kylie Jenner=Kylie|Kim Kardashian=Kim K|Instagram@30!The platform's own account rather than a person
+0393|Orca=Killer whale|Cow=Holstein|Siberian husky@30=Husky!Often grey and white|Great black-backed gull@60|Gull@30=Seagull!Many gulls are grey and white|Gannet@60|Ermine@60!White in winter with a black tail tip
+0394|Exfoliant@30=Exfoliator|Salicylic acid=BHA|Lip balm=Chapstick|Facial mist@30=Face mist|Collagen@30|Pore strips=Nose strips
+0395|Grand Theft Auto V=GTA V=GTA 5=Gta 5=Gta V|Counter-Strike: Global Offensive=CS:GO=CSGO
+0396|Dis Pater=Dis|Tellus=Terra|Aesculapius=Asclepius|Fauna@60|Cybele=Magna Mater|Trivia@60
+0397|Hole in one=Ace=Hole in 1|Bunker=Sand trap|Caddie=Caddy|Approach shot@30=Approach|Flagstick=Pin=Flag|Fat shot=Chunk|Fringe=Collar|Out of bounds=OB|Provisional ball@60=Provisional|Driving range=Range|Green jacket@60|Amen Corner@60|Bogey=Bogie|Birdie=Birdy
+0398|Science fiction=Sci-fi=Scifi|Utopian fiction@30=Utopian|Detective fiction@30=Detective|Mythology@30|Folklore@30|Paranormal@30|Post-apocalyptic fiction=Apocalyptic|Bildungsroman=Coming-of-age|Romantic comedy=Rom-com
+0399|Bangalore=Bengaluru
+0400|Tripitaka=Pali Canon|Sutras@30|Tibetan Book of the Dead=Bardo Thodol|Apocrypha=Deuterocanon|Vulgate@60!A Latin translation of the Bible|Bible=KJV|Sunnah@30|Tafsir@60!A commentary on the Quran|Catechism@30!A summary of doctrine rather than scripture|Quran=Quran Sharif
+0401|Wasp=Hope van Dyne|Thena@60|Ikaris@60|Ms. Marvel=Kamala Khan|Mister Fantastic=Reed Richards|Human Torch=Johnny Storm|The Thing=Ben Grimm|Scarlet Witch@60=Wanda!A lead in Doctor Strange in the Multiverse of Madness|Thanos@60!Often called the protagonist of Infinity War
+0402|Puerto Rico@60!A US territory, not a country
+0403|Pituitary gland=Pituitary|Cerebral cortex=Cortex|Somatosensory cortex=Sensory cortex|Septum@60|Gyrus@30|Sulcus@30|Fissure@30|Cerebral hemispheres@30=Hemisphere=Left hemisphere=Right hemisphere
+0404|Catty=Jin|Pound=Lb=Lbs|Ounce=Oz|Kilogram=Kg|Gram=G|Milligram=Mg
+0405|Titus Andronicus=Titus|Katherina=Kate|Romeo=Romeo Montague|Juliet=Juliet Capulet|Shylock=Shylock the Jew
+0407|Amazon=Amazon Logistics|Evri=Hermes|Cainiao@60|Grab=GrabFood|Careem@60|SkipTheDishes=Skip|USPS=U.S. Postal Service=United States Postal Service|Uber Eats=Uber
+0408|Georgia@30!Usually counted as Western Asia|Armenia@30!Usually counted as Western Asia|Azerbaijan@30!Usually counted as Western Asia|Kazakhstan@30!Mostly in Central Asia
+0409|Gazillion@30=Gajillion|Squillion@30|Neel@60
+0410|Tongue-and-groove pliers@30=Channel locks=Channellocks|Nails@30!Fasteners rather than a tool|Screws@30!Fasteners rather than a tool|Bolts@30!Fasteners rather than a tool|Nuts@30!Fasteners rather than a tool|Washers@30!Fasteners rather than a tool|Zip ties@30|Pry bar=Crowbar|Torx screwdriver@30=Torx|Multitool=Leatherman|Work gloves@30=Gloves!Safety gear rather than a tool|Safety glasses@30=Goggles!Safety gear rather than a tool|Ear protection@30!Safety gear rather than a tool|Funnel@30|Oil can@30|WD-40@30=WD40=Wd40
+0412|Track and field=Track|Esports@30!Competitive video gaming|Dance@30|Frisbee@30|Ultimate frisbee=Ultimate|Go@60!A board game recognised as a mind sport|Backgammon@60!A board game recognised as a mind sport|Poker@30!A card game sometimes called a mind sport
+0413|Google Search=Search|Google Maps=Maps|Google Drive=Drive|Google Photos=Photos|Google Calendar=Calendar|Google Meet=Meet|Google Hangouts=Hangouts|Google Duo=Duo|Google Assistant=Assistant|Gemini=Bard|Google Nest=Nest|Google Pixel=Pixel|Google Analytics=Analytics|Google Stadia=Stadia|Google Inbox=Inbox|Go=Golang
+0414|Gray fox@60|Caribou@30
+0415|Sorghum=Jowar|Pearl millet=Bajra
+0416|Kanna=Gran Gran|Combustion Man=Sparky Sparky Boom Man|Lo and Li=Lo=Li|Druk@60|Ilah@85
+0418|Disney Parks=Disneyland=Disney World=Walt Disney World=Disneyland Paris=Tokyo Disneyland|Universal Studios=Universal=Universal Parks & Resorts|Merlin Entertainments=Merlin|Madame Tussauds@60!A chain of wax museums|Sea Life@60!A chain of aquariums|Herschend=Herschend Family Entertainment|Six Flags=Six Flags Great Adventure=Six Flags Magic Mountain=Great Adventure=Magic Mountain|Cedar Fair=Cedar Point
+0419|Resolution@30!A part of a plot rather than a device|Protagonist@30!A character role rather than a device|Antagonist@30!A character role rather than a device|Hamartia=Tragic flaw|Flashback=Analepsis
+0421|Groundhog=Woodchuck
+0422|Soybean=Edamame|Lentil=Lentils red
+0423|Peru@30!Two colours only on the civil flag, without the coat of arms|Malta@30!The George Cross adds a third colour|Vatican City@30=Vatican!The emblem adds more colours|Guatemala@30!Two colours only on the civil flag, without the coat of arms|El Salvador@30!Two colours only on the civil flag, without the coat of arms|Nicaragua@30!Two colours only on the civil flag, without the coat of arms
+0424|Glue stick@30|Marker=Sharpie|Sticky notes=Post-it notes=Post-its|Push pin=Pushpin|Toner@30|Desk lamp@30|Crayons@30!Art supplies rather than office supplies|Compass@30
+0425|A Complete Unknown=Bob Dylan movie|Dune: Part Three@60=Dune 3!Due for release in December 2026
+0426|Sudoku=Sudoku NYT|Wordle=Wordle NYT
+0427|Jar@30|Yeti@30|Coupe@60|Water fountain@30=Fountain!You drink from it rather than out of it
+0429|Butter lettuce=Butterhead|Bok choy=Pak choi|Microgreens@30|Spring mix@30=Mesclun|Basil@30!A herb|Parsley@30!A herb|Cilantro@30!A herb|Mint@30!A herb|Callaloo@60|Broccoli rabe=Rapini
+0430|Fantastic Mr. Fox=Fantastic Mister Fox
+0431|Bandage=Band-Aids=Bandaids|Rubbing alcohol@30|Antibiotic ointment=Neosporin=Polysporin=Neosporine|Burn cream=Burn gel|Painkillers=Pain relievers=Ibuprofen=Advil=Acetaminophen=Tylenol=Paracetamol=Aspirin|Antihistamine=Benadryl|EpiPen@60=Epinephrine|Emergency blanket=Space blanket|Cotton swabs=Q-tips|Butterfly closures=Steri-Strips|Petroleum jelly=Vaseline
+0432|Keto=Ketogenic=Ketogenic diet|Weight Watchers=WW|Juice cleanse=Juicing|Low-FODMAP=FODMAP|Whole foods@30|IIFYM=Counting macros|5:2 diet=5:2|Intermittent fasting=16:8
+0433|Wales@60!A constituent country of the UK|Bermuda@60!A British territory, not a country|Cayman Islands@60!A British territory, not a country|Montserrat@60!A British territory, not a country|Anguilla@60!A British territory, not a country|British Virgin Islands@60!A British territory, not a country|American Samoa@60!A US territory, not a country
+0434|Camel=Dromedary|Silver fox@60=Fox!Domesticated only in a long-running breeding experiment|Gayal=Mithun|Bali cattle=Banteng|Cattle=Ox|Elephant@30=Asian elephant!Tamed rather than truly domesticated|Cochineal@85
+0435|Minuet=Napoleon|Cyprus cat@85
+0437|Men in Black=MIB
+0438|Taking out the trash=Taking out the garbage=Trash|Cleaning the toilet=Scrubbing the toilet|Cleaning the windows=Washing windows|Unloading the dishwasher=Emptying the dishwasher|Polishing@30|Scrubbing@30|Wiping@30|Sweeping=Sweeping the floor|Mopping=Mopping the floor
+0442|Puppy@10=Puppies|Kitten=Kitty|Calf=Calves|Pinkie=Pinky|Gilt@60!A young female pig|Heifer@60!A young female cow|Joey=Joey kangaroo
+0444|Skater jumps@60|Plank=Plank hold
+0445|T-shirt=Tee|Vest=Waistcoat|Tie=Necktie|Polo shirt=Polo|Overalls=Dungarees|Cheongsam=Qipao|Uniform@30|Headband@30!An accessory
+0446|X=Twitter|KakaoTalk=Kakao|Facebook Messenger=Messenger|Ask.fm@60|Instagram=Insta|Facebook=FB
+0447|Carbon dioxide=CO2|CFCs=Chlorofluorocarbons|Nitrogen=N2|Oxygen=O2|Argon=Ar|Methane=CH4|Water vapor=H2O
+0449|Child protective services caseworker=CPS worker|Principal@30|Teaching assistant=Paraprofessional|Toy designer@30!Designs for children rather than working with them|Children's entertainer=Party entertainer=Clown|Adoption agent@60|Nursery nurse@60|Child photographer@60
+0450|Dinoflagellates@60!Single-celled organisms rather than animals|Plankton@30!Some plankton glow|Glowworm=Fungus gnat|Midshipman fish=Plainfin midshipman

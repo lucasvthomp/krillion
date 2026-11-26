@@ -6,7 +6,7 @@ These are the ones it accepted leniently. To veto one, delete it from
 `node scripts/report-arguable-answers.mjs`. A veto removes it from the next full rebuild; to drop it from the
 current banks straight away, remove the answer from its bank file as well.
 
-409 answers.
+479 answers.
 
 | Prompt | Answer | Points | Why it is arguable |
 | --- | --- | ---: | --- |
@@ -419,3 +419,73 @@ current banks straight away, remove the answer from its bank file as well.
 | Name a type of bicycle | Peloton | 30 | A brand of exercise bike |
 | Name a country that borders Brazil | French Guiana | 60 | Part of France |
 | Name a city in California | Discovery Bay | 85 | A census-designated place rather than an incorporated city |
+| Name an animal with horns or antlers | Unicorn | 30 | A mythical animal |
+| Name a Spanish or Portuguese dish | Tapas | 30 | A style of small dishes |
+| Name a Spanish or Portuguese dish | Sangria | 30 | A drink |
+| Name a carnivorous mammal | Dog | 30 | In the order Carnivora, but eats a mixed diet |
+| Name a carnivorous mammal | Skunk | 30 | In the order Carnivora, but omnivorous |
+| Name a carnivorous mammal | Raccoon | 30 | In the order Carnivora, but omnivorous |
+| Name a carnivorous mammal | Coati | 30 | In the order Carnivora, but omnivorous |
+| Name a carnivorous mammal | Kinkajou | 30 | In the order Carnivora, but eats mostly fruit |
+| Name a carnivorous mammal | Binturong | 30 | In the order Carnivora, but eats mostly fruit |
+| Name a carnivorous mammal | Red panda | 30 | In the order Carnivora, but eats mostly bamboo |
+| Name a carnivorous mammal | Giant panda | 30 | In the order Carnivora, but eats mostly bamboo |
+| Name someone with over 100 million Instagram followers | Instagram | 30 | The platform's own account rather than a person |
+| Name a black and white mammal or bird | Siberian husky | 30 | Often grey and white |
+| Name a black and white mammal or bird | Gull | 30 | Many gulls are grey and white |
+| Name a black and white mammal or bird | Ermine | 60 | White in winter with a black tail tip |
+| Name a sacred text of Christianity, Islam, Judaism, Hinduism, or Buddhism | Vulgate | 60 | A Latin translation of the Bible |
+| Name a sacred text of Christianity, Islam, Judaism, Hinduism, or Buddhism | Tafsir | 60 | A commentary on the Quran |
+| Name a sacred text of Christianity, Islam, Judaism, Hinduism, or Buddhism | Catechism | 30 | A summary of doctrine rather than scripture |
+| Name a protagonist of a Marvel Cinematic Universe movie | Scarlet Witch | 60 | A lead in Doctor Strange in the Multiverse of Madness |
+| Name a protagonist of a Marvel Cinematic Universe movie | Thanos | 60 | Often called the protagonist of Infinity War |
+| Name a country whose name starts with P | Puerto Rico | 60 | A US territory, not a country |
+| Name a country in Eastern Europe | Georgia | 30 | Usually counted as Western Asia |
+| Name a country in Eastern Europe | Armenia | 30 | Usually counted as Western Asia |
+| Name a country in Eastern Europe | Azerbaijan | 30 | Usually counted as Western Asia |
+| Name a country in Eastern Europe | Kazakhstan | 30 | Mostly in Central Asia |
+| Name a tool you would find in a toolbox | Nails | 30 | Fasteners rather than a tool |
+| Name a tool you would find in a toolbox | Screws | 30 | Fasteners rather than a tool |
+| Name a tool you would find in a toolbox | Bolts | 30 | Fasteners rather than a tool |
+| Name a tool you would find in a toolbox | Nuts | 30 | Fasteners rather than a tool |
+| Name a tool you would find in a toolbox | Washers | 30 | Fasteners rather than a tool |
+| Name a tool you would find in a toolbox | Work gloves | 30 | Safety gear rather than a tool |
+| Name a tool you would find in a toolbox | Safety glasses | 30 | Safety gear rather than a tool |
+| Name a tool you would find in a toolbox | Ear protection | 30 | Safety gear rather than a tool |
+| Name a sport played without a ball | Esports | 30 | Competitive video gaming |
+| Name a sport played without a ball | Go | 60 | A board game recognised as a mind sport |
+| Name a sport played without a ball | Backgammon | 60 | A board game recognised as a mind sport |
+| Name a sport played without a ball | Poker | 30 | A card game sometimes called a mind sport |
+| Name a theme park chain | Madame Tussauds | 60 | A chain of wax museums |
+| Name a theme park chain | Sea Life | 60 | A chain of aquariums |
+| Name a literary device | Resolution | 30 | A part of a plot rather than a device |
+| Name a literary device | Protagonist | 30 | A character role rather than a device |
+| Name a literary device | Antagonist | 30 | A character role rather than a device |
+| Name a country whose national flag has exactly two colors | Peru | 30 | Two colours only on the civil flag, without the coat of arms |
+| Name a country whose national flag has exactly two colors | Malta | 30 | The George Cross adds a third colour |
+| Name a country whose national flag has exactly two colors | Vatican City | 30 | The emblem adds more colours |
+| Name a country whose national flag has exactly two colors | Guatemala | 30 | Two colours only on the civil flag, without the coat of arms |
+| Name a country whose national flag has exactly two colors | El Salvador | 30 | Two colours only on the civil flag, without the coat of arms |
+| Name a country whose national flag has exactly two colors | Nicaragua | 30 | Two colours only on the civil flag, without the coat of arms |
+| Name an office supply | Crayons | 30 | Art supplies rather than office supplies |
+| Name a movie starring Timothée Chalamet | Dune: Part Three | 60 | Due for release in December 2026 |
+| Name something you drink out of | Water fountain | 30 | You drink from it rather than out of it |
+| Name a leafy green | Basil | 30 | A herb |
+| Name a leafy green | Parsley | 30 | A herb |
+| Name a leafy green | Cilantro | 30 | A herb |
+| Name a leafy green | Mint | 30 | A herb |
+| Name a country with an animal on its flag | Wales | 60 | A constituent country of the UK |
+| Name a country with an animal on its flag | Bermuda | 60 | A British territory, not a country |
+| Name a country with an animal on its flag | Cayman Islands | 60 | A British territory, not a country |
+| Name a country with an animal on its flag | Montserrat | 60 | A British territory, not a country |
+| Name a country with an animal on its flag | Anguilla | 60 | A British territory, not a country |
+| Name a country with an animal on its flag | British Virgin Islands | 60 | A British territory, not a country |
+| Name a country with an animal on its flag | American Samoa | 60 | A US territory, not a country |
+| Name a domesticated animal (kinds of animal, not breeds) | Silver fox | 60 | Domesticated only in a long-running breeding experiment |
+| Name a domesticated animal (kinds of animal, not breeds) | Elephant | 30 | Tamed rather than truly domesticated |
+| Name a word for a baby animal | Gilt | 60 | A young female pig |
+| Name a word for a baby animal | Heifer | 60 | A young female cow |
+| Name an article of clothing (jewelry, glasses and bags don't count) | Headband | 30 | An accessory |
+| Name an occupation that involves working with children (the job itself must focus on kids) | Toy designer | 30 | Designs for children rather than working with them |
+| Name an animal that produces its own light | Dinoflagellates | 60 | Single-celled organisms rather than animals |
+| Name an animal that produces its own light | Plankton | 30 | Some plankton glow |
