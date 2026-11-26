@@ -6,7 +6,7 @@ These are the ones it accepted leniently. To veto one, delete it from
 `node scripts/report-arguable-answers.mjs`. A veto removes it from the next full rebuild; to drop it from the
 current banks straight away, remove the answer from its bank file as well.
 
-866 answers.
+958 answers.
 
 | Prompt | Answer | Points | Why it is arguable |
 | --- | --- | ---: | --- |
@@ -876,3 +876,95 @@ current banks straight away, remove the answer from its bank file as well.
 | Name a national park anywhere in the world | Ngorongoro | 15 | a conservation area rather than a park |
 | Name a national park anywhere in the world | Great Barrier Reef | 15 | a marine park |
 | Name a national park anywhere in the world | Zhangjiajie | 15 | a national forest park |
+| Name a country with a desert climate (in any part of it) | Western Sahara | 15 | a disputed territory rather than a country |
+| Name a player currently on an English Premier League or NFL team | Mohamed Salah | 30 | at Liverpool in 2025-26; check he has not moved |
+| Name a player currently on an English Premier League or NFL team | Rodri | 30 | at Manchester City in 2025-26; check he has not moved |
+| Name a player currently on an English Premier League or NFL team | Ollie Watkins | 30 | at Aston Villa in 2025-26; check he has not moved |
+| Name a player currently on an English Premier League or NFL team | Gabriel Martinelli | 30 | at Arsenal in 2025-26; check he has not moved |
+| Name a player currently on an English Premier League or NFL team | Leandro Trossard | 30 | at Arsenal in 2025-26; check he has not moved |
+| Name a player currently on an English Premier League or NFL team | Marc Cucurella | 30 | at Chelsea in 2025-26; check he has not moved |
+| Name a player currently on an English Premier League or NFL team | Jarrod Bowen | 30 | at West Ham in 2025-26; check he has not moved |
+| Name a player currently on an English Premier League or NFL team | Cristian Romero | 30 | at Tottenham in 2025-26; check he has not moved |
+| Name a player currently on an English Premier League or NFL team | Anthony Gordon | 30 | at Newcastle in 2025-26; check he has not moved |
+| Name a currency worth less than the US dollar | Bulgarian lev | 15 | replaced by the euro in 2026 |
+| Name a currency worth less than the US dollar | Croatian kuna | 15 | replaced by the euro in 2023 |
+| Name a currency worth less than the US dollar | Dogecoin | 10 | a cryptocurrency rather than a national currency |
+| Name something traditionally expressed as a percentage (like body fat) | Zoom level | 15 | shown as a percentage on screens |
+| Name something traditionally expressed as a percentage (like body fat) | Percentile | 10 | a rank out of 100 rather than a percentage |
+| Name something used to hit a ball in a sport (the same tool counts once across sports) | Cesta | 15 | catches and throws the ball rather than hitting it |
+| Name a bird that lives in or by water | Waterfowl | 15 | a group of birds rather than one bird |
+| Name a type of ball outside of sports | Ball python | 15 | a snake named for curling into a ball |
+| Name a type of ball outside of sports | Jawbreaker | 15 | a round candy rather than a ball |
+| Name a type of ball outside of sports | Bath bomb | 15 | ball-shaped but not called a ball |
+| Name a type of ball outside of sports | Cake pop | 15 | ball-shaped but not called a ball |
+| Name a type of ball outside of sports | Ballpoint pen ball | 15 | has a ball in its tip |
+| Name a type of ball outside of sports | Testicles | 10 | slang |
+| Name a part of the school year (events like prom count too) | Fire drill | 15 | happens through the year rather than at one time |
+| Name a part of the school year (events like prom count too) | Assembly | 15 | a weekly event rather than part of the year |
+| Name a part of the school year (events like prom count too) | Recess | 10 | part of the school day rather than the year |
+| Name a country whose flag has a white stripe through the centre (horizontal or vertical). | Israel | 15 | white field between two blue stripes |
+| Name a pasta dish | Beef stroganoff | 10 | usually served over egg noodles |
+| Name a part of the human head | Nape | 15 | the back of the neck rather than the head |
+| Name a region of the world that spans multiple countries (like the Middle East) | Rhineland | 15 | mostly within Germany |
+| Name a region of the world that spans multiple countries (like the Middle East) | European Union | 10 | a political union rather than a region |
+| Name a region of the world that spans multiple countries (like the Middle East) | Schengen Area | 10 | a travel zone rather than a region |
+| Name a region of the world that spans multiple countries (like the Middle East) | Eurozone | 10 | a currency area rather than a region |
+| Name a region of the world that spans multiple countries (like the Middle East) | Commonwealth | 10 | a political association rather than a region |
+| Name a superpower any superhero has in the MCU | Super jump | 15 | usually part of super strength |
+| Name a superpower any superhero has in the MCU | Precognition | 15 | only hinted at in the films |
+| Name a superpower any superhero has in the MCU | Ice manipulation | 15 | shown by Frost Giants rather than heroes |
+| Name a superpower any superhero has in the MCU | Super soldier serum | 10 | the source of powers rather than a power |
+| Name something you ride while standing up | Elliptical | 15 | an exercise machine rather than a ride |
+| Name something you ride while standing up | Treadmill | 10 | an exercise machine rather than a ride |
+| Name something you ride while standing up | Roller skates | 15 | worn rather than ridden |
+| Name something you ride while standing up | Shopping cart | 10 | riding on the back of a cart |
+| Name something you ride while standing up | Stilts | 10 | walked on rather than ridden |
+| Name something you can measure about the human body | Blood type | 15 | identified rather than measured |
+| Name something you can measure about the human body | Stress level | 15 | measured indirectly |
+| Name a strategy board game | Dots and Boxes | 15 | a pencil-and-paper game rather than a board game |
+| Name a strategy board game | Ludo | 10 | mostly luck rather than strategy |
+| Name a strategy board game | Sorry | 10 | mostly luck rather than strategy |
+| Name a country where another religion has more followers than Christianity | Hong Kong | 15 | a Chinese special region rather than a country |
+| Name a country where another religion has more followers than Christianity | Macau | 15 | a Chinese special region rather than a country |
+| Name a country where another religion has more followers than Christianity | Western Sahara | 15 | a disputed territory rather than a country |
+| Name a hair type, texture, or natural color | Bald | 10 | no hair rather than a hair type |
+| Name a sport where athletes do flips or somersaults | Professional wrestling | 15 | scripted entertainment rather than sport |
+| Name something used to grip or pick things up | Velcro | 15 | fastens rather than grips |
+| Name a non-human character from Star Wars, the MCU, or Lord of the Rings | Kree | 15 | a species rather than a character |
+| Name a non-human character from Star Wars, the MCU, or Lord of the Rings | Abomination | 15 | a mutated human |
+| Name a way to contact someone (methods, not brands/apps) | Sign language | 15 | a language rather than a way to reach someone |
+| Name a way to contact someone (methods, not brands/apps) | Hand signals | 15 | only works at close range |
+| Name a way to contact someone (methods, not brands/apps) | Telepathy | 10 | not real |
+| Name a fast food chain that operates in more than one country | Wagamama | 15 | a sit-down restaurant chain |
+| Name a fast food chain that operates in more than one country | Din Tai Fung | 10 | a sit-down restaurant chain |
+| Name a Halloween tradition | Séance | 15 | rare today |
+| Name a Halloween tradition | Day of the Dead | 15 | a separate holiday right after Halloween |
+| Name a Halloween tradition | Monster Mash | 10 | a Halloween song rather than a tradition |
+| Name a chocolate with wafer, biscuit, or cookie in it | Jaffa Cakes | 15 | a cake with a sponge base rather than a biscuit |
+| Name a fictional character who wears a mask | Power Rangers | 15 | wear helmets rather than masks |
+| Name an orange fruit or vegetable | Red lentils | 15 | a legume rather than a fruit or vegetable |
+| Name a word that starts with “boo” | Booster seat | 10 | a phrase rather than one word |
+| Name a word that starts with “boo” | Booster shot | 10 | a phrase rather than one word |
+| Name a holiday from anywhere in the world that is celebrated in October, November or December | Golden Week | 30 | China's National Day holiday week |
+| Name a holiday from anywhere in the world that is celebrated in October, November or December | Black Friday | 10 | a shopping day rather than a holiday |
+| Name a music release type or format (like an album or CD) | Playlist | 10 | a list rather than a release |
+| Name a tool used for digging | Adze | 15 | a woodworking tool, though some are used for digging |
+| Name a tool used for digging | Hands | 10 | not a tool |
+| Name a tool used for digging | Spoon | 10 | not made for digging |
+| Name a chips or crisps brand | French Fries | 15 | a Walkers potato snack rather than chips |
+| Name a chips or crisps brand | Snyder's | 15 | mostly known for pretzels |
+| Name a chips or crisps brand | Lehar | 15 | a snack brand that also makes chips |
+| Name a substance the human body produces | Water | 15 | a by-product of metabolism |
+| Name something shaped like a cone | Sand pile | 15 | only roughly cone-shaped |
+| Name something shaped like a cone | Hourglass | 15 | two cones joined at the tips |
+| Name something shaped like a cone | Beehive | 15 | a traditional skep is a cone |
+| Name a clear, colourless drink | Lemonade | 15 | British lemonade is clear; American lemonade is cloudy |
+| Name a country with the letter H in its name (ignore the word "the") | Hong Kong | 15 | a Chinese special region rather than a country |
+| Name a music genre (listed as a genre on Spotify) | Regional Mexican | 15 | a radio and chart category |
+| Name a TV show that released or had a new season this year or last year | Frieren: Beyond Journey's End | 30 | season 2 aired in early 2026 |
+| Name a superhero that can fly | Stormfront | 15 | a villain in The Boys |
+| Name a superhero that can fly | Buzz Lightyear | 15 | falls with style rather than flies |
+| Name a superhero that can fly | Syndrome | 10 | a villain who flies with rocket boots |
+| Name someone currently serving in a national government or parliament. | Viktor Orbán | 30 | check he still holds his seat after the 2026 election |
+| Name someone currently serving in a national government or parliament. | Kristi Noem | 30 | check she is still in the cabinet |
+| Name someone currently serving in a national government or parliament. | Tulsi Gabbard | 30 | check she is still in the cabinet |
