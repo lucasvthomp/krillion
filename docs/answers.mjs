@@ -409,7 +409,9 @@ export function buildLookup(answers, prompt, { category } = {}) {
     const words = wordsOf(entry[0]);
     for (let size = 1; size <= 2 && size < words.length; size++) {
       const tail = words.slice(-size);
-      if (tail.some((word) => word.length < 3 || /\d/u.test(word)) || tail.every((word) => kindWords.has(word) || subjectWords.has(word))) break;
+      if (tail.some((word) => word.length < 3 || /\d/u.test(word))) break;
+      // "whale" alone only names the subject, but "killer whale" is a base answer.
+      if (tail.every((word) => kindWords.has(word) || subjectWords.has(word))) continue;
       const key = tail.join(' ');
       if (!bases.has(key)) {
         const name = written.slice(-size).join(' ');
@@ -453,17 +455,22 @@ export function buildLookup(answers, prompt, { category } = {}) {
       if (longer.has(entry)) continue;
       const spellings = [entry[0], ...(entry[3] ?? [])];
       const fits = spellings.some((spelling) => {
+        // A nickname such as "Congo Bill" does not make "bill" a last name.
+        if (single && allowSurnames && spelling !== entry[0]) return false;
         const name = wordsOf(spelling);
         if (!words.every((word) => name.includes(word))) return false;
         if (!single) return true;
         const abbreviation = spelling.split(/[^\p{L}\p{N}]+/u).some((part) => /^\p{Lu}{2,5}$/u.test(part) && part.toLowerCase() === typed);
         if (abbreviation) return true;
-        if (!distinctive || name.length !== 2 || single.length < 5 || kindWords.has(single)) return false;
-        // The last word names the thing ("Rhapsody"); the first word only describes it ("soccer" is
-        // not Soccer field) unless the last word just says what kind of thing it is ("Galapagos"
-        // for Galapagos tortoise). On prompts about people the word must be the last name.
+        if (!distinctive || name.length < 2 || typed.length < 4 || kindWords.has(single)) return false;
+        // The last word names the thing ("Rhapsody", "Spurs" for San Antonio Spurs); a first word
+        // only describes it ("soccer" is not Soccer field) unless the other word just says what
+        // kind of thing it is ("Galapagos" for Galapagos tortoise). On prompts about people the
+        // word must be the last name.
+        if (name.length <= 4 && name.at(-1) === single) return true;
+        if (name.length !== 2 || allowSurnames || typed.length < 5) return false;
         const other = name[0] === single ? name[1] : name[0];
-        return name[1] === single || (!allowSurnames && (kindWords.has(other) || subjectWords.has(other)));
+        return kindWords.has(other) || subjectWords.has(other);
       });
       if (fits) longer.add(entry);
     }
@@ -483,8 +490,10 @@ export function buildLookup(answers, prompt, { category } = {}) {
         if (size < best) continue;
         const names = [entry[0], ...(entry[3] ?? [])].map(wordsOf);
         const atEnd = (name) => name.every((part, index) => part === words[words.length - size + index]);
+        // A full name for a character the bank knows by one name: "Fred Jones" for Fred.
+        const fullName = allowSurnames && size === 1 && words.length === 2;
         const fits = (name) => name.length === size && name.every((part) => words.includes(part)) &&
-          ((atEnd(name) && words.length - size <= 3) || size * 2 > words.length ||
+          ((atEnd(name) && words.length - size <= 3) || size * 2 > words.length || fullName ||
             words.every((part) => name.includes(part) || kindWords.has(part)));
         if (!names.some(fits)) continue;
         if (size > best) {

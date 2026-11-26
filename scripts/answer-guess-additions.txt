@@ -1,0 +1,48 @@
+# Answers and alternate names added after testing the guess sweep. Format: id|Name@points=alternate!reason
+# Points apply to new answers only (default 30). "!reason" marks an arguable answer for ARGUABLE-ANSWERS.md.
+0001|Kiwi=Kiwi bird|Komodo dragon=Komodo
+0002|Democratic Republic of the Congo=Zaire|Somaliland@60!Self-declared state, not recognised by the UN
+0003|Farfalle=Bowtie=Bow-tie=Bowties|Macaroni=Elbow=Elbows=Elbow macaroni|Conchiglie=Shells=Pasta shells|Fusilli=Spirals=Corkscrew
+0006|Soccer=Football|Rugby=Rugby sevens|Canoeing=Kayaking|Breaking=Breakdancing|Marathon@10!An event within athletics rather than a sport of its own|BMX racing@30=BMX|Motorboating@85=Powerboating=Motor boating
+0007|French horn=Horn|Tubular bells=Chimes|Gong=Tam-tam
+0008|Greenland@60!Part of the Kingdom of Denmark, not an independent country|Puerto Rico@30!US territory, not an independent country|French Guiana@60!Part of France, not an independent country
+0009|Shrike@60!A songbird that hunts like a raptor
+0010|Pecorino Romano PDO=Romano|Velveeta@30!A processed cheese product brand|Babybel@30!A brand of snack cheese
+0012|Omega=Ω|Pi=π
+0014|Cockapoo@60!A designer crossbreed|Puggle@60!A designer crossbreed|Dachshund=Daschund=Dachsund
+0015|Edinburgh@60!Capital of Scotland, which is not a sovereign state|Cardiff@60!Capital of Wales, which is not a sovereign state|Belfast@60!Capital of Northern Ireland, which is not a sovereign state
+0016|Tangelo=Minneola|Cara cara orange@60=Cara cara
+0019|Brooklyn Nets=Nets|LA Clippers=Clippers|Houston Rockets=Rockets|Utah Jazz=Jazz|Sacramento Kings=Kings|Memphis Grizzlies=Grizzlies|Atlanta Hawks=Hawks|Charlotte Hornets=Hornets|Detroit Pistons=Pistons
+0020|Parsley root@60|Konjac@85!A corm, like taro
+0021|Harmonia@85
+0024|Bao@30=Bao bun=Steamed bun|Pan dulce@30|Concha@60
+0025|Nausicaä of the Valley of the Wind=Nausicaa=Nausicaä
+0026|Mandible=Jaw|Stapes=Stirrup
+0027|Texas hold 'em@30=Texas Hold'em=Texas holdem=Hold'em=Holdem|Concentration=Memory|Kings in the Corner@60|Pokémon Trading Card Game@30=Pokémon=Pokemon=Pokemon TCG|Big Two=Pusoy Dos|Pai gow poker@60=Pai gow
+0028|Dwight D. Eisenhower=Ike|Abraham Lincoln=Abe Lincoln=Honest Abe|George W. Bush=Dubya|Theodore Roosevelt=Teddy
+0030|Cottonmouth=Water moccasin|Pufferfish=Fugu=Blowfish|Asp viper@60=Asp|Monarch butterfly@60!Poisonous to eat rather than venomous|Golden poison frog@60|Snake@10!Most snakes are not venomous|Spider@10!Most spiders are harmless to people
+0031|Lavender@60|Sesame@30=Sesame seed=Sesame seeds|Italian seasoning@30!A blend rather than a single herb|Old Bay@60!A brand of seasoning blend|Peppermint@30
+0032|Atlantis: The Lost Empire=Atlantis
+0033|Foot=Feet|Weber@60|Miles per hour@30=mph
+0034|Cortina d'Ampezzo=Cortina
+0035|Chrysanthemum=Mum|Lily of the valley@30|Rhododendron@30|Larkspur@60|Lantana@60
+0038|Aperol spritz=Spritz|Cuba libre=Rum and coke=Rum and Coke|Eggnog@30!Often made without alcohol|Kir royale@60
+0039|Voldemort=Tom Riddle=Tom Marvolo Riddle|Cedric Diggory=Cedric|Mad-Eye Moody=Alastor Moody
+0040|The Moon=Luna
+0041|Arnis@60=Kali=Eskrima=Escrima|MMA=Mixed martial arts|Hwa Rang Do@85|Kuk Sool Won@85
+0042|Bigfoot=Sasquatch|Ghost@30!A spirit rather than a creature|Demon@30!A spirit rather than a creature|Angel@30!A spirit rather than a creature|Giant@30|Genie=Djinn=Jinn|Faun@60|Jersey Devil@60|Oni@60
+0043|Ems@85|Mureș@85=Mures|Struma@85|Kemijoki@85|Torne@85=Torne River|Dalälven@85=Dalalven|Havel@85|Rhine=Rhein
+0045|Kellogg's@10=Kelloggs=Kellogg|General Mills@10|Post@30=Post Consumer Brands|Quaker@10=Quaker Oats|Fruity Pebbles=Pebbles|Krave@60|Nature's Path@60|Nestlé@30=Nestle
+0047|Lapis lazuli=Lapis|Moissanite@60
+0048|Othello=Reversi|Dixit@60|Kingdomino@60|Dungeons & Dragons@30=D&D=Dungeons and Dragons!A role-playing game rather than a board game|Monopoly Deal@30!A card game
+0049|Slovenian=Slovene|Flemish@60|Galician=Gallego
+0050|Gibraltar@60!A British territory, not a country|Palestine=Gaza
+0051|Orca=Killer whale
+0052|Lychee=Litchi=Lichi|Star fruit=Carambola|Persimmon@30!Mostly grown in temperate and subtropical climates|Pomegranate@30!Mostly grown in subtropical climates|Fig@30!Mostly grown in subtropical climates|Salak=Snake fruit|Kiwano=Horned melon|Lucuma@60
+0054|Cirrocumulus=Mackerel sky
+0055|Lyrical@30=Lyrical dance|K-pop dance@60=Kpop dance=Kpop!A style of choreography rather than a dance form|Capoeira@30|Moonwalk@30!A dance move rather than a style|Macarena@30!A dance move rather than a style|Floss@60!A dance move rather than a style|Frevo@85
+0056|Julius Caesar=Caesar!Ruled as dictator; Augustus was the first emperor
+0057|Dasht-e Lut=Lut
+0058|Gopher snake@60=Bullsnake
+0059|Cuban coffee=Cafecito|Cortado=Gibraltar|Vienna coffee@60|Espresso=Short black
+0060|Nintendo DS=DS|Atari 2600=Atari
