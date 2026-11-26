@@ -167,3 +167,57 @@
 0190|Bushbaby=Galago|Owl monkey@60=Night monkey|Gerbil@60!Mostly crepuscular|Aardwolf@60|Whip-poor-will@60|Frogmouth@60|Earthworm@30!Surfaces mostly at night|Mosquito@30!Many species bite at dusk and night|Katydid@60|Octopus@30!Many species hunt at night
 0177|Spanish rice=Arroz rojo
 0142|Fermenting=Fermentation
+0191|Orange juice=OJ|Egg McMuffin@60|Full English breakfast=Fry-up=Full English breakfast|Latte@30|Cappuccino@30|Espresso@30|Apple juice@30|Grapefruit@30|Spam@60|Rice@30!A staple eaten at breakfast in many countries|Pão de queijo@60=Pao de queijo|Tapioca@60|Cuscuz@85
+0192|War Machine=Rhodey|Ms. Marvel=Kamala Khan|Nick Fury@30!Directs S.H.I.E.L.D. rather than joining the team|Spectrum=Monica Rambeau=Photon|Thing@60=The Thing|Star-Lord@30!A Guardian of the Galaxy who fought beside the Avengers|Rocket@30!A Guardian of the Galaxy who fought beside the Avengers|Groot@30!A Guardian of the Galaxy who fought beside the Avengers|Gamora@30!A Guardian of the Galaxy who fought beside the Avengers|Nebula@30!Fought beside the Avengers in Endgame|Drax@30!A Guardian of the Galaxy who fought beside the Avengers|Yelena Belova@60!Leads the team renamed the New Avengers
+0193|Egyptology@60|Phycology@85|Cryptozoology@60!A pseudoscience|Topology@60!A branch of mathematics
+0194|Juche@60!A state ideology often counted as a religion|Rastafari@60=Rastafarianism!Close to one million followers|Neopaganism@60=Paganism|Mormonism=Latter-day Saints=LDS|Candomblé@85=Candomble|Umbanda@85|Santería@60=Santeria|Yoruba religion@60
+0195|North Macedonia=Macedonia
+0196|Republic of the Congo=Congo
+0197|Bean bag chair=Beanbag|Stool=Barstool|Rug@30!A furnishing rather than furniture|Curtains@30!A furnishing rather than furniture
+0198|Xi Jinping=Xi|Lula da Silva=Lula|Prabowo Subianto=Prabowo|Mohammed bin Salman=MBS|Tamim bin Hamad Al Thani@60=Tamim|Pope Leo XIV=Pope
+0199|Child's Play=Chucky|The Grudge=Ju-On|A Nightmare on Elm Street=Freddy Krueger=Freddy|Friday the 13th=Jason=Jason Voorhees|Halloween=Michael Myers
+0200|Hong Kong@60!A region of China with its own dollar
+0201|Bungee jumping=Bungee|Parkour=Free running|Freestyle skiing@30|Big air@60|Highlining=Slacklining|Monster truck@60!A motorsport show|Wingsuit flying=Proximity flying
+0204|Greek tortoise=Spur-thighed tortoise
+0205|Coca-Cola=Coke|Mountain Dew=Mtn Dew|A&W=A&W Root Beer|Starry@60|Ribena@60!A juice drink|Guaraná Antarctica=Guarana=Guaraná|Kuat@85|Diet Coke@30|Pepsi Max@60|Cherry Coke@60|Vanilla Coke@60|Pibb Xtra=Pibb=Mr. Pibb=Mr Pibb|Dad's@85|Afri-Cola@85|Calpis@60!A cultured milk drink|Red Bull@30!An energy drink|Monster@30!An energy drink|Gatorade@30!A sports drink
+0206|Publix@60|Outshine@60|Mister Softee=Mr. Softee=Mr Softee
+0208|Double Dutch@30|Tic-tac-toe@30!A pencil game|Clapping games@30|Ninja@60|Sharks and minnows=Fishy fishy|Wink murder@60
+0209|Yuan=Renminbi|Krone=Norwegian krone=Danish krone
+0210|Bosnia and Herzegovina=Bosnia|Belarus=Byelorussia
+0212|Pasta@10|Ragù@30=Ragu|Chicken parmesan=Chicken parmigiana=Chicken parm!Italian-American|Eggplant parmesan=Parmigiana|Veal piccata@60|Cotoletta alla milanese=Cotoletta|Margherita pizza=Margherita|Linguine alle vongole=Spaghetti alle vongole|Spumoni@60
+0213|Aurora=Sleeping Beauty|Ariel=The Little Mermaid=Ariel the Little Mermaid
+0214|Lord Kelvin=William Thomson|Hans Christian Ørsted@60=Oersted|Eugene Wigner@60=Wigner|John von Neumann@60!Best known as a mathematician|Ernest Lawrence@60|Gustav Kirchhoff@60=Kirchhoff|Joseph Fourier@60=Fourier!Best known as a mathematician|Leonhard Euler@60=Euler=Leonard Euler!Best known as a mathematician|Daniel Bernoulli@60=Bernoulli
+0215|Oakland Athletics=Athletics=A's=Sacramento Athletics=Las Vegas Athletics
+0216|Oxford cloth@60=Oxford|Burlap=Hessian|Kente@60|Ikat@60|Faux fur@30|PVC@30!A plastic sometimes used as fabric|Ripstop@60|Merino@30=Merino wool
+0218|Gulf of Mexico@30!A gulf, though counted among marginal seas|Bay of Bengal@30!A bay, though counted among marginal seas|Hudson Bay@30!A bay, though counted among marginal seas
+0219|Phoebe@60|Kingbird@60
+0220|Dumplings=Jiaozi|Kung Pao chicken=Gong bao=Gong bao chicken|Baozi=Bao|Yuxiang shredded pork@60=Yu xiang rou si=Fish-flavored shredded pork|Sichuan boiled fish@60=Shuizhu yu|Chongqing chicken=Laziji
+0221|Captain Kirk=James T. Kirk=Kirk James|Scotty=Montgomery Scott|Captain Picard=Jean-Luc Picard=Picard Jean-Luc|Wesley Crusher=Wesley|Captain Janeway=Kathryn Janeway|Christopher Pike=Captain Pike|Una Chin-Riley@60=Number One|Khan=Khan Noonien Singh|Tribble@30=Tribbles!A species rather than a character
+0222|Allergy and immunology@30=Allergy|Orthodontics@60!A dental specialty|Optometry@30!Practised by optometrists rather than doctors|Osteopathy@60|Psychology@30!Practised by psychologists rather than doctors|Pharmacy@30!Practised by pharmacists rather than doctors|Cardiology=Cardiologist|Dermatology=Dermatologist|Pediatrics=Pediatrician|Neurology=Neurologist|Oncology=Oncologist
+0223|Courier New=Courier|Noto Sans@60|Ubuntu@60|San Francisco=SF Pro|Book Antiqua@60|Century@60|Playfair Display@60|Merriweather@60|PT Sans@60|Nunito@60|Quicksand@60|Pacifico@60|Jenson@85|Trajan@60|Blackletter@60=Old English=Fraktur|Chiller@60|Helvetica=Helvetica Neue
+0224|Greenland@60!Part of the Kingdom of Denmark, not a country
+0225|San Joaquin@60|Nelson@60|Negro River=Rio Negro|Japurá@85=Japura|Araguaia@60|Juruá@85=Jurua|Napo@85|Grijalva@85|Pánuco@85=Panuco|St. Johns@60=St. Johns River|Yellowstone@60|Kootenay@85|Klondike@85
+0226|Chana masala=Chole|Onion bhaji@30=Bhaji|Dhansak@60|Ladoo@30=Laddu
+0227|Tasmanian Devil=Taz|Lola Bunny=Lola|Buster Bunny@60!From Tiny Toon Adventures, a Looney Tunes spin-off|Plucky Duck@60!From Tiny Toon Adventures, a Looney Tunes spin-off|Hamton J. Pig@60=Hamton!From Tiny Toon Adventures, a Looney Tunes spin-off|Montana Max@60!From Tiny Toon Adventures, a Looney Tunes spin-off|Elmyra Duff@60=Elmyra!From Tiny Toon Adventures, a Looney Tunes spin-off
+0228|Halite=Salt|Breccia@60|Peridotite@60|Labradorite@60|Kimberlite@60|Geode@30!A rock formation rather than a rock type
+0229|Lamellar@60|Plate armor@30=Plate armour=Full plate|Flak jacket@60|Pauldron=Spaulder|Besagew@85|Armet@85|Barbute@85|Kabuto@60|Samurai armor@60=Samurai armour|Lorica segmentata@60|Vambrace=Bracers|Shin guard@30=Shinguard!Sports protection|Knee pad@30!Sports protection|Chestplate=Chestpiece
+0230|Kinesiology tape@30=KT tape|Teflon tape=Plumber's tape=Thread seal tape=PTFE tape|Caution tape=Police tape=Barricade tape|Velcro@30!A hook-and-loop fastener|Videotape@30|Scotch tape=Sellotape=Clear tape=Invisible tape|Glow tape@60|Spike tape@85|Gorilla tape@30|Drafting tape@60|Correction tape@30|Hem tape@60|Fashion tape@60|Seam tape@60|Lead tape@85
+0232|Balearic Islands@30!A group of islands|Kefalonia=Cephalonia|Aeolian Islands@30!A group of islands|Sardinia=Sardegna
+0233|Bear=Grizzly|Groundhog=Woodchuck|Bumblebee=Bee|Pygmy possum@60|Hummingbird@30!Goes into nightly torpor rather than hibernating
+0234|Spring rolls=Summer rolls=Gỏi cuốn=Goi cuon|Vietnamese coffee@30=Cà phê sữa đá|Egg coffee@60|Pho=Pho bo=Pho ga=Phở bò=Phở gà|Tom saep@85
+0235|Sulley=James P. Sullivan|Elastigirl=Helen Parr
+0237|Dreadlocks=Locs|Taper@30|Feathered hair=Farrah Fawcett|Butch cut@60|Waves@30=360 waves|Mod cut@60
+0239|Cowrie@60|Snail=Escargot|Shipworm@85|Tusk shell@85|Argonaut@85|Squid=Calamari
+0240|Black Forest cake=Schwarzwälder Kirschtorte|Kartoffelsalat=Potato salad=German potato salad|Knodel=Dumplings=Kartoffelknödel|Pfeffernüsse@60=Pfeffernusse|Kartoffelpuffer=Reibekuchen|Rotkohl@60=Red cabbage|Rouladen=Rinderroulade|Spargel=White asparagus|Brötchen@60=Brotchen|Mett=Hackepeter|Brathähnchen@60=Hendl|Sausage=Wurst|Thüringer Rostbratwurst@60=Thüringer|Bratkartoffeln=Fried potatoes|Bratwurst=Brat
+0242|Lambda baryon@60=Lambda!A family of baryons|Sigma baryon@60=Sigma!A family of baryons|Xi baryon@60=Xi!A family of baryons|Upsilon meson@60=Upsilon
+0244|Heels@30=Stilettos=Stiletto=Stilletos|Rain boots=Wellies=Wellington boots|Timberlands@30!A brand|Boat shoes=Deck shoes=Docksiders|Ballet shoes@30|Vans@30!A brand|Converse@30=Chuck Taylors!A brand|Jordans@30=Air Jordans!A brand|Adidas@30!A brand|Tabi@60
+0245|Do not enter=No entry|Road work ahead=Roadwork=Construction|Slippery when wet=Slippery road|Steep hill@30|Sharp curve@30=Curve|Bridge out@60|Keep left@30|No passing zone=No overtaking=Do not pass|Interstate@60=Interstate shield|No standing@60|Taxi stand@60|Speed bump=Hump|Ice@60|Fog@60|Flood@60
+0246|Button mushroom=White mushroom|Cremini=Baby bella|Maitake=Hen of the woods|Porcini=Cep=Penny bun|King oyster=Trumpet mushroom|Shimeji=Beech mushroom|Wood ear=Cloud ear|Black trumpet=Trumpet of death|Fly agaric=Amanita=Amanita muscaria|Psilocybin mushroom=Magic mushroom=Shroom=Shrooms|Inkcap@60=Ink cap|Horse mushroom@60|Enoki=Velvet foot
+0247|Hummus@30!A dip|Peanut sauce=Satay|Bolognese=Ragu=Ragù
+0249|Thermal energy=Heat|Electrical energy=Electricity|Hydroelectric energy=Hydropower=Hydro|Elastic potential energy=Elastic|Gravitational potential energy=Gravitational|Coal@30!A fuel rather than a type of energy|Oil@30!A fuel rather than a type of energy|Natural gas@30!A fuel rather than a type of energy|Zero-point energy=Vacuum energy|Enthalpy@60!A measure of heat content
+0250|Brighton & Hove Albion=Brighton|Manchester City=Man City|Manchester United=Man United=Man Utd|Tottenham Hotspur=Spurs|Wolverhampton Wanderers=Wolves|West Bromwich Albion=West Brom|Middlesbrough=Boro|Queens Park Rangers=QPR
+0251|Gym bag@30|Luggage@30!A general word for travel bags|Wallet@30!Usually counted as a case rather than a bag|Trash bag=Garbage bag|Sandwich bag@30|Freezer bag@30|Makeup bag=Cosmetic bag|Pencil case@30!A case rather than a bag|Carry-on@30=Carry on|Evening bag@60|Wristlet@60|Speedy@85
+0252|Korean barbecue=Korean BBQ|Kimchi jjigae=Kimchi stew|Budae jjigae=Army stew|Bingsu=Patbingsu|Yangnyeom chicken@60|Eomuk=Odeng|Kimchi fried rice=Kimchi bokkeumbap=Bokkeumbap|Hotteok=Hoeddeok|Soju@30!A drink|Makgeolli@30!A drink|Japchae=Japchae noodles
+0253|Lake Constance=Bodensee|Sea of Galilee=Lake Tiberias|Lake Eyre=Kati Thanda|Lake Texcoco@60!Mostly drained|Lake Bonneville@60!A prehistoric lake
+0254|Ocean's Eleven=Ocean's 11
+0255|Sam=Samwise=Samwise Gamgee|Merry=Meriadoc Brandybuck|Pippin=Peregrin Took|Nazgûl=Ringwraiths=Ringwraith|Bergil@85|Fatty Bolger=Fredegar Bolger|Wormtongue=Gríma|Erkenbrand@85

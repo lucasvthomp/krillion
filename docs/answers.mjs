@@ -233,6 +233,11 @@ const kindWords = new Set([
   'pepper', 'app', 'website', 'character', 'band', 'franchise', 'console', 'exercise', 'setting', 'product',
 ].map((word) => stemWord(word)));
 
+// Words that only finish a club's name, so "Leeds" is Leeds United and "Tottenham" is Tottenham Hotspur.
+const clubWords = new Set(['united', 'city', 'town', 'athletic', 'rovers', 'wanderers', 'hotspur', 'albion', 'county',
+  'fc', 'afc', 'cf', 'sc', 'rangers', 'forest', 'villa', 'palace', 'argyle', 'orient', 'alexandra', 'hove', 'and',
+  'north', 'end', 'wednesday', 'stanley', 'dons'].map((word) => stemWord(word)));
+
 // A rough word stem so "whip" meets "whipped", "bake" meets "baked" and "empanadas" meets "empanada".
 function stemWord(word) {
   let stem = word;
@@ -491,6 +496,8 @@ export function buildLookup(answers, prompt, { category } = {}) {
         // kind of thing it is ("Galapagos" for Galapagos tortoise). On prompts about people the
         // word must be the last name.
         if (name.length <= 4 && name.at(-1) === single) return true;
+        // A club by its town: the rest of the name only says it is a club.
+        if (name[0] === single && name.length <= 4 && name.slice(1).every((word) => clubWords.has(word))) return true;
         if (name.length !== 2 || allowSurnames || typed.length < 5) return false;
         const other = name[0] === single ? name[1] : name[0];
         return kindWords.has(other) || subjectWords.has(other);

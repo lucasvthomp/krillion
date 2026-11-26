@@ -6,7 +6,7 @@ These are the ones it accepted leniently. To veto one, delete it from
 `node scripts/report-arguable-answers.mjs`. A veto removes it from the next full rebuild; to drop it from the
 current banks straight away, remove the answer from its bank file as well.
 
-145 answers.
+214 answers.
 
 | Prompt | Answer | Points | Why it is arguable |
 | --- | --- | ---: | --- |
@@ -155,3 +155,72 @@ current banks straight away, remove the answer from its bank file as well.
 | Name a nocturnal animal | Earthworm | 30 | Surfaces mostly at night |
 | Name a nocturnal animal | Mosquito | 30 | Many species bite at dusk and night |
 | Name a nocturnal animal | Octopus | 30 | Many species hunt at night |
+| Name a breakfast food or drink | Rice | 30 | A staple eaten at breakfast in many countries |
+| Name a member of the Avengers | Nick Fury | 30 | Directs S.H.I.E.L.D. rather than joining the team |
+| Name a member of the Avengers | Star-Lord | 30 | A Guardian of the Galaxy who fought beside the Avengers |
+| Name a member of the Avengers | Rocket | 30 | A Guardian of the Galaxy who fought beside the Avengers |
+| Name a member of the Avengers | Groot | 30 | A Guardian of the Galaxy who fought beside the Avengers |
+| Name a member of the Avengers | Gamora | 30 | A Guardian of the Galaxy who fought beside the Avengers |
+| Name a member of the Avengers | Nebula | 30 | Fought beside the Avengers in Endgame |
+| Name a member of the Avengers | Drax | 30 | A Guardian of the Galaxy who fought beside the Avengers |
+| Name a member of the Avengers | Yelena Belova | 60 | Leads the team renamed the New Avengers |
+| Name a branch of science ending in -ology | Cryptozoology | 60 | A pseudoscience |
+| Name a branch of science ending in -ology | Topology | 60 | A branch of mathematics |
+| Name a religion with more than one million followers | Juche | 60 | A state ideology often counted as a religion |
+| Name a religion with more than one million followers | Rastafari | 60 | Close to one million followers |
+| Name a piece of furniture | Rug | 30 | A furnishing rather than furniture |
+| Name a piece of furniture | Curtains | 30 | A furnishing rather than furniture |
+| Name a country that uses the dollar | Hong Kong | 60 | A region of China with its own dollar |
+| Name an extreme sport | Monster truck | 60 | A motorsport show |
+| Name a soda brand | Ribena | 60 | A juice drink |
+| Name a soda brand | Calpis | 60 | A cultured milk drink |
+| Name a soda brand | Red Bull | 30 | An energy drink |
+| Name a soda brand | Monster | 30 | An energy drink |
+| Name a soda brand | Gatorade | 30 | A sports drink |
+| Name a playground game | Tic-tac-toe | 30 | A pencil game |
+| Name an Italian dish | Chicken parmesan | 30 | Italian-American |
+| Name a famous physicist | John von Neumann | 60 | Best known as a mathematician |
+| Name a famous physicist | Joseph Fourier | 60 | Best known as a mathematician |
+| Name a famous physicist | Leonhard Euler | 60 | Best known as a mathematician |
+| Name a fabric or textile | PVC | 30 | A plastic sometimes used as fabric |
+| Name a sea | Gulf of Mexico | 30 | A gulf, though counted among marginal seas |
+| Name a sea | Bay of Bengal | 30 | A bay, though counted among marginal seas |
+| Name a sea | Hudson Bay | 30 | A bay, though counted among marginal seas |
+| Name a Star Trek character | Tribble | 30 | A species rather than a character |
+| Name a medical specialty | Orthodontics | 60 | A dental specialty |
+| Name a medical specialty | Optometry | 30 | Practised by optometrists rather than doctors |
+| Name a medical specialty | Psychology | 30 | Practised by psychologists rather than doctors |
+| Name a medical specialty | Pharmacy | 30 | Practised by pharmacists rather than doctors |
+| Name a country bigger than Mexico (by area) | Greenland | 60 | Part of the Kingdom of Denmark, not a country |
+| Name a Looney Tunes character | Buster Bunny | 60 | From Tiny Toon Adventures, a Looney Tunes spin-off |
+| Name a Looney Tunes character | Plucky Duck | 60 | From Tiny Toon Adventures, a Looney Tunes spin-off |
+| Name a Looney Tunes character | Hamton J. Pig | 60 | From Tiny Toon Adventures, a Looney Tunes spin-off |
+| Name a Looney Tunes character | Montana Max | 60 | From Tiny Toon Adventures, a Looney Tunes spin-off |
+| Name a Looney Tunes character | Elmyra Duff | 60 | From Tiny Toon Adventures, a Looney Tunes spin-off |
+| Name a rock or mineral | Geode | 30 | A rock formation rather than a rock type |
+| Name a piece of armor | Shin guard | 30 | Sports protection |
+| Name a piece of armor | Knee pad | 30 | Sports protection |
+| Name a type of tape | Velcro | 30 | A hook-and-loop fastener |
+| Name an island in the Mediterranean | Balearic Islands | 30 | A group of islands |
+| Name an island in the Mediterranean | Aeolian Islands | 30 | A group of islands |
+| Name an animal that hibernates | Hummingbird | 30 | Goes into nightly torpor rather than hibernating |
+| Name a subatomic particle | Lambda baryon | 60 | A family of baryons |
+| Name a subatomic particle | Sigma baryon | 60 | A family of baryons |
+| Name a subatomic particle | Xi baryon | 60 | A family of baryons |
+| Name a type of shoe | Timberlands | 30 | A brand |
+| Name a type of shoe | Vans | 30 | A brand |
+| Name a type of shoe | Converse | 30 | A brand |
+| Name a type of shoe | Jordans | 30 | A brand |
+| Name a type of shoe | Adidas | 30 | A brand |
+| Name a sauce | Hummus | 30 | A dip |
+| Name a type of energy | Coal | 30 | A fuel rather than a type of energy |
+| Name a type of energy | Oil | 30 | A fuel rather than a type of energy |
+| Name a type of energy | Natural gas | 30 | A fuel rather than a type of energy |
+| Name a type of energy | Enthalpy | 60 | A measure of heat content |
+| Name a type of bag | Luggage | 30 | A general word for travel bags |
+| Name a type of bag | Wallet | 30 | Usually counted as a case rather than a bag |
+| Name a type of bag | Pencil case | 30 | A case rather than a bag |
+| Name a Korean dish | Soju | 30 | A drink |
+| Name a Korean dish | Makgeolli | 30 | A drink |
+| Name a lake | Lake Texcoco | 60 | Mostly drained |
+| Name a lake | Lake Bonneville | 60 | A prehistoric lake |
