@@ -46,3 +46,66 @@
 0058|Gopher snake@60=Bullsnake
 0059|Cuban coffee=Cafecito|Cortado=Gibraltar|Vienna coffee@60|Espresso=Short black
 0060|Nintendo DS=DS|Atari 2600=Atari
+0061|Deltoid=Delts|Trapezius=Traps|Rectus abdominis@30=Six pack=Six-pack|Infraspinatus@60|Supraspinatus@60|Gluteus maximus=Buttocks=Butt
+0062|Ushanka=Trapper hat|Bucket hat=Fisherman hat=Fisherman's hat|Kufi@60|Kippah=Yarmulke|Wizard hat@30!A costume hat from fiction|Conical hat=Rice hat=Asian conical hat
+0064|Russia=Russian SFSR=Russian SSR|Ukraine=Ukrainian SSR|Kyrgyzstan=Kirghizia=Kirghiz SSR
+0065|Euoplocephalus@85|Yutyrannus@85|Pachyrhinosaurus@60|Chasmosaurus@60|Indominus rex@30!Fictional, from Jurassic World
+0066|Bell peppers=Green peppers=Peppers=Green pepper|Mozzarella@10|Artichokes=Artichoke hearts|Arugula=Rocket|Corn=Sweetcorn|Ranch@60|Hot dogs@85|Steak@60|Barbecue sauce@30=BBQ sauce|Oregano@60
+0067|Mom@30|Kim's Convenience@60|Workaholics@60
+0068|C++=CPP=Cplusplus|Delphi@60|CSS@30!A style-sheet language rather than a programming language|Visual Basic .NET@60=VB.NET
+0069|Hurdles@10=Hurdle|Relay@10=Relays|Javelin throw=Javelin|Hammer throw=Hammer
+0071|Atlas Mountains=Atlas|Alborz=Elburz|Jura Mountains=Jura|Mid-Atlantic Ridge@85!An underwater ridge rather than a mountain range on land
+0072|Swallowtail@30=Swallowtail butterfly|Silkworm@30
+0073|Leek and potato soup@30=Potato leek=Leek and potato=Potato leek soup|Beef barley soup@60=Beef barley|Bone broth@30!A broth rather than a soup|Callaloo@85|Sundubu-jjigae@60=Sundubu
+0075|Yale blue@60|Delft blue@85|Capri@85|Pacific blue@60|Admiral blue@60|Duck egg blue@60|Lapis lazuli@60=Lapis
+0076|Kitchen shears=Scissors|Mixing bowl@30!A container rather than a utensil|Timer@30!A gadget rather than a utensil|Oven mitt@30!Protective wear rather than a utensil|Pot holder@30!Protective wear rather than a utensil|Cleaver@30|Juicer=Citrus press
+0077|Hodr=Hod=Höðr|Fenrir@30!A giant wolf rather than a god|Jörmungandr@60=Jormungandr!A serpent rather than a god|Ymir@60!A primordial giant rather than a god|Valkyrie@30!Valkyries serve Odin rather than being gods|Gerðr@85=Gerd|Thor=Thor Odinson
+0078|Puerto Rico@30!A US territory, not a country
+0080|3 Musketeers=Three Musketeers|Crunch bar=Nestle Crunch|Twirl@60|Cadbury Dairy Milk=Cadbury=Cadbury Dairy Milk|Fifth Avenue@85|Mallo Cup@85|Goldenberg's Peanut Chews@85|Galaxy@60|Topic@85|Fry's Chocolate Cream@85|Bar One@85|Kinder Bueno@30=Kinder|Ritter Sport@60|Milka@60
+0081|Union J@85|Dream Street@85|Immature@85=IMx|911@85|The Beatles@30=Beatles!A rock band rather than a boy band
+0082|Thyroid=Thyroid gland|Testes=Testicles|Trachea=Windpipe
+0083|Downward dog=Down dog=Downdog=Adho mukha svanasana|Cat-cow=Cat=Cow=Cat pose=Cow pose|Half lotus@60|Sun salutation@30=Surya namaskar!A sequence of poses|Garland pose=Malasana|Gate pose@60|Mountain pose=Tadasana|Tree pose=Vrksasana|Cobra=Bhujangasana
+0084|Bryce Canyon=Bryce
+0085|United Kingdom=England=Scotland=Wales
+0086|Eastern newt=Red eft|Axolotl=Mexican walking fish
+0087|Mocha@30|Cake batter@60|Matcha=Green tea|Fudge ripple@60|Mint@30|Cookies and cream=Oreo|Cookie monster@60
+0088|Anakin Skywalker@10=Anakin|Chewbacca=Chewie|Ahsoka Tano=Ahsoka|Ewok@30!A species rather than a character|Jabba the Hutt=Jabba|Kanan Jarrus@60=Kanan
+0089|Kindle@60|Bale@85|Sloth@85|Caravan@60|Nest@60|Nye@85|Hive@30|Cloud@60|Plague@60|Lamentation@85|Paddling@85|Team@60|Yoke@60|Span@85|Rookery@60|Descent@85|Doylt@85|Harras@85|Husk@85|Fesnyng@85|Party@85|Memory@85|Ugly@85|Barrel@60|Grist@85|Bed@60|Congregation@85
+0090|Bench press=Bench|Chin-up@30=Chin up=Chinup|Sit-up@30=Situp=Sit up|Bicep curl=Curl|Overhead press=Military press|Cable row=Seated row|Front raise@60|Skull crusher@60|Chest fly=Fly|Pec deck@60|Cable crossover@60|Romanian deadlift=RDL
+0091|Quiche@10|Escargot=Snails|Duck confit=Confit de canard|Gratin dauphinois=Dauphinoise potatoes=Potatoes au gratin|Moules marinieres=Moules frites=Mussels=Moules marinières|Fondue@30!Usually counted as Swiss|Choucroute@60|Socca@85|Steak au poivre@60|Duck a l'orange=Canard à l'orange|Bouchée à la reine@85|Navarin@85|Gougères@85=Gougeres|Brioche@60!A bread rather than a dish|French toast@30=Pain perdu!Named French but of uncertain origin|French fries@30!Often credited to Belgium|Crêpes Suzette@60=Crepe suzette=Crepes Suzette
+0092|Ulaanbaatar=Ulan Bator
+0093|Funnel-web spider=Sydney funnel-web
+0094|PB&J=Peanut butter and jelly=PBJ|Submarine=Sub=Hoagie=Hero=Grinder=Sub sandwich|Italian sub@60|Bacon, egg and cheese@60=Bacon egg and cheese=BEC|Cucumber sandwich@60|Arepa@30!A corn cake often stuffed rather than a sandwich
+0095|Little Green Men=Aliens|Ducky@60|Bo Peep=Bo
+0096|Bigfoot=Sasquatch|Megalodon@30!An extinct shark known from fossils|Momo@85=Missouri Monster|Globster@85|Montauk Monster@85|Spring-heeled Jack@60|Black Shuck@60|Dingonek@85|Cadborosaurus=Caddy|Champ=Lake Champlain Monster
+0097|Jai alai@30!Played with a wicker basket, the cesta|Basque pelota=Pelota|Stand-up paddleboarding=SUP
+0098|Leonardo da Vinci=Leonardo|Lorenzo Lotto@85
+0099|Puerto Rico@30!A US territory, not a country
+0100|Rabbit@10!Rabbits are lagomorphs, not rodents
+0101|Les Misérables=Les Mis=Les Miz|Wicked=Wicked the Musical|Heathers@60!Ran off-Broadway|Hell's Kitchen@60|The Great Gatsby@60|Back to the Future@60|Some Like It Hot@60
+0102|Kilo=k|Mega=M|Giga=G
+0103|Figure eight knot=Figure 8|Noose=Hangman's knot|Bimini twist@85|Albright knot@85
+0104|Ancient Egypt=Egyptians=Ancient Egyptians|Sumer=Sumerians|Babylonians=Babylon|Akkadians@60=Akkadian Empire|Persian Empire=Achaemenid Empire|Indus Valley=Harappan|Ancient China@10|Shang dynasty@60|Zhou dynasty@60=Zhou|Carthage=Carthaginians|Viking=Vikings=Norse|Kingdom of Kush@60=Kush|Aksumite Empire=Axum|Khmer Empire=Angkor|Israelites@60=Hebrews|Hyksos@85|Mississippian culture@85=Mississippian
+0105|Strait of Gibraltar=Gibralter
+0106|Comb jelly@60|Chimaera=Ghost shark=Ratfish|Telescope octopus@85|Atolla jellyfish@85|Grenadier@60=Rattail|Scaly-foot snail@85|Basket star@85
+0107|Ghost pepper=Bhut jolokia|Arbol chili=Chile de árbol=De árbol=Árbol|Hatch chile@30=Hatch=New Mexico chile|Manzano@60|Paprika@30!A powder usually made from bell or mild peppers|Gochugaru@60!A pepper powder
+0109|Achluophobia@85|Spheksophobia@85|Iatrophobia@85|Autophobia@60|Technophobia@60|Pteromerhanophobia@85|Lachanophobia@85|Ombrophobia@85|Selenophobia@85|Siderophobia@85
+0110|Ding Liren=Ding|Ju Wenjun@60!Women's world champion|Magnus Carlsen=Magnus
+0111|QE2=Queen Elizabeth 2|Andrea Gail@60|Bluenose@60|La Amistad@60=Amistad|Tirpitz@60|Musashi@60|Akagi@60|USS Lexington@60=Lexington|Noah's Ark=Ark|Dawn Treader@60|Whydah Gally@85=Whydah|HMS Resolute@85=Resolute|Vasa=Vasa ship
+0112|United Kingdom@30=UK!Left the EU in 2020
+0113|Morepork=Ruru
+0114|Yule log=Bûche de Noël=Buche de Noel|Crepe cake=Mille crêpe=Mille crepe|Lemon drizzle cake@30=Lemon drizzle|Pavlova@60!A meringue dessert
+0115|Spirit: Stallion of the Cimarron=Spirit|Sinbad: Legend of the Seven Seas=Sinbad|Wallace & Gromit: The Curse of the Were-Rabbit=Wallace & Gromit=Wallace and Gromit|Madagascar: Escape 2 Africa
+0116|Ti-6Al-4V@85|Magnox@85|Tumbaga@85|Shibuichi@85|Spiegeleisen@85|Ferrochrome@60|Ferromanganese@60|Weathering steel=Corten=Cor-ten|Vitallium@85
+0117|Barcelona=Barca=Barça|Bayern Munich=Bayern=Bayern München|Manchester United=Man United=Man Utd=Manchester Utd|Juventus=Juve|Manchester City=Man City|Steaua Bucharest=FCSB
+0118|Hans Zimmer@60!A film composer|Ennio Morricone@60!A film composer|Ludovico Einaudi@60=Einaudi!A contemporary composer
+0119|United Kingdom=England=Scotland
+0120|Hippopotamus=Hippo|Hedgehog tenrec@85
+0121|Sugar cream pie=Hoosier pie|Plum pie@60|Spanakopita@60=Spinach pie|Empanada@30!A turnover rather than a pie|Custard pie=Egg custard|Galette@30!A free-form tart
+0123|Eucalyptus=Gum tree|Cherry=Cherry blossom|London plane@60=Plane tree|Linden=Lime tree=Basswood|Sweetgum@60|Rosewood@60|Bamboo@30!A grass rather than a tree|Bottlebrush@60|Christmas tree@10!A use rather than a species|Dragon blood tree@60|Larch=Tamarack
+0124|Serena Williams=Serena|Venus Williams=Venus|Patrick Rafter@60|Ash Barty=Ashleigh Barty
+0125|The Card Players@60=Card Players
+0080|Reese's Peanut Butter Cups=Reese's=Reeses
+0088|The Mandalorian=Din Djarin=Mando
+0109|Hippopotomonstrosesquippedaliophobia=Sesquipedalophobia
+0111|Merrimack=CSS Virginia

@@ -6,7 +6,7 @@ These are the ones it accepted leniently. To veto one, delete it from
 `node scripts/report-arguable-answers.mjs`. A veto removes it from the next full rebuild; to drop it from the
 current banks straight away, remove the answer from its bank file as well.
 
-34 answers.
+73 answers.
 
 | Prompt | Answer | Points | Why it is arguable |
 | --- | --- | ---: | --- |
@@ -44,3 +44,42 @@ current banks straight away, remove the answer from its bank file as well.
 | Name a style of dance | Macarena | 30 | A dance move rather than a style |
 | Name a style of dance | Floss | 60 | A dance move rather than a style |
 | Name a Roman emperor | Julius Caesar | 30 | Ruled as dictator; Augustus was the first emperor |
+| Name a style of hat | Wizard hat | 30 | A costume hat from fiction |
+| Name a dinosaur | Indominus rex | 30 | Fictional, from Jurassic World |
+| Name a programming language | CSS | 30 | A style-sheet language rather than a programming language |
+| Name a mountain range | Mid-Atlantic Ridge | 85 | An underwater ridge rather than a mountain range on land |
+| Name a soup | Bone broth | 30 | A broth rather than a soup |
+| Name a kitchen utensil | Mixing bowl | 30 | A container rather than a utensil |
+| Name a kitchen utensil | Timer | 30 | A gadget rather than a utensil |
+| Name a kitchen utensil | Oven mitt | 30 | Protective wear rather than a utensil |
+| Name a kitchen utensil | Pot holder | 30 | Protective wear rather than a utensil |
+| Name a Norse god or goddess | Fenrir | 30 | A giant wolf rather than a god |
+| Name a Norse god or goddess | Jörmungandr | 60 | A serpent rather than a god |
+| Name a Norse god or goddess | Ymir | 60 | A primordial giant rather than a god |
+| Name a Norse god or goddess | Valkyrie | 30 | Valkyries serve Odin rather than being gods |
+| Name a country where Spanish is an official language | Puerto Rico | 30 | A US territory, not a country |
+| Name a boy band | The Beatles | 30 | A rock band rather than a boy band |
+| Name a yoga pose | Sun salutation | 30 | A sequence of poses |
+| Name a Star Wars character | Ewok | 30 | A species rather than a character |
+| Name a classic French dish | Fondue | 30 | Usually counted as Swiss |
+| Name a classic French dish | Brioche | 60 | A bread rather than a dish |
+| Name a classic French dish | French toast | 30 | Named French but of uncertain origin |
+| Name a classic French dish | French fries | 30 | Often credited to Belgium |
+| Name a type of sandwich | Arepa | 30 | A corn cake often stuffed rather than a sandwich |
+| Name a cryptid (a creature like Bigfoot whose existence is claimed but unproven) | Megalodon | 30 | An extinct shark known from fossils |
+| Name a sport played with a racquet or paddle | Jai alai | 30 | Played with a wicker basket, the cesta |
+| Name a country whose flag uses all three of red, white, and blue, and no other colors | Puerto Rico | 30 | A US territory, not a country |
+| Name a rodent | Rabbit | 10 | Rabbits are lagomorphs, not rodents |
+| Name a Broadway musical | Heathers | 60 | Ran off-Broadway |
+| Name a variety of chili pepper | Paprika | 30 | A powder usually made from bell or mild peppers |
+| Name a variety of chili pepper | Gochugaru | 60 | A pepper powder |
+| Name a world chess champion | Ju Wenjun | 60 | Women's world champion |
+| Name a country in the European Union | United Kingdom | 30 | Left the EU in 2020 |
+| Name a type of cake | Pavlova | 60 | A meringue dessert |
+| Name a famous classical composer | Hans Zimmer | 60 | A film composer |
+| Name a famous classical composer | Ennio Morricone | 60 | A film composer |
+| Name a famous classical composer | Ludovico Einaudi | 60 | A contemporary composer |
+| Name a type of pie | Empanada | 30 | A turnover rather than a pie |
+| Name a type of pie | Galette | 30 | A free-form tart |
+| Name a species of tree | Bamboo | 30 | A grass rather than a tree |
+| Name a species of tree | Christmas tree | 10 | A use rather than a species |

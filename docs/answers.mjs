@@ -283,6 +283,7 @@ export function buildLookup(answers, prompt, { category } = {}) {
     if (!previous || previous[1] < entry[1]) exact.set(key, entry);
   }
   const labels = labelsIn(prompt);
+  const collective = /\bcollective noun/iu.test(prompt);
   const typedExactly = [];
   const allowInflection = labels.some((label) => inflectedCategories.has(label)) && !hasSpellingRule(prompt);
   const allowSurnames = isPersonPrompt(prompt);
@@ -351,7 +352,29 @@ export function buildLookup(answers, prompt, { category } = {}) {
         .flatMap((stem) => resolveVariant(looseKey(stem))));
       if (matches.size) return [...matches];
     }
+    // A collective noun with its animal: "murder of crows" for Murder.
+    if (collective && / of /u.test(key)) {
+      const direct = resolveVariant(looseKey(key.replace(/ of .+$/u, '')));
+      if (direct.length) return direct;
+    }
+    // The prompt's subject added to an answer: "Yellowstone National Park", "cobra pose".
+    for (const label of labels) {
+      for (const shorter of [stripLabel(key, label, true), stripLabel(key, label, false)]) {
+        if (!shorter || looseKey(shorter).length < 3) continue;
+        const direct = resolveVariant(looseKey(shorter));
+        if (direct.length) return direct;
+      }
+    }
     return [];
+  }
+
+  function stripLabel(key, label, atEnd) {
+    const plural = `${label}s`;
+    for (const word of [label, plural]) {
+      if (atEnd && key.endsWith(` ${word}`)) return key.slice(0, -word.length - 1);
+      if (!atEnd && key.startsWith(`${word} `)) return key.slice(word.length + 1);
+    }
+    return '';
   }
 
   // When a shared spelling fits one well-known answer and otherwise only Deep Cuts, the player means
