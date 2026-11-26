@@ -6,7 +6,7 @@ These are the ones it accepted leniently. To veto one, delete it from
 `node scripts/report-arguable-answers.mjs`. A veto removes it from the next full rebuild; to drop it from the
 current banks straight away, remove the answer from its bank file as well.
 
-659 answers.
+750 answers.
 
 | Prompt | Answer | Points | Why it is arguable |
 | --- | --- | ---: | --- |
@@ -669,3 +669,94 @@ current banks straight away, remove the answer from its bank file as well.
 | Name a country with both an A and an M in its name | Macau | 60 | A region of China, not a country |
 | Name a country with both an A and an M in its name | Martinique | 60 | Part of France, not a country |
 | Name a country whose name ends in N | Britain | 30 | Usually called the United Kingdom |
+| Name a dating app | Bumble BFF | 30 | For making friends rather than dating |
+| Name a food you'd grate (kinds of cheese count once) | Soap | 30 | Not a food |
+| Name a food you'd grate (kinds of cheese count once) | Hash browns | 30 | Made by grating potatoes |
+| Name a food you'd grate (kinds of cheese count once) | Coleslaw | 30 | Made by grating cabbage |
+| Name a food you'd grate (kinds of cheese count once) | Cauliflower rice | 30 | Made by grating cauliflower |
+| Name a kind of gun that isn't designed as a weapon (like a glue gun) | BB gun | 30 | Often sold as a toy, though it can injure |
+| Name a kind of gun that isn't designed as a weapon (like a glue gun) | Taser | 30 | A weapon, though meant to be non-lethal |
+| Name a city in Europe with over 100,000 people | Ankara | 30 | Mostly in Asia |
+| Name a city in Europe with over 100,000 people | Izmir | 30 | In Asia |
+| Name a city in Europe with over 100,000 people | Yerevan | 30 | Usually counted as Western Asia |
+| Name a city in Europe with over 100,000 people | Tbilisi | 30 | Usually counted as Western Asia |
+| Name a kind of live stage show (like a magic show) | Fireworks | 30 | Usually outdoors rather than on a stage |
+| Name a solo sport (no card games, board games, or esports) | Pilates | 30 | An exercise method |
+| Name a sports car brand | Rolls-Royce | 30 | A luxury brand rather than a sports car maker |
+| Name a symptom of a cold or flu | Pneumonia | 30 | A complication rather than a symptom |
+| Name a symptom of a cold or flu | Bronchitis | 30 | A complication rather than a symptom |
+| Name an animal with another animal in its name (like seahorse) | Hippopotamus | 30 | "Hippo" means horse in Greek |
+| Name an animal with another animal in its name (like seahorse) | Antelope | 30 | Contains "ant" |
+| Name an animal with another animal in its name (like seahorse) | Rattlesnake | 30 | Contains "rat" |
+| Name an animal with another animal in its name (like seahorse) | Grasshopper | 30 | Contains "hopper" |
+| Name an email service (like Gmail) | Mailchimp | 30 | For sending newsletters |
+| Name an email service (like Gmail) | Constant Contact | 30 | For sending newsletters |
+| Name an email service (like Gmail) | SendGrid | 30 | For sending email from apps |
+| Name a vegetable that's botanically a fruit | Pickle | 30 | A pickled cucumber |
+| Name a city with the word "City" in its name (like Mexico City) | Gotham City | 30 | Fictional |
+| Name a city with the word "City" in its name (like Mexico City) | Emerald City | 30 | Fictional |
+| Name a city with the word "City" in its name (like Mexico City) | Vice City | 30 | Fictional |
+| Name a city with the word "City" in its name (like Mexico City) | Twin Cities | 30 | A nickname for Minneapolis and Saint Paul |
+| Name an animal whose name ends in Y | Grey | 30 | A seal or squirrel rather than a full name |
+| Name a metal (pure elements only; alloys like steel don't count) | Antimony | 60 | A metalloid |
+| Name a metal (pure elements only; alloys like steel don't count) | Germanium | 60 | A metalloid |
+| Name a metal (pure elements only; alloys like steel don't count) | Silicon | 30 | A metalloid |
+| Name a metal (pure elements only; alloys like steel don't count) | Arsenic | 60 | A metalloid |
+| Name a metal (pure elements only; alloys like steel don't count) | Boron | 60 | A metalloid |
+| Name a metal (pure elements only; alloys like steel don't count) | Tellurium | 60 | A metalloid |
+| Name an app or service for paying or sending money (like PayPal; banks and card networks don't count) | Chime | 30 | A banking app |
+| Name an app or service for paying or sending money (like PayPal; banks and card networks don't count) | Bitcoin | 30 | A currency rather than a service |
+| Name a sport that is a race (fastest to the finish wins) | Roller derby | 30 | Scored by lapping rather than finishing first |
+| Name a country that borders Iraq or Iran by land | Georgia | 30 | Borders neither by land |
+| Name a department in a company (like HR) | Board of directors | 30 | The board oversees rather than being a department |
+| Name an Amazon product, service or company Amazon owns | Lost Ark | 30 | Published in the West by Amazon Games |
+| Name a fruit or vegetable that starts with B | Basil | 30 | A herb |
+| Name a fictional character played by more than one actor in live-action movies | Jesus | 30 | A historical figure rather than fictional |
+| Name a fictional character played by more than one actor in live-action movies | Moses | 30 | A religious figure |
+| Name a fictional character played by more than one actor in live-action movies | Ethan Hunt | 30 | Played only by Tom Cruise |
+| Name a fictional character played by more than one actor in live-action movies | John McClane | 30 | Played only by Bruce Willis |
+| Name a fictional character played by more than one actor in live-action movies | Paddington | 30 | Voiced rather than played in live action |
+| Name a fictional character played by more than one actor in live-action movies | Gandalf | 30 | Played only by Ian McKellen in the films |
+| Name a country that has part of the Alps, the Andes or the Himalayas | Myanmar | 30 | The Himalayan foothills reach its north |
+| Name a country that has part of the Alps, the Andes or the Himalayas | Afghanistan | 30 | The Hindu Kush rather than the Himalayas |
+| Name a country that has part of the Alps, the Andes or the Himalayas | Tajikistan | 30 | The Pamirs rather than the Himalayas |
+| Name a city in Asia with over 1 million people within city limits | Kathmandu | 30 | Just over one million in the metro area |
+| Name a city in Asia with over 1 million people within city limits | Cebu | 30 | Under one million within city limits |
+| Name an app or website for writing documents or taking notes | Asana | 30 | A project-management app |
+| Name an app or website for writing documents or taking notes | Airtable | 30 | A database app |
+| Name an app or website for writing documents or taking notes | ChatGPT | 30 | An AI assistant |
+| Name the most widely spoken language of a country in the Americas | French | 30 | Most spoken only in Haiti, Martinique and Guadeloupe |
+| Name the most widely spoken language of a country in the Americas | Papiamento | 60 | Most spoken in Aruba and Curaçao, which are not countries |
+| Name the most widely spoken language of a country in the Americas | Greenlandic | 60 | Greenland is not a country |
+| Name the current capital of a state or province anywhere in the world (must be officially called a state or province) | Seoul | 30 | A special city rather than a provincial capital |
+| Name the current capital of a state or province anywhere in the world (must be officially called a state or province) | Kuala Lumpur | 30 | A federal territory |
+| Name something you shake before using it | Insulin | 30 | Only some types are mixed |
+| Name something you shake before using it | Polaroid | 30 | Shaking does not help it develop |
+| Name a type of astronomical object found in space (like an asteroid) | Meteorite | 30 | Found on Earth after landing |
+| Name a type of astronomical object found in space (like an asteroid) | Wormhole | 30 | Hypothetical |
+| Name a type of astronomical object found in space (like an asteroid) | White hole | 30 | Hypothetical |
+| Name a type of astronomical object found in space (like an asteroid) | Cosmic string | 60 | Hypothetical |
+| Name a type of astronomical object found in space (like an asteroid) | Constellation | 30 | A pattern of stars rather than an object |
+| Name a type of astronomical object found in space (like an asteroid) | Space station | 30 | Man-made |
+| Name a professional sports league with at least 10 teams | NCAA | 30 | A college association rather than a professional league |
+| Name a professional sports league with at least 10 teams | NASCAR | 30 | A racing series with teams |
+| Name a professional sports league with at least 10 teams | PGA Tour | 30 | Players rather than teams |
+| Name a professional sports league with at least 10 teams | LPGA | 30 | Players rather than teams |
+| Name a professional sports league with at least 10 teams | ATP | 30 | Players rather than teams |
+| Name a professional sports league with at least 10 teams | WTA | 30 | Players rather than teams |
+| Name a professional sports league with at least 10 teams | UFC | 30 | Fighters rather than teams |
+| Name a professional sports league with at least 10 teams | WWE | 30 | Wrestlers rather than teams |
+| Name a living animal that weighs over a metric ton (1,000 kg) | Moose | 30 | Large males pass 700 kg but rarely a ton |
+| Name a living animal that weighs over a metric ton (1,000 kg) | Giant eland | 30 | Large males approach a ton |
+| Name a living animal that weighs over a metric ton (1,000 kg) | Kodiak bear | 30 | The biggest males weigh close to a ton |
+| Name a living animal that weighs over a metric ton (1,000 kg) | Clydesdale | 30 | Heavy draft horses can top a ton |
+| Name a living animal that weighs over a metric ton (1,000 kg) | Percheron | 30 | Heavy draft horses can top a ton |
+| Name a living animal that weighs over a metric ton (1,000 kg) | Cow | 30 | Large bulls top a ton |
+| Name a living animal that weighs over a metric ton (1,000 kg) | Bull | 30 | Large bulls top a ton |
+| Name a living animal that weighs over a metric ton (1,000 kg) | Ox | 30 | Large oxen top a ton |
+| Name a living animal that weighs over a metric ton (1,000 kg) | Bactrian camel | 30 | Large males approach a ton |
+| Name a living animal that weighs over a metric ton (1,000 kg) | Colossal squid | 30 | Estimated at about 500 kg |
+| Name a city south of the equator with over 1 million people (by metro area) | Kampala | 30 | Just north of the equator |
+| Name a city south of the equator with over 1 million people (by metro area) | Port Moresby | 30 | Under one million |
+| Name a city south of the equator with over 1 million people (by metro area) | Gold Coast | 30 | Under one million |
+| Name an app or service meant for editing photos | Procreate | 30 | A drawing app |
