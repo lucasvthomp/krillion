@@ -6,7 +6,7 @@ These are the ones it accepted leniently. To veto one, delete it from
 `node scripts/report-arguable-answers.mjs`. A veto removes it from the next full rebuild; to drop it from the
 current banks straight away, remove the answer from its bank file as well.
 
-750 answers.
+866 answers.
 
 | Prompt | Answer | Points | Why it is arguable |
 | --- | --- | ---: | --- |
@@ -760,3 +760,119 @@ current banks straight away, remove the answer from its bank file as well.
 | Name a city south of the equator with over 1 million people (by metro area) | Port Moresby | 30 | Under one million |
 | Name a city south of the equator with over 1 million people (by metro area) | Gold Coast | 30 | Under one million |
 | Name an app or service meant for editing photos | Procreate | 30 | A drawing app |
+| Name a feature a modern car can have (like cruise control) | Airbags | 10 | standard safety equipment rather than an optional feature |
+| Name a feature a modern car can have (like cruise control) | Hybrid powertrain | 15 | a drivetrain rather than a feature |
+| Name a feature a modern car can have (like cruise control) | Seat belts | 10 | basic equipment every car has |
+| Name a feature a modern car can have (like cruise control) | Radio | 10 | basic equipment every car has |
+| Name a feature a modern car can have (like cruise control) | Sun visor | 10 | basic equipment every car has |
+| Name a feature a modern car can have (like cruise control) | Horn | 10 | basic equipment every car has |
+| Name a country in East Africa | Somaliland | 15 | self-declared state, not internationally recognised |
+| Name a country in East Africa | Democratic Republic of the Congo | 15 | usually counted as Central Africa, but it is in the East African Community |
+| Name a white sauce, dip, or condiment | Coconut milk | 15 | thin and pale; arguably a sauce base rather than a sauce |
+| Name a superhero team | S.H.I.E.L.D. | 15 | a spy agency more than a superhero team |
+| Name a superhero team | Voltron Force | 15 | a mecha team rather than superheroes |
+| Name a superhero team | Furious Five | 15 | kung fu heroes rather than superheroes |
+| Name a superhero team | Class 1-A | 15 | a hero class from My Hero Academia rather than a team name |
+| Name a fruit bigger than an apple | Plantain | 15 | usually counted as a kind of banana |
+| Name a symbol of Hinduism, Judaism, Christianity, Islam or Buddhism (like the cross) | Black Stone | 15 | a sacred object rather than a symbol |
+| Name a symbol of Hinduism, Judaism, Christianity, Islam or Buddhism (like the cross) | Communion wafer | 15 | a sacrament rather than a symbol |
+| Name a symbol of Hinduism, Judaism, Christianity, Islam or Buddhism (like the cross) | Holy water | 15 | a sacramental rather than a symbol |
+| Name a symbol of Hinduism, Judaism, Christianity, Islam or Buddhism (like the cross) | Ganesha | 15 | a deity, often used as a symbol |
+| Name a symbol of Hinduism, Judaism, Christianity, Islam or Buddhism (like the cross) | Candle | 10 | used in many faiths but not a symbol of one |
+| Name a sport where competitors wear gloves | Weightlifting | 15 | lifting gloves are optional |
+| Name a sport where competitors wear gloves | Falconry | 15 | glove is worn, but falconry is rarely a competition |
+| Name a sport where competitors wear gloves | BMX | 15 | gloves are usual but not required |
+| Name a sport where competitors wear gloves | Wheelchair basketball | 15 | gloves are common but not required |
+| Name a Fortnite character or skin | Default skin | 15 | a placeholder look rather than a named skin |
+| Name a rapper with more than 500k monthly Spotify listeners | Metro Boomin | 15 | a producer who also raps on his records |
+| Name a rapper with more than 500k monthly Spotify listeners | Bizarrap | 10 | a producer rather than a rapper |
+| Name a female singer with over 500,000 monthly listeners on Spotify | Megan Thee Stallion | 30 | a rapper who also sings |
+| Name a foul or rule violation in soccer, basketball, American football, cricket, rugby or ice hockey | Leg before wicket | 15 | a way to be out rather than a foul |
+| Name a foul or rule violation in soccer, basketball, American football, cricket, rugby or ice hockey | Hit wicket | 10 | a way to be out rather than a foul |
+| Name a foul or rule violation in soccer, basketball, American football, cricket, rugby or ice hockey | Yellow card | 10 | a punishment for a foul rather than a foul |
+| Name a foul or rule violation in soccer, basketball, American football, cricket, rugby or ice hockey | Red card | 10 | a punishment for a foul rather than a foul |
+| Name a language that’s the most spoken in at least two countries | Serbo-Croatian | 30 | one language or several, depending on who you ask |
+| Name a language that’s the most spoken in at least two countries | Hausa | 30 | most spoken in Niger; in Nigeria it vies with English |
+| Name a language that’s the most spoken in at least two countries | Turkish | 15 | Northern Cyprus is not widely recognised |
+| Name a language that’s the most spoken in at least two countries | Kinyarwanda | 30 | Kinyarwanda and Kirundi are usually counted as separate languages |
+| Name something sold as a stick, not on one (like deodorant) | Eyeliner | 15 | usually sold as a pencil |
+| Name something sold as a stick, not on one (like deodorant) | Twix | 15 | sold as bars rather than sticks |
+| Name something sold as a stick, not on one (like deodorant) | Kit Kat | 15 | sold as fingers rather than sticks |
+| Name something sold as a stick, not on one (like deodorant) | Twizzlers | 15 | sold as twists rather than sticks |
+| Name a food made by mashing or puréeing (like guacamole) | Pumpkin pie | 15 | the filling is puréed pumpkin |
+| Name a food made by mashing or puréeing (like guacamole) | Sweet potato pie | 15 | the filling is mashed sweet potato |
+| Name a food made by mashing or puréeing (like guacamole) | Banana bread | 15 | made with mashed bananas |
+| Name a food made by mashing or puréeing (like guacamole) | Milkshake | 15 | blended rather than mashed |
+| Name a food made by mashing or puréeing (like guacamole) | Sofrito | 15 | blended or finely chopped |
+| Name a food made by mashing or puréeing (like guacamole) | Avocado toast | 15 | topped with mashed avocado |
+| Name a food made by mashing or puréeing (like guacamole) | Soup | 10 | only blended soups count |
+| Name a country with the letter D in its name (like Canada) | Scotland | 15 | a country within the UK |
+| Name a country with the letter D in its name (like Canada) | England | 15 | a country within the UK |
+| Name a country with the letter D in its name (like Canada) | Greenland | 15 | a territory of Denmark |
+| Name a country with the letter D in its name (like Canada) | Bermuda | 15 | a British territory |
+| Name a device made to blow air | HVAC | 15 | a whole system that includes blowers |
+| Name a mammal smaller than a house cat | Kitten | 10 | a young house cat |
+| Name a mammal smaller than a house cat | Chihuahua | 15 | a dog breed often smaller than a cat |
+| Name something that has a saddle (like a bicycle) | Jet ski | 15 | has a seat rather than a saddle |
+| Name something that has a saddle (like a bicycle) | Mountain pass | 15 | a saddle in geography |
+| Name a TV show that's rated 8.5+ on IMDb (1,000+ votes) | Westworld | 15 | rated about 8.5; check the current rating |
+| Name a TV show that's rated 8.5+ on IMDb (1,000+ votes) | The Last of Us | 15 | rated about 8.5; check the current rating |
+| Name a TV show that's rated 8.5+ on IMDb (1,000+ votes) | Spartacus | 15 | rated about 8.5; check the current rating |
+| Name a vehicle that doesn't travel on wheels | Snowboard | 15 | a board rather than a vehicle |
+| Name a vehicle that doesn't travel on wheels | Elevator | 10 | moves on rails and cables, not wheels |
+| Name a vehicle that doesn't travel on wheels | Magic carpet | 10 | fictional |
+| Name a vehicle that doesn't travel on wheels | Broomstick | 10 | fictional |
+| Name a body part people have exactly one of (like the nose) | Abdomen | 15 | an area rather than a single part |
+| Name a body part people have exactly one of (like the nose) | Penis | 15 | only some people have one |
+| Name a body part people have exactly one of (like the nose) | Vagina | 15 | only some people have one |
+| Name a character from Attack on Titan, One Piece or Naruto | Colossal Titan | 15 | a Titan form rather than a character's name |
+| Name a character from Attack on Titan, One Piece or Naruto | Armored Titan | 15 | a Titan form rather than a character's name |
+| Name a character from Attack on Titan, One Piece or Naruto | Female Titan | 15 | a Titan form rather than a character's name |
+| Name a character from Attack on Titan, One Piece or Naruto | Beast Titan | 15 | a Titan form rather than a character's name |
+| Name a character from Attack on Titan, One Piece or Naruto | Attack Titan | 15 | a Titan form rather than a character's name |
+| Name a character from Attack on Titan, One Piece or Naruto | Founding Titan | 15 | a Titan form rather than a character's name |
+| Name a game with a number in its name (sequels and 3D variants don't count) | Five Hundred | 30 | a card game named for a number |
+| Name a game with a number in its name (sequels and 3D variants don't count) | Unreal Tournament 2004 | 30 | the number is a year rather than a sequel number |
+| Name a game with a number in its name (sequels and 3D variants don't count) | Yakuza 0 | 30 | a prequel numbered zero |
+| Name a game with a number in its name (sequels and 3D variants don't count) | Mortal Kombat 1 | 15 | a reboot, though the series has numbered sequels |
+| Name a country with a five-letter English name | Korea | 15 | there are two Koreas, neither officially named just Korea |
+| Name a country with a five-letter English name | Macau | 15 | a Chinese special region rather than a country |
+| Name an environmental problem (like pollution) | Flooding | 15 | a natural hazard made worse by environmental change |
+| Name an environmental problem (like pollution) | Fossil fuels | 15 | a cause rather than a problem |
+| Name a branded fast-food menu item (like the Big Mac). | Waffle Potato Fries | 30 | a Chick-fil-A item with a generic name |
+| Name a branded fast-food menu item (like the Big Mac). | Bloomin' Onion | 15 | Outback Steakhouse is not fast food |
+| Name a branded fast-food menu item (like the Big Mac). | McCafé | 15 | a drinks line rather than one item |
+| Name an animal that sprays, spits or squirts something to defend itself. | Opossum | 15 | secretes a foul fluid rather than spraying |
+| Name an animal that sprays, spits or squirts something to defend itself. | Wolverine | 15 | marks with musk rather than spraying |
+| Name an animal that sprays, spits or squirts something to defend itself. | Harvestman | 15 | oozes defensive fluid rather than spraying |
+| Name an animal that sprays, spits or squirts something to defend itself. | Ladybug | 15 | oozes bitter fluid from its legs |
+| Name a part of a 2D or 3D shape (like a radius). | Tangent | 15 | a line that touches a curve rather than a part of it |
+| Name a part of a 2D or 3D shape (like a radius). | Area | 10 | a measurement rather than a part |
+| Name a part of a 2D or 3D shape (like a radius). | Directrix | 15 | a line outside the shape that defines it |
+| Name a part of a 2D or 3D shape (like a radius). | Equator | 15 | the great circle around a sphere |
+| Name a part of a 2D or 3D shape (like a radius). | Cross section | 10 | a slice rather than a part |
+| Name a part of a 2D or 3D shape (like a radius). | Length | 10 | a measurement rather than a part |
+| Name a part of a 2D or 3D shape (like a radius). | Width | 10 | a measurement rather than a part |
+| Name a Nintendo Wii game. | Pikmin | 15 | a GameCube game re-released on the Wii |
+| Name a rap song with over 100 million Spotify streams. | Starships | 15 | a pop-rap song |
+| Name a machine traditionally operated by inserting coins. | Shopping cart | 15 | some carts need a coin deposit |
+| Name a machine traditionally operated by inserting coins. | Coin counter | 15 | you pour coins in to count them |
+| Name a machine traditionally operated by inserting coins. | Foosball table | 15 | coin-operated in bars |
+| Name a machine traditionally operated by inserting coins. | Player piano | 15 | coin-operated in old saloons |
+| Name a machine traditionally operated by inserting coins. | Breathalyzer | 10 | some bar breathalyzers take coins |
+| Name a movie first released in theaters in 2026 | Avengers: Doomsday | 30 | scheduled for December 2026; check it came out |
+| Name a movie first released in theaters in 2026 | Dune: Part Three | 30 | scheduled for December 2026; check it came out |
+| Name an app or program that comes built into Windows or macOS (older versions count). | Outlook | 15 | the new Outlook ships with Windows 11 |
+| Name something with a legal minimum age | Buying cold medicine | 15 | only some places set an age |
+| Name something with a legal minimum age | Social media | 15 | the age is usually a site rule |
+| Name something with a legal minimum age | Buying M-rated games | 15 | a legal age only in some countries |
+| Name something with a legal minimum age | Pension | 15 | a minimum age to claim, not a ban |
+| Name something with a legal minimum age | Hormone therapy | 15 | only some places set an age |
+| Name something with a legal minimum age | Plastic surgery | 15 | only some places set an age |
+| Name a type of bed (for sleeping) | Bed of nails | 10 | a stunt prop rather than a bed for sleeping |
+| Name a food or ingredient that costs over US$100/kg ($45/lb), like caviar | Fugu | 15 | expensive as a dish, not always by weight |
+| Name a food or ingredient that costs over US$100/kg ($45/lb), like caviar | Ayam Cemani | 15 | sold as live birds rather than by weight |
+| Name a national park anywhere in the world | Masai Mara | 15 | a national reserve rather than a park |
+| Name a national park anywhere in the world | Ngorongoro | 15 | a conservation area rather than a park |
+| Name a national park anywhere in the world | Great Barrier Reef | 15 | a marine park |
+| Name a national park anywhere in the world | Zhangjiajie | 15 | a national forest park |
