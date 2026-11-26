@@ -6,7 +6,7 @@ These are the ones it accepted leniently. To veto one, delete it from
 `node scripts/report-arguable-answers.mjs`. A veto removes it from the next full rebuild; to drop it from the
 current banks straight away, remove the answer from its bank file as well.
 
-1030 answers.
+1072 answers.
 
 | Prompt | Answer | Points | Why it is arguable |
 | --- | --- | ---: | --- |
@@ -1040,3 +1040,45 @@ current banks straight away, remove the answer from its bank file as well.
 | Name a type of injury (like a sprain, not a sprained ankle) | Heatstroke | 15 | a condition rather than an injury |
 | Name a type of injury (like a sprain, not a sprained ankle) | Nosebleed | 15 | a symptom rather than a type of injury |
 | Name a chocolate that has caramel in it | Wispa Gold | 30 | the original Wispa has no caramel |
+| Name a country that has been colonized by Spain or Portugal. | Puerto Rico | 15 | a US territory rather than a country |
+| Name a country that has been colonized by Spain or Portugal. | Western Sahara | 15 | a disputed territory rather than a country |
+| Name a country that has been colonized by Spain or Portugal. | Macau | 15 | a Chinese special region rather than a country |
+| Name a country that has been colonized by Spain or Portugal. | Guam | 15 | a US territory rather than a country |
+| Name a country that has been colonized by Spain or Portugal. | Northern Mariana Islands | 15 | a US territory rather than a country |
+| Name a book that has been adapted into a movie. | One Shot | 30 | filmed as Jack Reacher |
+| Name a billionaire. | Kanye West | 15 | lost billionaire status in 2022 |
+| Name a billionaire. | Dietrich Mateschitz | 15 | a billionaire who died in 2022 |
+| Name a billionaire. | Ingvar Kamprad | 15 | a billionaire who died in 2018 |
+| Name a billionaire. | Mohamed Al Fayed | 15 | a billionaire who died in 2023 |
+| Name a ball sport where you don't score by getting the ball into or through an object. | Curling | 15 | aims at a target rather than into one |
+| Name a fictional way to travel. | Tractor beam | 15 | pulls things in rather than taking you places |
+| Name any national government agency. | Department of Government Efficiency | 15 | a temporary advisory body |
+| Name a movie involving time travel. | Napoleon Dynamite | 10 | only a joke time machine |
+| Name a country where French is an official language | Jersey | 15 | a Crown Dependency rather than a country |
+| Name a country where French is an official language | Mali | 15 | dropped French as an official language in 2023 |
+| Name a country where French is an official language | Burkina Faso | 15 | dropped French as an official language in 2023 |
+| Name a brand with an animal in its logo. | Dodge | 15 | the ram logo moved to Ram trucks |
+| Name a brand with an animal in its logo. | Geico | 15 | the gecko is a mascot rather than the logo |
+| Name a brand with an animal in its logo. | Haribo | 15 | the gold bear is a mascot rather than the logo |
+| Name a brand with an animal in its logo. | Teddy Grahams | 15 | bear-shaped crackers |
+| Name a deep-fried chicken dish. | Zinger | 15 | a KFC burger rather than a dish |
+| Name a job where people wear a uniform. | Circus performer | 15 | costumes rather than uniforms |
+| Name a country with the letter B in its name. | Burma | 15 | the old name of Myanmar |
+| Name a fictional weapon. | Sonic screwdriver | 15 | a tool rather than a weapon |
+| Name a fictional weapon. | Hylian Shield | 15 | a shield rather than a weapon |
+| Name a job focused on repairing physical things. | Carpenter | 15 | builds as much as repairs |
+| Name a job focused on repairing physical things. | Welder | 15 | builds as much as repairs |
+| Name a sport involving a board (no board games, tabletop games or esports). | Gymnastics | 15 | uses a springboard |
+| Name a part of the body above the waist, excluding the head. | Love handles | 15 | at the waist |
+| Name a part of the body above the waist, excluding the head. | Appendix | 15 | low in the abdomen |
+| Name a part of the body above the waist, excluding the head. | Large intestine | 15 | mostly below the navel |
+| Name a one-word food or drink that ends in O | Pollo | 15 | Spanish for chicken |
+| Name a one-word food or drink that ends in O | Avo | 15 | slang for avocado |
+| Name a fruit or vegetable that’s white on the inside | Cannellini beans | 15 | a legume rather than a fruit or vegetable |
+| Name a fictional food or drink | Phoenix Down | 15 | a revival item rather than food |
+| Name a website or app designed for learning or studying (not apps/sites only for taking notes) | Grammarly | 15 | a writing tool that teaches as it corrects |
+| Name a sport where competitors wear helmets | Rugby | 15 | scrum caps are optional |
+| Name a sport where competitors wear helmets | Wrestling | 15 | ear guards rather than helmets |
+| Name a fruit or vegetable that starts with a vowel | Amaranth | 15 | grown for grain and greens |
+| Name a fruit or vegetable that starts with a vowel | Almond | 15 | a nut rather than a fruit |
+| Name a fruit or vegetable that starts with a vowel | Acorn | 15 | a nut rather than a fruit |
