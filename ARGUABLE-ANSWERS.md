@@ -6,7 +6,7 @@ These are the ones it accepted leniently. To veto one, delete it from
 `node scripts/report-arguable-answers.mjs`. A veto removes it from the next full rebuild; to drop it from the
 current banks straight away, remove the answer from its bank file as well.
 
-573 answers.
+659 answers.
 
 | Prompt | Answer | Points | Why it is arguable |
 | --- | --- | ---: | --- |
@@ -583,3 +583,89 @@ current banks straight away, remove the answer from its bank file as well.
 | Name a career in finance | Cashier | 30 | A retail role |
 | Name a career in finance | Financial journalist | 30 | Writes about finance |
 | Name a career in finance | Finance professor | 30 | Teaches finance |
+| Name a sport that has a goalkeeper | Goalball | 30 | All three players defend the goal |
+| Name a superpower Superman has in the comics or movies | Immortality | 30 | Implied by his slow ageing rather than shown |
+| Name a superpower Superman has in the comics or movies | Time travel | 60 | He turns back time by circling Earth in the 1978 film |
+| Name a superpower Superman has in the comics or movies | Electricity | 60 | As Superman Blue in the comics |
+| Name a language whose English name ends in -ish | Scottish | 30 | Usually called Scots |
+| Name a language whose English name ends in -ish | Amish | 30 | Usually called Pennsylvania Dutch |
+| Name something used to block the sun | Moon | 30 | Blocks the sun only during an eclipse |
+| Name a body part people have more than two of (like fingers) | Fingerprints | 30 | Only one on each fingertip |
+| Name a body part people have more than two of (like fingers) | Dimples | 30 | Most people have none or two |
+| Name something sold in a tube | Tube socks | 30 | Sold folded rather than in a tube |
+| Name something sold in a tube | Mentos | 30 | Sold in a paper roll |
+| Name a symbol or shape that appears on a national flag (like a star) | Hammer and sickle | 30 | Only on former flags such as the Soviet Union's |
+| Name a symbol or shape that appears on a national flag (like a star) | Swallowtail | 30 | The shape of Nepal's flag rather than a symbol on it |
+| Name a type of chair | Car seat | 30 | A vehicle seat |
+| Name a type of chair | Loveseat | 30 | A small sofa |
+| Name a type of chair | Chairlift | 30 | A ski lift |
+| Name a coffee shop chain | Gong Cha | 30 | A bubble tea chain |
+| Name an item designed to be filled with air | Lungs | 30 | Natural rather than designed |
+| Name a power tool | Stud finder | 30 | Electronic rather than powered |
+| Name a word for an animal's home (nests and shelters, not habitats like the ocean) | Beaver dam | 30 | A beaver lives in the lodge behind the dam |
+| Name a word for an animal's home (nests and shelters, not habitats like the ocean) | Chrysalis | 30 | A pupal case rather than a home |
+| Name a word for an animal's home (nests and shelters, not habitats like the ocean) | Coral reef | 30 | A habitat as well as a home |
+| Name a sauce used in Asian cooking (like soy sauce) | Mirin | 30 | A cooking wine rather than a sauce |
+| Name a sauce used in Asian cooking (like soy sauce) | Rice vinegar | 30 | A vinegar rather than a sauce |
+| Name a sauce used in Asian cooking (like soy sauce) | Black vinegar | 30 | A vinegar rather than a sauce |
+| Name a sauce used in Asian cooking (like soy sauce) | Sesame oil | 30 | An oil rather than a sauce |
+| Name a music festival | Burning Man | 30 | An art event with music |
+| Name a yellow fruit or vegetable | Turmeric | 30 | More orange than yellow |
+| Name a yellow fruit or vegetable | Parsnip | 30 | Cream rather than yellow |
+| Name an app where you can video call | Marco Polo | 30 | Sends video messages rather than live calls |
+| Name an animal with a color in its name | Cardinal | 30 | Named after cardinals' red robes |
+| Name a place in the Harry Potter universe | Hogwarts Express | 30 | A train rather than a place |
+| Name a country with glaciers | Greenland | 60 | Part of the Kingdom of Denmark, not a country |
+| Name a country with glaciers | Venezuela | 30 | Its last glacier melted away in 2024 |
+| Name a country with glaciers | Antarctica | 60 | A continent rather than a country |
+| Name a standard type of tax (currently levied in at least one country) | TV licence | 60 | A licence fee rather than a tax |
+| Name a TV genre | Prestige TV | 30 | A label for quality rather than a genre |
+| Name a device used to magnify things | Contact lenses | 30 | Correct vision rather than magnify |
+| Name a device used to magnify things | Theodolite | 60 | Has a telescope for sighting |
+| Name a device used to magnify things | Phone camera | 30 | Zooms digitally |
+| Name a body part an animal has for fighting or protection | Venom | 30 | A substance rather than a body part |
+| Name a body part an animal has for fighting or protection | Slime | 30 | A secretion rather than a body part |
+| Name a type of sausage | Head cheese | 30 | A jellied meat rather than a sausage |
+| Name a type of sausage | Currywurst | 30 | A dish made with sausage |
+| Name a country in the Americas where Spanish is not the most widely spoken language | French Guiana | 60 | Part of France, not a country |
+| Name a country in the Americas where Spanish is not the most widely spoken language | Greenland | 60 | Part of the Kingdom of Denmark, not a country |
+| Name a country in the Americas where Spanish is not the most widely spoken language | Aruba | 60 | A Dutch constituent country |
+| Name a country in the Americas where Spanish is not the most widely spoken language | Curaçao | 60 | A Dutch constituent country |
+| Name a country in the Americas where Spanish is not the most widely spoken language | Bermuda | 60 | A British territory, not a country |
+| Name a country in the Americas where Spanish is not the most widely spoken language | Martinique | 60 | Part of France, not a country |
+| Name a country in the Americas where Spanish is not the most widely spoken language | Guadeloupe | 60 | Part of France, not a country |
+| Name a country with both an O and an R in its name | Korea | 30 | Two countries share the name |
+| Name something listed on a nutrition facts label | Ingredients | 30 | Listed near the label rather than on it |
+| Name something listed on a nutrition facts label | Allergens | 30 | Listed near the label rather than on it |
+| Name something listed on a nutrition facts label | Net carbs | 30 | Not on US labels |
+| Name something listed on a nutrition facts label | Caffeine | 30 | Only on some labels |
+| Name a country larger than the UK by area | Western Sahara | 60 | A disputed territory, not a country |
+| Name a country larger than the UK by area | Greenland | 60 | Part of the Kingdom of Denmark, not a country |
+| Name a religious role or title in Christianity, Islam, Buddhism, Hinduism or Judaism | Buddha | 30 | A title for an awakened one rather than a role |
+| Name something you can do with a keyboard shortcut (like copy with Ctrl+C) | Home | 30 | A navigation key rather than a shortcut |
+| Name something you can do with a keyboard shortcut (like copy with Ctrl+C) | End | 30 | A navigation key rather than a shortcut |
+| Name something you can do with a keyboard shortcut (like copy with Ctrl+C) | Page up | 30 | A navigation key rather than a shortcut |
+| Name something you can do with a keyboard shortcut (like copy with Ctrl+C) | Page down | 30 | A navigation key rather than a shortcut |
+| Name something you can do with a keyboard shortcut (like copy with Ctrl+C) | Volume up | 30 | A media key rather than a shortcut |
+| Name a fruit or vegetable that starts with P | Parsley | 30 | A herb |
+| Name a fruit or vegetable that starts with P | Pickle | 30 | A pickled cucumber |
+| Name a website or app built mainly for ratings and reviews | OpenTable | 30 | Mainly for bookings |
+| Name a website or app built mainly for ratings and reviews | HomeAdvisor | 30 | Mainly a marketplace |
+| Name a website or app built mainly for ratings and reviews | Thumbtack | 30 | Mainly a marketplace |
+| Name a website or app built mainly for ratings and reviews | Zocdoc | 30 | Mainly for bookings |
+| Name a website or app built mainly for ratings and reviews | Houzz | 30 | Mainly for design ideas |
+| Name a sport or game where you score by getting a ball or object into a hole, hoop, basket or pocket | Ring toss | 30 | You ring a peg rather than fill a hole |
+| Name a home safety device (like a smoke detector) | Panic room | 30 | A room rather than a device |
+| Name a form of pay a worker can receive | Health insurance | 30 | A benefit rather than pay |
+| Name a form of pay a worker can receive | Company car | 30 | A benefit in kind |
+| Name a form of pay a worker can receive | Barter | 30 | Payment in goods |
+| Name a form of pay a worker can receive | Cryptocurrency | 30 | Rare as wages |
+| Name a language ending in -ese | Legalese | 30 | A style of language rather than a language |
+| Name a language ending in -ese | Journalese | 30 | A style of language rather than a language |
+| Name a language ending in -ese | Viennese | 60 | A dialect of German |
+| Name a language ending in -ese | Bolognese | 60 | A dialect of Emilian |
+| Name a country with both an A and an M in its name | Burma | 30 | Myanmar's former name |
+| Name a country with both an A and an M in its name | Macedonia | 30 | North Macedonia's former name |
+| Name a country with both an A and an M in its name | Macau | 60 | A region of China, not a country |
+| Name a country with both an A and an M in its name | Martinique | 60 | Part of France, not a country |
+| Name a country whose name ends in N | Britain | 30 | Usually called the United Kingdom |
