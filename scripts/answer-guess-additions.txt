@@ -221,3 +221,65 @@
 0253|Lake Constance=Bodensee|Sea of Galilee=Lake Tiberias|Lake Eyre=Kati Thanda|Lake Texcoco@60!Mostly drained|Lake Bonneville@60!A prehistoric lake
 0254|Ocean's Eleven=Ocean's 11
 0255|Sam=Samwise=Samwise Gamgee|Merry=Meriadoc Brandybuck|Pippin=Peregrin Took|Nazgûl=Ringwraiths=Ringwraith|Bergil@85|Fatty Bolger=Fredegar Bolger|Wormtongue=Gríma|Erkenbrand@85
+0256|Michael Stevens@60|Michael Reeves@60|Michael Saylor@60|Michael Ondaatje@85
+0257|Slots=Slot machine=Slot machines|Big Six wheel@60=Big Six=Money wheel|Blackjack=21=Twenty-one|Lottery@30!A game of chance sold outside casinos too|Scratch cards@30!A game of chance sold outside casinos too
+0258|Canzone@85|Epyllion@85
+0259|Réunion@60=Reunion!A French overseas region, not a country|Mayotte@60!A French overseas region, not a country
+0260|Macaw@30|Anaconda@30|Python@30|Boa constrictor@30|Pygmy hippo@60=Pygmy hippopotamus|Goliath birdeater@60|Blue morpho@60|Stick insect@30|Flying fox@30
+0261|Lady apple@60
+0262|Emma=Emma Geller-Green|Frank Buffay@60=Frank Jr.|Dr. Ramoray=Drake Ramoray|The Chick and the Duck@60=Chick=The Chick
+0263|Brett Eldredge@60|Chris Lane@60
+0265|Period=Full stop=Fullstop|Quotation marks=Quotes|At sign=@|Hashtag=Hash=Octothorpe=Pound sign|Bullet point=Bullet|Registered trademark@60=®|Backtick=Grave accent|Umlaut=Diaeresis|Plus sign@30!A maths symbol rather than punctuation|Equals sign@30!A maths symbol rather than punctuation|Minus sign@30!A maths symbol rather than punctuation
+0266|Fiji Water=Fiji|Core Hydration=Core=Core Water|Smartwater=Glaceau|Saratoga@60|Kirkland@60|Ice River Springs@60=Ice River|Eternal@60|Path@85|Hawaiian Springs@85|Proud Source@85|Solé@85=Sole|Hépar@85=Hepar|Bru@85
+0267|Somaliland@60!British Somaliland, now a self-declared state|Israel@30!Part of the British Mandate of Palestine, not formally the Empire|Yemen=Aden
+0268|Ferrero Rocher=Ferrero|Thorntons@60|Tony's Chocolonely=Tony's|Hachez@85|Feodora@85|Schogetten@85|Villars@85|Lacta@85|Arcor@60|Rowntree's@60|Mondelez@30!A company that owns chocolate brands
+0269|Horizon=Horizon Zero Dawn|Crash Bandicoot@30!Began on PlayStation, now on other platforms|Spyro@30=Spyro the Dragon!Began on PlayStation, now on other platforms|Sackboy@60|Astro Bot=Astro|MLB The Show@30!On other consoles since 2021|PaRappa the Rapper=PaRappa|Patapon@60|Helldivers@30=Helldivers 2!Helldivers 2 came to Xbox in 2025|Concord@85|Ghost of Tsushima=Ghost of Yotei=Ghost of Yōtei
+0270|Organizational chart=Org chart|Doughnut chart=Donut chart|Choropleth@60=Choropleth map|Column chart@30|Run chart@60|Hexbin@85=Hexbin plot|Kaplan-Meier@85=Kaplan-Meier plot
+0271|Rocky Balboa@60
+0272|Fullmetal Alchemist: Brotherhood=FMA=FMAB|Demon Slayer=Kimetsu no Yaiba|Hunter x Hunter=HxH
+0273|Western Sahara=Sahrawi Republic
+0274|Equals sign@10=Equals=Equal sign=Equal|Multiplication sign=Times=×|Division sign=÷|Pi=π|Infinity=∞|Square root sign=Square root=Radical|Summation@30=Sigma=Σ|Integral sign=Integral=∫|Not equal sign=≠|Greater than sign=>|Less than sign=<|Greater than or equal to@30=≥|Less than or equal to@30=≤|Plus-minus sign=±|Percent sign=Percent=%|Degree sign=Degree=°|Factorial@30|Nabla=Del|Partial derivative symbol=∂|Congruent@60=≅|Similar@60=∼|Phi@60=φ|Floor@60=Floor function|Ceiling@60=Ceiling function|Product@60=Π|Implies@60=⇒|If and only if@60=⇔|Logical and@60=∧|Logical or@60=∨|Not@60=¬|Exponent@30|Ratio@60|Vector@60|Dot product@60|Cross product@60
+0275|Kebab=Döner|Roti@30|Panzerotti@60|Supplì@60=Suppli|Kettle corn@30|Gelato@30|Esquites@60|Tapioca@60
+0276|Nellie Bertram=Nellie|Roy Anderson=Roy|Karen Filippelli=Karen|Mose Schrute=Mose|Hank Tate@60=Hank|Cathy Simms@60=Cathy|Val Johnson@60=Val|Esther Bruegger@85=Esther|Cece Halpert@85=Cece|Astrid Levinson@85=Astrid|Isabel Poreba@85=Isabel|Robert Lipton=Senator Lipton|Michael Scarn@60|Prison Mike@60|Date Mike@60|Goldenface@85
+0277|Instagram Reels=Reels|Clash@85|Funimate@85|Pinterest@30!Mostly images, with some video|X@30=Twitter!Has a video feed but is mainly text|Netflix Moments@85|Rumble@60|Bilibili@60|Xiaohongshu@60=RedNote|Bluesky@30!Has a video feed but is mainly text|Threads@30!Has a video feed but is mainly text
+0278|Reindeer=Caribou|Wildebeest=Gnu|Ox@30|Macaw@30
+0279|Conch@60!A shell trumpet
+0280|Congo@30
+0281|Seagull@10|Gator@30
+0282|Pancake@10|Scotch pancake=Drop scone|Flapjack@30|Johnnycake=Hoecake|Socca=Farinata|Crispbread=Knäckebröd|Khubz@60|Saj@60|Roti canai@60|Palačinka@60=Palacinka|Aebleskiver=Æbleskiver|Hash brown@30!A potato cake rather than a pancake|Waffle@30!A batter cake cooked in an iron|Naan=Nan
+0283|Dahmer=Monster
+0284|Alejandro G. Iñárritu=Alejandro González Iñárritu=Iñárritu=Inarritu|Coen brothers=Joel Coen=Ethan Coen|Russo brothers=Anthony Russo=Joe Russo
+0286|Woodcarving@30=Wood carving|Sketching@30!A drawing rather than a craft|Leatherworking=Leather craft|Basket weaving=Basketry|Dyeing@60|Block printing@60|Linocut@60|Lego@30!Building with bricks rather than making from scratch|Diorama@60|Furniture making@60|Sculpture@30|Bobbin lace@85|Latch hook@60|Loom bands@60
+0287|France@30!Christians are close to half the population|United Kingdom@30=UK!Christians were 46% at the 2021 census|Belgium@30!Christians are close to half the population|Puerto Rico@30!A US territory, not a country
+0288|Saber-toothed tiger=Smilodon=Saber-toothed cat=Sabertooth=Smilodon fatalis|Woolly rhino=Woolly rhinoceros|Giant ground sloth=Megatherium|Megaloceros=Irish elk|Gomphothere@60|Procoptodon=Giant kangaroo|Thylacine@30!Died out in 1936, so recent rather than prehistoric|Chalicothere@60|Entelodon=Entelodont=Hell pig=Daeodon|Brontotherium=Megacerops|Eohippus=Hyracotherium|Giant beaver=Castoroides|Megalonyx@60|Amphicyon=Bear dog
+0289|Reese's Pieces@30|Nerds Rope@60|Mochi@30!A rice cake
+0290|False dilemma=False dichotomy=Either-or|Bandwagon=Appeal to popularity=Ad populum|Begging the question=Circular reasoning|False cause@30|Tu quoque=Whataboutism=Appeal to hypocrisy|Middle ground fallacy=Golden mean|Guilt by association@60|Reductio ad Hitlerum@60|Kafkatrapping@85|Strawman=Strawman argument
+0291|Cotton swabs=Q-tips|Faucet=Tap|Towel rack@30|Tiles@30|Bathrobe=Robe|Counter@30|Hair gel@30=Gel
+0292|Shaquille O'Neal=Shaq|Julius Erving=Dr. J|Kobe Bryant=Kobe|Magic Johnson=Magic
+0293|New Year's Eve@10|New Year's Day=New Year|Lunar New Year=Chinese New Year=Spring Festival|Vesak=Buddha's Birthday|Nowruz=Persian New Year|Christmas Eve@30|World Environment Day@60|Remembrance Day@60|Black Friday@30!A shopping event|Cyber Monday@60!A shopping event|Singles' Day@60|Star Wars Day@60!An informal fan day|World Book Day@60
+0294|Currant=Whitecurrant=White currant|Chokeberry=Aronia|Cape gooseberry=Physalis=Goldenberry
+0295|American Airlines=American|Frontier Airlines=Frontier|Breeze Airways@60=Breeze|TAP Air Portugal=TAP|Northwest Airlines@60=Northwest|Thomas Cook Airlines@60=Thomas Cook|Pegasus Airlines@60=Pegasus
+0296|Tim Hortons=Timmies|Shipley Do-Nuts=Shipley|Dough@85|Randy's Donuts=Randy's|LaMar's@85|Daylight Donuts=Daylight|Rolling Pin@85|Gourdough's@85|Dunkin'=Dunkin Doughnuts
+0297|Tagalog=Filipino
+0298|Windows=Microsoft Windows|macOS=Mac OS X=OS X|Red Hat=RHEL|Arch Linux=Arch|SUSE Linux Enterprise@60=SUSE|Raspberry Pi OS=Raspbian
+0299|Bee=Honeybee|Cattle@30|Reindeer@30|Jellyfish@60!Drift in swarms rather than social groups|Parakeets@60
+0300|Itsy Bitsy Spider=Incy Wincy Spider|Old MacDonald=Old MacDonald Had a Farm|London Bridge=London Bridge Is Falling Down|Ring Around the Rosie=Ring a Ring o' Roses|The Muffin Man=Do You Know the Muffin Man|Twinkle Twinkle Little Star=Twinkle twinkle
+0301|Ascension Island@60|Tristan da Cunha@60|Ontario@60!A Canadian province|Manitoba@60!A Canadian province|British Columbia@60!A Canadian province|Victoria@60!An Australian state|New South Wales@60!An Australian state|Queensland@60!An Australian state|Tasmania@60!An Australian state
+0302|Flightless cormorant=Galapagos cormorant=Galápagos cormorant|Chicken@30!Most chickens can fly short distances|Turkey@30=Domestic turkey!Wild turkeys fly; heavy farm breeds cannot
+0303|Seven layer dip=7-layer dip|Blue cheese dip=Blue cheese dressing|Plum sauce@30|Sweet and sour@30=Sweet and sour sauce|Dill dip@60|Vegetable dip@30|Nutella@30!A spread
+0304|Stannis Baratheon=Stannis|Shireen Baratheon=Shireen|Brienne of Tarth=Brienne|The Hound=Sandor Clegane|The Mountain=Gregor Clegane|Jorah Mormont=Jorah|Viserys Targaryen=Viserys|Ramsay Bolton=Ramsay|Margaery Tyrell=Margaery|Oberyn Martell=Oberyn|Jaqen H'ghar=Jaqen|Talisa Maegyr@60=Talisa|Rhaenyra Targaryen@60!From House of the Dragon|Daemon Targaryen@60!From House of the Dragon
+0305|Oganesson@60!Predicted to be a gas but never observed as one
+0306|Hotline Bling=Hotline
+0307|The Met=Metropolitan Museum of Art|Smithsonian=Smithsonian Institution|Hermitage=State Hermitage Museum|Palace Museum=Forbidden City|Museum of Fine Arts, Boston=MFA Boston|Smithsonian American Art Museum@60|Museum Island@60|Alte Pinakothek@60=Pinakothek
+0308|Raisin@30!A dried grape
+0309|Agarwood@60|Particleboard=Chipboard|Driftwood@30!Wood shaped by water rather than a kind of wood|Burl@60!A growth rather than a kind of wood|Reclaimed wood@30!Reused wood rather than a kind|Cork@30!Bark rather than wood|Rattan@30!A palm rather than wood|Cedar=Cedarwood
+0310|Pepperoni@60|Cocoa@30|Coffee@30!Fermentation is one step of processing the beans|Tea@30=Black tea!Oxidised rather than truly fermented, except dark teas|Century egg@30!Cured rather than fermented|Hot sauce@30=Sriracha!Some, such as Tabasco, are fermented|Soju@30!Distilled from a fermented mash|Kumis=Airag|Fufu@30!Sometimes made from fermented cassava|Dawadawa@85|Ogiri@85|Bagoong@60|Patis@60|Som moo@85|Atchara@60
+0312|Microsoft PowerPoint=PowerPoint=Powerpoint=Power point|Microsoft Access=Access|Microsoft Teams=Teams|SharePoint@30|Microsoft Project=Project|Microsoft Paint=Paint=MS Paint|Microsoft Photos@60=Photos|Microsoft To Do=To Do|Microsoft Forms=Forms|Copilot@30|Minecraft@30!A game Microsoft owns|Microsoft Solitaire=Solitaire|Minesweeper@30|Snip & Sketch@60|File Explorer=Windows Explorer|Visual Studio Code=VS Code|Azure@30!A cloud platform|Yammer@60|Microsoft Viva@60=Viva|Lync@60|MSN Messenger@60|Hotmail@60|Microsoft Office=Office|Microsoft 365=Office 365|Groove Music@60=Groove|Microsoft OneNote=One note
+0313|Shazam=Captain Marvel|John Stewart@60|Kyle Rayner@60|Jessica Cruz@60|Simon Baz@60|Wally West@60|Cyborg=Victor Stone
+0314|Photo paper@30|Sticky notes@30=Post-it notes=Post-its|A4@30!A paper size|Thermal paper=Receipt paper|Cellophane@30!A plastic film
+0315|Alphabet=Google|Meta=Facebook|JPMorgan Chase=JPMorgan|Coca-Cola=Coke|UnitedHealth Group=UnitedHealth|CVS=CVS Health|Citigroup=Citi|RTX Corporation=Raytheon|GE Aerospace=GE
+0316|Sphynx@60|Silver fox@60|Xolo@60|Tyrannosaurus rex@60!An extinct animal|Oxen@30
+0317|Palak paneer@30|Bobotie@60!A curried mince bake|Doro wat@60!A spiced stew|Shahi paneer@60|Kadai chicken@60=Karahi chicken|Aloo gobi@30|Avial@60
+0318|Oscar the Grouch=Oscar|Snuffleupagus=Snuffy|Murray Monster=Murray|Kermit the Frog@60=Kermit!A Muppet who appeared on Sesame Street|Gabi@60|Lefty the Salesman@85=Lefty
+0319|MacBook Air@30|AirPods Pro@30|HomePod mini@60|iPod Touch@30|iPod Nano@30|iPod Shuffle@30|iPod Classic@30|iPad Pro@30|iPad Air@30|iPad mini@30|iPhone Air@60|Siri Remote@60|Apple Card@60!A credit card|Beats headphones@30!Beats is a brand Apple owns
+0320|Fullback=Left back=Right back|Sweeper=Libero|False nine=False 9|Defensive midfielder=Anchor=Defensive mid|Winger=Wing

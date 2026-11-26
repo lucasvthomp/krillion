@@ -6,7 +6,7 @@ These are the ones it accepted leniently. To veto one, delete it from
 `node scripts/report-arguable-answers.mjs`. A veto removes it from the next full rebuild; to drop it from the
 current banks straight away, remove the answer from its bank file as well.
 
-214 answers.
+282 answers.
 
 | Prompt | Answer | Points | Why it is arguable |
 | --- | --- | ---: | --- |
@@ -224,3 +224,71 @@ current banks straight away, remove the answer from its bank file as well.
 | Name a Korean dish | Makgeolli | 30 | A drink |
 | Name a lake | Lake Texcoco | 60 | Mostly drained |
 | Name a lake | Lake Bonneville | 60 | A prehistoric lake |
+| Name a casino game | Lottery | 30 | A game of chance sold outside casinos too |
+| Name a casino game | Scratch cards | 30 | A game of chance sold outside casinos too |
+| Name a country with a coastline on the Indian Ocean | Réunion | 60 | A French overseas region, not a country |
+| Name a country with a coastline on the Indian Ocean | Mayotte | 60 | A French overseas region, not a country |
+| Name a punctuation mark or typographic symbol | Plus sign | 30 | A maths symbol rather than punctuation |
+| Name a punctuation mark or typographic symbol | Equals sign | 30 | A maths symbol rather than punctuation |
+| Name a punctuation mark or typographic symbol | Minus sign | 30 | A maths symbol rather than punctuation |
+| Name a country that was once part of the British Empire | Somaliland | 60 | British Somaliland, now a self-declared state |
+| Name a country that was once part of the British Empire | Israel | 30 | Part of the British Mandate of Palestine, not formally the Empire |
+| Name a chocolate brand | Mondelez | 30 | A company that owns chocolate brands |
+| Name a PlayStation-exclusive franchise | Crash Bandicoot | 30 | Began on PlayStation, now on other platforms |
+| Name a PlayStation-exclusive franchise | Spyro | 30 | Began on PlayStation, now on other platforms |
+| Name a PlayStation-exclusive franchise | MLB The Show | 30 | On other consoles since 2021 |
+| Name a PlayStation-exclusive franchise | Helldivers | 30 | Helldivers 2 came to Xbox in 2025 |
+| Name a platform where you can scroll short-form videos | Pinterest | 30 | Mostly images, with some video |
+| Name a platform where you can scroll short-form videos | X | 30 | Has a video feed but is mainly text |
+| Name a platform where you can scroll short-form videos | Bluesky | 30 | Has a video feed but is mainly text |
+| Name a platform where you can scroll short-form videos | Threads | 30 | Has a video feed but is mainly text |
+| Name a brass instrument | Conch | 60 | A shell trumpet |
+| Name a pancake or flatbread from any cuisine | Hash brown | 30 | A potato cake rather than a pancake |
+| Name a pancake or flatbread from any cuisine | Waffle | 30 | A batter cake cooked in an iron |
+| Name a craft or handicraft — a hobby where you make things by hand | Sketching | 30 | A drawing rather than a craft |
+| Name a craft or handicraft — a hobby where you make things by hand | Lego | 30 | Building with bricks rather than making from scratch |
+| Name a country where Christianity is the majority religion | France | 30 | Christians are close to half the population |
+| Name a country where Christianity is the majority religion | United Kingdom | 30 | Christians were 46% at the 2021 census |
+| Name a country where Christianity is the majority religion | Belgium | 30 | Christians are close to half the population |
+| Name a country where Christianity is the majority religion | Puerto Rico | 30 | A US territory, not a country |
+| Name a prehistoric mammal | Thylacine | 30 | Died out in 1936, so recent rather than prehistoric |
+| Name a candy | Mochi | 30 | A rice cake |
+| Name a holiday celebrated around the world | Black Friday | 30 | A shopping event |
+| Name a holiday celebrated around the world | Cyber Monday | 60 | A shopping event |
+| Name a holiday celebrated around the world | Star Wars Day | 60 | An informal fan day |
+| Name an animal that lives in groups | Jellyfish | 60 | Drift in swarms rather than social groups |
+| Name a country or territory with the Union Jack on its flag | Ontario | 60 | A Canadian province |
+| Name a country or territory with the Union Jack on its flag | Manitoba | 60 | A Canadian province |
+| Name a country or territory with the Union Jack on its flag | British Columbia | 60 | A Canadian province |
+| Name a country or territory with the Union Jack on its flag | Victoria | 60 | An Australian state |
+| Name a country or territory with the Union Jack on its flag | New South Wales | 60 | An Australian state |
+| Name a country or territory with the Union Jack on its flag | Queensland | 60 | An Australian state |
+| Name a country or territory with the Union Jack on its flag | Tasmania | 60 | An Australian state |
+| Name a living bird that cannot fly | Chicken | 30 | Most chickens can fly short distances |
+| Name a living bird that cannot fly | Turkey | 30 | Wild turkeys fly; heavy farm breeds cannot |
+| Name a dip | Nutella | 30 | A spread |
+| Name a Game of Thrones character | Rhaenyra Targaryen | 60 | From House of the Dragon |
+| Name a Game of Thrones character | Daemon Targaryen | 60 | From House of the Dragon |
+| Name a chemical element that is a gas at room temperature | Oganesson | 60 | Predicted to be a gas but never observed as one |
+| Name a fruit | Raisin | 30 | A dried grape |
+| Name a type of wood | Driftwood | 30 | Wood shaped by water rather than a kind of wood |
+| Name a type of wood | Burl | 60 | A growth rather than a kind of wood |
+| Name a type of wood | Reclaimed wood | 30 | Reused wood rather than a kind |
+| Name a type of wood | Cork | 30 | Bark rather than wood |
+| Name a type of wood | Rattan | 30 | A palm rather than wood |
+| Name a fermented food or drink | Coffee | 30 | Fermentation is one step of processing the beans |
+| Name a fermented food or drink | Tea | 30 | Oxidised rather than truly fermented, except dark teas |
+| Name a fermented food or drink | Century egg | 30 | Cured rather than fermented |
+| Name a fermented food or drink | Hot sauce | 30 | Some, such as Tabasco, are fermented |
+| Name a fermented food or drink | Soju | 30 | Distilled from a fermented mash |
+| Name a fermented food or drink | Fufu | 30 | Sometimes made from fermented cassava |
+| Name a Microsoft application | Minecraft | 30 | A game Microsoft owns |
+| Name a Microsoft application | Azure | 30 | A cloud platform |
+| Name a type of paper | A4 | 30 | A paper size |
+| Name a type of paper | Cellophane | 30 | A plastic film |
+| Name an animal that has an X in its name | Tyrannosaurus rex | 60 | An extinct animal |
+| Name a curry | Bobotie | 60 | A curried mince bake |
+| Name a curry | Doro wat | 60 | A spiced stew |
+| Name a Sesame Street character | Kermit the Frog | 60 | A Muppet who appeared on Sesame Street |
+| Name an Apple device | Apple Card | 60 | A credit card |
+| Name an Apple device | Beats headphones | 30 | Beats is a brand Apple owns |
